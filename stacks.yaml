@@ -16,15 +16,15 @@ availableVersions:
 ---
 id: jboss-javaee-6.0-with-tools
 name: Java EE with tools recommended by JBoss
-description: Java EE lacks any testing APIs, and for this reason JBoss developed the Arquillian project, along with it's various component projects, such as Arquillian Drone, and the sister project Shrinkwrap. This BOM builds on the Java EE full profile BOM, adding Arquillian to the mix. It also provides a version of JUnit and TestNG recommended for use with Arquillian. Furthermore, this BOM adds the JBoss AS Maven deployment plugin. EAP 6's recommended mode of deployment is via the management APIs, and the Maven plugin is the recommended way to do this, if the customer is using Maven for building.
-artifact: jboss-javaee-6.0-with-tools:1.0.0.Final
+description: Java EE lacks any testing APIs, and for this reason JBoss developed the Arquillian project, along with its various component projects, such as Arquillian Drone, and the sister project Shrinkwrap. This BOM builds on the Java EE full profile BOM, adding Arquillian to the mix. It also provides a version of JUnit and TestNG recommended for use with Arquillian. Furthermore, this BOM adds the JBoss AS Maven deployment plugin. EAP 6s recommended mode of deployment is via the management APIs, and the Maven plugin is the recommended way to do this, if the customer is using Maven for building.
+artifact: jboss-javaee-6.0-with-tools
 recommendedVersion: 1.0.0.Final
 availableVersions: 
  - 1.0.0.Final
 ---
 id: jboss-javaee-6.0-with-transactions
 name: Java EE with JBoss Transactions
-description: JBoss AS includes a world class transaction manager. In order to access it's full capabilites, including for example XTS, WS-AT and WS-BA, you need to use the JBossTS APIs. This BOM adds the JBossTS APIs to the stack.
+description: JBoss AS includes a world class transaction manager. In order to access its full capabilites, including for example XTS, WS-AT and WS-BA, you need to use the JBossTS APIs. This BOM adds the JBossTS APIs to the stack.
 artifact: jboss-javaee-6.0-with-transactions
 recommendedVersion: 1.0.0.Final
 availableVersions: 
