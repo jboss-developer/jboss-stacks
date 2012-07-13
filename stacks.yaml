@@ -1,31 +1,126 @@
-id: jboss-javaee-6.0-with-errai
-name: Java EE with Errai and GWT
-description: Errai provides a comprehensive framework and tools for building rich web applications, leveraging the GWT compiler. With standard server-side APIs, such as CDI, in the browser, managing large web applications was never so easy. This BOM adds both Errai and GWT to your project.
-artifact: jboss-javaee-6.0-with-errai
-recommendedVersion: 1.0.0.Final
-availableVersions: 
+#JBoss, Home of Professional Open Source
+# Copyright 2011, Red Hat, Inc., and individual contributors
+# by the @authors tag. See the copyright.txt in the distribution for a
+# full listing of individual contributors.
+
+# This is free software; you can redistribute it and/or modify it
+# under the terms of the GNU Lesser General Public License as
+# published by the Free Software Foundation; either version 2.1 of
+# the License, or (at your option) any later version.
+
+# This software is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# Lesser General Public License for more details.
+ 
+# You should have received a copy of the GNU Lesser General Public
+# License along with this software; if not, write to the Free
+# Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+# 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+
+#################################################################
+#                                                               #
+#   L I S T    O F    A L L     A V A I L A B L E    B O M S    #
+#                                                               #
+#################################################################
+bom: &jboss-javaee-6_0-with-errai
+ name: Java EE with Errai and GWT
+ description: Errai provides a comprehensive framework and tools for building rich web applications, leveraging the GWT compiler. With standard server-side APIs, such as CDI, in the browser, managing large web applications was never so easy. This BOM adds both Errai and GWT to your project.
+ artifact: jboss-javaee-6.0-with-errai
+ recommendedVersion: 1.0.0.Final
+ availableVersions: 
  - 1.0.0.Final
----
-id: jboss-javaee-6.0-with-hibernate
-name: Java EE with Hibernate
-description: Historically, Hibernate facilitated the storage and retrieval of Java domain objects via Object/Relational Mapping. Today, Hibernate is a collection of related projects enabling developers to utilize POJO-style domain models in their applications in ways extending well beyond Object/Relational Mapping. This BOM builds on the Java EE full profile BOM, adding Hibernate Community projects including Hibernate ORM, Hibernate Search and Hibernate Validator. It also provides tool projects such as Hibernate JPA Model Gen and Hibernate Validator Annotation Processor.
-artifact: jboss-javaee-6.0-with-hibernate
-recommendedVersion: 1.0.0.Final
-availableVersions: 
- - 1.0.0.Final
----
-id: jboss-javaee-6.0-with-tools
-name: Java EE with tools recommended by JBoss
-description: Java EE lacks any testing APIs, and for this reason JBoss developed the Arquillian project, along with its various component projects, such as Arquillian Drone, and the sister project Shrinkwrap. This BOM builds on the Java EE full profile BOM, adding Arquillian to the mix. It also provides a version of JUnit and TestNG recommended for use with Arquillian. Furthermore, this BOM adds the JBoss AS Maven deployment plugin. EAP 6s recommended mode of deployment is via the management APIs, and the Maven plugin is the recommended way to do this, if the customer is using Maven for building.
-artifact: jboss-javaee-6.0-with-tools
-recommendedVersion: 1.0.0.Final
-availableVersions: 
- - 1.0.0.Final
----
-id: jboss-javaee-6.0-with-transactions
-name: Java EE with JBoss Transactions
-description: JBoss AS includes a world class transaction manager. In order to access its full capabilites, including for example XTS, WS-AT and WS-BA, you need to use the JBossTS APIs. This BOM adds the JBossTS APIs to the stack.
-artifact: jboss-javaee-6.0-with-transactions
-recommendedVersion: 1.0.0.Final
-availableVersions: 
- - 1.0.0.Final
+ 
+#####################################
+
+bom: &jboss-javaee-6_0-with-hibernate
+ name: Java EE with Hibernate
+ description: Historically, Hibernate facilitated the storage and retrieval of Java domain objects via Object/Relational Mapping. Today, Hibernate is a collection of related projects enabling developers to utilize POJO-style domain models in their applications in ways extending well beyond Object/Relational Mapping. This BOM builds on the Java EE full profile BOM, adding Hibernate Community projects including Hibernate ORM, Hibernate Search and Hibernate Validator. It also provides tool projects such as Hibernate JPA Model Gen and Hibernate Validator Annotation Processor.
+ artifact: jboss-javaee-6.0-with-hibernate
+ recommendedVersion: 1.0.0.Final
+ availableVersions: 
+  - 1.0.0.Final
+
+#####################################
+bom: &jboss-javaee-6_0-with-tools
+ name: Java EE with tools recommended by JBoss
+ description: Java EE lacks any testing APIs, and for this reason JBoss developed the Arquillian project, along with its various component projects, such as Arquillian Drone, and the sister project Shrinkwrap. This BOM builds on the Java EE full profile BOM, adding Arquillian to the mix. It also provides a version of JUnit and TestNG recommended for use with Arquillian. Furthermore, this BOM adds the JBoss AS Maven deployment plugin. EAP 6s recommended mode of deployment is via the management APIs, and the Maven plugin is the recommended way to do this, if the customer is using Maven for building.
+ artifact: jboss-javaee-6.0-with-tools
+ recommendedVersion: 1.0.0.Final
+ availableVersions: 
+  - 1.0.0.Final
+  
+#####################################
+ 
+bom: &jboss-javaee-6_0-with-transactions
+ name: Java EE with JBoss Transactions
+ description: JBoss AS includes a world class transaction manager. In order to access its full capabilites, including for example XTS, WS-AT and WS-BA, you need to use the JBossTS APIs. This BOM adds the JBossTS APIs to the stack.
+ artifact: jboss-javaee-6.0-with-transactions
+ recommendedVersion: 1.0.0.Final
+ availableVersions: 
+  - 1.0.0.Final
+
+##########################################################################
+#                                                                        #
+#   L I S T    O F    A L L     A V A I L A B L E    R U N T I M E S     #
+#                                                                        #
+##########################################################################
+
+runtime: &jbosseap6runtime
+ name: JBoss EAP 6.0
+ version: 6.0.0
+ type: EAP
+ url: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=12673&product=appplatform&version=&downloadType=distributions
+ labels: [jboss, eap, application server]
+ boms:
+ - *jboss-javaee-6_0-with-errai
+ - *jboss-javaee-6_0-with-tools
+ - *jboss-javaee-6_0-with-hibernate
+ - *jboss-javaee-6_0-with-transactions
+ recommendedBOM: *jboss-javaee-6_0-with-errai
+ properties:
+  - 
+ archetypes:
+ -
+ recommendedArchetype: 
+
+#####################################
+
+runtime: &jboss-as70runtime
+ name: JBoss AS 7.0
+ version: 7.0.0
+ type: AS
+ url: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=12673&product=appplatform&version=&downloadType=distributions
+ labels: [jboss, as, application server, community]
+ boms:
+ - *jboss-javaee-6_0-with-errai
+ - *jboss-javaee-6_0-with-tools
+ - *jboss-javaee-6_0-with-hibernate
+ - *jboss-javaee-6_0-with-transactions
+ recommendedBOM: *jboss-javaee-6_0-with-errai
+ properties:
+  - 
+ archetypes:
+ -
+ recommendedArchetype: 
+ 
+#########################################################################
+#                                                                       #
+#   L I S T    O F    A L L     A V A I L A B L E    R E L E A S E S    #
+#                                                                       #
+#########################################################################
+ 
+
+minorRelease: &jbeap600
+ name: JBoss EAP
+ version: 6.0.0
+ recommendedRuntime: *jbosseap6runtime
+ 
+############################################
+
+majorRelease:
+ name: JBoss EAP
+ version: 6.0
+ recommendedRuntime: *jbosseap6runtime
+ minorReleases:
+ - *jbeap600
