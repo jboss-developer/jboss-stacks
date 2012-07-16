@@ -21,55 +21,57 @@
  */
 package org.jboss.stack;
 
+import java.util.List;
+
 public class Stacks
 {
-   
-   private Runtime runtime;
-   
-   private Bom bom;
-   
-   private MinorRelease minorRelease;
-   
-   private MajorRelease majorRelease;
-   
-   public Runtime getRuntime()
+
+   private List<Runtime> availableRuntimes;
+
+   private List<Bom> availableBoms;
+
+   private List<MinorRelease> minorReleases;
+
+   private List<MajorRelease> majorReleases;
+
+   public void setAvailableRuntimes(List<Runtime> availableRuntimes)
    {
-      return runtime;
-   }
-   
-   public void setRuntime(Runtime runtime)
-   {
-      this.runtime = runtime;
-   }
-   
-   public Bom getBom()
-   {
-      return bom;
-   }
-   
-   public void setBom(Bom bom)
-   {
-      this.bom = bom;
+      this.availableRuntimes = availableRuntimes;
    }
 
-   public void setMajorRelease(MajorRelease majorRelease)
+   public List<Runtime> getAvailableRuntimes()
    {
-      this.majorRelease = majorRelease;
+      return availableRuntimes;
    }
-   
-   public void setMinorRelease(MinorRelease minorRelease)
+
+   public List<Bom> getAvailableBoms()
    {
-      this.minorRelease = minorRelease;
+      return availableBoms;
    }
-   
-   public MajorRelease getMajorRelease()
+
+   public void setAvailableBoms(List<Bom> availableBoms)
    {
-      return majorRelease;
+      this.availableBoms = availableBoms;
    }
-   
-   public MinorRelease getMinorRelease()
+
+   public List<MinorRelease> getMinorReleases()
    {
-      return minorRelease;
+      return minorReleases;
    }
+
+   public void setMinorReleases(List<MinorRelease> minorReleases)
+   {
+      this.minorReleases = minorReleases;
+   }
+
+   public List<MajorRelease> getMajorReleases()
+   {
+      return majorReleases;
+   }
+
+   public void setMajorReleases(List<MajorRelease> majorReleases)
+   {
+      this.majorReleases = majorReleases;
+   }
+
 }
-

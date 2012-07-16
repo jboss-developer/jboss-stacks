@@ -19,22 +19,35 @@
  * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
-package org.jboss.stack;
+package org.jboss.stack.parser;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.InputStream;
 
+import org.jboss.stack.Bom;
+import org.jboss.stack.MajorRelease;
+import org.jboss.stack.MinorRelease;
+import org.jboss.stack.Runtime;
+import org.jboss.stack.Stacks;
+import org.yaml.snakeyaml.TypeDescription;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.Constructor;
 
-public class Main
+public class YamlStacksParser implements Parser
 {
-    
-   
-   public static void main(String[] args) throws FileNotFoundException
+
+   public Stacks parse(InputStream is)
    {
-      Yaml yaml = new Yaml(new Constructor(Stacks.class));
-      Stacks data = (Stacks) yaml.load(new FileInputStream("/home/rafael/Projetos/JDF/jdf-stack/stacks.yaml"));
-      System.out.println(yaml.dump(data));
+      Constructor constructor = new Constructor(Stacks.class);
+      TypeDescription stackDescription = new TypeDescription(Stacks.class);
+      stackDescription.putListPropertyType("availableBoms", Bom.class);
+      stackDescription.putListPropertyType("availableRuntimes", Runtime.class);
+      stackDescription.putListPropertyType("minorReleases", MinorRelease.class);
+      stackDescription.putListPropertyType("majorReleases", MajorRelease.class);
+
+      constructor.addTypeDescription(stackDescription);
+      Yaml yaml = new Yaml(constructor);
+      Stacks data = (Stacks) yaml.load(is);
+      return data;
    }
+
 }
