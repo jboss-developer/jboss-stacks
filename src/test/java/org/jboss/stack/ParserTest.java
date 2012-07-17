@@ -26,8 +26,9 @@ public class ParserTest
    public void testParse()
    {
       Stacks stacks = parser.parse(is);
-      assertEquals(4, stacks.getAvailableBoms().size());
+      assertEquals(6, stacks.getAvailableBoms().size());
       assertEquals(2, stacks.getAvailableRuntimes().size());
+      assertEquals(RuntimeType.EAP, stacks.getAvailableRuntimes().get(0).getType());
    }
 
 }

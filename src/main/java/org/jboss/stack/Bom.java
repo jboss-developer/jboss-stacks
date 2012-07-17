@@ -31,11 +31,15 @@ public class Bom
 
    private String description;
 
-   private String artifact;
+   private String groupId = "org.jboss.bom";
+
+   private String artifactId;
 
    private String recommendedVersion;
 
    private List<String> availableVersions = new ArrayList<String>();
+
+   private List<String> labels = new ArrayList<String>();
 
    public String getName()
    {
@@ -57,14 +61,27 @@ public class Bom
       this.description = description;
    }
 
-   public String getArtifact()
+   public String getGroupId()
    {
-      return artifact;
+      return groupId;
    }
 
-   public void setArtifact(String artifact)
+   public void setGroupId(String groupId)
    {
-      this.artifact = artifact;
+      if (groupId != null)
+      {
+         this.groupId = groupId;
+      }
+   }
+
+   public String getArtifactId()
+   {
+      return artifactId;
+   }
+
+   public void setArtifactId(String artifactId)
+   {
+      this.artifactId = artifactId;
    }
 
    public String getRecommendedVersion()
@@ -87,4 +104,19 @@ public class Bom
       this.availableVersions = availableVersions;
    }
 
+   public List<String> getLabels()
+   {
+      return labels;
+   }
+
+   public void setLabels(List<String> labels)
+   {
+      this.labels = labels;
+   }
+
+   @Override
+   public String toString()
+   {
+      return this.getArtifactId();
+   }
 }

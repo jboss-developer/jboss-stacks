@@ -29,10 +29,22 @@ public class Stacks
    private List<Runtime> availableRuntimes;
 
    private List<Bom> availableBoms;
+   
+   private List<Archetype> availableArchetypes;
 
    private List<MinorRelease> minorReleases;
 
    private List<MajorRelease> majorReleases;
+   
+   public List<Archetype> getAvailableArchetypes()
+   {
+      return availableArchetypes;
+   }
+   
+   public void setAvailableArchetypes(List<Archetype> availableArchetypes)
+   {
+      this.availableArchetypes = availableArchetypes;
+   }
 
    public void setAvailableRuntimes(List<Runtime> availableRuntimes)
    {

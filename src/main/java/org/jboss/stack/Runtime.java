@@ -23,7 +23,6 @@ package org.jboss.stack;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
 public class Runtime
 {
@@ -35,12 +34,10 @@ public class Runtime
    private List<String> labels = new ArrayList<String>();
 
    private List<Bom> boms = new ArrayList<Bom>();
-   private Bom recommendedBOM;
+   private Bom defaultBom;
 
    private List<Archetype> archetypes = new ArrayList<Archetype>();
-   private Archetype recommendedArchetype;
-
-   private Properties properties;
+   private Archetype defaultArchetype;
 
    public String getName()
    {
@@ -102,14 +99,14 @@ public class Runtime
       this.boms = boms;
    }
 
-   public Bom getRecommendedBOM()
+   public Bom getDefaultBom()
    {
-      return recommendedBOM;
+      return defaultBom;
    }
 
-   public void setRecommendedBOM(Bom recommendedBOM)
+   public void setDefaultBom(Bom defaultBom)
    {
-      this.recommendedBOM = recommendedBOM;
+      this.defaultBom = defaultBom;
    }
 
    public List<Archetype> getArchetypes()
@@ -122,24 +119,14 @@ public class Runtime
       this.archetypes = archetypes;
    }
 
-   public Archetype getRecommendedArchetype()
+   public void setDefaultArchetype(Archetype defaultArchetype)
    {
-      return recommendedArchetype;
+      this.defaultArchetype = defaultArchetype;
    }
 
-   public void setRecommendedArchetype(Archetype recommendedArchetype)
+   public Archetype getDefaultArchetype()
    {
-      this.recommendedArchetype = recommendedArchetype;
-   }
-
-   public Properties getProperties()
-   {
-      return properties;
-   }
-
-   public void setProperties(Properties properties)
-   {
-      this.properties = properties;
+      return defaultArchetype;
    }
 
 }
