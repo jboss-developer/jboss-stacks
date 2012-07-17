@@ -25,6 +25,12 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.jboss.jdf.plugins.stacks.Parser.Bom;
+import org.jboss.jdf.plugins.stacks.Parser.CustomClassLoaderConstructor;
+import org.jboss.jdf.plugins.stacks.Parser.MajorRelease;
+import org.jboss.jdf.plugins.stacks.Parser.MinorRelease;
+import org.jboss.jdf.plugins.stacks.Parser.Runtime;
+import org.jboss.jdf.plugins.stacks.Parser.Stacks;
 import org.yaml.snakeyaml.TypeDescription;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.Constructor;
@@ -34,7 +40,8 @@ public class Parser
 
    public Stacks parse(InputStream is)
    {
-      Constructor constructor = new Constructor(Stacks.class);
+      CustomClassLoaderConstructor constructor = new CustomClassLoaderConstructor(Stacks.class, this.getClass()
+               .getClassLoader());
       TypeDescription stackDescription = new TypeDescription(Stacks.class);
       stackDescription.putListPropertyType("availableBoms", Bom.class);
       stackDescription.putListPropertyType("availableRuntimes", Runtime.class);
@@ -45,6 +52,32 @@ public class Parser
       Yaml yaml = new Yaml(constructor);
       Stacks data = (Stacks) yaml.load(is);
       return data;
+   }
+
+   public class CustomClassLoaderConstructor extends Constructor
+   {
+      private ClassLoader loader = CustomClassLoaderConstructor.class.getClassLoader();
+
+      public CustomClassLoaderConstructor(ClassLoader cLoader)
+      {
+         this(Object.class, cLoader);
+      }
+
+      public CustomClassLoaderConstructor(Class<? extends Object> theRoot, ClassLoader theLoader)
+      {
+         super(theRoot);
+         if (theLoader == null)
+         {
+            throw new NullPointerException("Loader must be provided.");
+         }
+         this.loader = theLoader;
+      }
+
+      @Override
+      protected Class<?> getClassForName(String name) throws ClassNotFoundException
+      {
+         return Class.forName(name, true, loader);
+      }
    }
 
    public static class Bom
