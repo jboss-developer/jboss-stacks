@@ -23,6 +23,7 @@
 #   L I S T    O F    A L L     A V A I L A B L E    B O M S    #
 #                                                               #
 #################################################################
+
 availableBoms:
  - &jboss-javaee-6_0-with-errai
    name: Java EE with Errai and GWT
@@ -110,6 +111,10 @@ availableArchetypes:
 
 availableRuntimes:
 
+###############
+#   E A P 6   #
+###############
+
  - &jbosseap6runtime
    name: JBoss EAP 6.0
    version: 6.0.0
@@ -128,13 +133,36 @@ availableRuntimes:
    archetypes:
     -
 
-#####################################
+###############
+#   A S 7.1   #
+###############
 
- - &jboss-as70runtime
-   name: JBoss AS 7.0
-   version: 7.0.0
+
+ - &jboss-as711runtime
+   name: JBoss AS 7.1.1 Brontes
+   version: 7.1.1.Final
    type: AS
-   url: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=12673&product=appplatform&version=&downloadType=distributions
+   url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip
+   labels: 
+   boms:
+    - *jboss-javaee-6_0-with-errai
+    - *jboss-javaee-6_0-with-tools
+    - *jboss-javaee-6_0-with-hibernate
+    - *jboss-javaee-6_0-with-transactions
+    - *jboss-javaee6-specs-bom
+    - *jboss-javaee6-web-specs-bom
+   defaultBom: *jboss-javaee6-specs-bom
+   defaultArchetype: 
+   archetypes:
+    -
+
+###############
+
+ - &jboss-as710runtime
+   name: JBoss AS 7.1.0 Thunder
+   version: 7.1.0
+   type: AS
+   url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip
    labels: 
    boms:
     - *jboss-javaee-6_0-with-errai
@@ -148,6 +176,48 @@ availableRuntimes:
    archetypes:
     -
  
+###############
+#   A S 7.0   #
+###############
+ 
+ - &jboss-as702runtime-web
+   name: JBoss AS 7.0.2 Arc (Web Profile)
+   version: 7.0.2.Final
+   type: AS
+   url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-web-7.0.2.Final.zip
+   labels: 
+   boms:
+    - *jboss-javaee-6_0-with-errai
+    - *jboss-javaee-6_0-with-tools
+    - *jboss-javaee-6_0-with-hibernate
+    - *jboss-javaee-6_0-with-transactions
+    - *jboss-javaee6-web-specs-bom
+   defaultBom: *jboss-javaee6-web-specs-bom
+   defaultArchetype: 
+   archetypes:
+    -
+    
+ - &jboss-as702runtime-full
+   name: JBoss AS 7.0.2 Arc (Full Profile)
+   version: 7.0.2.Final
+   type: AS
+   url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-7.0.2.Final.zip
+   labels: 
+   boms:
+    - *jboss-javaee-6_0-with-errai
+    - *jboss-javaee-6_0-with-tools
+    - *jboss-javaee-6_0-with-hibernate
+    - *jboss-javaee-6_0-with-transactions
+    - *jboss-javaee6-specs-bom
+    - *jboss-javaee6-web-specs-bom
+   defaultBom: *jboss-javaee6-specs-bom
+   defaultArchetype: 
+   archetypes:
+    -
+        
+
+  
+ 
 ##########################################################
 #                                                        #
 #   L I S T    O F    A L L     R E L E A S E S          #
@@ -158,32 +228,38 @@ availableRuntimes:
 minorReleases: 
 
 #  ***** E A P  6.X *******
- - &jbeap600
+ - &jbeap60
    name: JBoss EAP
-   version: 6.0.0
+   version: 6.0
    recommendedRuntime: *jbosseap6runtime
    
 #  ***** A S   7.X *******
- - &jbas700
+ - &jbas70
    name: JBoss AS
-   version: 7.0.0
-   recommendedRuntime: *jboss-as70runtime
+   version: 7.0
+   recommendedRuntime: *jboss-as702runtime-full
+   
+ - &jbas71
+   name: JBoss AS
+   version: 7.1
+   recommendedRuntime: *jboss-as711runtime
  
 ############################################
 
 majorReleases:
 
-#  ***** E A P  6.X *******
+#  ***** E A P  6 ******
  - name: JBoss EAP
-   version: 6.0
+   version: 6
    recommendedRuntime: *jbosseap6runtime
    minorReleases:
-    - *jbeap600
+    - *jbeap60
 
-#  ***** A S   7.X *******
+#  ***** A S   7 *******
  - name: JBoss AS
-   version: 7.0
-   recommendedRuntime: *jboss-as70runtime
+   version: 7
+   recommendedRuntime: *jboss-as711runtime
    minorReleases:
-    - *jbas700
+    - *jbas70
+    - *jbas71
     
