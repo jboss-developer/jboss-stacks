@@ -234,15 +234,16 @@ minorReleases:
    recommendedRuntime: *jbosseap6runtime
    
 #  ***** A S   7.X *******
+ - &jbas71
+   name: JBoss AS
+   version: 7.1
+   recommendedRuntime: *jboss-as711runtime
+
  - &jbas70
    name: JBoss AS
    version: 7.0
    recommendedRuntime: *jboss-as702runtime-full
    
- - &jbas71
-   name: JBoss AS
-   version: 7.1
-   recommendedRuntime: *jboss-as711runtime
  
 ############################################
 
