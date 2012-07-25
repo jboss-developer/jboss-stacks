@@ -139,7 +139,7 @@ availableRuntimes:
 
 
  - &jboss-as711runtime
-   name: JBoss AS 7.1.1 Brontes
+   name: JBoss AS 7.1.1 (Brontes)
    version: 7.1.1.Final
    type: AS
    url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip
@@ -159,7 +159,7 @@ availableRuntimes:
 ###############
 
  - &jboss-as710runtime
-   name: JBoss AS 7.1.0 Thunder
+   name: JBoss AS 7.1.0 (Thunder)
    version: 7.1.0
    type: AS
    url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip
@@ -181,7 +181,7 @@ availableRuntimes:
 ###############
  
  - &jboss-as702runtime-web
-   name: JBoss AS 7.0.2 Arc (Web Profile)
+   name: JBoss AS 7.0.2 (Arc) - Web Profile
    version: 7.0.2.Final
    type: AS
    url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-web-7.0.2.Final.zip
@@ -198,7 +198,7 @@ availableRuntimes:
     -
     
  - &jboss-as702runtime-full
-   name: JBoss AS 7.0.2 Arc (Full Profile)
+   name: JBoss AS 7.0.2 (Arc) - Full Profile
    version: 7.0.2.Final
    type: AS
    url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-7.0.2.Final.zip
