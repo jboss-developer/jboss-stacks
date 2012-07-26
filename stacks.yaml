@@ -26,7 +26,7 @@
 
 availableBoms:
  - &jboss-javaee-6_0-with-errai
-   name: Java EE 6 with Errai and GWT
+   name: Java EE with Errai and GWT
    description: Errai provides a comprehensive framework and tools for building rich web applications, leveraging the GWT compiler. With standard server-side APIs, such as CDI, in the browser, managing large web applications was never so easy. This BOM adds both Errai and GWT to your project.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-errai
@@ -38,7 +38,7 @@ availableBoms:
  #####################################
 
  - &jboss-javaee-6_0-with-hibernate
-   name: Java EE 6 with Hibernate
+   name: Java EE with Hibernate
    description: Historically, Hibernate facilitated the storage and retrieval of Java domain objects via Object/Relational Mapping. Today, Hibernate is a collection of related projects enabling developers to utilize POJO-style domain models in their applications in ways extending well beyond Object/Relational Mapping. This BOM builds on the Java EE full profile BOM, adding Hibernate Community projects including Hibernate ORM, Hibernate Search and Hibernate Validator. It also provides tool projects such as Hibernate JPA Model Gen and Hibernate Validator Annotation Processor.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-hibernate
@@ -49,7 +49,7 @@ availableBoms:
    
 #####################################
  - &jboss-javaee-6_0-with-tools
-   name: Java EE 6 with tools recommended by JBoss
+   name: Java EE with tools recommended by JBoss
    description: Java EE lacks any testing APIs, and for this reason JBoss developed the Arquillian project, along with its various component projects, such as Arquillian Drone, and the sister project Shrinkwrap. This BOM builds on the Java EE full profile BOM, adding Arquillian to the mix. It also provides a version of JUnit and TestNG recommended for use with Arquillian. Furthermore, this BOM adds the JBoss AS Maven deployment plugin. EAP 6s recommended mode of deployment is via the management APIs, and the Maven plugin is the recommended way to do this, if the customer is using Maven for building.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-tools
@@ -61,7 +61,7 @@ availableBoms:
 #####################################
  
  - &jboss-javaee-6_0-with-transactions
-   name: Java EE 6 with JBoss Transactions
+   name: Java EE with JBoss Transactions
    description: JBoss AS includes a world class transaction manager. In order to access its full capabilites, including for example XTS, WS-AT and WS-BA, you need to use the JBossTS APIs. This BOM adds the JBossTS APIs to the stack.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-transactions
@@ -74,17 +74,26 @@ availableBoms:
 
    # # #  S P E C S     B O M S  # # #
 
- - &jboss-javaee-6_0-specs-bom
-   name: Java EE 6
+ - &jboss-javaee6-specs-bom
+   name: Java EE 6 API BOM
    description: Bill of Materials for Java EE 6 APIs for use with JBoss AS 7
    groupId: org.jboss.spec
-   artifactId: jjboss-javaee-6.0
-   recommendedVersion: 3.0.0.Final
+   artifactId: jboss-javaee6-specs-bom
+   recommendedVersion: 2.0.0.Final
    availableVersions: 
-    - 3.0.0.Final
-    - 3.0.1.Final
+    - 2.0.0.Final
    labels:
 
+ - &jboss-javaee6-web-specs-bom
+   name: Java EE 6 Web API BOM
+   description: Bill of Materials for Java EE 6 Web Profile APIs for use with JBoss AS 7.0.0 Web Profile Configuration
+   groupId: org.jboss.spec
+   artifactId: jboss-javaee6-web-specs-bom
+   recommendedVersion: 2.0.0.CR1
+   availableVersions: 
+    - 2.0.0.CR1
+   labels:
+   
 ##############################################################################
 #                                                                            #
 #   L I S T    O F    A L L     A V A I L A B L E    A R C H E T Y P E S     #
@@ -113,12 +122,13 @@ availableRuntimes:
    url: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=12673&product=appplatform&version=&downloadType=distributions
    labels: 
    boms:
-    - *jboss-javaee-6_0-specs-bom
     - *jboss-javaee-6_0-with-errai
     - *jboss-javaee-6_0-with-tools
     - *jboss-javaee-6_0-with-hibernate
     - *jboss-javaee-6_0-with-transactions
-   defaultBom: *jboss-javaee-6_0-specs-bom
+    - *jboss-javaee6-specs-bom
+    - *jboss-javaee6-web-specs-bom
+   defaultBom: *jboss-javaee6-specs-bom
    defaultArchetype: 
    archetypes:
     -
@@ -135,12 +145,13 @@ availableRuntimes:
    url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip
    labels: 
    boms:
-    - *jboss-javaee-6_0-specs-bom
     - *jboss-javaee-6_0-with-errai
     - *jboss-javaee-6_0-with-tools
     - *jboss-javaee-6_0-with-hibernate
     - *jboss-javaee-6_0-with-transactions
-   defaultBom: *jboss-javaee-6_0-specs-bom
+    - *jboss-javaee6-specs-bom
+    - *jboss-javaee6-web-specs-bom
+   defaultBom: *jboss-javaee6-specs-bom
    defaultArchetype: 
    archetypes:
     -
@@ -154,12 +165,13 @@ availableRuntimes:
    url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip
    labels: 
    boms:
-    - *jboss-javaee-6_0-specs-bom
     - *jboss-javaee-6_0-with-errai
     - *jboss-javaee-6_0-with-tools
     - *jboss-javaee-6_0-with-hibernate
     - *jboss-javaee-6_0-with-transactions
-   defaultBom: *jboss-javaee-6_0-specs-bom
+    - *jboss-javaee6-specs-bom
+    - *jboss-javaee6-web-specs-bom
+   defaultBom: *jboss-javaee6-specs-bom
    defaultArchetype: 
    archetypes:
     -
@@ -167,6 +179,23 @@ availableRuntimes:
 ###############
 #   A S 7.0   #
 ###############
+ 
+ - &jboss-as702runtime-web
+   name: JBoss AS 7.0.2 (Arc) - Web Profile
+   version: 7.0.2.Final
+   type: AS
+   url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-web-7.0.2.Final.zip
+   labels: 
+   boms:
+    - *jboss-javaee-6_0-with-errai
+    - *jboss-javaee-6_0-with-tools
+    - *jboss-javaee-6_0-with-hibernate
+    - *jboss-javaee-6_0-with-transactions
+    - *jboss-javaee6-web-specs-bom
+   defaultBom: *jboss-javaee6-web-specs-bom
+   defaultArchetype: 
+   archetypes:
+    -
     
  - &jboss-as702runtime-full
    name: JBoss AS 7.0.2 (Arc) - Full Profile
@@ -175,15 +204,19 @@ availableRuntimes:
    url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-7.0.2.Final.zip
    labels: 
    boms:
-    - *jboss-javaee-6_0-specs-bom
     - *jboss-javaee-6_0-with-errai
     - *jboss-javaee-6_0-with-tools
     - *jboss-javaee-6_0-with-hibernate
     - *jboss-javaee-6_0-with-transactions
-   defaultBom: *jboss-javaee-6_0-specs-bom
+    - *jboss-javaee6-specs-bom
+    - *jboss-javaee6-web-specs-bom
+   defaultBom: *jboss-javaee6-specs-bom
    defaultArchetype: 
    archetypes:
     -
+        
+
+  
  
 ##########################################################
 #                                                        #
