@@ -214,7 +214,7 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-hibernate
     - *jboss-javaee-6_0-with-transactions
    defaultBom: *jboss-javaee-6_0
-   defaultArchetype: *jboss-javaee6-webapp-ear-archetype
+   defaultArchetype: *jboss-javaee6-webapp-archetype
    archetypes:
     - *jboss-javaee6-webapp-archetype
     - *jboss-javaee6-webapp-archetype-blank
@@ -240,7 +240,7 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-hibernate
     - *jboss-javaee-6_0-with-transactions
    defaultBom: *jboss-javaee-6_0
-   defaultArchetype: *jboss-javaee6-webapp-ear-archetype
+   defaultArchetype: *jboss-javaee6-webapp-archetype
    archetypes:
     - *jboss-javaee6-webapp-archetype
     - *jboss-javaee6-webapp-archetype-blank
@@ -263,7 +263,7 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-hibernate
     - *jboss-javaee-6_0-with-transactions
    defaultBom: *jboss-javaee-6_0
-   defaultArchetype: *jboss-javaee6-webapp-ear-archetype
+   defaultArchetype: *jboss-javaee6-webapp-archetype
    archetypes:
     - *jboss-javaee6-webapp-archetype
     - *jboss-javaee6-webapp-archetype-blank
@@ -311,7 +311,7 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-hibernate
     - *jboss-javaee-6_0-with-transactions
    defaultBom: *jboss-javaee-6_0
-   defaultArchetype: *jboss-javaee6-webapp-ear-archetype
+   defaultArchetype: *jboss-javaee6-webapp-archetype
    archetypes:
     - *jboss-javaee6-webapp-archetype
     - *jboss-javaee6-webapp-archetype-blank
