@@ -80,7 +80,7 @@ availableBoms:
    availableVersions: 
     - 1.0.0.Final
    labels:
-   
+
    ###############################
  - &jboss-javaee-6_0-with-tools
    name: Java EE 6 with tools recommended by JBoss
@@ -91,6 +91,7 @@ availableBoms:
    availableVersions: 
     - 1.0.0.Final
    labels:
+   	- jbossAsPluginVersion: 7.1.1.Final
   
    ################################
  
