@@ -91,7 +91,8 @@ availableBoms:
    availableVersions: 
     - 1.0.0.Final
    labels:
-  
+    - jbossASPluginVersion: 7.1.1.Final
+       
    ################################
  
  - &jboss-javaee-6_0-with-transactions

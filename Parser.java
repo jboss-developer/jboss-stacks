@@ -24,6 +24,7 @@ package org.jboss.stack.parser;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 import org.yaml.snakeyaml.TypeDescription;
 import org.yaml.snakeyaml.Yaml;
@@ -88,7 +89,7 @@ public class Parser {
 
         private List<String> availableVersions = new ArrayList<String>();
 
-        private List<String> labels = new ArrayList<String>();
+        private List<Properties> labels = new ArrayList<Properties>();
 
         public String getName() {
             return name;
@@ -140,11 +141,11 @@ public class Parser {
             this.availableVersions = availableVersions;
         }
 
-        public List<String> getLabels() {
+        public List<Properties> getLabels() {
             return labels;
         }
 
-        public void setLabels(List<String> labels) {
+        public void setLabels(List<Properties> labels) {
             this.labels = labels;
         }
 
@@ -218,7 +219,7 @@ public class Parser {
         private String version;
         private String url;
         private RuntimeType type;
-        private List<String> labels = new ArrayList<String>();
+        private List<Properties> labels = new ArrayList<Properties>();
 
         private List<Bom> boms = new ArrayList<Bom>();
         private Bom defaultBom;
@@ -258,11 +259,11 @@ public class Parser {
             this.type = type;
         }
 
-        public List<String> getLabels() {
+        public List<Properties> getLabels() {
             return labels;
         }
 
-        public void setLabels(List<String> labels) {
+        public void setLabels(List<Properties> labels) {
             this.labels = labels;
         }
 
@@ -391,7 +392,7 @@ public class Parser {
 
         private List<String> availableVersions = new ArrayList<String>();
 
-        private List<String> labels = new ArrayList<String>();
+        private List<Properties> labels = new ArrayList<Properties>();
 
         public String getName() {
             return name;
@@ -441,11 +442,11 @@ public class Parser {
             this.availableVersions = availableVersions;
         }
 
-        public List<String> getLabels() {
+        public List<Properties> getLabels() {
             return labels;
         }
 
-        public void setLabels(List<String> labels) {
+        public void setLabels(List<Properties> labels) {
             this.labels = labels;
         }
     }
