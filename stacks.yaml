@@ -40,6 +40,7 @@ availableBoms:
     - 3.0.0.Final
     - 3.0.1.Final
    labels:
+    -
    
    ##############################
 
@@ -53,7 +54,7 @@ availableBoms:
     - 3.0.0.Final
     - 3.0.1.Final
    labels:
-
+    -
 
    ##########################
    #    J D F    B O M S    #
@@ -68,7 +69,8 @@ availableBoms:
    availableVersions: 
     - 1.0.0.Final
    labels:
- 
+    -
+
    ##############################
 
  - &jboss-javaee-6_0-with-hibernate
@@ -80,6 +82,7 @@ availableBoms:
    availableVersions: 
     - 1.0.0.Final
    labels:
+    -
    
    ###############################
  - &jboss-javaee-6_0-with-tools
@@ -104,7 +107,7 @@ availableBoms:
    availableVersions: 
     - 1.0.0.Final
    labels:
-
+    -
    
 ##############################################################################
 #                                                                            #
@@ -133,7 +136,8 @@ availableArchetypes:
     - 7.1.1.Beta3
     - 7.1.1.CR1
    labels: 
-   
+    -
+
    #######################   
    
  - &jboss-javaee6-webapp-archetype-blank
@@ -145,7 +149,8 @@ availableArchetypes:
    availableVersions:
     - 7.0.2.CR2
    labels: 
-   
+    -
+
    #############################################
    #   E A R    A P P     A R C H E T Y P E S  #
    #############################################
@@ -163,7 +168,8 @@ availableArchetypes:
     - 7.1.1.Beta3
     - 7.1.1.CR1
    labels:    
-   
+    -
+
    ####################   
 
  - &jboss-javaee6-webapp-ear-archetype-blank
@@ -175,7 +181,8 @@ availableArchetypes:
    availableVersions:
     - 7.0.2.CR2
    labels: 
-   
+    -
+
    ###########################################
    #   O T H E R S     A R C H E T Y P E S   #
    ###########################################
@@ -189,7 +196,8 @@ availableArchetypes:
    availableVersions:
     - 7.0.2.CR2
    labels: 
-   
+    -
+
 ##########################################################################
 #                                                                        #
 #   L I S T    O F    A L L     A V A I L A B L E    R U N T I M E S     #
@@ -207,7 +215,6 @@ availableRuntimes:
    version: 6.0.0
    type: EAP
    url: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=12673&product=appplatform&version=&downloadType=distributions
-   labels: 
    boms:
     - *jboss-javaee-6_0
     - *jboss-javaee-6_0-with-errai
@@ -222,6 +229,8 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-archetype
     - *jboss-javaee6-webapp-ear-archetype-blank
     - *jboss-html5-mobile-archetype
+   labels: 
+    -
 
    ###############
    #   A S 7.1   #
@@ -233,7 +242,6 @@ availableRuntimes:
    version: 7.1.1.Final
    type: AS
    url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip
-   labels: 
    boms:
     - *jboss-javaee-6_0
     - *jboss-javaee-6_0-with-errai
@@ -248,6 +256,8 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-archetype
     - *jboss-javaee6-webapp-ear-archetype-blank
     - *jboss-html5-mobile-archetype
+   labels: 
+    -
 
    ###############
 
@@ -256,7 +266,6 @@ availableRuntimes:
    version: 7.1.0
    type: AS
    url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip
-   labels: 
    boms:
     - *jboss-javaee-6_0
     - *jboss-javaee-6_0-with-errai
@@ -271,6 +280,8 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-archetype
     - *jboss-javaee6-webapp-ear-archetype-blank
     - *jboss-html5-mobile-archetype
+   labels: 
+    -
  
    ###############
    #   A S 7.0   #
@@ -281,7 +292,6 @@ availableRuntimes:
    version: 7.0.2.Final
    type: AS
    url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-web-7.0.2.Final.zip
-   labels: 
    boms:
     - *jboss-javaee-6_0-web
     - *jboss-javaee-6_0-with-errai
@@ -296,6 +306,8 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-archetype
     - *jboss-javaee6-webapp-ear-archetype-blank
     - *jboss-html5-mobile-archetype
+   labels: 
+    -
     
    #################
    
@@ -304,7 +316,6 @@ availableRuntimes:
    version: 7.0.2.Final
    type: AS
    url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-7.0.2.Final.zip
-   labels: 
    boms:
     - *jboss-javaee-6_0
     - *jboss-javaee-6_0-with-errai
@@ -319,6 +330,8 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-archetype
     - *jboss-javaee6-webapp-ear-archetype-blank
     - *jboss-html5-mobile-archetype
+   labels: 
+    -
         
 ##########################################################
 #                                                        #
