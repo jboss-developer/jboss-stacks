@@ -124,7 +124,7 @@ availableArchetypes:
    description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true)
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-archetype
-   recommendedVersion: 7.0.2.CR2
+   recommendedVersion: 7.1.1.CR1
    availableVersions:
     - 7.0.2.CR2
     - 7.1.1.Beta1
@@ -154,7 +154,7 @@ availableArchetypes:
    description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true). The project is an EAR, with an EJB-JAR and WAR
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-ear-archetype
-   recommendedVersion: 7.0.2.CR2
+   recommendedVersion: 7.1.1.CR1
    availableVersions:
     - 7.0.2.CR2
     - 7.1.1.Beta1
