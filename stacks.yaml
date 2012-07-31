@@ -197,6 +197,21 @@ availableArchetypes:
     - 7.0.2.CR2
    labels: 
     -
+   ############################
+   #  RichFaces Archetypes    #
+   ############################
+
+ - &jboss-html5-mobile-archetype
+   name: RichFaces Archetypes Kitchen Sink Application
+   description: RichFaces Kitchen Sink Application
+   groupId: org.richfaces.archetypes
+   artifactId: richfaces-archetype-kitchensink
+   recommendedVersion: 4.2.2.Final-2
+   availableVersions:
+    - 4.2.2.Final-2
+   labels:
+    -
+
 
 ##########################################################################
 #                                                                        #
