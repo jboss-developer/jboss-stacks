@@ -197,11 +197,12 @@ availableArchetypes:
     - 7.0.2.CR2
    labels: 
     -
+
    ############################
    #  RichFaces Archetypes    #
    ############################
 
- - &jboss-html5-mobile-archetype
+ - &richfaces-archetype-kitchensink
    name: RichFaces Archetypes Kitchen Sink Application
    description: RichFaces Kitchen Sink Application
    groupId: org.richfaces.archetypes
@@ -212,6 +213,20 @@ availableArchetypes:
    labels:
     -
 
+   ############################
+   #  E R R A I   Archetype   #
+   ############################
+
+ - &jboss-errai-kitchensink-archetype
+   name: Errai Kitchen Sink Webapp Archetype
+   description: A starter Errai + Java EE 6 webapp project for use on JBoss AS 7 / EAP 6, generated from the jboss-errai-kitchensink-archetype archetype
+   groupId: org.jboss.errai.archetypes
+   artifactId: jboss-errai-kitchensink-archetype
+   recommendedVersion: 2.0.2.Final
+   availableVersions:
+    - 2.0.2.Final
+   labels:
+    -
 
 ##########################################################################
 #                                                                        #
