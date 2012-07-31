@@ -259,6 +259,8 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-archetype
     - *jboss-javaee6-webapp-ear-archetype-blank
     - *jboss-html5-mobile-archetype
+    - *richfaces-archetype-kitchensink
+    - *jboss-errai-kitchensink-archetype
    labels: 
     -
 
@@ -286,6 +288,8 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-archetype
     - *jboss-javaee6-webapp-ear-archetype-blank
     - *jboss-html5-mobile-archetype
+    - *richfaces-archetype-kitchensink
+    - *jboss-errai-kitchensink-archetype
    labels: 
     -
 
@@ -310,6 +314,8 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-archetype
     - *jboss-javaee6-webapp-ear-archetype-blank
     - *jboss-html5-mobile-archetype
+    - *richfaces-archetype-kitchensink
+    - *jboss-errai-kitchensink-archetype
    labels: 
     -
  
@@ -336,6 +342,8 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-archetype
     - *jboss-javaee6-webapp-ear-archetype-blank
     - *jboss-html5-mobile-archetype
+    - *richfaces-archetype-kitchensink
+    - *jboss-errai-kitchensink-archetype
    labels: 
     -
     
@@ -360,6 +368,8 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-archetype
     - *jboss-javaee6-webapp-ear-archetype-blank
     - *jboss-html5-mobile-archetype
+    - *richfaces-archetype-kitchensink
+    - *jboss-errai-kitchensink-archetype
    labels: 
     -
         
