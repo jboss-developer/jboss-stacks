@@ -183,23 +183,23 @@ availableArchetypes:
    labels: 
     -
 
-   ###########################################
-   #   O T H E R S     A R C H E T Y P E S   #
-   ###########################################
+   ############################
+   #    HTML5     Archetype   #
+   ############################
 
  - &jboss-html5-mobile-archetype
    name: Java EE 6 HTML5 Mobile Web Application
    description: An archetype that generates a Java EE 6 application using HTML5, and JAX-RS to support both desktop and mobile web browsers
-   groupId: org.jboss.spec.archetypes
+   groupId: org.jboss.aerogear.archetypes
    artifactId: jboss-html5-mobile-archetype
-   recommendedVersion: 7.0.2.CR2
+   recommendedVersion: 1.0.0.M4b
    availableVersions:
-    - 7.0.2.CR2
+    - 1.0.0.M4b
    labels: 
     -
 
    ############################
-   #  RichFaces Archetypes    #
+   #  RichFaces Archetype     #
    ############################
 
  - &richfaces-archetype-kitchensink
