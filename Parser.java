@@ -19,7 +19,7 @@
  * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
-package org.jboss.stack.parse;
+package org.jboss.stack.parser;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -223,11 +223,9 @@ public class Parser {
 
         private List<Bom> boms = new ArrayList<Bom>();
         private Bom defaultBom;
-        private String defaultBomVersion;
 
         private List<Archetype> archetypes = new ArrayList<Archetype>();
         private Archetype defaultArchetype;
-        private String defaultArchetypeVersion;
 
         public String getName() {
             return name;
@@ -299,30 +297,6 @@ public class Parser {
 
         public Archetype getDefaultArchetype() {
             return defaultArchetype;
-        }
-        
-        public String getDefaultArchetypeVersion() {
-            if (defaultArchetypeVersion == null){
-                return defaultArchetype.getRecommendedVersion();
-            }else{
-                return defaultArchetypeVersion;
-            }
-        }
-        
-        public String getDefaultBomVersion() {
-            if (defaultBomVersion == null){
-                return defaultBom.getRecommendedVersion();
-            }else{
-                return defaultBomVersion;
-            }
-        }
-        
-        public void setDefaultArchetypeVersion(String defaultArchetypeVersion) {
-            this.defaultArchetypeVersion = defaultArchetypeVersion;
-        }
-        
-        public void setDefaultBomVersion(String defaultBomVersion) {
-            this.defaultBomVersion = defaultBomVersion;
         }
 
     }

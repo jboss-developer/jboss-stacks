@@ -332,7 +332,6 @@ availableRuntimes:
     - *jboss-javaee-6_0-web
    defaultBom: *jboss-javaee-6_0-web
    defaultArchetype: *jboss-javaee6-webapp-archetype
-   defaultArchetypeVersion: 7.0.2.CR2
    archetypes:
     - *jboss-javaee6-webapp-archetype
     - *jboss-javaee6-webapp-archetype-blank
@@ -352,7 +351,6 @@ availableRuntimes:
     - *jboss-javaee-6_0
    defaultBom: *jboss-javaee-6_0
    defaultArchetype: *jboss-javaee6-webapp-archetype
-   defaultArchetypeVersion: 7.0.2.CR2
    archetypes:
     - *jboss-javaee6-webapp-archetype
     - *jboss-javaee6-webapp-archetype-blank
