@@ -330,10 +330,6 @@ availableRuntimes:
    url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-web-7.0.2.Final.zip
    boms:
     - *jboss-javaee-6_0-web
-    - *jboss-javaee-6_0-with-errai
-    - *jboss-javaee-6_0-with-tools
-    - *jboss-javaee-6_0-with-hibernate
-    - *jboss-javaee-6_0-with-transactions
    defaultBom: *jboss-javaee-6_0-web
    defaultArchetype: *jboss-javaee6-webapp-archetype
    archetypes:
@@ -341,9 +337,6 @@ availableRuntimes:
     - *jboss-javaee6-webapp-archetype-blank
     - *jboss-javaee6-webapp-ear-archetype
     - *jboss-javaee6-webapp-ear-archetype-blank
-    - *jboss-html5-mobile-archetype
-    - *richfaces-archetype-kitchensink
-    - *jboss-errai-kitchensink-archetype
    labels: 
     -
     
@@ -356,10 +349,6 @@ availableRuntimes:
    url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-7.0.2.Final.zip
    boms:
     - *jboss-javaee-6_0
-    - *jboss-javaee-6_0-with-errai
-    - *jboss-javaee-6_0-with-tools
-    - *jboss-javaee-6_0-with-hibernate
-    - *jboss-javaee-6_0-with-transactions
    defaultBom: *jboss-javaee-6_0
    defaultArchetype: *jboss-javaee6-webapp-archetype
    archetypes:
@@ -367,9 +356,6 @@ availableRuntimes:
     - *jboss-javaee6-webapp-archetype-blank
     - *jboss-javaee6-webapp-ear-archetype
     - *jboss-javaee6-webapp-ear-archetype-blank
-    - *jboss-html5-mobile-archetype
-    - *richfaces-archetype-kitchensink
-    - *jboss-errai-kitchensink-archetype
    labels: 
     -
         
