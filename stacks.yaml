@@ -275,7 +275,7 @@ availableArchetypeVersions:
    ########################################
    
  - &jboss-javaee6-webapp-archetype-blank-702cr2
-   archetype: 8jboss-javaee6-webapp-archetype-blank
+   archetype: *jboss-javaee6-webapp-archetype-blank
    version: 7.0.2.CR2
    labels:
     -

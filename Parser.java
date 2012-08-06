@@ -43,8 +43,10 @@ public class Parser {
                 .getClassLoader());
         TypeDescription stackDescription = new TypeDescription(Stacks.class);
         stackDescription.putListPropertyType("availableBoms", Bom.class);
+        stackDescription.putListPropertyType("availableBomVersions", BomVersion.class);
         stackDescription.putListPropertyType("availableRuntimes", Runtime.class);
         stackDescription.putListPropertyType("availableArchetypes", Archetype.class);
+        stackDescription.putListPropertyType("availableArchetypeVersions", ArchetypeVersion.class);
         stackDescription.putListPropertyType("minorReleases", MinorRelease.class);
         stackDescription.putListPropertyType("majorReleases", MajorRelease.class);
 
@@ -75,6 +77,40 @@ public class Parser {
         }
     }
 
+    public static class BomVersion {
+
+        private Bom bom;
+
+        private String version;
+
+        private List<Properties> labels = new ArrayList<Properties>();
+
+        public Bom getBom() {
+            return bom;
+        }
+
+        public void setBom(Bom bom) {
+            this.bom = bom;
+        }
+
+        public String getVersion() {
+            return version;
+        }
+
+        public void setVersion(String version) {
+            this.version = version;
+        }
+
+        public List<Properties> getLabels() {
+            return labels;
+        }
+
+        public void setLabels(List<Properties> labels) {
+            this.labels = labels;
+        }
+
+    }
+
     public static class Bom {
 
         private String name;
@@ -88,8 +124,6 @@ public class Parser {
         private String recommendedVersion;
 
         private List<String> availableVersions = new ArrayList<String>();
-
-        private List<Properties> labels = new ArrayList<Properties>();
 
         public String getName() {
             return name;
@@ -141,14 +175,6 @@ public class Parser {
             this.availableVersions = availableVersions;
         }
 
-        public List<Properties> getLabels() {
-            return labels;
-        }
-
-        public void setLabels(List<Properties> labels) {
-            this.labels = labels;
-        }
-
         @Override
         public String toString() {
             return this.getArtifactId();
@@ -161,7 +187,11 @@ public class Parser {
 
         private List<Bom> availableBoms;
 
+        private List<BomVersion> availableBomVersions;
+
         private List<Archetype> availableArchetypes;
+
+        private List<ArchetypeVersion> availableArchetypeVersions;
 
         private List<MinorRelease> minorReleases;
 
@@ -207,6 +237,21 @@ public class Parser {
             this.majorReleases = majorReleases;
         }
 
+        public List<BomVersion> getAvailableBomVersions() {
+            return availableBomVersions;
+        }
+
+        public void setAvailableBomVersions(List<BomVersion> availableBomVersions) {
+            this.availableBomVersions = availableBomVersions;
+        }
+
+        public List<ArchetypeVersion> getAvailableArchetypeVersions() {
+            return availableArchetypeVersions;
+        }
+
+        public void setAvailableArchetypeVersions(List<ArchetypeVersion> availableArchetypeVersions) {
+            this.availableArchetypeVersions = availableArchetypeVersions;
+        }
     }
 
     public static enum RuntimeType {
@@ -223,9 +268,11 @@ public class Parser {
 
         private List<Bom> boms = new ArrayList<Bom>();
         private Bom defaultBom;
+        private String defaultBomVersion;
 
         private List<Archetype> archetypes = new ArrayList<Archetype>();
         private Archetype defaultArchetype;
+        private String defaultArchetypeVersion;
 
         public String getName() {
             return name;
@@ -297,6 +344,30 @@ public class Parser {
 
         public Archetype getDefaultArchetype() {
             return defaultArchetype;
+        }
+
+        public String getDefaultArchetypeVersion() {
+            if (defaultArchetypeVersion == null) {
+                return defaultArchetype.getRecommendedVersion();
+            } else {
+                return defaultArchetypeVersion;
+            }
+        }
+
+        public String getDefaultBomVersion() {
+            if (defaultBomVersion == null) {
+                return defaultBom.getRecommendedVersion();
+            } else {
+                return defaultBomVersion;
+            }
+        }
+
+        public void setDefaultArchetypeVersion(String defaultArchetypeVersion) {
+            this.defaultArchetypeVersion = defaultArchetypeVersion;
+        }
+
+        public void setDefaultBomVersion(String defaultBomVersion) {
+            this.defaultBomVersion = defaultBomVersion;
         }
 
     }
@@ -378,6 +449,39 @@ public class Parser {
         }
     }
 
+    public static class ArchetypeVersion {
+        private Archetype archetype;
+
+        private String version;
+
+        private List<Properties> labels = new ArrayList<Properties>();
+
+        public Archetype getArchetype() {
+            return archetype;
+        }
+
+        public void setArchetype(Archetype archetype) {
+            this.archetype = archetype;
+        }
+
+        public String getVersion() {
+            return version;
+        }
+
+        public void setVersion(String version) {
+            this.version = version;
+        }
+
+        public List<Properties> getLabels() {
+            return labels;
+        }
+
+        public void setLabels(List<Properties> labels) {
+            this.labels = labels;
+        }
+
+    }
+
     public static class Archetype {
 
         private String name;
@@ -391,8 +495,6 @@ public class Parser {
         private String recommendedVersion;
 
         private List<String> availableVersions = new ArrayList<String>();
-
-        private List<Properties> labels = new ArrayList<Properties>();
 
         public String getName() {
             return name;
@@ -442,13 +544,6 @@ public class Parser {
             this.availableVersions = availableVersions;
         }
 
-        public List<Properties> getLabels() {
-            return labels;
-        }
-
-        public void setLabels(List<Properties> labels) {
-            this.labels = labels;
-        }
     }
 
 }
