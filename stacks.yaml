@@ -360,8 +360,8 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-tools-100
     - *jboss-javaee-6_0-with-hibernate-100
     - *jboss-javaee-6_0-with-transactions-100
-   defaultBom: *jboss-javaee-6_0
-   defaultArchetype: *jboss-javaee6-webapp-archetype
+   defaultBom: *jboss-javaee-6_0-301
+   defaultArchetype: *jboss-javaee6-webapp-archetype-711cr1
    archetypes:
     - *jboss-javaee6-webapp-archetype-711cr1
     - *jboss-javaee6-webapp-archetype-blank-702cr2
@@ -389,8 +389,8 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-tools-100
     - *jboss-javaee-6_0-with-hibernate-100
     - *jboss-javaee-6_0-with-transactions-100
-   defaultBom: *jboss-javaee-6_0
-   defaultArchetype: *jboss-javaee6-webapp-archetype
+   defaultBom: *jboss-javaee-6_0-301
+   defaultArchetype: *jboss-javaee6-webapp-archetype-711cr1
    archetypes:
     - *jboss-javaee6-webapp-archetype-711cr1
     - *jboss-javaee6-webapp-archetype-blank-702cr2
@@ -415,8 +415,8 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-tools-100
     - *jboss-javaee-6_0-with-hibernate-100
     - *jboss-javaee-6_0-with-transactions-100
-   defaultBom: *jboss-javaee-6_0
-   defaultArchetype: *jboss-javaee6-webapp-archetype
+   defaultBom: *jboss-javaee-6_0-301
+   defaultArchetype: *jboss-javaee6-webapp-archetype-711cr1
    archetypes:
     - *jboss-javaee6-webapp-archetype-711cr1
     - *jboss-javaee6-webapp-archetype-blank-702cr2
@@ -438,9 +438,9 @@ availableRuntimes:
    type: AS
    url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-web-7.0.2.Final.zip
    boms:
-    - *jboss-javaee-6_0-web
-   defaultBom: *jboss-javaee-6_0-web
-   defaultArchetype: *jboss-javaee6-webapp-archetype
+    - *jboss-javaee-6_0-web-300
+   defaultBom: *jboss-javaee-6_0-web-300
+   defaultArchetype: *jboss-javaee6-webapp-archetype-702cr2
    archetypes:
     - *jboss-javaee6-webapp-archetype-702cr2
     - *jboss-javaee6-webapp-archetype-blank-702cr2
@@ -457,9 +457,9 @@ availableRuntimes:
    type: AS
    url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-7.0.2.Final.zip
    boms:
-    - *jboss-javaee-6_0
-   defaultBom: *jboss-javaee-6_0
-   defaultArchetype: *jboss-javaee6-webapp-archetype
+    - *jboss-javaee-6_0-300
+   defaultBom: *jboss-javaee-6_0-300
+   defaultArchetype: *jboss-javaee6-webapp-archetype-702cr2
    archetypes:
     - *jboss-javaee6-webapp-archetype-702cr2
     - *jboss-javaee6-webapp-archetype-blank-702cr2

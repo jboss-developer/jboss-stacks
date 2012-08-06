@@ -19,7 +19,7 @@
  * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
-package org.jboss.stack.parser;
+package org.jboss.stacks.parser;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -266,13 +266,11 @@ public class Parser {
         private RuntimeType type;
         private List<Properties> labels = new ArrayList<Properties>();
 
-        private List<Bom> boms = new ArrayList<Bom>();
-        private Bom defaultBom;
-        private String defaultBomVersion;
+        private List<BomVersion> boms = new ArrayList<BomVersion>();
+        private BomVersion defaultBom;
 
-        private List<Archetype> archetypes = new ArrayList<Archetype>();
-        private Archetype defaultArchetype;
-        private String defaultArchetypeVersion;
+        private List<ArchetypeVersion> archetypes = new ArrayList<ArchetypeVersion>();
+        private ArchetypeVersion defaultArchetype;
 
         public String getName() {
             return name;
@@ -314,60 +312,36 @@ public class Parser {
             this.labels = labels;
         }
 
-        public List<Bom> getBoms() {
+        public List<BomVersion> getBoms() {
             return boms;
         }
 
-        public void setBoms(List<Bom> boms) {
+        public void setBoms(List<BomVersion> boms) {
             this.boms = boms;
         }
 
-        public Bom getDefaultBom() {
+        public BomVersion getDefaultBom() {
             return defaultBom;
         }
 
-        public void setDefaultBom(Bom defaultBom) {
+        public void setDefaultBom(BomVersion defaultBom) {
             this.defaultBom = defaultBom;
         }
 
-        public List<Archetype> getArchetypes() {
+        public List<ArchetypeVersion> getArchetypes() {
             return archetypes;
         }
 
-        public void setArchetypes(List<Archetype> archetypes) {
+        public void setArchetypes(List<ArchetypeVersion> archetypes) {
             this.archetypes = archetypes;
         }
 
-        public void setDefaultArchetype(Archetype defaultArchetype) {
+        public void setDefaultArchetype(ArchetypeVersion defaultArchetype) {
             this.defaultArchetype = defaultArchetype;
         }
 
-        public Archetype getDefaultArchetype() {
+        public ArchetypeVersion getDefaultArchetype() {
             return defaultArchetype;
-        }
-
-        public String getDefaultArchetypeVersion() {
-            if (defaultArchetypeVersion == null) {
-                return defaultArchetype.getRecommendedVersion();
-            } else {
-                return defaultArchetypeVersion;
-            }
-        }
-
-        public String getDefaultBomVersion() {
-            if (defaultBomVersion == null) {
-                return defaultBom.getRecommendedVersion();
-            } else {
-                return defaultBomVersion;
-            }
-        }
-
-        public void setDefaultArchetypeVersion(String defaultArchetypeVersion) {
-            this.defaultArchetypeVersion = defaultArchetypeVersion;
-        }
-
-        public void setDefaultBomVersion(String defaultBomVersion) {
-            this.defaultBomVersion = defaultBomVersion;
         }
 
     }
