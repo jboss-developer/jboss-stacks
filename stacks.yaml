@@ -36,11 +36,6 @@ availableBoms:
    groupId: org.jboss.spec
    artifactId: jboss-javaee-all-6.0
    recommendedVersion: 3.0.0.Final
-   availableVersions: 
-    - 3.0.0.Final
-    - 3.0.1.Final
-   labels:
-    -
    
    ##############################
 
@@ -50,11 +45,6 @@ availableBoms:
    groupId: org.jboss.spec
    artifactId: jboss-javaee-web-6.0
    recommendedVersion: 3.0.0.Final
-   availableVersions: 
-    - 3.0.0.Final
-    - 3.0.1.Final
-   labels:
-    -
 
    ##########################
    #    J D F    B O M S    #
@@ -66,10 +56,6 @@ availableBoms:
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-errai
    recommendedVersion: 1.0.0.Final
-   availableVersions: 
-    - 1.0.0.Final
-   labels:
-    -
 
    ##############################
 
@@ -79,10 +65,6 @@ availableBoms:
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-hibernate
    recommendedVersion: 1.0.0.Final
-   availableVersions: 
-    - 1.0.0.Final
-   labels:
-    -
    
    ###############################
  - &jboss-javaee-6_0-with-tools
@@ -91,10 +73,6 @@ availableBoms:
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-tools
    recommendedVersion: 1.0.0.Final
-   availableVersions: 
-    - 1.0.0.Final
-   labels:
-    - jbossASPluginVersion: 7.1.1.Final
        
    ################################
  
@@ -104,11 +82,87 @@ availableBoms:
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-transactions
    recommendedVersion: 1.0.0.Final
-   availableVersions: 
-    - 1.0.0.Final
+
+#####################################################################################
+#                                                                                   #
+#   L I S T    O F    A L L     A V A I L A B L E    B O M      V E R S I O N S     #
+#                                                                                   #
+#####################################################################################
+
+availableBomVersions:
+
+   ################
+   #  Java EE 6   #
+   ################
+
+ - &jboss-javaee-6_0-300
+   bom: *jboss-javaee-6_0
+   version: 3.0.0.Final
+   labels:
+    -
+ 
+ - &jboss-javaee-6_0-301
+   bom: *jboss-javaee-6_0
+   version: 3.0.1.Final
    labels:
     -
    
+   ###################
+   #  Java EE 6 Web  #
+   ###################
+   
+ - &jboss-javaee-6_0-web-300
+   bom: *jboss-javaee-6_0-web
+   version: 3.0.0.Final
+   labels:
+    -
+   
+ - &jboss-javaee-6_0-web-301
+   bom: *jboss-javaee-6_0-web
+   version: 3.0.1.Final
+   labels:
+    -
+   
+   ###################################
+   #   Java EE 6 with Errai and GWT  #
+   ###################################
+   
+ - &jboss-javaee-6_0-with-errai-100
+   bom: *jboss-javaee-6_0-with-errai
+   version: 1.0.0.Final
+   labels:
+    -
+   
+   ##################################
+   #   Java EE 6 with Hibernate     #
+   ##################################
+   
+ - &jboss-javaee-6_0-with-hibernate-100
+   bom: *jboss-javaee-6_0-with-hibernate
+   version: 1.0.0.Final
+   labels:
+    -
+  
+   ##################################################
+   #   Java EE 6 with tools recommended by JBoss    #
+   ##################################################
+
+ - &jboss-javaee-6_0-with-tools-100
+   bom: *jboss-javaee-6_0-with-tools
+   version: 1.0.0.Final
+   labels:
+    - jbossASPluginVersion: 7.1.1.Final
+   
+   #########################################
+   #   Java EE 6 with JBoss Transactions   #
+   #########################################
+   
+ - &jboss-javaee-6_0-with-transactions-100
+   bom: *jboss-javaee-6_0-with-transactions
+   version: 1.0.0.Final
+   labels:
+    -
+  
 ##############################################################################
 #                                                                            #
 #   L I S T    O F    A L L     A V A I L A B L E    A R C H E T Y P E S     #
@@ -129,14 +183,6 @@ availableArchetypes:
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-archetype
    recommendedVersion: 7.1.1.CR1
-   availableVersions:
-    - 7.0.2.CR2
-    - 7.1.1.Beta1
-    - 7.1.1.Beta2
-    - 7.1.1.Beta3
-    - 7.1.1.CR1
-   labels: 
-    -
 
    #######################   
    
@@ -146,10 +192,6 @@ availableArchetypes:
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-archetype-blank
    recommendedVersion: 7.0.2.CR2
-   availableVersions:
-    - 7.0.2.CR2
-   labels: 
-    -
 
    #############################################
    #   E A R    A P P     A R C H E T Y P E S  #
@@ -161,14 +203,6 @@ availableArchetypes:
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-ear-archetype
    recommendedVersion: 7.1.1.CR1
-   availableVersions:
-    - 7.0.2.CR2
-    - 7.1.1.Beta1
-    - 7.1.1.Beta2
-    - 7.1.1.Beta3
-    - 7.1.1.CR1
-   labels:    
-    -
 
    ####################   
 
@@ -178,10 +212,6 @@ availableArchetypes:
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-ear-archetype-blank
    recommendedVersion: 7.0.2.CR2
-   availableVersions:
-    - 7.0.2.CR2
-   labels: 
-    -
 
    ############################
    #    HTML5     Archetype   #
@@ -193,10 +223,6 @@ availableArchetypes:
    groupId: org.jboss.aerogear.archetypes
    artifactId: jboss-html5-mobile-archetype
    recommendedVersion: 1.0.0.M4b
-   availableVersions:
-    - 1.0.0.M4b
-   labels: 
-    -
 
    ############################
    #  RichFaces Archetype     #
@@ -208,10 +234,6 @@ availableArchetypes:
    groupId: org.richfaces.archetypes
    artifactId: richfaces-archetype-kitchensink
    recommendedVersion: 4.2.2.Final-2
-   availableVersions:
-    - 4.2.2.Final-2
-   labels:
-    -
 
    ############################
    #  E R R A I   Archetype   #
@@ -223,11 +245,98 @@ availableArchetypes:
    groupId: org.jboss.errai.archetypes
    artifactId: jboss-errai-kitchensink-archetype
    recommendedVersion: 2.0.2.Final
-   availableVersions:
-    - 2.0.2.Final
+
+###############################################################################################
+#                                                                                             #
+#   L I S T    O F    A L L     A V A I L A B L E    A R C H E T Y P E S    V E R S I O N S   #
+#                                                                                             #
+###############################################################################################
+
+availableArchetypeVersions:
+ 
+   #######################
+   #   Java EE 6 Webapp  #
+   #######################
+ 
+ - &jboss-javaee6-webapp-archetype-702cr2
+   archetype: *jboss-javaee6-webapp-archetype
+   version: 7.0.2.CR2
    labels:
     -
 
+ - &jboss-javaee6-webapp-archetype-711cr1
+   archetype: *jboss-javaee6-webapp-archetype
+   version: 7.1.1.CR1
+   labels:
+    -
+   
+   ########################################
+   #   Java EE 6 Webapp (Blank Skeleton)  #
+   ########################################
+   
+ - &jboss-javaee6-webapp-archetype-blank-702cr2
+   archetype: 8jboss-javaee6-webapp-archetype-blank
+   version: 7.0.2.CR2
+   labels:
+    -
+   
+   ########################################
+   #   JBoss AS 7 / Java EE 6 EAR Webapp  #
+   ########################################
+
+ - &jboss-javaee6-webapp-ear-archetype-702cr2
+   archetype: *jboss-javaee6-webapp-ear-archetype
+   version: 7.0.2.CR2
+   labels:
+    -
+    
+ - &jboss-javaee6-webapp-ear-archetype-711cr1
+   archetype: *jboss-javaee6-webapp-ear-archetype
+   version: 7.1.1.CR1
+   labels:
+    -
+
+   ##########################################################
+   #   JBoss AS 7 / Java EE 6 EAR Webapp (Blank Skeleton)   #
+   ##########################################################
+   
+ - &jboss-javaee6-webapp-ear-archetype-blank-702cr2
+   archetype: *jboss-javaee6-webapp-ear-archetype-blank
+   version: 7.0.2.CR2
+   labels:
+    -
+   
+   ###############################################
+   #   Java EE 6 HTML5 Mobile Web Application    #
+   ###############################################
+   
+ - &jboss-html5-mobile-archetype-100m4b
+   archetype: *jboss-html5-mobile-archetype
+   version: 1.0.0.M4b
+   labels:
+    -
+   
+   ####################################################
+   #   RichFaces Archetypes Kitchen Sink Application  #
+   ####################################################
+   
+ - &richfaces-archetype-kitchensink-422final2
+   archetype: *richfaces-archetype-kitchensink
+   version: 4.2.2.Final-2
+   labels:
+    -
+   
+   ###########################################
+   #   Errai Kitchen Sink Webapp Archetype   #
+   ###########################################
+   
+ - &jboss-errai-kitchensink-archetype-202final
+   archetype: *jboss-errai-kitchensink-archetype
+   version: 2.0.2.Final
+   labels:
+    -
+   
+   
 ##########################################################################
 #                                                                        #
 #   L I S T    O F    A L L     A V A I L A B L E    R U N T I M E S     #
@@ -246,21 +355,21 @@ availableRuntimes:
    type: EAP
    url: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=12673&product=appplatform&version=&downloadType=distributions
    boms:
-    - *jboss-javaee-6_0
-    - *jboss-javaee-6_0-with-errai
-    - *jboss-javaee-6_0-with-tools
-    - *jboss-javaee-6_0-with-hibernate
-    - *jboss-javaee-6_0-with-transactions
+    - *jboss-javaee-6_0-301
+    - *jboss-javaee-6_0-with-errai-100
+    - *jboss-javaee-6_0-with-tools-100
+    - *jboss-javaee-6_0-with-hibernate-100
+    - *jboss-javaee-6_0-with-transactions-100
    defaultBom: *jboss-javaee-6_0
    defaultArchetype: *jboss-javaee6-webapp-archetype
    archetypes:
-    - *jboss-javaee6-webapp-archetype
-    - *jboss-javaee6-webapp-archetype-blank
-    - *jboss-javaee6-webapp-ear-archetype
-    - *jboss-javaee6-webapp-ear-archetype-blank
-    - *jboss-html5-mobile-archetype
-    - *richfaces-archetype-kitchensink
-    - *jboss-errai-kitchensink-archetype
+    - *jboss-javaee6-webapp-archetype-711cr1
+    - *jboss-javaee6-webapp-archetype-blank-702cr2
+    - *jboss-javaee6-webapp-ear-archetype-711cr1
+    - *jboss-javaee6-webapp-ear-archetype-blank-702cr2
+    - *jboss-html5-mobile-archetype-100m4b
+    - *richfaces-archetype-kitchensink-422final2
+    - *jboss-errai-kitchensink-archetype-202final
    labels: 
     -
 
@@ -275,21 +384,21 @@ availableRuntimes:
    type: AS
    url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip
    boms:
-    - *jboss-javaee-6_0
-    - *jboss-javaee-6_0-with-errai
-    - *jboss-javaee-6_0-with-tools
-    - *jboss-javaee-6_0-with-hibernate
-    - *jboss-javaee-6_0-with-transactions
+    - *jboss-javaee-6_0-301
+    - *jboss-javaee-6_0-with-errai-100
+    - *jboss-javaee-6_0-with-tools-100
+    - *jboss-javaee-6_0-with-hibernate-100
+    - *jboss-javaee-6_0-with-transactions-100
    defaultBom: *jboss-javaee-6_0
    defaultArchetype: *jboss-javaee6-webapp-archetype
    archetypes:
-    - *jboss-javaee6-webapp-archetype
-    - *jboss-javaee6-webapp-archetype-blank
-    - *jboss-javaee6-webapp-ear-archetype
-    - *jboss-javaee6-webapp-ear-archetype-blank
-    - *jboss-html5-mobile-archetype
-    - *richfaces-archetype-kitchensink
-    - *jboss-errai-kitchensink-archetype
+    - *jboss-javaee6-webapp-archetype-711cr1
+    - *jboss-javaee6-webapp-archetype-blank-702cr2
+    - *jboss-javaee6-webapp-ear-archetype-711cr1
+    - *jboss-javaee6-webapp-ear-archetype-blank-702cr2
+    - *jboss-html5-mobile-archetype-100m4b
+    - *richfaces-archetype-kitchensink-422final2
+    - *jboss-errai-kitchensink-archetype-202final
    labels: 
     -
 
@@ -301,21 +410,21 @@ availableRuntimes:
    type: AS
    url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip
    boms:
-    - *jboss-javaee-6_0
-    - *jboss-javaee-6_0-with-errai
-    - *jboss-javaee-6_0-with-tools
-    - *jboss-javaee-6_0-with-hibernate
-    - *jboss-javaee-6_0-with-transactions
+    - *jboss-javaee-6_0-301
+    - *jboss-javaee-6_0-with-errai-100
+    - *jboss-javaee-6_0-with-tools-100
+    - *jboss-javaee-6_0-with-hibernate-100
+    - *jboss-javaee-6_0-with-transactions-100
    defaultBom: *jboss-javaee-6_0
    defaultArchetype: *jboss-javaee6-webapp-archetype
    archetypes:
-    - *jboss-javaee6-webapp-archetype
-    - *jboss-javaee6-webapp-archetype-blank
-    - *jboss-javaee6-webapp-ear-archetype
-    - *jboss-javaee6-webapp-ear-archetype-blank
-    - *jboss-html5-mobile-archetype
-    - *richfaces-archetype-kitchensink
-    - *jboss-errai-kitchensink-archetype
+    - *jboss-javaee6-webapp-archetype-711cr1
+    - *jboss-javaee6-webapp-archetype-blank-702cr2
+    - *jboss-javaee6-webapp-ear-archetype-711cr1
+    - *jboss-javaee6-webapp-ear-archetype-blank-702cr2
+    - *jboss-html5-mobile-archetype-100m4b
+    - *richfaces-archetype-kitchensink-422final2
+    - *jboss-errai-kitchensink-archetype-202final
    labels: 
     -
  
@@ -333,10 +442,10 @@ availableRuntimes:
    defaultBom: *jboss-javaee-6_0-web
    defaultArchetype: *jboss-javaee6-webapp-archetype
    archetypes:
-    - *jboss-javaee6-webapp-archetype
-    - *jboss-javaee6-webapp-archetype-blank
-    - *jboss-javaee6-webapp-ear-archetype
-    - *jboss-javaee6-webapp-ear-archetype-blank
+    - *jboss-javaee6-webapp-archetype-702cr2
+    - *jboss-javaee6-webapp-archetype-blank-702cr2
+    - *jboss-javaee6-webapp-ear-archetype-702cr2
+    - *jboss-javaee6-webapp-ear-archetype-blank-702cr2
    labels: 
     -
     
@@ -352,10 +461,10 @@ availableRuntimes:
    defaultBom: *jboss-javaee-6_0
    defaultArchetype: *jboss-javaee6-webapp-archetype
    archetypes:
-    - *jboss-javaee6-webapp-archetype
-    - *jboss-javaee6-webapp-archetype-blank
-    - *jboss-javaee6-webapp-ear-archetype
-    - *jboss-javaee6-webapp-ear-archetype-blank
+    - *jboss-javaee6-webapp-archetype-702cr2
+    - *jboss-javaee6-webapp-archetype-blank-702cr2
+    - *jboss-javaee6-webapp-ear-archetype-702cr2
+    - *jboss-javaee6-webapp-ear-archetype-blank-702cr2
    labels: 
     -
         
