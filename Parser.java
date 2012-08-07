@@ -123,8 +123,6 @@ public class Parser {
 
         private String recommendedVersion;
 
-        private List<String> availableVersions = new ArrayList<String>();
-
         public String getName() {
             return name;
         }
@@ -165,14 +163,6 @@ public class Parser {
 
         public void setRecommendedVersion(String recommendedVersion) {
             this.recommendedVersion = recommendedVersion;
-        }
-
-        public List<String> getAvailableVersions() {
-            return availableVersions;
-        }
-
-        public void setAvailableVersions(List<String> availableVersions) {
-            this.availableVersions = availableVersions;
         }
 
         @Override
@@ -468,8 +458,6 @@ public class Parser {
 
         private String recommendedVersion;
 
-        private List<String> availableVersions = new ArrayList<String>();
-
         public String getName() {
             return name;
         }
@@ -508,14 +496,6 @@ public class Parser {
 
         public void setRecommendedVersion(String recommendedVersion) {
             this.recommendedVersion = recommendedVersion;
-        }
-
-        public List<String> getAvailableVersions() {
-            return availableVersions;
-        }
-
-        public void setAvailableVersions(List<String> availableVersions) {
-            this.availableVersions = availableVersions;
         }
 
     }
