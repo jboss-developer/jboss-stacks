@@ -251,6 +251,8 @@ public class Parser {
     public static class Runtime {
 
         private String name;
+        private String groupId;
+        private String artifactId;
         private String version;
         private String url;
         private RuntimeType type;
@@ -268,6 +270,22 @@ public class Parser {
 
         public void setName(String name) {
             this.name = name;
+        }
+
+        public String getGroupId() {
+            return groupId;
+        }
+
+        public void setGroupId(final String groupId) {
+            this.groupId = groupId;
+        }
+
+        public String getArtifactId() {
+            return artifactId;
+        }
+
+        public void setArtifactId(final String artifactId) {
+            this.artifactId = artifactId;
         }
 
         public String getVersion() {
