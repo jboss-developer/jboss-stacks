@@ -1,0 +1,716 @@
+artifacts:
+
+ - name: bean-validation
+   useCases: 
+    - Bean Validation
+    - test Using Arquilian
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-with-tools-100
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-bmt
+   useCases: 
+    - Demonstrates bean-managed transactions (BMT)
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-cdi-injection
+   useCases: 
+    - Demonstrates the use of CDI
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-cmt
+   useCases: 
+    - Demonstrates container-managed transactions (CMT)
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-with-tools-100
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-ejb-in-ear
+   useCases: 
+    - Packages an EJB JAR and WAR in an EAR
+   archetype: *jboss-javaee6-webapp-ear-archetype-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+
+ - name: jboss-as-ejb-in-war
+   useCases: 
+    - Deployment of a WAR Containing an EJB
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-with-tools-100
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web   
+   
+   ###########################################
+   
+ - name: jboss-as-ejb-remote
+   useCases: 
+    - Access an EJB from a remote Java client
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web   
+   
+   ###########################################
+   
+ - name: jboss-as-ejb-security
+   useCases: 
+    - Use Java EE Declarative Security
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web 
+   
+   ###########################################
+   
+ - name: jboss-as-greeter
+   useCases: 
+    - Demonstrates the use of CDI 1.0, JPA 2.0, JTA 1.1, EJB 3.1 and JSF 2.0
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web 
+   
+   ###########################################
+   
+ - name: jboss-as-helloworld
+   useCases: 
+    - Basic example
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web 
+   
+   ###########################################
+   
+ - name: jboss-as-helloworld-errai
+   useCases: 
+    - Helloworld using the Errai framework
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-with-errai-100
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web 
+   
+   ###########################################
+   
+ - name: jboss-as-helloworld-gwt
+   useCases: 
+    - Use of CDI 1.0 and JAX-RS with a GWT front-end client
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web 
+   
+   ###########################################
+   
+ - name: jboss-as-helloworld-html5
+   useCases: 
+    - Basic HTML5 example
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-with-tools-100
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web 
+   
+   ###########################################
+   
+ - name: jboss-as-helloworld-jms
+   useCases: 
+    - Use of a standalone (Java SE) JMS client
+   archetype: 
+   bom:
+    - 
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: full
+   
+   ###########################################
+   
+ - name: jboss-as-helloworld-jsf
+   useCases: 
+    - Basic HTML5 example
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+    - TODO use -with-richfaces BOM
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web 
+   
+   ###########################################
+   
+ - name: jboss-as-helloworld-mdb
+   useCases: 
+    - Use of JMS 1.1 and EJB 3.1 Message-Driven Bean
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: full
+   
+   ###########################################
+   
+ - name: jboss-as-helloworld-osgi
+   useCases: 
+    - Create and deploy a simple OSGi Bundle
+   archetype: 
+   bom:
+    - 
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-helloworld-rs
+   useCases: 
+    - Demonstrates the use of CDI 1.0 and JAX-RS
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: full
+   
+   ###########################################
+   
+ - name: jboss-as-helloworld-singleton
+   useCases: 
+    - Use of an EJB 3.1 Singleton Session Bean
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-hibernate3
+   useCases: 
+    - Uses Hibernate 3
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+    - TODO use -with-hibernate3 BOM
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-hibernate4
+   useCases: 
+    - Uses Hibernate 4
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-with-hibernate-100
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-inter-app
+   useCases: 
+    - How to communicate between two applications using EJB and CDI
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-jax-rs-client
+   useCases: 
+    - Use an external JAX-RS RestEasy client which interacts with a JAX-RS Web service
+   archetype: 
+   bom:
+    - 
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: 
+   
+   ###########################################
+   
+ - name: jboss-as-jta-crash-rec
+   useCases: 
+    - Uses Java Transaction API and JBoss Transactions to demonstrate recovery of a crashed transaction
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-web-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-jts
+   useCases: 
+    - Uses Java Transaction API and JBoss Transactions to demonstrate recovery of a crashed transaction
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-kitchensink
+   useCases: 
+    - Uses JSF 2.0, CDI 1.0, EJB 3.1, JPA 2.0 and Bean Validation 1.0.
+   archetype: *jboss-javaee6-webapp-archetype-711cr1
+   bom:
+    - *jboss-javaee-6_0-with-tools-100
+    - *jboss-javaee-6_0-with-hibernate-100
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: full
+   
+   ########################################### 
+   
+ - name: jboss-as-kitchensink-ear
+   useCases: 
+    - Uses JSF 2.0, CDI 1.0, EJB 3.1, JPA 2.0 and Bean Validation 1.0.
+    - Deploy using EAR
+   archetype: *jboss-javaee6-webapp-ear-archetype-711cr1
+   bom:
+    - *jboss-javaee-6_0-with-tools-100
+    - *jboss-javaee-6_0-with-hibernate-100
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: full
+   
+   ########################################### 
+   
+ - name: jboss-as-kitchensink
+   useCases: 
+    - Uses JSF 2.0, CDI 1.0, EJB 3.1, JPA 2.0 and Bean Validation 1.0.
+   archetype: *jboss-javaee6-webapp-archetype-711cr1
+   bom:
+    - *jboss-javaee-6_0-with-tools-100
+    - *jboss-javaee-6_0-with-hibernate-100
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: full
+   
+   ########################################### 
+   
+ - name: jboss-as-kitchensink-html5-mobile
+   useCases: 
+    - Uses JSF 2.0, CDI 1.0, EJB 3.1, JPA 2.0 and Bean Validation 1.0.
+   archetype: *jboss-html5-mobile-archetype-100m4b
+   bom:
+    - *jboss-javaee-6_0-web-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ########################################### 
+   
+ - name: jboss-as-kitchensink-jsp
+   useCases: 
+    - Uses JSF 2.0, CDI 1.0, EJB 3.1, JPA 2.0 and Bean Validation 1.0.
+    - Uses JSP as interface
+   archetype: *jboss-javaee6-webapp-archetype-711cr1
+   bom:
+    - *jboss-javaee-6_0-with-tools-100
+    - *jboss-javaee-6_0-with-hibernate-100
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-log4j
+   useCases: 
+    - Use modules to control class loading for 3rd party logging frameworks
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - TODO use -with-logging BOM
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-logging-tools
+   useCases: 
+    - Use of JBoss Logging Tools to create internationalized loggers
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-mail
+   useCases: 
+    - Demonstrates the use of JavaMail
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: full
+   
+   ###########################################
+   
+ - name: jboss-as-numberguess
+   useCases: 
+    - Demonstrates the use of CDI 1.0 and JSF 2.0
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-payment-cdi-event
+   useCases: 
+    - Demonstrates how to use CDI 1.0 Events
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+    - *jboss-javaee-6_0-with-hibernate-100
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-richfaces-validation
+   useCases: 
+    - Demonstrates RichFaces and bean validation
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-with-tools-100
+    - TODO uses -with-richfaces BOM
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-servlet-async
+   useCases: 
+    - Demonstrates CDI, plus asynchronous Servlets and EJBs
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-servlet-filterlistener
+   useCases: 
+    - Demonstrates Servlet filters and listeners
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-servlet-security
+   useCases: 
+    - Use Java EE declarative security to control access to Servlet 3
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-tasks
+   useCases: 
+    - Testing JPA using Arquillian
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-with-tools-100
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-tasks-jsf
+   useCases: 
+    - Testing JPA using Arquillian
+    - Provides a JSF 2.0 as view layer
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-with-tools-100
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-tasks-rs
+   useCases: 
+    - Demonstrates how to use JAX-RS and JPA together
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-with-tools-100
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: full
+   
+   ###########################################
+   
+ - name: jboss-as-temperature-converter
+   useCases: 
+    - Demonstrates a stateless session bean 
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-wicket-ear
+   useCases: 
+    - Demonstrates how to use the Wicket Framework 1.5 packaged in EAR
+   archetype: *jboss-javaee6-webapp-ear-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+     
+ - name: jboss-as-wicket-war
+   useCases: 
+    - Demonstrates how to use the Wicket Framework 1.5 packaged in WAR
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+     
+ - name: jboss-as-wsat-simple
+   useCases: 
+    - Deployment of a WS-AT (WS-AtomicTransaction) enabled JAX-WS Web service bundled in a WAR archive
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-with-tools-100
+    - *jboss-javaee-6_0-with-transactions-100
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: full
+   
+   ###########################################
+   
+ - name: jboss-as-wsba-coordinator-completion-simple
+   useCases: 
+    - Deployment of a WS-BA (WS-BusinessActivity) enabled JAX-WS Web service bundled in a WAR archive (Participant Completion protocol)
+   archetype: 
+   bom:
+    - *jboss-javaee-6_0-with-tools-100
+    - *jboss-javaee-6_0-with-transactions-100
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: full
+   
+   ###########################################
+   
+ - name: jboss-as-wsba-participant-completion-simple
+   useCases: 
+    - Deployment of a WS-BA (WS-BusinessActivity) enabled JAX-WS Web service bundled in a war archive (Coordinator Completion protocol)
+   archetype: 
+   bom:
+    - *jboss-javaee-6_0-with-tools-100
+    - *jboss-javaee-6_0-with-transactions-100
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: full
+   
+   ###########################################
+   
+ - name: jboss-as-xml-dom4j
+   useCases: 
+    - Demonstrates how to upload an XML file and parse it using 3rd party XML parsing libraries
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
+   
+ - name: jboss-as-xml-jaxp
+   useCases: 
+    - Upload, validation and parsing of XML using SAX or DOM
+   archetype: *jboss-javaee6-webapp-archetype-blank-702cr2
+   bom:
+    - *jboss-javaee-6_0-300
+   targetRuntimes:
+    - *jbosseap6runtime
+    - *jboss-as711runtime
+    - *jboss-as710runtime
+   profile: web
+   
+   ###########################################
