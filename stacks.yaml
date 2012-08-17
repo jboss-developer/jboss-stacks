@@ -30,12 +30,21 @@ availableBoms:
    #    S P E C S     B O M S   # 
    ##############################
 
- - &jboss-javaee-6_0
+ - &jboss-javaee-6_0-all
    name: Java EE 6
    description: Bill of Materials for Java EE 6 APIs for use with JBoss AS 7
    groupId: org.jboss.spec
    artifactId: jboss-javaee-all-6.0
    recommendedVersion: 3.0.0.Final
+   
+   ##############################
+   
+ - &jboss-javaee-6_0
+   name: Java EE 6 (EAP)
+   description: Dependency Management for Java EE 6 Specification APIs
+   groupId: org.jboss.spec
+   artifactId: jboss-javaee-6.0
+   recommendedVersion: 3.0.0.Final-redhat-1
    
    ##############################
 
@@ -95,18 +104,27 @@ availableBomVersions:
    #  Java EE 6   #
    ################
 
- - &jboss-javaee-6_0-300
-   bom: *jboss-javaee-6_0
+ - &jboss-javaee-6_0-all-300
+   bom: *jboss-javaee-6_0-all
    version: 3.0.0.Final
    labels:
     -
  
- - &jboss-javaee-6_0-301
-   bom: *jboss-javaee-6_0
+ - &jboss-javaee-6_0-all-301
+   bom: *jboss-javaee-6_0-all
    version: 3.0.1.Final
    labels:
     -
    
+   ######################
+   #   Java EE 6   EAP  #
+   ######################
+
+ - &jboss-javaee-6_0-300redhat1
+   bom: *jboss-javaee-6_0
+   version: 3.0.0.Final-redhat-1
+   labels:
+
    ###################
    #  Java EE 6 Web  #
    ###################
@@ -132,6 +150,12 @@ availableBomVersions:
    version: 1.0.0.Final
    labels:
     -
+
+ - &jboss-javaee-6_0-with-errai-100-redhat1
+   bom: *jboss-javaee-6_0-with-errai
+   version: 1.0.0.M12-redhat-1
+   labels:
+    - WFK2RepositoryRequired: true
    
    ##################################
    #   Java EE 6 with Hibernate     #
@@ -143,6 +167,12 @@ availableBomVersions:
    labels:
     -
   
+ - &jboss-javaee-6_0-with-hibernate-100-redhat1
+   bom: *jboss-javaee-6_0-with-hibernate
+   version: 1.0.0.M12-redhat-1
+   labels:
+    -
+
    ##################################################
    #   Java EE 6 with tools recommended by JBoss    #
    ##################################################
@@ -150,6 +180,12 @@ availableBomVersions:
  - &jboss-javaee-6_0-with-tools-100
    bom: *jboss-javaee-6_0-with-tools
    version: 1.0.0.Final
+   labels:
+    - jbossASPluginVersion: 7.1.1.Final
+    
+ - &jboss-javaee-6_0-with-tools-100-redhat1
+   bom: *jboss-javaee-6_0-with-tools
+   version: 1.0.0.M12-redhat-1
    labels:
     - jbossASPluginVersion: 7.1.1.Final
    
@@ -160,6 +196,11 @@ availableBomVersions:
  - &jboss-javaee-6_0-with-transactions-100
    bom: *jboss-javaee-6_0-with-transactions
    version: 1.0.0.Final
+   labels:
+    -
+ - &jboss-javaee-6_0-with-transactions-100-redhat1
+   bom: *jboss-javaee-6_0-with-transactions
+   version: 1.0.0.M12-redhat-1
    labels:
     -
   
@@ -355,12 +396,12 @@ availableRuntimes:
    type: EAP
    url: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=12673&product=appplatform&version=&downloadType=distributions
    boms:
-    - *jboss-javaee-6_0-301
-    - *jboss-javaee-6_0-with-errai-100
-    - *jboss-javaee-6_0-with-tools-100
-    - *jboss-javaee-6_0-with-hibernate-100
-    - *jboss-javaee-6_0-with-transactions-100
-   defaultBom: *jboss-javaee-6_0-301
+    - *jboss-javaee-6_0-300redhat1
+    - *jboss-javaee-6_0-with-errai-100-redhat1
+    - *jboss-javaee-6_0-with-tools-100-redhat1
+    - *jboss-javaee-6_0-with-hibernate-100-redhat1
+    - *jboss-javaee-6_0-with-transactions-100-redhat1
+   defaultBom: *jboss-javaee-6_0-300redhat1
    defaultArchetype: *jboss-javaee6-webapp-archetype-711cr1
    archetypes:
     - *jboss-javaee6-webapp-archetype-711cr1
@@ -386,12 +427,12 @@ availableRuntimes:
    type: AS
    url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip
    boms:
-    - *jboss-javaee-6_0-301
+    - *jboss-javaee-6_0-all-301
     - *jboss-javaee-6_0-with-errai-100
     - *jboss-javaee-6_0-with-tools-100
     - *jboss-javaee-6_0-with-hibernate-100
     - *jboss-javaee-6_0-with-transactions-100
-   defaultBom: *jboss-javaee-6_0-301
+   defaultBom: *jboss-javaee-6_0-all-301
    defaultArchetype: *jboss-javaee6-webapp-archetype-711cr1
    archetypes:
     - *jboss-javaee6-webapp-archetype-711cr1
@@ -414,12 +455,12 @@ availableRuntimes:
    type: AS
    url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip
    boms:
-    - *jboss-javaee-6_0-301
+    - *jboss-javaee-6_0-all-301
     - *jboss-javaee-6_0-with-errai-100
     - *jboss-javaee-6_0-with-tools-100
     - *jboss-javaee-6_0-with-hibernate-100
     - *jboss-javaee-6_0-with-transactions-100
-   defaultBom: *jboss-javaee-6_0-301
+   defaultBom: *jboss-javaee-6_0-all-301
    defaultArchetype: *jboss-javaee6-webapp-archetype-711cr1
    archetypes:
     - *jboss-javaee6-webapp-archetype-711cr1
@@ -465,8 +506,8 @@ availableRuntimes:
    type: AS
    url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-7.0.2.Final.zip
    boms:
-    - *jboss-javaee-6_0-300
-   defaultBom: *jboss-javaee-6_0-300
+    - *jboss-javaee-6_0-all-300
+   defaultBom: *jboss-javaee-6_0-all-300
    defaultArchetype: *jboss-javaee6-webapp-archetype-702cr2
    archetypes:
     - *jboss-javaee6-webapp-archetype-702cr2
