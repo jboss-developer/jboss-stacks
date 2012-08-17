@@ -124,6 +124,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0
    version: 3.0.0.Final-redhat-1
    labels:
+    -
 
    ###################
    #  Java EE 6 Web  #
@@ -198,6 +199,7 @@ availableBomVersions:
    version: 1.0.0.Final
    labels:
     -
+
  - &jboss-javaee-6_0-with-transactions-100-redhat1
    bom: *jboss-javaee-6_0-with-transactions
    version: 1.0.0.M12-redhat-1
