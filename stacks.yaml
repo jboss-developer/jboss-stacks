@@ -18,11 +18,15 @@
 # Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
 # 02110-1301 USA, or see the FSF site: http://www.fsf.org.
 
+licenses:
+ - &lgpl http://www.gnu.org/copyleft/lesser.txt
+
 #################################################################
 #                                                               #
 #   L I S T    O F    A L L     A V A I L A B L E    B O M S    #
 #                                                               #
 #################################################################
+
 
 availableBoms:
 
@@ -107,14 +111,14 @@ availableBomVersions:
  - &jboss-javaee-6_0-all-300
    bom: *jboss-javaee-6_0-all
    version: 3.0.0.Final
-   labels:
-    -
+   labels: {}
+    
  
  - &jboss-javaee-6_0-all-301
    bom: *jboss-javaee-6_0-all
    version: 3.0.1.Final
-   labels:
-    -
+   labels: {}
+    
    
    ######################
    #   Java EE 6   EAP  #
@@ -123,8 +127,8 @@ availableBomVersions:
  - &jboss-javaee-6_0-300redhat1
    bom: *jboss-javaee-6_0
    version: 3.0.0.Final-redhat-1
-   labels:
-    -
+   labels: {}
+    
 
    ###################
    #  Java EE 6 Web  #
@@ -133,14 +137,14 @@ availableBomVersions:
  - &jboss-javaee-6_0-web-300
    bom: *jboss-javaee-6_0-web
    version: 3.0.0.Final
-   labels:
-    -
+   labels: {}
+   
    
  - &jboss-javaee-6_0-web-301
    bom: *jboss-javaee-6_0-web
    version: 3.0.1.Final
-   labels:
-    -
+   labels: {}
+    
    
    ###################################
    #   Java EE 6 with Errai and GWT  #
@@ -149,14 +153,15 @@ availableBomVersions:
  - &jboss-javaee-6_0-with-errai-100
    bom: *jboss-javaee-6_0-with-errai
    version: 1.0.0.Final
-   labels:
-    -
+   labels: {}
+    
 
  - &jboss-javaee-6_0-with-errai-100-redhat1
    bom: *jboss-javaee-6_0-with-errai
    version: 1.0.0.M12-redhat-1
-   labels:
-    - WFK2RepositoryRequired: true
+   labels: {
+        WFK2RepositoryRequired: true,
+   }
    
    ##################################
    #   Java EE 6 with Hibernate     #
@@ -165,14 +170,12 @@ availableBomVersions:
  - &jboss-javaee-6_0-with-hibernate-100
    bom: *jboss-javaee-6_0-with-hibernate
    version: 1.0.0.Final
-   labels:
-    -
+   labels: {}
   
  - &jboss-javaee-6_0-with-hibernate-100-redhat1
    bom: *jboss-javaee-6_0-with-hibernate
    version: 1.0.0.M12-redhat-1
-   labels:
-    -
+   labels: {}
 
    ##################################################
    #   Java EE 6 with tools recommended by JBoss    #
@@ -181,14 +184,16 @@ availableBomVersions:
  - &jboss-javaee-6_0-with-tools-100
    bom: *jboss-javaee-6_0-with-tools
    version: 1.0.0.Final
-   labels:
-    - jbossASPluginVersion: 7.1.1.Final
+   labels: {
+        jbossASPluginVersion: 7.1.1.Final,
+   }
     
  - &jboss-javaee-6_0-with-tools-100-redhat1
    bom: *jboss-javaee-6_0-with-tools
    version: 1.0.0.M12-redhat-1
-   labels:
-    - jbossASPluginVersion: 7.1.1.Final
+   labels: {
+        jbossASPluginVersion: 7.1.1.Final,
+   }
    
    #########################################
    #   Java EE 6 with JBoss Transactions   #
@@ -197,14 +202,13 @@ availableBomVersions:
  - &jboss-javaee-6_0-with-transactions-100
    bom: *jboss-javaee-6_0-with-transactions
    version: 1.0.0.Final
-   labels:
-    -
+   labels: {}
+    
 
  - &jboss-javaee-6_0-with-transactions-100-redhat1
    bom: *jboss-javaee-6_0-with-transactions
    version: 1.0.0.M12-redhat-1
-   labels:
-    -
+   labels: {}
   
 ##############################################################################
 #                                                                            #
@@ -304,14 +308,12 @@ availableArchetypeVersions:
  - &jboss-javaee6-webapp-archetype-702cr2
    archetype: *jboss-javaee6-webapp-archetype
    version: 7.0.2.CR2
-   labels:
-    -
+   labels: {}
 
  - &jboss-javaee6-webapp-archetype-711cr1
    archetype: *jboss-javaee6-webapp-archetype
    version: 7.1.1.CR1
-   labels:
-    -
+   labels: {}
    
    ########################################
    #   Java EE 6 Webapp (Blank Skeleton)  #
@@ -320,8 +322,7 @@ availableArchetypeVersions:
  - &jboss-javaee6-webapp-archetype-blank-702cr2
    archetype: *jboss-javaee6-webapp-archetype-blank
    version: 7.0.2.CR2
-   labels:
-    -
+   labels: {}
    
    ########################################
    #   JBoss AS 7 / Java EE 6 EAR Webapp  #
@@ -330,14 +331,12 @@ availableArchetypeVersions:
  - &jboss-javaee6-webapp-ear-archetype-702cr2
    archetype: *jboss-javaee6-webapp-ear-archetype
    version: 7.0.2.CR2
-   labels:
-    -
+   labels: {}
     
  - &jboss-javaee6-webapp-ear-archetype-711cr1
    archetype: *jboss-javaee6-webapp-ear-archetype
    version: 7.1.1.CR1
-   labels:
-    -
+   labels: {}
 
    ##########################################################
    #   JBoss AS 7 / Java EE 6 EAR Webapp (Blank Skeleton)   #
@@ -346,8 +345,7 @@ availableArchetypeVersions:
  - &jboss-javaee6-webapp-ear-archetype-blank-702cr2
    archetype: *jboss-javaee6-webapp-ear-archetype-blank
    version: 7.0.2.CR2
-   labels:
-    -
+   labels: {}
    
    ###############################################
    #   Java EE 6 HTML5 Mobile Web Application    #
@@ -356,8 +354,7 @@ availableArchetypeVersions:
  - &jboss-html5-mobile-archetype-100m4b
    archetype: *jboss-html5-mobile-archetype
    version: 1.0.0.M4b
-   labels:
-    -
+   labels: {}
    
    ####################################################
    #   RichFaces Archetypes Kitchen Sink Application  #
@@ -366,8 +363,7 @@ availableArchetypeVersions:
  - &richfaces-archetype-kitchensink-422final2
    archetype: *richfaces-archetype-kitchensink
    version: 4.2.2.Final-2
-   labels:
-    -
+   labels: {}
    
    ###########################################
    #   Errai Kitchen Sink Webapp Archetype   #
@@ -376,8 +372,7 @@ availableArchetypeVersions:
  - &jboss-errai-kitchensink-archetype-202final
    archetype: *jboss-errai-kitchensink-archetype
    version: 2.0.2.Final
-   labels:
-    -
+   labels: {}
    
    
 ##########################################################################
@@ -395,7 +390,6 @@ availableRuntimes:
  - &jbosseap6runtime
    name: JBoss EAP 6.0
    version: 6.0.0
-   type: EAP
    url: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=12673&product=appplatform&version=&downloadType=distributions
    boms:
     - *jboss-javaee-6_0-300redhat1
@@ -413,8 +407,9 @@ availableRuntimes:
     - *jboss-html5-mobile-archetype-100m4b
     - *richfaces-archetype-kitchensink-422final2
     - *jboss-errai-kitchensink-archetype-202final
-   labels: 
-    -
+   labels: {
+        runtimeType: EAP,
+   }
 
    ###############
    #   A S 7.1   #
@@ -426,8 +421,9 @@ availableRuntimes:
    groupId: org.jboss.as
    artifactId: jboss-as-dist
    version: 7.1.1.Final
-   type: AS
-   url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip
+   license: *lgpl
+   url: http://www.jboss.org/jbossas
+   downloadUrl: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip
    boms:
     - *jboss-javaee-6_0-all-301
     - *jboss-javaee-6_0-with-errai-100
@@ -444,8 +440,10 @@ availableRuntimes:
     - *jboss-html5-mobile-archetype-100m4b
     - *richfaces-archetype-kitchensink-422final2
     - *jboss-errai-kitchensink-archetype-202final
-   labels: 
-    - requiresLogModule: false
+   labels: {
+        requiresLogModule: false,
+        runtimeType: AS,
+    }
 
    ###############
 
@@ -454,8 +452,9 @@ availableRuntimes:
    groupId: org.jboss.as
    artifactId: jboss-as-dist
    version: 7.1.0.Final
-   type: AS
-   url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip
+   license: *lgpl
+   url: http://www.jboss.org/jbossas
+   downloadUrl: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip
    boms:
     - *jboss-javaee-6_0-all-301
     - *jboss-javaee-6_0-with-errai-100
@@ -472,8 +471,10 @@ availableRuntimes:
     - *jboss-html5-mobile-archetype-100m4b
     - *richfaces-archetype-kitchensink-422final2
     - *jboss-errai-kitchensink-archetype-202final
-   labels: 
-    - requiresLogModule: false
+   labels: {
+        requiresLogModule: false,
+        runtimeType: AS,
+    }
  
    ###############
    #   A S 7.0   #
@@ -484,8 +485,9 @@ availableRuntimes:
    groupId: org.jboss.as
    artifactId: jboss-as-dist
    version: 7.0.2.Final
-   type: AS
-   url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-web-7.0.2.Final.zip
+   license: *lgpl
+   url: http://www.jboss.org/jbossas
+   downloadUrl: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-web-7.0.2.Final.zip
    boms:
     - *jboss-javaee-6_0-web-300
    defaultBom: *jboss-javaee-6_0-web-300
@@ -495,8 +497,10 @@ availableRuntimes:
     - *jboss-javaee6-webapp-archetype-blank-702cr2
     - *jboss-javaee6-webapp-ear-archetype-702cr2
     - *jboss-javaee6-webapp-ear-archetype-blank-702cr2
-   labels: 
-    - requiresLogModule: true
+   labels: {
+        requiresLogModule: true,
+        runtimeType: AS,
+    }
     
    #################
    
@@ -505,8 +509,9 @@ availableRuntimes:
    groupId: org.jboss.as
    artifactId: jboss-as-dist
    version: 7.0.2.Final
-   type: AS
-   url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-7.0.2.Final.zip
+   license: *lgpl
+   url: http://www.jboss.org/jbossas
+   downloadUrl: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-7.0.2.Final.zip
    boms:
     - *jboss-javaee-6_0-all-300
    defaultBom: *jboss-javaee-6_0-all-300
@@ -516,8 +521,10 @@ availableRuntimes:
     - *jboss-javaee6-webapp-archetype-blank-702cr2
     - *jboss-javaee6-webapp-ear-archetype-702cr2
     - *jboss-javaee6-webapp-ear-archetype-blank-702cr2
-   labels: 
-    - requiresLogModule: true
+   labels: {
+        requiresLogModule: true,
+        runtimeType: AS,
+    }
         
 ##########################################################
 #                                                        #
