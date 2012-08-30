@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-public class Runtime {
+public class ServerRuntime {
 
     private String name;
 

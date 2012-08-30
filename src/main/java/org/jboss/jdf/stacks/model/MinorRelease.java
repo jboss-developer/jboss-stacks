@@ -27,7 +27,7 @@ public class MinorRelease {
 
     private String version;
 
-    private Runtime recommendedRuntime;
+    private ServerRuntime recommendedRuntime;
 
     public String getName() {
         return name;
@@ -45,11 +45,11 @@ public class MinorRelease {
         this.version = version;
     }
 
-    public Runtime getRecommendedRuntime() {
+    public ServerRuntime getRecommendedRuntime() {
         return recommendedRuntime;
     }
 
-    public void setRecommendedRuntime(Runtime recommendedRuntime) {
+    public void setRecommendedRuntime(ServerRuntime recommendedRuntime) {
         this.recommendedRuntime = recommendedRuntime;
     }
 

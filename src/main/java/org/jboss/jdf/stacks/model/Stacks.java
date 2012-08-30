@@ -26,7 +26,7 @@ import java.util.List;
 
 public class Stacks {
 
-    private List<Runtime> availableRuntimes;
+    private List<ServerRuntime> availableRuntimes;
 
     private List<Bom> availableBoms;
 
@@ -39,6 +39,8 @@ public class Stacks {
     private List<MinorRelease> minorReleases;
 
     private List<MajorRelease> majorReleases;
+    
+    private List<String> licenses;
 
     public List<Archetype> getAvailableArchetypes() {
         return availableArchetypes;
@@ -48,11 +50,11 @@ public class Stacks {
         this.availableArchetypes = availableArchetypes;
     }
 
-    public void setAvailableRuntimes(List<Runtime> availableRuntimes) {
+    public void setAvailableRuntimes(List<ServerRuntime> availableRuntimes) {
         this.availableRuntimes = availableRuntimes;
     }
 
-    public List<Runtime> getAvailableRuntimes() {
+    public List<ServerRuntime> getAvailableRuntimes() {
         return availableRuntimes;
     }
 
@@ -94,5 +96,13 @@ public class Stacks {
 
     public void setAvailableArchetypeVersions(List<ArchetypeVersion> availableArchetypeVersions) {
         this.availableArchetypeVersions = availableArchetypeVersions;
+    }
+    
+    public List<String> getLicenses() {
+        return licenses;
+    }
+    
+    public void setLicenses(List<String> licenses) {
+        this.licenses = licenses;
     }
 }

@@ -29,6 +29,7 @@ import org.jboss.jdf.stacks.model.Bom;
 import org.jboss.jdf.stacks.model.BomVersion;
 import org.jboss.jdf.stacks.model.MajorRelease;
 import org.jboss.jdf.stacks.model.MinorRelease;
+import org.jboss.jdf.stacks.model.ServerRuntime;
 import org.jboss.jdf.stacks.model.Stacks;
 import org.yaml.snakeyaml.TypeDescription;
 import org.yaml.snakeyaml.Yaml;
@@ -47,12 +48,12 @@ public class Parser {
         TypeDescription stackDescription = new TypeDescription(Stacks.class);
         stackDescription.putListPropertyType("availableBoms", Bom.class);
         stackDescription.putListPropertyType("availableBomVersions", BomVersion.class);
-        stackDescription.putListPropertyType("availableRuntimes", Runtime.class);
+        stackDescription.putListPropertyType("availableRuntimes", ServerRuntime.class);
         stackDescription.putListPropertyType("availableArchetypes", Archetype.class);
         stackDescription.putListPropertyType("availableArchetypeVersions", ArchetypeVersion.class);
         stackDescription.putListPropertyType("minorReleases", MinorRelease.class);
         stackDescription.putListPropertyType("majorReleases", MajorRelease.class);
-
+   
         constructor.addTypeDescription(stackDescription);
         Yaml yaml = new Yaml(constructor);
         Stacks data = (Stacks) yaml.load(is);
