@@ -35,6 +35,7 @@ availableBoms:
    ##############################
 
  - &jboss-javaee-6_0-all
+   id: jboss-javaee-6_0-all
    name: Java EE 6
    description: Bill of Materials for Java EE 6 APIs for use with JBoss AS 7
    groupId: org.jboss.spec
@@ -44,6 +45,7 @@ availableBoms:
    ##############################
    
  - &jboss-javaee-6_0
+   id: jboss-javaee-6_0
    name: Java EE 6 (EAP)
    description: Dependency Management for Java EE 6 Specification APIs
    groupId: org.jboss.spec
@@ -53,6 +55,7 @@ availableBoms:
    ##############################
 
  - &jboss-javaee-6_0-web
+   id: jboss-javaee-6_0-web
    name: Java EE 6 Web
    description: Bill of Materials for Java EE 6 Web Profile APIs for use with JBoss AS 7.0.0 Web Profile Configuration
    groupId: org.jboss.spec
@@ -64,6 +67,7 @@ availableBoms:
    ########################## 
 
  - &jboss-javaee-6_0-with-errai
+   id: jboss-javaee-6_0-with-errai
    name: Java EE 6 with Errai and GWT
    description: Errai provides a comprehensive framework and tools for building rich web applications, leveraging the GWT compiler. With standard server-side APIs, such as CDI, in the browser, managing large web applications was never so easy. This BOM adds both Errai and GWT to your project.
    groupId: org.jboss.bom
@@ -73,6 +77,7 @@ availableBoms:
    ##############################
 
  - &jboss-javaee-6_0-with-hibernate
+   id: jboss-javaee-6_0-with-hibernate
    name: Java EE 6 with Hibernate
    description: Historically, Hibernate facilitated the storage and retrieval of Java domain objects via Object/Relational Mapping. Today, Hibernate is a collection of related projects enabling developers to utilize POJO-style domain models in their applications in ways extending well beyond Object/Relational Mapping. This BOM builds on the Java EE full profile BOM, adding Hibernate Community projects including Hibernate ORM, Hibernate Search and Hibernate Validator. It also provides tool projects such as Hibernate JPA Model Gen and Hibernate Validator Annotation Processor.
    groupId: org.jboss.bom
@@ -80,7 +85,9 @@ availableBoms:
    recommendedVersion: 1.0.0.Final
    
    ###############################
+   
  - &jboss-javaee-6_0-with-tools
+   id: jboss-javaee-6_0-with-tools
    name: Java EE 6 with tools recommended by JBoss
    description: Java EE lacks any testing APIs, and for this reason JBoss developed the Arquillian project, along with its various component projects, such as Arquillian Drone, and the sister project Shrinkwrap. This BOM builds on the Java EE full profile BOM, adding Arquillian to the mix. It also provides a version of JUnit and TestNG recommended for use with Arquillian. Furthermore, this BOM adds the JBoss AS Maven deployment plugin. EAP 6s recommended mode of deployment is via the management APIs, and the Maven plugin is the recommended way to do this, if the customer is using Maven for building.
    groupId: org.jboss.bom
@@ -90,6 +97,7 @@ availableBoms:
    ################################
  
  - &jboss-javaee-6_0-with-transactions
+   id: jboss-javaee-6_0-with-transactions
    name: Java EE 6 with JBoss Transactions
    description: JBoss AS includes a world class transaction manager. In order to access its full capabilites, including for example XTS, WS-AT and WS-BA, you need to use the JBossTS APIs. This BOM adds the JBossTS APIs to the stack.
    groupId: org.jboss.bom
@@ -109,12 +117,14 @@ availableBomVersions:
    ################
 
  - &jboss-javaee-6_0-all-300
+   id: jboss-javaee-6_0-all-300
    bom: *jboss-javaee-6_0-all
    version: 3.0.0.Final
    labels: {}
     
  
  - &jboss-javaee-6_0-all-301
+   id: jboss-javaee-6_0-all-301
    bom: *jboss-javaee-6_0-all
    version: 3.0.1.Final
    labels: {}
@@ -125,6 +135,7 @@ availableBomVersions:
    ######################
 
  - &jboss-javaee-6_0-300redhat1
+   id: jboss-javaee-6_0-300redhat1
    bom: *jboss-javaee-6_0
    version: 3.0.0.Final-redhat-1
    labels: {}
@@ -135,12 +146,14 @@ availableBomVersions:
    ###################
    
  - &jboss-javaee-6_0-web-300
+   id: jboss-javaee-6_0-web-300
    bom: *jboss-javaee-6_0-web
    version: 3.0.0.Final
    labels: {}
    
    
- - &jboss-javaee-6_0-web-301
+ - &jboss-javaee-6_0-web-301 
+   id: jboss-javaee-6_0-web-301
    bom: *jboss-javaee-6_0-web
    version: 3.0.1.Final
    labels: {}
@@ -151,12 +164,14 @@ availableBomVersions:
    ###################################
    
  - &jboss-javaee-6_0-with-errai-100
+   id: jboss-javaee-6_0-with-errai-100
    bom: *jboss-javaee-6_0-with-errai
    version: 1.0.0.Final
    labels: {}
     
 
  - &jboss-javaee-6_0-with-errai-100-redhat1
+   id: jboss-javaee-6_0-with-errai-100-redhat1
    bom: *jboss-javaee-6_0-with-errai
    version: 1.0.0.M12-redhat-1
    labels: {
@@ -168,11 +183,13 @@ availableBomVersions:
    ##################################
    
  - &jboss-javaee-6_0-with-hibernate-100
+   id: jboss-javaee-6_0-with-hibernate-100
    bom: *jboss-javaee-6_0-with-hibernate
    version: 1.0.0.Final
    labels: {}
   
  - &jboss-javaee-6_0-with-hibernate-100-redhat1
+   id: jboss-javaee-6_0-with-hibernate-100-redhat1
    bom: *jboss-javaee-6_0-with-hibernate
    version: 1.0.0.M12-redhat-1
    labels: {}
@@ -182,6 +199,7 @@ availableBomVersions:
    ##################################################
 
  - &jboss-javaee-6_0-with-tools-100
+   id: jboss-javaee-6_0-with-tools-100
    bom: *jboss-javaee-6_0-with-tools
    version: 1.0.0.Final
    labels: {
@@ -189,6 +207,7 @@ availableBomVersions:
    }
     
  - &jboss-javaee-6_0-with-tools-100-redhat1
+   id: jboss-javaee-6_0-with-tools-100-redhat1
    bom: *jboss-javaee-6_0-with-tools
    version: 1.0.0.M12-redhat-1
    labels: {
@@ -200,12 +219,14 @@ availableBomVersions:
    #########################################
    
  - &jboss-javaee-6_0-with-transactions-100
+   id: jboss-javaee-6_0-with-transactions-100
    bom: *jboss-javaee-6_0-with-transactions
    version: 1.0.0.Final
    labels: {}
     
 
  - &jboss-javaee-6_0-with-transactions-100-redhat1
+   id: jboss-javaee-6_0-with-transactions-100-redhat1
    bom: *jboss-javaee-6_0-with-transactions
    version: 1.0.0.M12-redhat-1
    labels: {}
@@ -223,48 +244,58 @@ availableArchetypes:
    ############################################
    #   W E B     A P P   A R C H E T Y P E S  #
    ############################################
-   
- - &jboss-javaee6-webapp-archetype
-   name: Java EE 6 Webapp
-   description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true)
-   groupId: org.jboss.spec.archetypes
-   artifactId: jboss-javaee6-webapp-archetype
-   recommendedVersion: 7.1.1.CR1
-
-   #######################   
-   
+  
+  
  - &jboss-javaee6-webapp-archetype-blank
+   id: jboss-javaee6-webapp-archetype-blank
    name: Java EE 6 Webapp (Blank Skeleton)
    description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true)
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-archetype-blank
-   recommendedVersion: 7.0.2.CR2
+   recommendedVersion: 7.0.2.CR2 
+
+   #######################   
+   
+ - &jboss-javaee6-webapp-archetype
+   id: jboss-javaee6-webapp-archetype
+   name: Java EE 6 Webapp
+   description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true)
+   blank: *jboss-javaee6-webapp-archetype-blank
+   groupId: org.jboss.spec.archetypes
+   artifactId: jboss-javaee6-webapp-archetype
+   recommendedVersion: 7.1.1.CR1
+
 
    #############################################
    #   E A R    A P P     A R C H E T Y P E S  #
    #############################################
 
- - &jboss-javaee6-webapp-ear-archetype
-   name: JBoss AS 7 / Java EE 6 EAR Webapp
-   description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true). The project is an EAR, with an EJB-JAR and WAR
-   groupId: org.jboss.spec.archetypes
-   artifactId: jboss-javaee6-webapp-ear-archetype
-   recommendedVersion: 7.1.1.CR1
-
-   ####################   
-
  - &jboss-javaee6-webapp-ear-archetype-blank
+   id: jboss-javaee6-webapp-ear-archetype-blank
    name: JBoss AS 7 / Java EE 6 EAR Webapp (Blank Skeleton)
    description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true). The project is an EAR, with an EJB-JAR and WAR
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-ear-archetype-blank
    recommendedVersion: 7.0.2.CR2
+   
+   ####################   
+
+ - &jboss-javaee6-webapp-ear-archetype
+   id: jboss-javaee6-webapp-ear-archetype
+   name: JBoss AS 7 / Java EE 6 EAR Webapp
+   description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true). The project is an EAR, with an EJB-JAR and WAR
+   blank: *jboss-javaee6-webapp-ear-archetype-blank
+   groupId: org.jboss.spec.archetypes
+   artifactId: jboss-javaee6-webapp-ear-archetype
+   recommendedVersion: 7.1.1.CR1
+
 
    ############################
    #    HTML5     Archetype   #
    ############################
 
  - &jboss-html5-mobile-archetype
+   id: jboss-html5-mobile-archetype
    name: Java EE 6 HTML5 Mobile Web Application
    description: An archetype that generates a Java EE 6 application using HTML5, and JAX-RS to support both desktop and mobile web browsers
    groupId: org.jboss.aerogear.archetypes
@@ -276,6 +307,7 @@ availableArchetypes:
    ############################
 
  - &richfaces-archetype-kitchensink
+   id: richfaces-archetype-kitchensink
    name: RichFaces Archetypes Kitchen Sink Application
    description: RichFaces Kitchen Sink Application
    groupId: org.richfaces.archetypes
@@ -287,6 +319,7 @@ availableArchetypes:
    ############################
 
  - &jboss-errai-kitchensink-archetype
+   id: jboss-errai-kitchensink-archetype
    name: Errai Kitchen Sink Webapp Archetype
    description: A starter Errai + Java EE 6 webapp project for use on JBoss AS 7 / EAP 6, generated from the jboss-errai-kitchensink-archetype archetype
    groupId: org.jboss.errai.archetypes
@@ -306,11 +339,13 @@ availableArchetypeVersions:
    #######################
  
  - &jboss-javaee6-webapp-archetype-702cr2
+   id: jboss-javaee6-webapp-archetype-702cr2
    archetype: *jboss-javaee6-webapp-archetype
    version: 7.0.2.CR2
    labels: {}
 
  - &jboss-javaee6-webapp-archetype-711cr1
+   id: jboss-javaee6-webapp-archetype-711cr1
    archetype: *jboss-javaee6-webapp-archetype
    version: 7.1.1.CR1
    labels: {}
@@ -320,6 +355,7 @@ availableArchetypeVersions:
    ########################################
    
  - &jboss-javaee6-webapp-archetype-blank-702cr2
+   id: jboss-javaee6-webapp-archetype-blank-702cr2
    archetype: *jboss-javaee6-webapp-archetype-blank
    version: 7.0.2.CR2
    labels: {}
@@ -329,20 +365,23 @@ availableArchetypeVersions:
    ########################################
 
  - &jboss-javaee6-webapp-ear-archetype-702cr2
+   id: jboss-javaee6-webapp-ear-archetype-702cr2
    archetype: *jboss-javaee6-webapp-ear-archetype
    version: 7.0.2.CR2
    labels: {}
     
  - &jboss-javaee6-webapp-ear-archetype-711cr1
+   id: jboss-javaee6-webapp-ear-archetype-711cr1
    archetype: *jboss-javaee6-webapp-ear-archetype
    version: 7.1.1.CR1
    labels: {}
 
    ##########################################################
-   #   JBoss AS 7 / Java EE 6 EAR Webapp (Blank Skeleton)   #
+   #   JBoss AS 7 / Java EE 6 EAR Webapp                    #
    ##########################################################
    
  - &jboss-javaee6-webapp-ear-archetype-blank-702cr2
+   id: jboss-javaee6-webapp-ear-archetype-blank-702cr2
    archetype: *jboss-javaee6-webapp-ear-archetype-blank
    version: 7.0.2.CR2
    labels: {}
@@ -352,6 +391,7 @@ availableArchetypeVersions:
    ###############################################
    
  - &jboss-html5-mobile-archetype-100m4b
+   id: jboss-html5-mobile-archetype-100m4b
    archetype: *jboss-html5-mobile-archetype
    version: 1.0.0.M4b
    labels: {}
@@ -361,6 +401,7 @@ availableArchetypeVersions:
    ####################################################
    
  - &richfaces-archetype-kitchensink-422final2
+   id: richfaces-archetype-kitchensink-422final2
    archetype: *richfaces-archetype-kitchensink
    version: 4.2.2.Final-2
    labels: {}
@@ -370,6 +411,7 @@ availableArchetypeVersions:
    ###########################################
    
  - &jboss-errai-kitchensink-archetype-202final
+   id: jboss-errai-kitchensink-archetype-202final
    archetype: *jboss-errai-kitchensink-archetype
    version: 2.0.2.Final
    labels: {}
@@ -388,6 +430,7 @@ availableRuntimes:
    ###############
 
  - &jbosseap6runtime
+   id: jbosseap6runtime
    name: JBoss EAP 6.0
    version: 6.0.0
    url: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=12673&product=appplatform&version=&downloadType=distributions
@@ -408,7 +451,8 @@ availableRuntimes:
     - *richfaces-archetype-kitchensink-422final2
     - *jboss-errai-kitchensink-archetype-202final
    labels: {
-        runtimeType: EAP,
+        runtime-category: SERVER,
+        runtime-type: EAP,
    }
 
    ###############
@@ -417,6 +461,7 @@ availableRuntimes:
 
 
  - &jboss-as711runtime
+   id: jboss-as711runtime
    name: JBoss AS 7.1.1 (Brontes)
    groupId: org.jboss.as
    artifactId: jboss-as-dist
@@ -441,13 +486,15 @@ availableRuntimes:
     - *richfaces-archetype-kitchensink-422final2
     - *jboss-errai-kitchensink-archetype-202final
    labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
         requiresLogModule: false,
-        runtimeType: AS,
     }
 
    ###############
 
  - &jboss-as710runtime
+   id: jboss-as710runtime
    name: JBoss AS 7.1.0 (Thunder)
    groupId: org.jboss.as
    artifactId: jboss-as-dist
@@ -472,8 +519,9 @@ availableRuntimes:
     - *richfaces-archetype-kitchensink-422final2
     - *jboss-errai-kitchensink-archetype-202final
    labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
         requiresLogModule: false,
-        runtimeType: AS,
     }
  
    ###############
@@ -481,6 +529,7 @@ availableRuntimes:
    ###############
  
  - &jboss-as702runtime-web
+   id: jboss-as702runtime-web
    name: JBoss AS 7.0.2 (Arc) - Web Profile
    groupId: org.jboss.as
    artifactId: jboss-as-dist
@@ -498,13 +547,15 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-archetype-702cr2
     - *jboss-javaee6-webapp-ear-archetype-blank-702cr2
    labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
         requiresLogModule: true,
-        runtimeType: AS,
     }
     
    #################
    
  - &jboss-as702runtime-full
+   id: jboss-as702runtime-full
    name: JBoss AS 7.0.2 (Arc) - Full Profile
    groupId: org.jboss.as
    artifactId: jboss-as-dist
@@ -522,8 +573,9 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-archetype-702cr2
     - *jboss-javaee6-webapp-ear-archetype-blank-702cr2
    labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
         requiresLogModule: true,
-        runtimeType: AS,
     }
         
 ##########################################################
