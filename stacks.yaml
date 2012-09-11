@@ -154,6 +154,17 @@ availableBoms:
    artifactId: jboss-javaee-6.0-with-logging
    recommendedVersion: 1.0.1.CR4
 
+   ####################################
+   
+ - &jboss-javaee-6_0-with-infinispan
+   id: jboss-javaee-6_0-with-infinispan
+   name: JBoss Java EE 6 Specification APIs with Infinispan
+   description: Dependency Management for Java EE 6 Specification APIs with Infinispan
+   groupId: org.jboss.bom
+   artifactId: jboss-javaee-6.0-with-infinispan
+   recommendedVersion: 1.0.1.CR4
+   
+   
 #####################################################################################
 #                                                                                   #
 #   L I S T    O F    A L L     A V A I L A B L E    B O M      V E R S I O N S     #
@@ -328,6 +339,16 @@ availableBomVersions:
  - &jboss-javaee-6_0-with-logging-101cr4
    id: jboss-javaee-6_0-with-logging-101cr4
    bom: *jboss-javaee-6_0-with-logging
+   version: 1.0.1.CR4
+   labels: {}
+   
+   ##########################################################
+   #   JBoss Java EE 6 Specification APIs with Infinispan   #
+   ##########################################################
+   
+ - &jboss-javaee-6_0-with-infinispan-101cr4
+   id: jboss-javaee-6_0-with-infinispan-101cr4
+   bom: *jboss-javaee-6_0-with-infinispan
    version: 1.0.1.CR4
    labels: {}
    
@@ -580,6 +601,7 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-hibernate3-101cr4
     - *jboss-javaee-6_0-with-osgi-101cr4
     - *jboss-javaee-6_0-with-logging-101cr4
+    - *jboss-javaee-6_0-with-infinispan-101cr4
    defaultBom: *jboss-javaee-6_0-all-301
    defaultArchetype: *jboss-javaee6-webapp-archetype-711cr1
    archetypes:
@@ -618,6 +640,7 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-hibernate3-101cr4
     - *jboss-javaee-6_0-with-osgi-101cr4
     - *jboss-javaee-6_0-with-logging-101cr4
+    - *jboss-javaee-6_0-with-infinispan-101cr4
    defaultBom: *jboss-javaee-6_0-all-301
    defaultArchetype: *jboss-javaee6-webapp-archetype-711cr1
    archetypes:
