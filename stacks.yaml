@@ -103,6 +103,56 @@ availableBoms:
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-transactions
    recommendedVersion: 1.0.0.Final
+   
+   ##################################
+   
+ - &jboss-javaee-6_0-with-security
+   id: jboss-javaee-6_0-with-security
+   name: JBoss Java EE 6 Specification APIs with Security
+   description: Dependency Management for Java EE 6 Specification APIs with JBoss specific Security features. Currently included is JBoss Negotiation.
+   groupId: org.jboss.bom
+   artifactId: jboss-javaee-6.0-with-security
+   recommendedVersion: 1.0.1.CR4
+   
+   ####################################
+
+ - &jboss-javaee-6_0-with-richfaces
+   id: jboss-javaee-6_0-with-richfaces
+   name: JBoss Java EE 6 Specification APIs with Richfaces
+   description: Dependency Management for Java EE 6 Specification APIs with Richfaces.
+   groupId: org.jboss.bom
+   artifactId: jboss-javaee-6.0-with-richfaces
+   recommendedVersion: 1.0.1.CR4
+   
+   ###################################
+   
+ - &jboss-javaee-6_0-with-hibernate3
+   id: jboss-javaee-6_0-with-hibernate3
+   name: JBoss Java EE 6 Specification APIs with Hibernate 3
+   description: Dependency Management for Java EE 6 Specification APIs with Hibernate 3 projects.
+   groupId: org.jboss.bom
+   artifactId: jboss-javaee-6.0-with-hibernate3
+   recommendedVersion: 1.0.1.CR4
+   
+   ###################################
+   
+ - &jboss-javaee-6_0-with-osgi
+   id: jboss-javaee-6_0-with-osgi
+   name: JBoss Java EE 6 Specification APIs with OSGI
+   description: Dependency Management for Java EE 6 Specification APIs with OSGI.
+   groupId: org.jboss.bom
+   artifactId: jboss-javaee-6.0-with-osgi
+   recommendedVersion: 1.0.1.CR4
+   
+   ####################################
+   
+ - &jboss-javaee-6_0-with-logging
+   id: jboss-javaee-6_0-with-logging
+   name: JBoss Java EE 6 Specification APIs with Logging Tools
+   description: Dependency Management for Java EE 6 Specification APIs with Logging Tools
+   groupId: org.jboss.bom
+   artifactId: jboss-javaee-6.0-with-logging
+   recommendedVersion: 1.0.1.CR4
 
 #####################################################################################
 #                                                                                   #
@@ -230,7 +280,57 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-transactions
    version: 1.0.0.M12-redhat-1
    labels: {}
-  
+   
+   ########################################################
+   #   JBoss Java EE 6 Specification APIs with Security   #
+   ########################################################
+   
+ - &jboss-javaee-6_0-with-security-101cr4
+   id: jboss-javaee-6_0-with-security-101cr4
+   bom: *jboss-javaee-6_0-with-security
+   version: 1.0.1.CR4
+   labels: {}
+   
+   ########################################################
+   #   JBoss Java EE 6 Specification APIs with Richfaces  #
+   ########################################################
+   
+ - &jboss-javaee-6_0-with-richfaces-101cr4
+   id: jboss-javaee-6_0-with-richfaces-101cr4
+   bom: *jboss-javaee-6_0-with-richfaces
+   version: 1.0.1.CR4
+   labels: {}
+   
+   ##########################################################
+   #   JBoss Java EE 6 Specification APIs with Hibernate 3  #
+   ##########################################################
+   
+ - &jboss-javaee-6_0-with-hibernate3-101cr4
+   id: jboss-javaee-6_0-with-hibernate3-101cr4
+   bom: *jboss-javaee-6_0-with-hibernate3
+   version: 1.0.1.CR4
+   labels: {}
+   
+   #####################################################
+   #   JBoss Java EE 6 Specification APIs with OSGI    #
+   #####################################################
+   
+ - &jboss-javaee-6_0-with-osgi-101cr4
+   id: jboss-javaee-6_0-with-osgi-101cr4
+   bom: *jboss-javaee-6_0-with-osgi
+   version: 1.0.1.CR4
+   labels: {}
+   
+   ##############################################################
+   #   JBoss Java EE 6 Specification APIs with Logging Tools    #
+   ##############################################################
+   
+ - &jboss-javaee-6_0-with-logging-101cr4
+   id: jboss-javaee-6_0-with-logging-101cr4
+   bom: *jboss-javaee-6_0-with-logging
+   version: 1.0.1.CR4
+   labels: {}
+   
 ##############################################################################
 #                                                                            #
 #   L I S T    O F    A L L     A V A I L A B L E    A R C H E T Y P E S     #
@@ -475,6 +575,11 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-tools-100
     - *jboss-javaee-6_0-with-hibernate-100
     - *jboss-javaee-6_0-with-transactions-100
+    - *jboss-javaee-6_0-with-security-101cr4
+    - *jboss-javaee-6_0-with-richfaces-101cr4
+    - *jboss-javaee-6_0-with-hibernate3-101cr4
+    - *jboss-javaee-6_0-with-osgi-101cr4
+    - *jboss-javaee-6_0-with-logging-101cr4
    defaultBom: *jboss-javaee-6_0-all-301
    defaultArchetype: *jboss-javaee6-webapp-archetype-711cr1
    archetypes:
@@ -508,6 +613,11 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-tools-100
     - *jboss-javaee-6_0-with-hibernate-100
     - *jboss-javaee-6_0-with-transactions-100
+    - *jboss-javaee-6_0-with-security-101cr4
+    - *jboss-javaee-6_0-with-richfaces-101cr4
+    - *jboss-javaee-6_0-with-hibernate3-101cr4
+    - *jboss-javaee-6_0-with-osgi-101cr4
+    - *jboss-javaee-6_0-with-logging-101cr4
    defaultBom: *jboss-javaee-6_0-all-301
    defaultArchetype: *jboss-javaee6-webapp-archetype-711cr1
    archetypes:
