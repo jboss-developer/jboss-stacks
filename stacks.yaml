@@ -88,7 +88,7 @@ availableBoms:
    
  - &jboss-javaee-6_0-with-hibernate3
    id: jboss-javaee-6_0-with-hibernate3
-   name: JBoss Java EE 6 Specification APIs with Hibernate 3
+   name: Java EE 6 with Hibernate 3
    description: Dependency Management for Java EE 6 Specification APIs with Hibernate 3 projects.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-hibernate3
@@ -98,7 +98,7 @@ availableBoms:
    
  - &jboss-javaee-6_0-with-infinispan
    id: jboss-javaee-6_0-with-infinispan
-   name: JBoss Java EE 6 Specification APIs with Infinispan
+   name: Java EE 6 with Infinispan
    description: Dependency Management for Java EE 6 Specification APIs with Infinispan
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-infinispan
@@ -108,7 +108,7 @@ availableBoms:
    
  - &jboss-javaee-6_0-with-logging
    id: jboss-javaee-6_0-with-logging
-   name: JBoss Java EE 6 Specification APIs with Logging Tools
+   name: Java EE 6 with Logging Tools
    description: Dependency Management for Java EE 6 Specification APIs with Logging Tools
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-logging
@@ -118,7 +118,7 @@ availableBoms:
    
  - &jboss-javaee-6_0-with-osgi
    id: jboss-javaee-6_0-with-osgi
-   name: JBoss Java EE 6 Specification APIs with OSGI
+   name: Java EE 6 with OSGI
    description: Dependency Management for Java EE 6 Specification APIs with OSGI.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-osgi
@@ -128,7 +128,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-richfaces
    id: jboss-javaee-6_0-with-richfaces
-   name: JBoss Java EE 6 Specification APIs with Richfaces
+   name: Java EE 6 with Richfaces
    description: Dependency Management for Java EE 6 Specification APIs with Richfaces.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-richfaces
@@ -138,7 +138,7 @@ availableBoms:
    
  - &jboss-javaee-6_0-with-security
    id: jboss-javaee-6_0-with-security
-   name: JBoss Java EE 6 Specification APIs with Security
+   name: Java EE 6 with Security
    description: Dependency Management for Java EE 6 Specification APIs with JBoss specific Security features. Currently included is JBoss Negotiation.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-security
@@ -594,13 +594,13 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-errai-100
     - *jboss-javaee-6_0-with-tools-100
     - *jboss-javaee-6_0-with-hibernate-100
-    - *jboss-javaee-6_0-with-transactions-100
-    - *jboss-javaee-6_0-with-security-101cr4
-    - *jboss-javaee-6_0-with-richfaces-101cr4
     - *jboss-javaee-6_0-with-hibernate3-101cr4
-    - *jboss-javaee-6_0-with-osgi-101cr4
-    - *jboss-javaee-6_0-with-logging-101cr4
     - *jboss-javaee-6_0-with-infinispan-101cr4
+    - *jboss-javaee-6_0-with-logging-101cr4
+    - *jboss-javaee-6_0-with-osgi-101cr4
+    - *jboss-javaee-6_0-with-richfaces-101cr4
+    - *jboss-javaee-6_0-with-security-101cr4
+    - *jboss-javaee-6_0-with-transactions-100
    defaultBom: *jboss-javaee-6_0-all-301
    defaultArchetype: *jboss-javaee6-webapp-archetype-711cr1
    archetypes:
@@ -633,13 +633,13 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-errai-100
     - *jboss-javaee-6_0-with-tools-100
     - *jboss-javaee-6_0-with-hibernate-100
-    - *jboss-javaee-6_0-with-transactions-100
-    - *jboss-javaee-6_0-with-security-101cr4
-    - *jboss-javaee-6_0-with-richfaces-101cr4
     - *jboss-javaee-6_0-with-hibernate3-101cr4
-    - *jboss-javaee-6_0-with-osgi-101cr4
-    - *jboss-javaee-6_0-with-logging-101cr4
     - *jboss-javaee-6_0-with-infinispan-101cr4
+    - *jboss-javaee-6_0-with-logging-101cr4
+    - *jboss-javaee-6_0-with-osgi-101cr4
+    - *jboss-javaee-6_0-with-richfaces-101cr4
+    - *jboss-javaee-6_0-with-security-101cr4
+    - *jboss-javaee-6_0-with-transactions-100
    defaultBom: *jboss-javaee-6_0-all-301
    defaultArchetype: *jboss-javaee6-webapp-archetype-711cr1
    archetypes:
