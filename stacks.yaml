@@ -373,6 +373,7 @@ availableArchetypes:
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-archetype-blank
    recommendedVersion: 7.0.2.CR2 
+   repositoryURL: 
 
    #######################   
    
@@ -384,6 +385,7 @@ availableArchetypes:
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-archetype
    recommendedVersion: 7.1.1.CR1
+   repositoryURL: 
 
 
    #############################################
@@ -397,6 +399,7 @@ availableArchetypes:
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-ear-archetype-blank
    recommendedVersion: 7.0.2.CR2
+   repositoryURL: 
    
    ####################   
 
@@ -408,6 +411,7 @@ availableArchetypes:
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-ear-archetype
    recommendedVersion: 7.1.1.CR1
+   repositoryURL: 
 
 
    ############################
@@ -421,6 +425,7 @@ availableArchetypes:
    groupId: org.jboss.aerogear.archetypes
    artifactId: jboss-html5-mobile-archetype
    recommendedVersion: 1.0.0.M5
+   repositoryURL: 
 
    ############################
    #  RichFaces Archetype     #
@@ -433,6 +438,7 @@ availableArchetypes:
    groupId: org.richfaces.archetypes
    artifactId: richfaces-archetype-kitchensink
    recommendedVersion: 4.2.2.Final-2
+   repositoryURL: 
 
    ############################
    #  E R R A I   Archetype   #
@@ -445,6 +451,7 @@ availableArchetypes:
    groupId: org.jboss.errai.archetypes
    artifactId: jboss-errai-kitchensink-archetype
    recommendedVersion: 2.0.2.Final
+   repositoryURL: 
 
 ###############################################################################################
 #                                                                                             #
@@ -462,12 +469,14 @@ availableArchetypeVersions:
    id: jboss-javaee6-webapp-archetype-702cr2
    archetype: *jboss-javaee6-webapp-archetype
    version: 7.0.2.CR2
+   repositoryURL: 
    labels: {}
 
  - &jboss-javaee6-webapp-archetype-711cr1
    id: jboss-javaee6-webapp-archetype-711cr1
    archetype: *jboss-javaee6-webapp-archetype
    version: 7.1.1.CR1
+   repositoryURL: 
    labels: {}
    
    ########################################
@@ -478,6 +487,7 @@ availableArchetypeVersions:
    id: jboss-javaee6-webapp-archetype-blank-702cr2
    archetype: *jboss-javaee6-webapp-archetype-blank
    version: 7.0.2.CR2
+   repositoryURL: 
    labels: {}
    
    ########################################
@@ -488,12 +498,14 @@ availableArchetypeVersions:
    id: jboss-javaee6-webapp-ear-archetype-702cr2
    archetype: *jboss-javaee6-webapp-ear-archetype
    version: 7.0.2.CR2
+   repositoryURL: 
    labels: {}
     
  - &jboss-javaee6-webapp-ear-archetype-711cr1
    id: jboss-javaee6-webapp-ear-archetype-711cr1
    archetype: *jboss-javaee6-webapp-ear-archetype
    version: 7.1.1.CR1
+   repositoryURL: 
    labels: {}
 
    ##########################################################
@@ -504,6 +516,7 @@ availableArchetypeVersions:
    id: jboss-javaee6-webapp-ear-archetype-blank-702cr2
    archetype: *jboss-javaee6-webapp-ear-archetype-blank
    version: 7.0.2.CR2
+   repositoryURL: 
    labels: {}
    
    ###############################################
@@ -514,6 +527,7 @@ availableArchetypeVersions:
    id: jboss-html5-mobile-archetype-100m5
    archetype: *jboss-html5-mobile-archetype
    version: 1.0.0.M5
+   repositoryURL: 
    labels: {}
    
    ####################################################
@@ -524,6 +538,7 @@ availableArchetypeVersions:
    id: richfaces-archetype-kitchensink-422final2
    archetype: *richfaces-archetype-kitchensink
    version: 4.2.2.Final-2
+   repositoryURL: 
    labels: {}
    
    ###########################################
@@ -534,6 +549,7 @@ availableArchetypeVersions:
    id: jboss-errai-kitchensink-archetype-202final
    archetype: *jboss-errai-kitchensink-archetype
    version: 2.0.2.Final
+   repositoryURL: 
    labels: {}
    
    
