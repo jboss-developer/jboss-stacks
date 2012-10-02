@@ -366,13 +366,13 @@ availableArchetypes:
    ############################################
   
   
- - &jboss-javaee6-webapp-archetype-blank
-   id: jboss-javaee6-webapp-archetype-blank
+ - &jboss-javaee6-webapp-blank-archetype
+   id: jboss-javaee6-webapp-blank-archetype
    name: Java EE 6 Webapp (Blank Skeleton)
    description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true)
    groupId: org.jboss.spec.archetypes
-   artifactId: jboss-javaee6-webapp-archetype-blank
-   recommendedVersion: 7.0.2.CR2 
+   artifactId: jboss-javaee6-webapp-blank-archetype
+   recommendedVersion: 7.1.1.Final
    repositoryURL: 
 
    #######################   
@@ -381,10 +381,10 @@ availableArchetypes:
    id: jboss-javaee6-webapp-archetype
    name: Java EE 6 Webapp
    description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true)
-   blank: *jboss-javaee6-webapp-archetype-blank
+   blank: *jboss-javaee6-webapp-blank-archetype
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-archetype
-   recommendedVersion: 7.1.1.CR1
+   recommendedVersion: 7.1.1.Final
    repositoryURL: 
 
 
@@ -392,13 +392,13 @@ availableArchetypes:
    #   E A R    A P P     A R C H E T Y P E S  #
    #############################################
 
- - &jboss-javaee6-webapp-ear-archetype-blank
-   id: jboss-javaee6-webapp-ear-archetype-blank
+ - &jboss-javaee6-webapp-ear-blank-archetype
+   id: jboss-javaee6-webapp-ear-blank-archetype
    name: JBoss AS 7 / Java EE 6 EAR Webapp (Blank Skeleton)
    description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true). The project is an EAR, with an EJB-JAR and WAR
    groupId: org.jboss.spec.archetypes
-   artifactId: jboss-javaee6-webapp-ear-archetype-blank
-   recommendedVersion: 7.0.2.CR2
+   artifactId: jboss-javaee6-webapp-ear-blank-archetype
+   recommendedVersion: 7.1.1.Final
    repositoryURL: 
    
    ####################   
@@ -407,10 +407,10 @@ availableArchetypes:
    id: jboss-javaee6-webapp-ear-archetype
    name: JBoss AS 7 / Java EE 6 EAR Webapp
    description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true). The project is an EAR, with an EJB-JAR and WAR
-   blank: *jboss-javaee6-webapp-ear-archetype-blank
+   blank: *jboss-javaee6-webapp-ear-blank-archetype
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-ear-archetype
-   recommendedVersion: 7.1.1.CR1
+   recommendedVersion: 7.1.1.Final
    repositoryURL: 
 
 
@@ -472,10 +472,10 @@ availableArchetypeVersions:
    repositoryURL: 
    labels: {}
 
- - &jboss-javaee6-webapp-archetype-711cr1
-   id: jboss-javaee6-webapp-archetype-711cr1
+ - &jboss-javaee6-webapp-archetype-711
+   id: jboss-javaee6-webapp-archetype-711
    archetype: *jboss-javaee6-webapp-archetype
-   version: 7.1.1.CR1
+   version: 7.1.1.Final
    repositoryURL: 
    labels: {}
    
@@ -483,12 +483,21 @@ availableArchetypeVersions:
    #   Java EE 6 Webapp (Blank Skeleton)  #
    ########################################
    
- - &jboss-javaee6-webapp-archetype-blank-702cr2
-   id: jboss-javaee6-webapp-archetype-blank-702cr2
-   archetype: *jboss-javaee6-webapp-archetype-blank
+ - &jboss-javaee6-webapp-blank-archetype-702cr2
+   id: jboss-javaee6-webapp-blank-archetype-702cr2
+   archetype: *jboss-javaee6-webapp-blank-archetype
    version: 7.0.2.CR2
    repositoryURL: 
    labels: {}
+   
+ - &jboss-javaee6-webapp-blank-archetype-711
+   id: jboss-javaee6-webapp-blank-archetype-711
+   archetype: *jboss-javaee6-webapp-blank-archetype
+   version: 7.1.1.Final
+   repositoryURL: 
+   labels: {}
+   
+
    
    ########################################
    #   JBoss AS 7 / Java EE 6 EAR Webapp  #
@@ -501,21 +510,28 @@ availableArchetypeVersions:
    repositoryURL: 
    labels: {}
     
- - &jboss-javaee6-webapp-ear-archetype-711cr1
-   id: jboss-javaee6-webapp-ear-archetype-711cr1
+ - &jboss-javaee6-webapp-ear-archetype-711
+   id: jboss-javaee6-webapp-ear-archetype-711
    archetype: *jboss-javaee6-webapp-ear-archetype
-   version: 7.1.1.CR1
+   version: 7.1.1.Final
    repositoryURL: 
    labels: {}
 
    ##########################################################
-   #   JBoss AS 7 / Java EE 6 EAR Webapp                    #
+   #   JBoss AS 7 / Java EE 6 EAR Webapp  (Blank Skeleton)  #
    ##########################################################
    
- - &jboss-javaee6-webapp-ear-archetype-blank-702cr2
-   id: jboss-javaee6-webapp-ear-archetype-blank-702cr2
-   archetype: *jboss-javaee6-webapp-ear-archetype-blank
+ - &jboss-javaee6-webapp-ear-blank-archetype-702cr
+   id: jboss-javaee6-webapp-ear-blank-archetype-702cr2
+   archetype: *jboss-javaee6-webapp-ear-blank-archetype
    version: 7.0.2.CR2
+   repositoryURL: 
+   labels: {}   
+   
+ - &jboss-javaee6-webapp-ear-blank-archetype-711
+   id: jboss-javaee6-webapp-ear-blank-archetype-711
+   archetype: *jboss-javaee6-webapp-ear-blank-archetype
+   version: 7.1.1.Final
    repositoryURL: 
    labels: {}
    
@@ -577,12 +593,12 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-hibernate-100-redhat1
     - *jboss-javaee-6_0-with-transactions-100-redhat1
    defaultBom: *jboss-javaee-6_0-300redhat1
-   defaultArchetype: *jboss-javaee6-webapp-archetype-711cr1
+   defaultArchetype: *jboss-javaee6-webapp-archetype-711
    archetypes:
-    - *jboss-javaee6-webapp-archetype-711cr1
-    - *jboss-javaee6-webapp-archetype-blank-702cr2
-    - *jboss-javaee6-webapp-ear-archetype-711cr1
-    - *jboss-javaee6-webapp-ear-archetype-blank-702cr2
+    - *jboss-javaee6-webapp-archetype-711
+    - *jboss-javaee6-webapp-blank-archetype-711
+    - *jboss-javaee6-webapp-ear-archetype-711
+    - *jboss-javaee6-webapp-ear-blank-archetype-711
     - *jboss-html5-mobile-archetype-100m5
     - *richfaces-archetype-kitchensink-422final2
     - *jboss-errai-kitchensink-archetype-202final
@@ -618,12 +634,12 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-security-101
     - *jboss-javaee-6_0-with-transactions-101
    defaultBom: *jboss-javaee-6_0-all-301
-   defaultArchetype: *jboss-javaee6-webapp-archetype-711cr1
+   defaultArchetype: *jboss-javaee6-webapp-archetype-711
    archetypes:
-    - *jboss-javaee6-webapp-archetype-711cr1
-    - *jboss-javaee6-webapp-archetype-blank-702cr2
-    - *jboss-javaee6-webapp-ear-archetype-711cr1
-    - *jboss-javaee6-webapp-ear-archetype-blank-702cr2
+    - *jboss-javaee6-webapp-archetype-711
+    - *jboss-javaee6-webapp-blank-archetype-711
+    - *jboss-javaee6-webapp-ear-archetype-711
+    - *jboss-javaee6-webapp-ear-blank-archetype-711
     - *jboss-html5-mobile-archetype-100m5
     - *richfaces-archetype-kitchensink-422final2
     - *jboss-errai-kitchensink-archetype-202final
@@ -657,12 +673,12 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-security-101
     - *jboss-javaee-6_0-with-transactions-101
    defaultBom: *jboss-javaee-6_0-all-301
-   defaultArchetype: *jboss-javaee6-webapp-archetype-711cr1
+   defaultArchetype: *jboss-javaee6-webapp-archetype-711
    archetypes:
-    - *jboss-javaee6-webapp-archetype-711cr1
-    - *jboss-javaee6-webapp-archetype-blank-702cr2
-    - *jboss-javaee6-webapp-ear-archetype-711cr1
-    - *jboss-javaee6-webapp-ear-archetype-blank-702cr2
+    - *jboss-javaee6-webapp-archetype-711
+    - *jboss-javaee6-webapp-blank-archetype-711
+    - *jboss-javaee6-webapp-ear-archetype-711
+    - *jboss-javaee6-webapp-ear-blank-archetype-711
     - *jboss-html5-mobile-archetype-100m5
     - *richfaces-archetype-kitchensink-422final2
     - *jboss-errai-kitchensink-archetype-202final
@@ -691,9 +707,9 @@ availableRuntimes:
    defaultArchetype: *jboss-javaee6-webapp-archetype-702cr2
    archetypes:
     - *jboss-javaee6-webapp-archetype-702cr2
-    - *jboss-javaee6-webapp-archetype-blank-702cr2
+    - *jboss-javaee6-webapp-blank-archetype-702cr2
     - *jboss-javaee6-webapp-ear-archetype-702cr2
-    - *jboss-javaee6-webapp-ear-archetype-blank-702cr2
+    - *jboss-javaee6-webapp-ear-blank-archetype-702cr
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -717,9 +733,9 @@ availableRuntimes:
    defaultArchetype: *jboss-javaee6-webapp-archetype-702cr2
    archetypes:
     - *jboss-javaee6-webapp-archetype-702cr2
-    - *jboss-javaee6-webapp-archetype-blank-702cr2
+    - *jboss-javaee6-webapp-blank-archetype-702cr2
     - *jboss-javaee6-webapp-ear-archetype-702cr2
-    - *jboss-javaee6-webapp-ear-archetype-blank-702cr2
+    - *jboss-javaee6-webapp-ear-blank-archetype-702cr
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
