@@ -235,7 +235,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-errai
    version: 1.0.0.M12-redhat-1
    labels: {
-        WFK2RepositoryRequired: true,
+        WFK2RepositoryRequired: true
    }
    
    ##################################
@@ -323,7 +323,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-tools
    version: 1.0.1.Final
    labels: {
-        jbossASPluginVersion: 7.1.1.Final,
+        jbossASPluginVersion: 7.1.1.Final
    }
     
  - &jboss-javaee-6_0-with-tools-100-redhat1
@@ -331,7 +331,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-tools
    version: 1.0.0.M12-redhat-1
    labels: {
-        jbossASPluginVersion: 7.1.1.Final,
+        jbossASPluginVersion: 7.1.1.Final
    }
    
    #########################################
@@ -604,7 +604,7 @@ availableRuntimes:
     - *jboss-errai-kitchensink-archetype-202final
    labels: {
         runtime-category: SERVER,
-        runtime-type: EAP,
+        runtime-type: EAP
    }
 
    ###############
@@ -646,7 +646,7 @@ availableRuntimes:
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
-        requiresLogModule: false,
+        requiresLogModule: false
     }
 
    ###############
@@ -685,7 +685,7 @@ availableRuntimes:
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
-        requiresLogModule: false,
+        requiresLogModule: false
     }
  
    ###############
@@ -713,7 +713,7 @@ availableRuntimes:
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
-        requiresLogModule: true,
+        requiresLogModule: true
     }
     
    #################
@@ -739,7 +739,7 @@ availableRuntimes:
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
-        requiresLogModule: true,
+        requiresLogModule: true
     }
         
 ##########################################################
