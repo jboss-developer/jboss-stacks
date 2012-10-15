@@ -96,16 +96,6 @@ availableBoms:
    
    ####################################
    
- - &jboss-javaee-6_0-with-infinispan
-   id: jboss-javaee-6_0-with-infinispan
-   name: Java EE 6 with Infinispan
-   description: Dependency Management for Java EE 6 Specification APIs with Infinispan
-   groupId: org.jboss.bom
-   artifactId: jboss-javaee-6.0-with-infinispan
-   recommendedVersion: 1.0.1.Final
-   
-   ####################################
-   
  - &jboss-javaee-6_0-with-logging
    id: jboss-javaee-6_0-with-logging
    name: Java EE 6 with Logging Tools
@@ -261,16 +251,6 @@ availableBomVersions:
  - &jboss-javaee-6_0-with-hibernate3-101
    id: jboss-javaee-6_0-with-hibernate3-101
    bom: *jboss-javaee-6_0-with-hibernate3
-   version: 1.0.1.Final
-   labels: {}
-   
-   ##########################################################
-   #   JBoss Java EE 6 Specification APIs with Infinispan   #
-   ##########################################################
-   
- - &jboss-javaee-6_0-with-infinispan-101
-   id: jboss-javaee-6_0-with-infinispan-101
-   bom: *jboss-javaee-6_0-with-infinispan
    version: 1.0.1.Final
    labels: {}
    
@@ -627,7 +607,6 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-tools-101
     - *jboss-javaee-6_0-with-hibernate-101
     - *jboss-javaee-6_0-with-hibernate3-101
-    - *jboss-javaee-6_0-with-infinispan-101
     - *jboss-javaee-6_0-with-logging-101
     - *jboss-javaee-6_0-with-osgi-101
     - *jboss-javaee-6_0-with-richfaces-101
@@ -666,7 +645,6 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-tools-101
     - *jboss-javaee-6_0-with-hibernate-101
     - *jboss-javaee-6_0-with-hibernate3-101
-    - *jboss-javaee-6_0-with-infinispan-101
     - *jboss-javaee-6_0-with-logging-101
     - *jboss-javaee-6_0-with-osgi-101
     - *jboss-javaee-6_0-with-richfaces-101
