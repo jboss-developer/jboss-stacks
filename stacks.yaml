@@ -72,7 +72,7 @@ availableBoms:
    description: Errai provides a comprehensive framework and tools for building rich web applications, leveraging the GWT compiler. With standard server-side APIs, such as CDI, in the browser, managing large web applications was never so easy. This BOM adds both Errai and GWT to your project.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-errai
-   recommendedVersion: 1.0.1.Final
+   recommendedVersion: 1.0.2.Final
 
    ##############################
 
@@ -82,7 +82,7 @@ availableBoms:
    description: Historically, Hibernate facilitated the storage and retrieval of Java domain objects via Object/Relational Mapping. Today, Hibernate is a collection of related projects enabling developers to utilize POJO-style domain models in their applications in ways extending well beyond Object/Relational Mapping. This BOM builds on the Java EE full profile BOM, adding Hibernate Community projects including Hibernate ORM, Hibernate Search and Hibernate Validator. It also provides tool projects such as Hibernate JPA Model Gen and Hibernate Validator Annotation Processor.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-hibernate
-   recommendedVersion: 1.0.1.Final
+   recommendedVersion: 1.0.2.Final
    
    ###################################
    
@@ -92,7 +92,7 @@ availableBoms:
    description: Dependency Management for Java EE 6 Specification APIs with Hibernate 3 projects.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-hibernate3
-   recommendedVersion: 1.0.1.Final
+   recommendedVersion: 1.0.2.Final
    
    ####################################
    
@@ -102,7 +102,7 @@ availableBoms:
    description: Dependency Management for Java EE 6 Specification APIs with Logging Tools
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-logging
-   recommendedVersion: 1.0.1.Final
+   recommendedVersion: 1.0.2.Final
    
    ###################################
    
@@ -112,7 +112,7 @@ availableBoms:
    description: Dependency Management for Java EE 6 Specification APIs with OSGI.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-osgi
-   recommendedVersion: 1.0.1.Final
+   recommendedVersion: 1.0.2.Final
    
    ####################################
 
@@ -122,7 +122,7 @@ availableBoms:
    description: Dependency Management for Java EE 6 Specification APIs with Richfaces.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-richfaces
-   recommendedVersion: 1.0.1.Final
+   recommendedVersion: 1.0.2.Final
       
    ##################################
    
@@ -132,7 +132,7 @@ availableBoms:
    description: Dependency Management for Java EE 6 Specification APIs with JBoss specific Security features. Currently included is JBoss Negotiation.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-security
-   recommendedVersion: 1.0.1.Final
+   recommendedVersion: 1.0.2.Final
          
    ###############################
    
@@ -142,7 +142,7 @@ availableBoms:
    description: Java EE lacks any testing APIs, and for this reason JBoss developed the Arquillian project, along with its various component projects, such as Arquillian Drone, and the sister project Shrinkwrap. This BOM builds on the Java EE full profile BOM, adding Arquillian to the mix. It also provides a version of JUnit and TestNG recommended for use with Arquillian. Furthermore, this BOM adds the JBoss AS Maven deployment plugin. EAP 6s recommended mode of deployment is via the management APIs, and the Maven plugin is the recommended way to do this, if the customer is using Maven for building.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-tools
-   recommendedVersion: 1.0.1.Final
+   recommendedVersion: 1.0.2.Final
        
    ################################
  
@@ -152,7 +152,7 @@ availableBoms:
    description: JBoss AS includes a world class transaction manager. In order to access its full capabilites, including for example XTS, WS-AT and WS-BA, you need to use the JBossTS APIs. This BOM adds the JBossTS APIs to the stack.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-transactions
-   recommendedVersion: 1.0.1.Final
+   recommendedVersion: 1.0.2.Final
       
 #####################################################################################
 #                                                                                   #
@@ -213,10 +213,10 @@ availableBomVersions:
    #   Java EE 6 with Errai and GWT  #
    ###################################
    
- - &jboss-javaee-6_0-with-errai-101
-   id: jboss-javaee-6_0-with-errai-101
+ - &jboss-javaee-6_0-with-errai-102
+   id: jboss-javaee-6_0-with-errai-102
    bom: *jboss-javaee-6_0-with-errai
-   version: 1.0.1.Final
+   version: 1.0.2.Final
    labels: {}
     
 
@@ -232,10 +232,10 @@ availableBomVersions:
    #   Java EE 6 with Hibernate     #
    ##################################
    
- - &jboss-javaee-6_0-with-hibernate-101
-   id: jboss-javaee-6_0-with-hibernate-101
+ - &jboss-javaee-6_0-with-hibernate-102
+   id: jboss-javaee-6_0-with-hibernate-102
    bom: *jboss-javaee-6_0-with-hibernate
-   version: 1.0.1.Final
+   version: 1.0.2.Final
    labels: {}
   
  - &jboss-javaee-6_0-with-hibernate-100-redhat1
@@ -248,60 +248,60 @@ availableBomVersions:
    #   JBoss Java EE 6 Specification APIs with Hibernate 3  #
    ##########################################################
    
- - &jboss-javaee-6_0-with-hibernate3-101
-   id: jboss-javaee-6_0-with-hibernate3-101
+ - &jboss-javaee-6_0-with-hibernate3-102
+   id: jboss-javaee-6_0-with-hibernate3-102
    bom: *jboss-javaee-6_0-with-hibernate3
-   version: 1.0.1.Final
+   version: 1.0.2.Final
    labels: {}
    
    ##############################################################
    #   JBoss Java EE 6 Specification APIs with Logging Tools    #
    ##############################################################
    
- - &jboss-javaee-6_0-with-logging-101
-   id: jboss-javaee-6_0-with-logging-101
+ - &jboss-javaee-6_0-with-logging-102
+   id: jboss-javaee-6_0-with-logging-102
    bom: *jboss-javaee-6_0-with-logging
-   version: 1.0.1.Final
+   version: 1.0.2.Final
    labels: {}   
 
    #####################################################
    #   JBoss Java EE 6 Specification APIs with OSGI    #
    #####################################################
    
- - &jboss-javaee-6_0-with-osgi-101
-   id: jboss-javaee-6_0-with-osgi-101
+ - &jboss-javaee-6_0-with-osgi-102
+   id: jboss-javaee-6_0-with-osgi-102
    bom: *jboss-javaee-6_0-with-osgi
-   version: 1.0.1.Final
+   version: 1.0.2.Final
    labels: {}
       
    ########################################################
    #   JBoss Java EE 6 Specification APIs with Richfaces  #
    ########################################################
    
- - &jboss-javaee-6_0-with-richfaces-101
-   id: jboss-javaee-6_0-with-richfaces-101
+ - &jboss-javaee-6_0-with-richfaces-102
+   id: jboss-javaee-6_0-with-richfaces-102
    bom: *jboss-javaee-6_0-with-richfaces
-   version: 1.0.1.Final
+   version: 1.0.2.Final
    labels: {}
    
    ########################################################
    #   JBoss Java EE 6 Specification APIs with Security   #
    ########################################################
    
- - &jboss-javaee-6_0-with-security-101
-   id: jboss-javaee-6_0-with-security-101
+ - &jboss-javaee-6_0-with-security-102
+   id: jboss-javaee-6_0-with-security-102
    bom: *jboss-javaee-6_0-with-security
-   version: 1.0.1.Final
+   version: 1.0.2.Final
    labels: {}
       
    ##################################################
    #   Java EE 6 with tools recommended by JBoss    #
    ##################################################
 
- - &jboss-javaee-6_0-with-tools-101
-   id: jboss-javaee-6_0-with-tools-101
+ - &jboss-javaee-6_0-with-tools-102
+   id: jboss-javaee-6_0-with-tools-102
    bom: *jboss-javaee-6_0-with-tools
-   version: 1.0.1.Final
+   version: 1.0.2.Final
    labels: {
         jbossASPluginVersion: 7.1.1.Final
    }
@@ -318,10 +318,10 @@ availableBomVersions:
    #   Java EE 6 with JBoss Transactions   #
    #########################################
    
- - &jboss-javaee-6_0-with-transactions-101
-   id: jboss-javaee-6_0-with-transactions-101
+ - &jboss-javaee-6_0-with-transactions-102
+   id: jboss-javaee-6_0-with-transactions-102
    bom: *jboss-javaee-6_0-with-transactions
-   version: 1.0.1.Final
+   version: 1.0.2.Final
    labels: {}
     
 
@@ -603,15 +603,15 @@ availableRuntimes:
    downloadUrl: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip
    boms:
     - *jboss-javaee-6_0-all-301
-    - *jboss-javaee-6_0-with-errai-101
-    - *jboss-javaee-6_0-with-tools-101
-    - *jboss-javaee-6_0-with-hibernate-101
-    - *jboss-javaee-6_0-with-hibernate3-101
-    - *jboss-javaee-6_0-with-logging-101
-    - *jboss-javaee-6_0-with-osgi-101
-    - *jboss-javaee-6_0-with-richfaces-101
-    - *jboss-javaee-6_0-with-security-101
-    - *jboss-javaee-6_0-with-transactions-101
+    - *jboss-javaee-6_0-with-errai-102
+    - *jboss-javaee-6_0-with-tools-102
+    - *jboss-javaee-6_0-with-hibernate-102
+    - *jboss-javaee-6_0-with-hibernate3-102
+    - *jboss-javaee-6_0-with-logging-102
+    - *jboss-javaee-6_0-with-osgi-102
+    - *jboss-javaee-6_0-with-richfaces-102
+    - *jboss-javaee-6_0-with-security-102
+    - *jboss-javaee-6_0-with-transactions-102
    defaultBom: *jboss-javaee-6_0-all-301
    defaultArchetype: *jboss-javaee6-webapp-archetype-711
    archetypes:
@@ -641,15 +641,15 @@ availableRuntimes:
    downloadUrl: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip
    boms:
     - *jboss-javaee-6_0-all-301
-    - *jboss-javaee-6_0-with-errai-101
-    - *jboss-javaee-6_0-with-tools-101
-    - *jboss-javaee-6_0-with-hibernate-101
-    - *jboss-javaee-6_0-with-hibernate3-101
-    - *jboss-javaee-6_0-with-logging-101
-    - *jboss-javaee-6_0-with-osgi-101
-    - *jboss-javaee-6_0-with-richfaces-101
-    - *jboss-javaee-6_0-with-security-101
-    - *jboss-javaee-6_0-with-transactions-101
+    - *jboss-javaee-6_0-with-errai-102
+    - *jboss-javaee-6_0-with-tools-102
+    - *jboss-javaee-6_0-with-hibernate-102
+    - *jboss-javaee-6_0-with-hibernate3-102
+    - *jboss-javaee-6_0-with-logging-102
+    - *jboss-javaee-6_0-with-osgi-102
+    - *jboss-javaee-6_0-with-richfaces-102
+    - *jboss-javaee-6_0-with-security-102
+    - *jboss-javaee-6_0-with-transactions-102
    defaultBom: *jboss-javaee-6_0-all-301
    defaultArchetype: *jboss-javaee6-webapp-archetype-711
    archetypes:
