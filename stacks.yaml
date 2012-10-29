@@ -625,7 +625,8 @@ availableRuntimes:
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
-        requiresLogModule: false
+        requiresLogModule: false,
+        pom: https://github.com/jbossas/jboss-as/blob/1f0c1d8348752595441cc295d3d07f79f4cb8347/pom.xml
     }
 
    ###############
@@ -663,7 +664,8 @@ availableRuntimes:
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
-        requiresLogModule: false
+        requiresLogModule: false,
+        pom: https://github.com/jbossas/jboss-as/blob/2e3f3e9645bcd8da66dcf0190111c512825a44a4/pom.xml
     }
  
    ###############
@@ -691,7 +693,8 @@ availableRuntimes:
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
-        requiresLogModule: true
+        requiresLogModule: true,
+        pom: https://github.com/jbossas/jboss-as/blob/6a5e47a88995a7c2e29584a18f9c8d2847b8f69b/pom.xml
     }
     
    #################
@@ -717,7 +720,8 @@ availableRuntimes:
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
-        requiresLogModule: true
+        requiresLogModule: true,
+        pom: https://github.com/jbossas/jboss-as/blob/6a5e47a88995a7c2e29584a18f9c8d2847b8f69b/pom.xml
     }
         
 ##########################################################
