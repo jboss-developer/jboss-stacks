@@ -463,13 +463,6 @@ availableArchetypeVersions:
    #   Java EE 6 Webapp (Blank Skeleton)  #
    ########################################
    
- - &jboss-javaee6-webapp-blank-archetype-702cr2
-   id: jboss-javaee6-webapp-blank-archetype-702cr2
-   archetype: *jboss-javaee6-webapp-blank-archetype
-   version: 7.0.2.CR2
-   repositoryURL: 
-   labels: {}
-   
  - &jboss-javaee6-webapp-blank-archetype-711
    id: jboss-javaee6-webapp-blank-archetype-711
    archetype: *jboss-javaee6-webapp-blank-archetype
@@ -500,13 +493,6 @@ availableArchetypeVersions:
    ##########################################################
    #   JBoss AS 7 / Java EE 6 EAR Webapp  (Blank Skeleton)  #
    ##########################################################
-   
- - &jboss-javaee6-webapp-ear-blank-archetype-702cr
-   id: jboss-javaee6-webapp-ear-blank-archetype-702cr2
-   archetype: *jboss-javaee6-webapp-ear-blank-archetype
-   version: 7.0.2.CR2
-   repositoryURL: 
-   labels: {}   
    
  - &jboss-javaee6-webapp-ear-blank-archetype-711
    id: jboss-javaee6-webapp-ear-blank-archetype-711
@@ -687,9 +673,9 @@ availableRuntimes:
    defaultArchetype: *jboss-javaee6-webapp-archetype-702cr2
    archetypes:
     - *jboss-javaee6-webapp-archetype-702cr2
-    - *jboss-javaee6-webapp-blank-archetype-702cr2
+    - *jboss-javaee6-webapp-blank-archetype-711
     - *jboss-javaee6-webapp-ear-archetype-702cr2
-    - *jboss-javaee6-webapp-ear-blank-archetype-702cr
+    - *jboss-javaee6-webapp-ear-blank-archetype-711
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -714,9 +700,9 @@ availableRuntimes:
    defaultArchetype: *jboss-javaee6-webapp-archetype-702cr2
    archetypes:
     - *jboss-javaee6-webapp-archetype-702cr2
-    - *jboss-javaee6-webapp-blank-archetype-702cr2
+    - *jboss-javaee6-webapp-blank-archetype-711
     - *jboss-javaee6-webapp-ear-archetype-702cr2
-    - *jboss-javaee6-webapp-ear-blank-archetype-702cr
+    - *jboss-javaee6-webapp-ear-blank-archetype-711
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
