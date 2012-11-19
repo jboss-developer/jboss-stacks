@@ -8,6 +8,13 @@ What is it?
 
 The stacks.yaml file represents all relationship between Runtimes, Maven BOMs and Archetypes.
 
+Run the tests
+-------------
+
+If you modify the stacks.yaml file run the tests to get sure that it is working
+
+        mvn test
+
 How to parse the file ?
 -----------------------
 
