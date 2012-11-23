@@ -67,16 +67,6 @@ availableBoms:
    ########################## 
    
    
- - &jboss-javaee-6_0-with-deltaspike
-   id: jboss-javaee-6_0-with-deltaspike
-   name: Java EE 6 with Deltaspike
-   description: Dependency Management for Java EE 6 Specification APIs with Deltaspike.
-   groupId: org.jboss.bom
-   artifactId: jboss-javaee-6.0-with-deltaspike
-   recommendedVersion: 1.0.3.Final
-
-   ##############################
-
  - &jboss-javaee-6_0-with-errai
    id: jboss-javaee-6_0-with-errai
    name: Java EE 6 with Errai and GWT
@@ -218,17 +208,6 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-web
    version: 3.0.1.Final
    labels: {}
-   
-   ################################
-   #   Java EE 6 with Deltaspike  #
-   ################################
-   
- - &jboss-javaee-6_0-with-deltaspike-103
-   id: jboss-javaee-6_0-with-deltaspike-103
-   bom: *jboss-javaee-6_0-with-deltaspike
-   version: 1.0.3.Final
-   labels: {}
-       
    
    ###################################
    #   Java EE 6 with Errai and GWT  #
@@ -610,7 +589,6 @@ availableRuntimes:
    downloadUrl: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip
    boms:
     - *jboss-javaee-6_0-all-301
-    - *jboss-javaee-6_0-with-deltaspike-103
     - *jboss-javaee-6_0-with-errai-103
     - *jboss-javaee-6_0-with-tools-103
     - *jboss-javaee-6_0-with-hibernate-103
@@ -650,7 +628,6 @@ availableRuntimes:
    downloadUrl: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip
    boms:
     - *jboss-javaee-6_0-all-301
-    - *jboss-javaee-6_0-with-deltaspike-103
     - *jboss-javaee-6_0-with-errai-103
     - *jboss-javaee-6_0-with-tools-103
     - *jboss-javaee-6_0-with-hibernate-103
