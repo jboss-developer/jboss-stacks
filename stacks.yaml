@@ -451,7 +451,7 @@ availableArchetypes:
    description: A starter Errai + Java EE 6 webapp project for use on JBoss AS 7 / EAP 6, generated from the jboss-errai-kitchensink-archetype archetype
    groupId: org.jboss.errai.archetypes
    artifactId: jboss-errai-kitchensink-archetype
-   recommendedVersion: 2.0.2.Final
+   recommendedVersion: 2.1.1.Final
    repositoryURL: 
 
 ###############################################################################################
@@ -548,10 +548,10 @@ availableArchetypeVersions:
    #   Errai Kitchen Sink Webapp Archetype   #
    ###########################################
    
- - &jboss-errai-kitchensink-archetype-202final
-   id: jboss-errai-kitchensink-archetype-202final
+ - &jboss-errai-kitchensink-archetype-211final
+   id: jboss-errai-kitchensink-archetype-211final
    archetype: *jboss-errai-kitchensink-archetype
-   version: 2.0.2.Final
+   version: 2.1.1.Final
    repositoryURL: 
    labels: {}
    
@@ -588,7 +588,7 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-blank-archetype-711
     - *jboss-html5-mobile-archetype-100m6c
     - *richfaces-archetype-kitchensink-422final2
-    - *jboss-errai-kitchensink-archetype-202final
+    - *jboss-errai-kitchensink-archetype-211final
    labels: {
         runtime-category: SERVER,
         runtime-type: EAP
@@ -629,7 +629,7 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-blank-archetype-711
     - *jboss-html5-mobile-archetype-100m6c
     - *richfaces-archetype-kitchensink-422final2
-    - *jboss-errai-kitchensink-archetype-202final
+    - *jboss-errai-kitchensink-archetype-211final
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -669,7 +669,7 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-blank-archetype-711
     - *jboss-html5-mobile-archetype-100m6c
     - *richfaces-archetype-kitchensink-422final2
-    - *jboss-errai-kitchensink-archetype-202final
+    - *jboss-errai-kitchensink-archetype-211final
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
