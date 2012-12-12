@@ -418,7 +418,7 @@ availableArchetypes:
    groupId: org.richfaces.archetypes
    artifactId: richfaces-archetype-kitchensink
    recommendedVersion: 4.2.3.Final-1
-   repositoryURL: https://repository.jboss.org/nexus/content/groups/staging/ 
+   repositoryURL: 
 
    ############################
    #  E R R A I   Archetype   #
