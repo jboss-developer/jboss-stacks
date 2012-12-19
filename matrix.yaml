@@ -402,7 +402,7 @@ artifacts:
  - name: jboss-as-kitchensink-html5-mobile
    useCases: 
     - Uses JSF 2.0, CDI 1.0, EJB 3.1, JPA 2.0 and Bean Validation 1.0.
-   archetype: *jboss-html5-mobile-archetype-100m6c
+   archetype: *jboss-html5-mobile-archetype-100m7
    bom:
     - *jboss-javaee-6_0-web-300
    targetRuntimes:
