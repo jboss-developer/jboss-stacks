@@ -352,7 +352,7 @@ availableArchetypes:
    description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true)
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-blank-archetype
-   recommendedVersion: 7.1.1.Final
+   recommendedVersion: 7.1.2.CR1
    repositoryURL: 
 
    #######################   
@@ -364,7 +364,7 @@ availableArchetypes:
    blank: *jboss-javaee6-webapp-blank-archetype
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-archetype
-   recommendedVersion: 7.1.1.Final
+   recommendedVersion: 7.1.2.CR1
    repositoryURL: 
 
 
@@ -378,7 +378,7 @@ availableArchetypes:
    description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true). The project is an EAR, with an EJB-JAR and WAR
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-ear-blank-archetype
-   recommendedVersion: 7.1.1.Final
+   recommendedVersion: 7.1.2.CR1
    repositoryURL: 
    
    ####################   
@@ -390,7 +390,7 @@ availableArchetypes:
    blank: *jboss-javaee6-webapp-ear-blank-archetype
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-ear-archetype
-   recommendedVersion: 7.1.1.Final
+   recommendedVersion: 7.1.2.CR1
    repositoryURL: 
 
 
@@ -455,7 +455,7 @@ availableArchetypeVersions:
  - &jboss-javaee6-webapp-archetype-711
    id: jboss-javaee6-webapp-archetype-711
    archetype: *jboss-javaee6-webapp-archetype
-   version: 7.1.1.Final
+   version: 7.1.2.CR1
    repositoryURL: 
    labels: {}
    
@@ -466,7 +466,7 @@ availableArchetypeVersions:
  - &jboss-javaee6-webapp-blank-archetype-711
    id: jboss-javaee6-webapp-blank-archetype-711
    archetype: *jboss-javaee6-webapp-blank-archetype
-   version: 7.1.1.Final
+   version: 7.1.2.CR1
    repositoryURL: 
    labels: {}
    
@@ -486,7 +486,7 @@ availableArchetypeVersions:
  - &jboss-javaee6-webapp-ear-archetype-711
    id: jboss-javaee6-webapp-ear-archetype-711
    archetype: *jboss-javaee6-webapp-ear-archetype
-   version: 7.1.1.Final
+   version: 7.1.2.CR1
    repositoryURL: 
    labels: {}
 
@@ -497,7 +497,7 @@ availableArchetypeVersions:
  - &jboss-javaee6-webapp-ear-blank-archetype-711
    id: jboss-javaee6-webapp-ear-blank-archetype-711
    archetype: *jboss-javaee6-webapp-ear-blank-archetype
-   version: 7.1.1.Final
+   version: 7.1.2.CR1
    repositoryURL: 
    labels: {}
    
