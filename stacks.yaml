@@ -452,8 +452,8 @@ availableArchetypeVersions:
    repositoryURL: 
    labels: {}
 
- - &jboss-javaee6-webapp-archetype-711
-   id: jboss-javaee6-webapp-archetype-711
+ - &jboss-javaee6-webapp-archetype-712cr1
+   id: jboss-javaee6-webapp-archetype-712cr1
    archetype: *jboss-javaee6-webapp-archetype
    version: 7.1.2.CR1
    repositoryURL: 
@@ -463,8 +463,8 @@ availableArchetypeVersions:
    #   Java EE 6 Webapp (Blank Skeleton)  #
    ########################################
    
- - &jboss-javaee6-webapp-blank-archetype-711
-   id: jboss-javaee6-webapp-blank-archetype-711
+ - &jboss-javaee6-webapp-blank-archetype-712cr1
+   id: jboss-javaee6-webapp-blank-archetype-712cr1
    archetype: *jboss-javaee6-webapp-blank-archetype
    version: 7.1.2.CR1
    repositoryURL: 
@@ -483,8 +483,8 @@ availableArchetypeVersions:
    repositoryURL: 
    labels: {}
     
- - &jboss-javaee6-webapp-ear-archetype-711
-   id: jboss-javaee6-webapp-ear-archetype-711
+ - &jboss-javaee6-webapp-ear-archetype-712cr1
+   id: jboss-javaee6-webapp-ear-archetype-712cr1
    archetype: *jboss-javaee6-webapp-ear-archetype
    version: 7.1.2.CR1
    repositoryURL: 
@@ -494,8 +494,8 @@ availableArchetypeVersions:
    #   JBoss AS 7 / Java EE 6 EAR Webapp  (Blank Skeleton)  #
    ##########################################################
    
- - &jboss-javaee6-webapp-ear-blank-archetype-711
-   id: jboss-javaee6-webapp-ear-blank-archetype-711
+ - &jboss-javaee6-webapp-ear-blank-archetype-712cr1
+   id: jboss-javaee6-webapp-ear-blank-archetype-712cr1
    archetype: *jboss-javaee6-webapp-ear-blank-archetype
    version: 7.1.2.CR1
    repositoryURL: 
@@ -559,12 +559,12 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-hibernate-100-redhat1
     - *jboss-javaee-6_0-with-transactions-100-redhat1
    defaultBom: *jboss-javaee-6_0-300redhat1
-   defaultArchetype: *jboss-javaee6-webapp-archetype-711
+   defaultArchetype: *jboss-javaee6-webapp-archetype-712cr1
    archetypes:
-    - *jboss-javaee6-webapp-archetype-711
-    - *jboss-javaee6-webapp-blank-archetype-711
-    - *jboss-javaee6-webapp-ear-archetype-711
-    - *jboss-javaee6-webapp-ear-blank-archetype-711
+    - *jboss-javaee6-webapp-archetype-712cr1
+    - *jboss-javaee6-webapp-blank-archetype-712cr1
+    - *jboss-javaee6-webapp-ear-archetype-712cr1
+    - *jboss-javaee6-webapp-ear-blank-archetype-712cr1
     - *jboss-html5-mobile-archetype-100m7
     - *richfaces-archetype-kitchensink-423final1
     - *jboss-errai-kitchensink-archetype-211final
@@ -599,12 +599,12 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-security-103
     - *jboss-javaee-6_0-with-transactions-103
    defaultBom: *jboss-javaee-6_0-all-301
-   defaultArchetype: *jboss-javaee6-webapp-archetype-711
+   defaultArchetype: *jboss-javaee6-webapp-archetype-712cr1
    archetypes:
-    - *jboss-javaee6-webapp-archetype-711
-    - *jboss-javaee6-webapp-blank-archetype-711
-    - *jboss-javaee6-webapp-ear-archetype-711
-    - *jboss-javaee6-webapp-ear-blank-archetype-711
+    - *jboss-javaee6-webapp-archetype-712cr1
+    - *jboss-javaee6-webapp-blank-archetype-712cr1
+    - *jboss-javaee6-webapp-ear-archetype-712cr1
+    - *jboss-javaee6-webapp-ear-blank-archetype-712cr1
     - *jboss-html5-mobile-archetype-100m7
     - *richfaces-archetype-kitchensink-423final1
     - *jboss-errai-kitchensink-archetype-211final
@@ -638,12 +638,12 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-security-103
     - *jboss-javaee-6_0-with-transactions-103
    defaultBom: *jboss-javaee-6_0-all-301
-   defaultArchetype: *jboss-javaee6-webapp-archetype-711
+   defaultArchetype: *jboss-javaee6-webapp-archetype-712cr1
    archetypes:
-    - *jboss-javaee6-webapp-archetype-711
-    - *jboss-javaee6-webapp-blank-archetype-711
-    - *jboss-javaee6-webapp-ear-archetype-711
-    - *jboss-javaee6-webapp-ear-blank-archetype-711
+    - *jboss-javaee6-webapp-archetype-712cr1
+    - *jboss-javaee6-webapp-blank-archetype-712cr1
+    - *jboss-javaee6-webapp-ear-archetype-712cr1
+    - *jboss-javaee6-webapp-ear-blank-archetype-712cr1
     - *jboss-html5-mobile-archetype-100m7
     - *richfaces-archetype-kitchensink-423final1
     - *jboss-errai-kitchensink-archetype-211final
@@ -673,9 +673,9 @@ availableRuntimes:
    defaultArchetype: *jboss-javaee6-webapp-archetype-702cr2
    archetypes:
     - *jboss-javaee6-webapp-archetype-702cr2
-    - *jboss-javaee6-webapp-blank-archetype-711
+    - *jboss-javaee6-webapp-blank-archetype-712cr1
     - *jboss-javaee6-webapp-ear-archetype-702cr2
-    - *jboss-javaee6-webapp-ear-blank-archetype-711
+    - *jboss-javaee6-webapp-ear-blank-archetype-712cr1
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -700,9 +700,9 @@ availableRuntimes:
    defaultArchetype: *jboss-javaee6-webapp-archetype-702cr2
    archetypes:
     - *jboss-javaee6-webapp-archetype-702cr2
-    - *jboss-javaee6-webapp-blank-archetype-711
+    - *jboss-javaee6-webapp-blank-archetype-712cr1
     - *jboss-javaee6-webapp-ear-archetype-702cr2
-    - *jboss-javaee6-webapp-ear-blank-archetype-711
+    - *jboss-javaee6-webapp-ear-blank-archetype-712cr1
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
