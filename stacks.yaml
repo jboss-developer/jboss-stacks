@@ -417,7 +417,7 @@ availableArchetypes:
    description: RichFaces Kitchen Sink Application
    groupId: org.richfaces.archetypes
    artifactId: richfaces-archetype-kitchensink
-   recommendedVersion: 4.2.3.Final-1
+   recommendedVersion: 4.2.3.Final-2
    repositoryURL: 
 
    ############################
@@ -516,10 +516,10 @@ availableArchetypeVersions:
    #   RichFaces Archetypes Kitchen Sink Application  #
    ####################################################
    
- - &richfaces-archetype-kitchensink-423final1
-   id: richfaces-archetype-kitchensink-423final1
+ - &richfaces-archetype-kitchensink-423final2
+   id: richfaces-archetype-kitchensink-423final2
    archetype: *richfaces-archetype-kitchensink
-   version: 4.2.3.Final-1
+   version: 4.2.3.Final-2
    repositoryURL: 
    labels: {}
    
@@ -566,7 +566,7 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-archetype-712cr1
     - *jboss-javaee6-webapp-ear-blank-archetype-712cr1
     - *jboss-html5-mobile-archetype-100m7a
-    - *richfaces-archetype-kitchensink-423final1
+    - *richfaces-archetype-kitchensink-423final2
     - *jboss-errai-kitchensink-archetype-211final
    labels: {
         runtime-category: SERVER,
@@ -606,7 +606,7 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-archetype-712cr1
     - *jboss-javaee6-webapp-ear-blank-archetype-712cr1
     - *jboss-html5-mobile-archetype-100m7a
-    - *richfaces-archetype-kitchensink-423final1
+    - *richfaces-archetype-kitchensink-423final2
     - *jboss-errai-kitchensink-archetype-211final
    labels: {
         runtime-category: SERVER,
@@ -645,7 +645,7 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-archetype-712cr1
     - *jboss-javaee6-webapp-ear-blank-archetype-712cr1
     - *jboss-html5-mobile-archetype-100m7a
-    - *richfaces-archetype-kitchensink-423final1
+    - *richfaces-archetype-kitchensink-423final2
     - *jboss-errai-kitchensink-archetype-211final
    labels: {
         runtime-category: SERVER,
