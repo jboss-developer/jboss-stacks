@@ -4,7 +4,9 @@ jdf-stack Contributing Guide
 Basic Steps
 -----------
 
-To contribute with Stacks, clone your own fork instead of cloning the main Stacks repository, commit your work on topic branches and make pull requests. In detail:
+To contribute Stacks index, fork the main Stacks index repository, clone your fork, commit your work on topic branches, and make pull requests.
+
+Here are the steps:
 
 1. [Fork](https://github.com/jboss-jdf/jdf-stack/fork_select) the project.
 
