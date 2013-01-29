@@ -65,7 +65,24 @@ availableBoms:
    ##########################
    #    J D F    B O M S    #
    ########################## 
-   
+
+
+ - &jboss-javaee-6_0-with-all
+   id: jboss-javaee-6_0-with-all
+   name: Java EE 6 with All BOMs
+   description: Dependency Management for Java EE 6 Specification APIs with All JBoss BOMs
+   groupId: org.jboss.bom
+   artifactId: jboss-javaee-6.0-with-all
+   recommendedVersion: 1.0.4.CR7
+
+ - &jboss-javaee-6_0-with-deltaspike
+   id: jboss-javaee-6_0-with-deltaspike
+   name: Java EE 6 with Deltaspike
+   description: Dependency Management for Java EE 6 Specification APIs with Deltaspike
+   groupId: org.jboss.bom
+   artifactId: jboss-javaee-6.0-with-deltaspike
+   recommendedVersion: 1.0.4.CR7
+
    
  - &jboss-javaee-6_0-with-errai
    id: jboss-javaee-6_0-with-errai
@@ -99,7 +116,7 @@ availableBoms:
    
  - &jboss-javaee-6_0-with-infinispan
    id: jboss-javaee-6_0-with-infinispan
-   name: JBoss Java EE 6 Specification APIs with Infinispan
+   name: JBoss Java EE 6 with Infinispan
    description: Dependency Management for Java EE 6 Specification APIs with Infinispan
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-infinispan
@@ -217,6 +234,26 @@ availableBomVersions:
    id: jboss-javaee-6_0-web-301
    bom: *jboss-javaee-6_0-web
    version: 3.0.1.Final
+   labels: {}
+
+   ###################################
+   #       Java EE 6 with All        #
+   ###################################
+   
+ - &jboss-javaee-6_0-with-all-104cr7
+   id: jboss-javaee-6_0-with-104cr7
+   bom: *jboss-javaee-6_0-with-all
+   version: 1.0.4.CR7
+   labels: {}
+
+   ###################################
+   #   Java EE 6 with Deltaspike     #
+   ###################################
+   
+ - &jboss-javaee-6_0-with-deltaspike-104cr7
+   id: jboss-javaee-6_0-with-deltaspike-104cr7
+   bom: *jboss-javaee-6_0-with-deltaspike
+   version: 1.0.4.CR7
    labels: {}
    
    ###################################
@@ -609,6 +646,8 @@ availableRuntimes:
    downloadUrl: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip
    boms:
     - *jboss-javaee-6_0-all-301
+    - *jboss-javaee-6_0-with-all-104cr7
+    - *jboss-javaee-6_0-with-deltaspike-104cr7
     - *jboss-javaee-6_0-with-errai-103
     - *jboss-javaee-6_0-with-tools-103
     - *jboss-javaee-6_0-with-hibernate-103
