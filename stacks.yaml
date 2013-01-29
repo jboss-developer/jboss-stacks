@@ -75,6 +75,8 @@ availableBoms:
    artifactId: jboss-javaee-6.0-with-all
    recommendedVersion: 1.0.4.CR7
 
+   ##############################
+
  - &jboss-javaee-6_0-with-deltaspike
    id: jboss-javaee-6_0-with-deltaspike
    name: Java EE 6 with Deltaspike
@@ -83,6 +85,7 @@ availableBoms:
    artifactId: jboss-javaee-6.0-with-deltaspike
    recommendedVersion: 1.0.4.CR7
 
+   ##############################
    
  - &jboss-javaee-6_0-with-errai
    id: jboss-javaee-6_0-with-errai
@@ -116,7 +119,7 @@ availableBoms:
    
  - &jboss-javaee-6_0-with-infinispan
    id: jboss-javaee-6_0-with-infinispan
-   name: JBoss Java EE 6 with Infinispan
+   name: Java EE 6 with Infinispan
    description: Dependency Management for Java EE 6 Specification APIs with Infinispan
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-infinispan
@@ -360,7 +363,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-tools
    version: 1.0.3.Final
    labels: {
-        jbossASPluginVersion: 7.1.1.Final
+        jbossASPluginVersion: 7.3.Final
    }
     
  - &jboss-javaee-6_0-with-tools-100-redhat1
@@ -368,7 +371,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-tools
    version: 1.0.0.M12-redhat-1
    labels: {
-        jbossASPluginVersion: 7.1.1.Final
+        jbossASPluginVersion: 7.3.Final
    }
    
    #########################################
@@ -402,7 +405,6 @@ availableArchetypes:
    #   W E B     A P P   A R C H E T Y P E S  #
    ############################################
   
-  
  - &jboss-javaee6-webapp-blank-archetype
    id: jboss-javaee6-webapp-blank-archetype
    name: Java EE 6 Webapp (Blank Skeleton)
@@ -423,7 +425,6 @@ availableArchetypes:
    artifactId: jboss-javaee6-webapp-archetype
    recommendedVersion: 7.1.2.CR1
    repositoryURL: 
-
 
    #############################################
    #   E A R    A P P     A R C H E T Y P E S  #
@@ -449,7 +450,6 @@ availableArchetypes:
    artifactId: jboss-javaee6-webapp-ear-archetype
    recommendedVersion: 7.1.2.CR1
    repositoryURL: 
-
 
    ############################
    #    HTML5     Archetype   #
@@ -526,8 +526,6 @@ availableArchetypeVersions:
    version: 7.1.2.CR1
    repositoryURL: 
    labels: {}
-   
-
    
    ########################################
    #   JBoss AS 7 / Java EE 6 EAR Webapp  #
