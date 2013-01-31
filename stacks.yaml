@@ -461,7 +461,7 @@ availableArchetypes:
    description: An archetype that generates a Java EE 6 application using HTML5, and JAX-RS to support both desktop and mobile web browsers
    groupId: org.jboss.aerogear.archetypes
    artifactId: jboss-html5-mobile-archetype
-   recommendedVersion: 1.0.0.M7a
+   recommendedVersion: 1.0.0.M8
    repositoryURL: 
 
    ############################
@@ -560,10 +560,10 @@ availableArchetypeVersions:
    #   Java EE 6 HTML5 Mobile Web Application    #
    ###############################################
    
- - &jboss-html5-mobile-archetype-100m7a
-   id: jboss-html5-mobile-archetype-100m7a
+ - &jboss-html5-mobile-archetype-100m8
+   id: jboss-html5-mobile-archetype-100m8
    archetype: *jboss-html5-mobile-archetype
-   version: 1.0.0.M7a
+   version: 1.0.0.M8
    repositoryURL: 
    labels: {}
    
@@ -620,7 +620,7 @@ availableRuntimes:
     - *jboss-javaee6-webapp-blank-archetype-712cr1
     - *jboss-javaee6-webapp-ear-archetype-712cr1
     - *jboss-javaee6-webapp-ear-blank-archetype-712cr1
-    - *jboss-html5-mobile-archetype-100m7a
+    - *jboss-html5-mobile-archetype-100m8
     - *richfaces-archetype-kitchensink-423final2
     - *jboss-errai-kitchensink-archetype-211final
    labels: {
@@ -663,7 +663,7 @@ availableRuntimes:
     - *jboss-javaee6-webapp-blank-archetype-712cr1
     - *jboss-javaee6-webapp-ear-archetype-712cr1
     - *jboss-javaee6-webapp-ear-blank-archetype-712cr1
-    - *jboss-html5-mobile-archetype-100m7a
+    - *jboss-html5-mobile-archetype-100m8
     - *richfaces-archetype-kitchensink-423final2
     - *jboss-errai-kitchensink-archetype-211final
    labels: {
@@ -703,7 +703,7 @@ availableRuntimes:
     - *jboss-javaee6-webapp-blank-archetype-712cr1
     - *jboss-javaee6-webapp-ear-archetype-712cr1
     - *jboss-javaee6-webapp-ear-blank-archetype-712cr1
-    - *jboss-html5-mobile-archetype-100m7a
+    - *jboss-html5-mobile-archetype-100m8
     - *richfaces-archetype-kitchensink-423final2
     - *jboss-errai-kitchensink-archetype-211final
    labels: {
