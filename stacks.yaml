@@ -63,14 +63,6 @@ availableBoms:
    recommendedVersion: 3.0.1.Final-redhat-1
    
    ##############################
-   
- - &jboss-wfk-arquillian
-   id: jboss-wfk-arquillian
-   name: Boss Web Framework Kit Arquillian Bill of Materials
-   description: ependency Management for Arquillian Testing Tool
-   groupId: org.jboss.bom
-   artifactId: jboss-wfk-arquillian
-   recommendedVersion: 1.0.2.Final-redhat-1
 
    ##########################
    #    J D F    B O M S    #
@@ -655,19 +647,7 @@ availableBomVersions:
    labels: {
       WFK21RepositoryRequired: true,
    }   
-   
-   #############################################
-   #  JBoss Web Framework Kit Arquillian BOM   #
-   #############################################
-
- - &jboss-wfk-arquillian-102-redhat1
-   id: jboss-wfk-arquillian-102-redhat1
-   bom: *jboss-wfk-arquillian
-   version: 1.0.2.Final-redhat-1
-   labels: {
-      EAP6RepositoryRequired: true,
-   }
-   
+      
    ##############################
    #    W F K   Spring BOMs     #
    ##############################
@@ -907,10 +887,10 @@ availableRuntimes:
    #   E A P 6   #
    ###############
 
- - &jbosseap6runtime
-   id: jbosseap6runtime
-   name: JBoss EAP 6.0.1
-   version: 6.0.1
+ - &jbosseap600runtime
+   id: jbosseap600runtime
+   name: JBoss EAP 6.0.0
+   version: 6.0.0
    url: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=12673&product=appplatform&version=&downloadType=distributions
    boms:
     - *jboss-javaee-6_0-300redhat1
@@ -932,10 +912,40 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-tools-wfk-101-redhat1
     - *jboss-javaee-6_0-with-transactions-102-redhat1
     - *jboss-javaee-6_0-with-transactions-wfk-101-redhat1
-    - *jboss-wfk-arquillian-102-redhat1 
     - *spring-2_5-bom-wfk-210-redhat1
     - *spring-3_0-bom-wfk-210-redhat1
     - *spring-3_1-bom-wfk-210-redhat1
+   defaultBom: *jboss-javaee-6_0-300redhat1
+   defaultArchetype: *jboss-javaee6-webapp-archetype-712
+   archetypes:
+    - *jboss-javaee6-webapp-archetype-712
+    - *jboss-javaee6-webapp-blank-archetype-712
+    - *jboss-javaee6-webapp-ear-archetype-712
+    - *jboss-javaee6-webapp-ear-blank-archetype-712
+    - *jboss-html5-mobile-archetype-100m8
+    - *richfaces-archetype-kitchensink-423final2
+    - *jboss-errai-kitchensink-archetype-211final
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: EAP
+   }
+
+# EAP 6.0.1 doesn't use WFK 2.1 BOMs
+ - &jbosseap601runtime
+   id: jbosseap601runtime
+   name: JBoss EAP 6.0.1
+   version: 6.0.1
+   url: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=12673&product=appplatform&version=&downloadType=distributions
+   boms:
+    - *jboss-javaee-6_0-300redhat1
+    - *jboss-javaee-6_0-with-errai-102-redhat1
+    - *jboss-javaee-6_0-with-hibernate-102-redhat1
+    - *jboss-javaee-6_0-with-hibernate3-102-redhat1
+    - *jboss-javaee-6_0-with-logging-102-redhat1
+    - *jboss-javaee-6_0-with-osgi-102-redhat1
+    - *jboss-javaee-6_0-with-security-102-redhat1
+    - *jboss-javaee-6_0-with-tools-102-redhat1
+    - *jboss-javaee-6_0-with-transactions-102-redhat1
    defaultBom: *jboss-javaee-6_0-300redhat1
    defaultArchetype: *jboss-javaee6-webapp-archetype-712
    archetypes:
@@ -1112,8 +1122,8 @@ minorReleases:
  - &jbeap60
    name: JBoss EAP
    version: 6.0
-   recommendedRuntime: *jbosseap6runtime
-      
+   recommendedRuntime: *jbosseap601runtime
+         
    ###############
    #   A S 7.X   #
    ###############
@@ -1150,6 +1160,6 @@ majorReleases:
    
  - name: JBoss EAP
    version: 6
-   recommendedRuntime: *jbosseap6runtime
+   recommendedRuntime: *jbosseap601runtime
    minorReleases:
     - *jbeap60
