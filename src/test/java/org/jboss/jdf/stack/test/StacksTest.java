@@ -28,6 +28,8 @@ import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.jboss.jdf.stacks.client.StacksClient;
 import org.jboss.jdf.stacks.client.StacksClientConfiguration;
 import org.jboss.jdf.stacks.model.Archetype;
@@ -48,16 +50,19 @@ import org.junit.Test;
 public class StacksTest {
 
     private static StacksClient stacksClient;
+    
+    private static Log log = LogFactory.getLog(StacksTest.class);
 
     @BeforeClass
     public static void setupClient() throws MalformedURLException {
         
         // suppress shrinkwrap warning messages
-        Logger log = Logger.getLogger("org.jboss.shrinkwrap.resolver");
-        log.setLevel(Level.SEVERE);
-
-
+        Logger shrinkwrapLogger = Logger.getLogger("org.jboss.shrinkwrap.resolver");
+        shrinkwrapLogger.setLevel(Level.SEVERE);
+        
         URL url = new File("./stacks.yaml").toURI().toURL();
+        
+        log.info("Testing file: " + url);
 
         stacksClient = new StacksClient();
 
@@ -120,7 +125,13 @@ public class StacksTest {
                 StringBuilder sb = new StringBuilder("Can't resolve BOM [" + artifact + "] ");
                 // Help the user to debug why the test is falling
                 if (bomVersion.getLabels().get("WFK2RepositoryRequired") != null) {
-                    sb.append(" - NOTE: This artifact needs a WFK 2.0 repository");
+                    sb.append(" - NOTE: This artifact needs a WFK 2.0 and EAP 6.0.0 repositories");
+                }
+                if (bomVersion.getLabels().get("WFK21RepositoryRequired") != null) {
+                    sb.append(" - NOTE: This artifact needs a WFK 2.1 and EAP 6.0.0 repositories");
+                }
+                if (bomVersion.getLabels().get("EAP6RepositoryRequired") != null) {
+                    sb.append(" - NOTE: This artifact needs a EAP 6 repository");
                 }
                 Assert.assertNull(sb.toString(), e);
             }

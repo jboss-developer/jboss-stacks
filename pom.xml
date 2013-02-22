@@ -9,6 +9,7 @@
   <properties>
         <stacks.client.version>1.0.1.Final</stacks.client.version>
         <junit.version>4.10</junit.version>
+        <shrinkwrap.version>2.0.0-beta-2</shrinkwrap.version>
     </properties>
     
     
@@ -41,17 +42,17 @@
         <dependency>
             <groupId>org.jboss.shrinkwrap.resolver</groupId>
             <artifactId>shrinkwrap-resolver-api</artifactId>
-            <version>2.0.0-alpha-5</version>
+            <version>${shrinkwrap.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jboss.shrinkwrap.resolver</groupId>
             <artifactId>shrinkwrap-resolver-api-maven</artifactId>
-            <version>2.0.0-alpha-5</version>
+            <version>${shrinkwrap.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jboss.shrinkwrap.resolver</groupId>
             <artifactId>shrinkwrap-resolver-depchain</artifactId>
-            <version>2.0.0-alpha-5</version>
+            <version>${shrinkwrap.version}</version>
             <type>pom</type>
         </dependency>
   </dependencies>
