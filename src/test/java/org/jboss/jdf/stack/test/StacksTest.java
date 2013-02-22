@@ -57,7 +57,7 @@ public class StacksTest {
     private static Log log = LogFactory.getLog(StacksTest.class);
 
     private String outputDir = System.getProperty("outPutDirectory");
-    
+
     private String testOutputDirectory = System.getProperty("testOutputDirectory");
 
     private static File stacksFile;
@@ -116,6 +116,37 @@ public class StacksTest {
     }
 
     @Test
+    public void testBomVersionUsed() {
+        log.info("Test if a BomVersion is used on any Runtime");
+        for (BomVersion bomVersion : stacksClient.getStacks().getAvailableBomVersions()) {
+            boolean used = false;
+            for (Runtime runtime : stacksClient.getStacks().getAvailableRuntimes()) {
+                if (runtime.getBoms().contains(bomVersion)) {
+                    used = true;
+                    break;
+                }
+            }
+            Assert.assertTrue("BOM Version " + bomVersion + " must be used on any runtime", used);
+        }
+    }
+
+    @Test
+    public void testDefaultBomVersion() {
+        log.info("Test if runtime default BOM is listed as a runtime BOM");
+        for (Runtime runtime : stacksClient.getStacks().getAvailableRuntimes()) {
+            Assert.assertTrue("Runtime " + runtime + " default BOM is not one of runtime BOMS", runtime.getBoms().contains(runtime.getDefaultBom()));
+        }
+    }
+
+    @Test
+    public void testDefaultArchetypeVersion() {
+        log.info("Test if runtime default Archetype is listed as a runtime Archetype");
+        for (Runtime runtime : stacksClient.getStacks().getAvailableRuntimes()) {
+            Assert.assertTrue("Runtime " + runtime + " default Archetype is not one of runtime Archetypes", runtime.getArchetypes().contains(runtime.getDefaultArchetype()));
+        }
+    }
+
+    @Test
     public void testRecommendedBomVersions() {
         log.info("Testing if recommended Bom Version has the correspondent BomVersion");
         Stacks stacks = stacksClient.getStacks();
@@ -152,30 +183,47 @@ public class StacksTest {
     }
 
     @Test
+    public void testEarlyAcccessLabel() {
+        log.info("Testing if all boms from a EarlyAccess runtime has also the EarlyAccess label");
+        for (Runtime runtime : stacksClient.getStacks().getAvailableRuntimes()) {
+            if (runtime.getLabels().get("EarlyAccess") != null) {
+                for (BomVersion bomVersion : runtime.getBoms()) {
+                    Assert.assertNotNull("A Bom " + bomVersion + " from a EarlyAccess Runtime " + runtime + " should also be labeled as EarlyAccess",
+                        bomVersion.getLabels().get("EarlyAccess"));
+                }
+            }
+        }
+    }
+
+    @Test
     public void testBomResolver() {
+        log.info("Testing if the BOM is resovable");
         Stacks stacks = stacksClient.getStacks();
         for (BomVersion bomVersion : stacks.getAvailableBomVersions()) {
             String artifact = String.format("%s:%s:pom:%s", bomVersion.getBom().getGroupId(), bomVersion.getBom().getArtifactId(), bomVersion.getVersion());
-            //Use only declared ???RepositoryRequired settings for each BOM
+            // Use only declared ???RepositoryRequired settings for each BOM
             try {
-                if (bomVersion.getLabels().get("EAP600RepositoryRequired") != null){
-                    log.info("Resolving EAP 6.0.0 BOM: " + artifact);
+                if (bomVersion.getLabels().get("EAP600RepositoryRequired") != null) {
+                    log.debug("Resolving EAP 6.0.0 BOM: " + artifact);
                     Maven.configureResolver().fromClassloaderResource("settings-eap600.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
-                }
-                if (bomVersion.getLabels().get("EAP601RepositoryRequired") != null){
-                    log.info("Resolving EAP 6.1.0 BOM: " + artifact);
+                } else if (bomVersion.getLabels().get("EAP601RepositoryRequired") != null) {
+                    log.debug("Resolving EAP 6.0.1 BOM: " + artifact);
                     Maven.configureResolver().fromClassloaderResource("settings-eap601.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
-                }
-                if (bomVersion.getLabels().get("WFK2RepositoryRequired") != null){
-                    log.info("Resolving WFK 2.0.0 BOM: " + artifact);
+                } else if (bomVersion.getLabels().get("EAP610AlphaRepositoryRequired") != null) {
+                    log.debug("Resolving EAP 6.1.0-alpha BOM: " + artifact);
+                    Maven.configureResolver().fromClassloaderResource("settings-eap610alpha.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
+                } else if (bomVersion.getLabels().get("WFK2RepositoryRequired") != null) {
+                    log.debug("Resolving WFK 2.0.0 BOM: " + artifact);
                     Maven.configureResolver().fromClassloaderResource("settings-wfk200.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
-                }
-                if (bomVersion.getLabels().get("WFK21RepositoryRequired") != null){
-                    log.info("Resolving WFK 2.1.0 BOM: " + artifact);
+                } else if (bomVersion.getLabels().get("WFK21RepositoryRequired") != null) {
+                    log.debug("Resolving WFK 2.1.0 BOM: " + artifact);
                     Maven.configureResolver().fromClassloaderResource("settings-wfk210.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
+                } else {
+                    log.debug("Using none repository for " + bomVersion);
+                    Maven.configureResolver().fromClassloaderResource("settings-centralonly.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
                 }
             } catch (ResolutionException e) {
-                Assert.assertNull("Can't resolve Archetype [" + artifact + "] ", e);
+                Assert.assertNull("Can't resolve Bom [" + artifact + "] ", e);
             } catch (Exception e) {
                 log.error(e.getMessage(), e);
                 Assert.fail("Can't throw exception");
@@ -188,7 +236,7 @@ public class StacksTest {
         Stacks stacks = stacksClient.getStacks();
         for (ArchetypeVersion archetypeVersion : stacks.getAvailableArchetypeVersions()) {
             String artifact = String.format("%s:%s:%s", archetypeVersion.getArchetype().getGroupId(), archetypeVersion.getArchetype().getArtifactId(),
-                    archetypeVersion.getVersion());
+                archetypeVersion.getVersion());
             try {
                 log.info("Resolving Archetype " + artifact);
                 Maven.resolver().resolve(artifact).withMavenCentralRepo(true).withoutTransitivity().asFile();
@@ -237,7 +285,7 @@ public class StacksTest {
      */
     private void executeCreateArchetype(ArchetypeVersion archetypeVersion, boolean eap) throws Exception {
         String archetype = String.format("%s:%s:%s", archetypeVersion.getArchetype().getGroupId(), archetypeVersion.getArchetype().getArtifactId(), archetypeVersion.getVersion());
-        String archetypeWithEnterprise = archetype + (eap?" - Enterprise":"");
+        String archetypeWithEnterprise = archetype + (eap ? " - Enterprise" : "");
         log.info("Creating project from Archetype: " + archetypeWithEnterprise);
         String goal = "org.apache.maven.plugins:maven-archetype-plugin:2.2:generate";
         Properties properties = new Properties();
@@ -260,7 +308,7 @@ public class StacksTest {
         log.info("Building project from Archetype: " + archetypeWithEnterprise);
         Verifier buildVerifier = new Verifier(outputDir + File.separator + artifactId);
         buildVerifier.addCliOption("-s " + testOutputDirectory + File.separator + "settings-all.xml");
-        buildVerifier.executeGoal("compile"); //buildVerifier log is inside each project
+        buildVerifier.executeGoal("compile"); // buildVerifier log is inside each project
     }
 
 }
