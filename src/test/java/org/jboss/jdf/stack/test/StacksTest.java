@@ -130,8 +130,11 @@ public class StacksTest {
                 if (bomVersion.getLabels().get("WFK21RepositoryRequired") != null) {
                     sb.append(" - NOTE: This artifact needs a WFK 2.1 and EAP 6.0.0 repositories");
                 }
-                if (bomVersion.getLabels().get("EAP6RepositoryRequired") != null) {
-                    sb.append(" - NOTE: This artifact needs a EAP 6 repository");
+                if (bomVersion.getLabels().get("EAP600RepositoryRequired") != null) {
+                    sb.append(" - NOTE: This artifact needs a EAP 6.0.0 repository");
+                }
+                if (bomVersion.getLabels().get("EAP601RepositoryRequired") != null) {
+                    sb.append(" - NOTE: This artifact needs a EAP 6.0.1 repository");
                 }
                 Assert.assertNull(sb.toString(), e);
             }

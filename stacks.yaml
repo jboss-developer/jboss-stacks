@@ -363,9 +363,17 @@ availableBomVersions:
  - &jboss-javaee-6_0-300redhat1
    id: jboss-javaee-6_0-300redhat1
    bom: *jboss-javaee-6_0
+   version: 3.0.0.Final-redhat-1
+   labels: {
+       EAP600RepositoryRequired: true,
+   }
+   
+ - &jboss-javaee-6_0-301redhat1
+   id: jboss-javaee-6_0-301redhat1
+   bom: *jboss-javaee-6_0
    version: 3.0.1.Final-redhat-1
    labels: {
-       EAP6RepositoryRequired: true,
+       EAP601RepositoryRequired: true,
    }
 
    ###################################
@@ -397,13 +405,21 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-errai
    version: 1.0.4.Final
    labels: {}
+
+ - &jboss-javaee-6_0-with-errai-100m11-redhat1
+   id: jboss-javaee-6_0-with-errai-100-redhat1
+   bom: *jboss-javaee-6_0-with-errai
+   version: 1.0.0.M11-redhat-1
+   labels: {
+      EAP600RepositoryRequired: true,
+   }
    
  - &jboss-javaee-6_0-with-errai-102-redhat1
    id: jboss-javaee-6_0-with-errai-102-redhat1
    bom: *jboss-javaee-6_0-with-errai
    version: 1.0.2.Final-redhat-1
    labels: {
-      EAP6RepositoryRequired: true,
+      EAP601RepositoryRequired: true,
    }
    
  - &jboss-javaee-6_0-with-errai-wfk-101-redhat1
@@ -423,13 +439,30 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-hibernate
    version: 1.0.4.Final
    labels: {}
+
+ - &jboss-javaee-6_0-with-hibernate-100m11-redhat1
+   id: jboss-javaee-6_0-with-hibernate-100m11-redhat1
+   bom: *jboss-javaee-6_0-with-hibernate
+   version: 1.0.0.M11-redhat-1
+   labels: {
+      EAP600RepositoryRequired: true,
+   }
+
+ - &jboss-javaee-6_0-with-hibernate-100m12-redhat1
+   id: jboss-javaee-6_0-with-hibernate-100m12-redhat1
+   bom: *jboss-javaee-6_0-with-hibernate
+   version: 1.0.0.M12-redhat-1
+   labels: {
+      EAP600RepositoryRequired: true,
+   }
+
    
  - &jboss-javaee-6_0-with-hibernate-102-redhat1
    id: jboss-javaee-6_0-with-hibernate-102-redhat1
    bom: *jboss-javaee-6_0-with-hibernate
    version: 1.0.2.Final-redhat-1
    labels: {
-      EAP6RepositoryRequired: true,
+      EAP601RepositoryRequired: true,
    }
    
  - &jboss-javaee-6_0-with-hibernate-wfk-101-redhat1
@@ -455,7 +488,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-hibernate3
    version: 1.0.2.Final-redhat-1
    labels: {
-      EAP6RepositoryRequired: true,
+      EAP601RepositoryRequired: true,
    }
    
  - &jboss-javaee-6_0-with-hibernate3-wfk-101-redhat1
@@ -499,7 +532,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-logging
    version: 1.0.2.Final-redhat-1
    labels: {
-      EAP6RepositoryRequired: true,
+      EAP601RepositoryRequired: true,
    }
 
  - &jboss-javaee-6_0-with-logging-wfk-101-redhat1
@@ -525,7 +558,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-osgi
    version: 1.0.2.Final-redhat-1
    labels: {
-      EAP6RepositoryRequired: true,
+      EAP601RepositoryRequired: true,
    }
    
  - &jboss-javaee-6_0-with-osgi-wfk-101-redhat1
@@ -580,7 +613,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-security
    version: 1.0.2.Final-redhat-1
    labels: {
-      EAP6RepositoryRequired: true,
+      EAP601RepositoryRequired: true,
    }
       
  - &jboss-javaee-6_0-with-security-wfk-101-redhat1
@@ -603,13 +636,31 @@ availableBomVersions:
         jbossASPluginVersion: 7.3.Final
    }    
    
+ - &jboss-javaee-6_0-with-tools-100m11-redhat1
+   id: jboss-javaee-6_0-with-tools-100m11-redhat1
+   bom: *jboss-javaee-6_0-with-tools
+   version: 1.0.0.M11-redhat-1
+   labels: {
+        jbossASPluginVersion: 7.3.Final,
+        EAP600RepositoryRequired: true,
+   }    
+
+ - &jboss-javaee-6_0-with-tools-100m12-redhat1
+   id: jboss-javaee-6_0-with-tools-100m12-redhat1
+   bom: *jboss-javaee-6_0-with-tools
+   version: 1.0.0.M12-redhat-1
+   labels: {
+        jbossASPluginVersion: 7.3.Final,
+        EAP600RepositoryRequired: true,
+   }    
+   
  - &jboss-javaee-6_0-with-tools-102-redhat1
    id: jboss-javaee-6_0-with-tools-102-redhat1
    bom: *jboss-javaee-6_0-with-tools
    version: 1.0.2.Final-redhat-1
    labels: {
         jbossASPluginVersion: 7.3.Final,
-        EAP6RepositoryRequired: true,
+        EAP601RepositoryRequired: true,
    }    
    
  - &jboss-javaee-6_0-with-tools-wfk-101-redhat1
@@ -632,12 +683,28 @@ availableBomVersions:
    version: 1.0.4.Final
    labels: {}
 
+ - &jboss-javaee-6_0-with-transactions-100m11-redhat1
+   id: jboss-javaee-6_0-with-transactions-100m11-redhat1
+   bom: *jboss-javaee-6_0-with-transactions
+   version: 1.0.0.M11-redhat-1
+   labels: {
+      EAP600RepositoryRequired: true,
+   }
+   
+ - &jboss-javaee-6_0-with-transactions-100m12-redhat1
+   id: jboss-javaee-6_0-with-transactions-100m12-redhat1
+   bom: *jboss-javaee-6_0-with-transactions
+   version: 1.0.0.M12-redhat-1
+   labels: {
+      EAP600RepositoryRequired: true,
+   }
+
  - &jboss-javaee-6_0-with-transactions-102-redhat1
    id: jboss-javaee-6_0-with-transactions-102-redhat1
    bom: *jboss-javaee-6_0-with-transactions
    version: 1.0.2.Final-redhat-1
    labels: {
-      EAP6RepositoryRequired: true,
+      EAP601RepositoryRequired: true,
    }
    
  - &jboss-javaee-6_0-with-transactions-wfk-101-redhat1
@@ -894,23 +961,22 @@ availableRuntimes:
    url: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=12673&product=appplatform&version=&downloadType=distributions
    boms:
     - *jboss-javaee-6_0-300redhat1
-    - *jboss-javaee-6_0-with-errai-102-redhat1
+    - *jboss-javaee-6_0-with-errai-100m11-redhat1
     - *jboss-javaee-6_0-with-errai-wfk-101-redhat1
-    - *jboss-javaee-6_0-with-hibernate-102-redhat1
+    - *jboss-javaee-6_0-with-hibernate-100m11-redhat1
+    - *jboss-javaee-6_0-with-hibernate-100m12-redhat1
     - *jboss-javaee-6_0-with-hibernate-wfk-101-redhat1
-    - *jboss-javaee-6_0-with-hibernate3-102-redhat1
     - *jboss-javaee-6_0-with-hibernate3-wfk-101-redhat1
     - *jboss-javaee-6_0-with-infinispan-wfk-101-redhat1
-    - *jboss-javaee-6_0-with-logging-102-redhat1
     - *jboss-javaee-6_0-with-logging-wfk-101-redhat1
-    - *jboss-javaee-6_0-with-osgi-102-redhat1
     - *jboss-javaee-6_0-with-osgi-wfk-101-redhat1
     - *jboss-javaee-6_0-with-richfaces-wfk-101-redhat1
-    - *jboss-javaee-6_0-with-security-102-redhat1
     - *jboss-javaee-6_0-with-security-wfk-101-redhat1
-    - *jboss-javaee-6_0-with-tools-102-redhat1
+    - *jboss-javaee-6_0-with-tools-100m11-redhat1
+    - *jboss-javaee-6_0-with-tools-100m12-redhat1
     - *jboss-javaee-6_0-with-tools-wfk-101-redhat1
-    - *jboss-javaee-6_0-with-transactions-102-redhat1
+    - *jboss-javaee-6_0-with-transactions-100m11-redhat1
+    - *jboss-javaee-6_0-with-transactions-100m12-redhat1
     - *jboss-javaee-6_0-with-transactions-wfk-101-redhat1
     - *spring-2_5-bom-wfk-210-redhat1
     - *spring-3_0-bom-wfk-210-redhat1
@@ -937,7 +1003,7 @@ availableRuntimes:
    version: 6.0.1
    url: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=12673&product=appplatform&version=&downloadType=distributions
    boms:
-    - *jboss-javaee-6_0-300redhat1
+    - *jboss-javaee-6_0-301redhat1
     - *jboss-javaee-6_0-with-errai-102-redhat1
     - *jboss-javaee-6_0-with-hibernate-102-redhat1
     - *jboss-javaee-6_0-with-hibernate3-102-redhat1
