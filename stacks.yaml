@@ -36,7 +36,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-all
    id: jboss-javaee-6_0-all
-   name: Java EE 6
+   name: Java EE 6 All
    description: Bill of Materials for Java EE 6 APIs for use with JBoss AS 7
    groupId: org.jboss.spec
    artifactId: jboss-javaee-all-6.0
@@ -52,15 +52,15 @@ availableBoms:
    artifactId: jboss-javaee-web-6.0
    recommendedVersion: 3.0.2.Final
    
-   ######## EAP Only ###########
+   ###############################
    
  - &jboss-javaee-6_0
    id: jboss-javaee-6_0
-   name: Java EE 6 (EAP)
+   name: Java EE 6
    description: Dependency Management for Java EE 6 Specification APIs
    groupId: org.jboss.spec
    artifactId: jboss-javaee-6.0
-   recommendedVersion: 3.0.1.Final-redhat-1
+   recommendedVersion: 3.0.2.Final
    
    ##############################
 
@@ -310,9 +310,9 @@ availableBoms:
 
 availableBomVersions:
 
-   ################
-   #  Java EE 6   #
-   ################
+   ###################
+   #  Java EE 6  All #
+   ###################
 
  - &jboss-javaee-6_0-all-300
    id: jboss-javaee-6_0-all-300
@@ -332,6 +332,14 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-all
    version: 3.0.2.Final
    labels: {}
+   
+ - &jboss-javaee-6_0-all-301redhat1
+   id: jboss-javaee-6_0-all-301redhat1
+   bom: *jboss-javaee-6_0-all
+   version: 3.0.1.Final-redhat-1
+   labels: {
+       EAP601RepositoryRequired: true,     
+   }
 
    ###################
    #  Java EE 6 Web  #
@@ -356,9 +364,31 @@ availableBomVersions:
    version: 3.0.2.Final
    labels: {}
    
-   ######################
-   #   Java EE 6   EAP  #
-   ######################
+ - &jboss-javaee-6_0-web-300redhat1 
+   id: jboss-javaee-6_0-300redhat1
+   bom: *jboss-javaee-6_0-web
+   version: 3.0.0.Final-redhat-1
+   labels: {
+       EAP600RepositoryRequired: true,
+   }
+   
+ - &jboss-javaee-6_0-web-301redhat1 
+   id: jboss-javaee-6_0-301redhat1
+   bom: *jboss-javaee-6_0-web
+   version: 3.0.1.Final-redhat-1
+   labels: {
+       EAP601RepositoryRequired: true,
+   }
+   
+   #################
+   #   Java EE 6   #
+   #################
+
+ - &jboss-javaee-6_0-302
+   id: jboss-javaee-6_0-302
+   bom: *jboss-javaee-6_0
+   version: 3.0.2.Final
+   labels: {}
    
  - &jboss-javaee-6_0-300redhat1
    id: jboss-javaee-6_0-300redhat1
@@ -961,6 +991,7 @@ availableRuntimes:
    url: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=12673&product=appplatform&version=&downloadType=distributions
    boms:
     - *jboss-javaee-6_0-300redhat1
+    - *jboss-javaee-6_0-web-300redhat1
     - *jboss-javaee-6_0-with-errai-100m11-redhat1
     - *jboss-javaee-6_0-with-errai-wfk-101-redhat1
     - *jboss-javaee-6_0-with-hibernate-100m11-redhat1
@@ -1004,6 +1035,8 @@ availableRuntimes:
    url: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=12673&product=appplatform&version=&downloadType=distributions
    boms:
     - *jboss-javaee-6_0-301redhat1
+    - *jboss-javaee-6_0-web-301redhat1
+    - *jboss-javaee-6_0-all-301redhat1
     - *jboss-javaee-6_0-with-errai-102-redhat1
     - *jboss-javaee-6_0-with-hibernate-102-redhat1
     - *jboss-javaee-6_0-with-hibernate3-102-redhat1
@@ -1043,7 +1076,9 @@ availableRuntimes:
    url: http://www.jboss.org/jbossas
    downloadUrl: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip
    boms:
+    - *jboss-javaee-6_0-302
     - *jboss-javaee-6_0-all-302
+    - *jboss-javaee-6_0-web-302
     - *jboss-javaee-6_0-with-all-104
     - *jboss-javaee-6_0-with-deltaspike-104
     - *jboss-javaee-6_0-with-errai-104
@@ -1086,7 +1121,9 @@ availableRuntimes:
    url: http://www.jboss.org/jbossas
    downloadUrl: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip
    boms:
+    - *jboss-javaee-6_0-302
     - *jboss-javaee-6_0-all-302
+    - *jboss-javaee-6_0-web-302
     - *jboss-javaee-6_0-with-errai-104
     - *jboss-javaee-6_0-with-tools-104
     - *jboss-javaee-6_0-with-hibernate-104
