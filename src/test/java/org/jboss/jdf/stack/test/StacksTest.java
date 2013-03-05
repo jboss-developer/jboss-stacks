@@ -22,7 +22,10 @@
 
 package org.jboss.jdf.stack.test;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.logging.Level;
@@ -50,18 +53,22 @@ import org.junit.Test;
 public class StacksTest {
 
     private static StacksClient stacksClient;
-    
+
     private static Log log = LogFactory.getLog(StacksTest.class);
+
+    private static File stacksFile;
 
     @BeforeClass
     public static void setupClient() throws MalformedURLException {
-        
+
         // suppress shrinkwrap warning messages
         Logger shrinkwrapLogger = Logger.getLogger("org.jboss.shrinkwrap.resolver");
         shrinkwrapLogger.setLevel(Level.SEVERE);
-        
-        URL url = new File("./stacks.yaml").toURI().toURL();
-        
+
+        stacksFile = new File("./stacks.yaml");
+
+        URL url = stacksFile.toURI().toURL();
+
         log.info("Testing file: " + url);
 
         stacksClient = new StacksClient();
@@ -78,6 +85,31 @@ public class StacksTest {
     }
 
     @Test
+    public void testIdEqualsYamlLink() throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader(stacksFile));
+        try {
+            String id = null;
+            while (br.ready()) {
+                String line = br.readLine();
+                if (line.contains("&")) {
+                    int pos = line.indexOf('&') + 1;
+                    id = line.substring(pos, line.length()).trim();
+                }
+                if (id != null && line.contains("id:")){
+                    int pos = line.lastIndexOf("id: ") + 3;
+                    String value = line.substring(pos, line.length()).trim();
+                    Assert.assertEquals("Id and Value should have the same value", id, value);                    
+                }
+            }
+
+        } finally {
+            if (br != null) {
+                br.close();
+            }
+        }
+    }
+
+    @Test
     public void testRecommendedBomVersions() {
         Stacks stacks = stacksClient.getStacks();
         for (Bom bom : stacks.getAvailableBoms()) {
@@ -90,8 +122,7 @@ public class StacksTest {
                     }
                 }
             }
-            Assert.assertTrue(bom + " recommendedVersion [" + recommendedVersion
-                    + "] doesn't have its correspondent BomVersion", hasBomRecommnendeVersion);
+            Assert.assertTrue(bom + " recommendedVersion [" + recommendedVersion + "] doesn't have its correspondent BomVersion", hasBomRecommnendeVersion);
         }
     }
 
@@ -108,8 +139,7 @@ public class StacksTest {
                     }
                 }
             }
-            Assert.assertTrue(archetype + " recommendedVersion [" + recommendedVersion
-                    + "] doesn't have its correspondent ArchetypeVersion", hasBomRecommnendeVersion);
+            Assert.assertTrue(archetype + " recommendedVersion [" + recommendedVersion + "] doesn't have its correspondent ArchetypeVersion", hasBomRecommnendeVersion);
         }
     }
 
@@ -117,8 +147,7 @@ public class StacksTest {
     public void testBomResolver() {
         Stacks stacks = stacksClient.getStacks();
         for (BomVersion bomVersion : stacks.getAvailableBomVersions()) {
-            String artifact = String.format("%s:%s:pom:%s", bomVersion.getBom().getGroupId(), bomVersion.getBom()
-                    .getArtifactId(), bomVersion.getVersion());
+            String artifact = String.format("%s:%s:pom:%s", bomVersion.getBom().getGroupId(), bomVersion.getBom().getArtifactId(), bomVersion.getVersion());
             try {
                 Maven.resolver().resolve(artifact).withMavenCentralRepo(true).withoutTransitivity().asFile();
             } catch (Exception e) {
@@ -145,8 +174,8 @@ public class StacksTest {
     public void testArchetypeResolver() {
         Stacks stacks = stacksClient.getStacks();
         for (ArchetypeVersion archetypeVersion : stacks.getAvailableArchetypeVersions()) {
-            String artifact = String.format("%s:%s:%s", archetypeVersion.getArchetype().getGroupId(), archetypeVersion
-                    .getArchetype().getArtifactId(), archetypeVersion.getVersion());
+            String artifact = String.format("%s:%s:%s", archetypeVersion.getArchetype().getGroupId(), archetypeVersion.getArchetype().getArtifactId(),
+                    archetypeVersion.getVersion());
             try {
                 Maven.resolver().resolve(artifact).withMavenCentralRepo(true).withoutTransitivity().asFile();
             } catch (Exception e) {
@@ -154,13 +183,13 @@ public class StacksTest {
             }
         }
     }
-    
+
     @Test
     public void testRuntimeResolver() {
         Stacks stacks = stacksClient.getStacks();
         for (Runtime runtime : stacks.getAvailableRuntimes()) {
-            //Only AS has maven artifact / EAP don't
-            if (runtime.getLabels().get("runtime-type").equals("AS")){
+            // Only AS has maven artifact / EAP don't
+            if (runtime.getLabels().get("runtime-type").equals("AS")) {
                 String artifact = String.format("%s:%s:pom:%s", runtime.getGroupId(), runtime.getArtifactId(), runtime.getVersion());
                 try {
                     Maven.resolver().resolve(artifact).withMavenCentralRepo(true).withoutTransitivity().asResolvedArtifact();

@@ -249,8 +249,8 @@ availableBoms:
    recommendedVersion: 1.0.4.Final
    
  - &jboss-javaee-6_0-with-tools-wfk
-   id: jboss-javaee-6_0-with-tools-wfk (WFK BOM)
-   name: Java EE 6 with tools recommended by JBoss
+   id: jboss-javaee-6_0-with-tools-wfk
+   name: Java EE 6 with tools recommended by JBoss (WFK BOM)
    description: Java EE lacks any testing APIs, and for this reason JBoss developed the Arquillian project, along with its various component projects, such as Arquillian Drone, and the sister project Shrinkwrap. This BOM builds on the Java EE full profile BOM, adding Arquillian to the mix. It also provides a version of JUnit and TestNG recommended for use with Arquillian. Furthermore, this BOM adds the JBoss AS Maven deployment plugin. EAP 6s recommended mode of deployment is via the management APIs, and the Maven plugin is the recommended way to do this, if the customer is using Maven for building.
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-tools
@@ -365,7 +365,7 @@ availableBomVersions:
    labels: {}
    
  - &jboss-javaee-6_0-web-300redhat1 
-   id: jboss-javaee-6_0-300redhat1
+   id: jboss-javaee-6_0-web-300redhat1
    bom: *jboss-javaee-6_0-web
    version: 3.0.0.Final-redhat-1
    labels: {
@@ -373,7 +373,7 @@ availableBomVersions:
    }
    
  - &jboss-javaee-6_0-web-301redhat1 
-   id: jboss-javaee-6_0-301redhat1
+   id: jboss-javaee-6_0-web-301redhat1
    bom: *jboss-javaee-6_0-web
    version: 3.0.1.Final-redhat-1
    labels: {
@@ -411,7 +411,7 @@ availableBomVersions:
    ###################################
    
  - &jboss-javaee-6_0-with-all-104
-   id: jboss-javaee-6_0-with-104
+   id: jboss-javaee-6_0-with-all-104
    bom: *jboss-javaee-6_0-with-all
    version: 1.0.4.Final
    labels: {}
@@ -437,7 +437,7 @@ availableBomVersions:
    labels: {}
 
  - &jboss-javaee-6_0-with-errai-100m11-redhat1
-   id: jboss-javaee-6_0-with-errai-100-redhat1
+   id: jboss-javaee-6_0-with-errai-100m11-redhat1
    bom: *jboss-javaee-6_0-with-errai
    version: 1.0.0.M11-redhat-1
    labels: {
@@ -496,7 +496,7 @@ availableBomVersions:
    }
    
  - &jboss-javaee-6_0-with-hibernate-wfk-101-redhat1
-   id: jboss-javaee-6_0-with-hibernate-101-redhat1
+   id: jboss-javaee-6_0-with-hibernate-wfk-101-redhat1
    bom: *jboss-javaee-6_0-with-hibernate-wfk
    version: 1.0.1.Final-redhat-1
    labels: {
@@ -540,7 +540,7 @@ availableBomVersions:
    labels: {}
 
  - &jboss-javaee-6_0-with-infinispan-wfk-101-redhat1
-   id: jboss-javaee-6_0-with-infinispan-wfk-101-redhat
+   id: jboss-javaee-6_0-with-infinispan-wfk-101-redhat1
    bom: *jboss-javaee-6_0-with-infinispan-wfk
    version: 1.0.1.Final-redhat-1
    labels: {
@@ -584,7 +584,7 @@ availableBomVersions:
    labels: {}
 
  - &jboss-javaee-6_0-with-osgi-102-redhat1
-   id: jboss-javaee-6_0-with-osgi-104-redhat1
+   id: jboss-javaee-6_0-with-osgi-102-redhat1
    bom: *jboss-javaee-6_0-with-osgi
    version: 1.0.2.Final-redhat-1
    labels: {
