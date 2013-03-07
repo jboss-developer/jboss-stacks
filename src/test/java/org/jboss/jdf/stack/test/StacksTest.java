@@ -1,23 +1,18 @@
 /*
- * JBoss, Home of Professional Open Source.
- * Copyright 2012, Red Hat, Inc., and individual contributors
- * as indicated by the @author tags. See the copyright.txt file in the
+ * JBoss, Home of Professional Open Source
+ * Copyright 2013, Red Hat, Inc. and/or its affiliates, and individual
+ * contributors by the @authors tag. See the copyright.txt in the 
  * distribution for a full listing of individual contributors.
  *
- * This is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as
- * published by the Free Software Foundation; either version 2.1 of
- * the License, or (at your option) any later version.
- *
- * This software is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this software; if not, write to the Free
- * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
- * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,  
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 package org.jboss.jdf.stack.test;
@@ -28,11 +23,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.maven.it.Verifier;
+import org.codehaus.plexus.PlexusContainerException;
+import org.codehaus.plexus.component.repository.exception.ComponentLookupException;
 import org.jboss.jdf.stacks.client.StacksClient;
 import org.jboss.jdf.stacks.client.StacksClientConfiguration;
 import org.jboss.jdf.stacks.model.Archetype;
@@ -41,6 +40,7 @@ import org.jboss.jdf.stacks.model.Bom;
 import org.jboss.jdf.stacks.model.BomVersion;
 import org.jboss.jdf.stacks.model.Runtime;
 import org.jboss.jdf.stacks.model.Stacks;
+import org.jboss.shrinkwrap.resolver.api.ResolutionException;
 import org.jboss.shrinkwrap.resolver.api.maven.Maven;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -55,6 +55,8 @@ public class StacksTest {
     private static StacksClient stacksClient;
 
     private static Log log = LogFactory.getLog(StacksTest.class);
+    
+    private String outputDir = System.getProperty("outPutDirectory");
 
     private static File stacksFile;
 
@@ -95,10 +97,10 @@ public class StacksTest {
                     int pos = line.indexOf('&') + 1;
                     id = line.substring(pos, line.length()).trim();
                 }
-                if (id != null && line.contains("id:")){
+                if (id != null && line.contains("id:")) {
                     int pos = line.lastIndexOf("id: ") + 3;
                     String value = line.substring(pos, line.length()).trim();
-                    Assert.assertEquals("Id and Value should have the same value", id, value);                    
+                    Assert.assertEquals("Id and Value should have the same value", id, value);
                 }
             }
 
@@ -150,7 +152,7 @@ public class StacksTest {
             String artifact = String.format("%s:%s:pom:%s", bomVersion.getBom().getGroupId(), bomVersion.getBom().getArtifactId(), bomVersion.getVersion());
             try {
                 Maven.resolver().resolve(artifact).withMavenCentralRepo(true).withoutTransitivity().asFile();
-            } catch (Exception e) {
+            } catch (ResolutionException e) {
                 StringBuilder sb = new StringBuilder("Can't resolve BOM [" + artifact + "] ");
                 // Help the user to debug why the test is falling
                 if (bomVersion.getLabels().get("WFK2RepositoryRequired") != null) {
@@ -166,6 +168,8 @@ public class StacksTest {
                     sb.append(" - NOTE: This artifact needs a EAP 6.0.1 repository");
                 }
                 Assert.assertNull(sb.toString(), e);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
     }
@@ -178,8 +182,10 @@ public class StacksTest {
                     archetypeVersion.getVersion());
             try {
                 Maven.resolver().resolve(artifact).withMavenCentralRepo(true).withoutTransitivity().asFile();
-            } catch (Exception e) {
+            } catch (ResolutionException e) {
                 Assert.assertNull("Can't resolve Archetype [" + artifact + "] ", e);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
     }
@@ -193,10 +199,53 @@ public class StacksTest {
                 String artifact = String.format("%s:%s:pom:%s", runtime.getGroupId(), runtime.getArtifactId(), runtime.getVersion());
                 try {
                     Maven.resolver().resolve(artifact).withMavenCentralRepo(true).withoutTransitivity().asResolvedArtifact();
-                } catch (Exception e) {
+                } catch (ResolutionException e) {
                     Assert.assertNull("Can't resolve Runtime [" + artifact + "] ", e);
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
             }
         }
     }
+    
+    @Test
+    public void testArchetypes() throws Exception {
+        Stacks stacks = stacksClient.getStacks();
+        for (ArchetypeVersion archetypeVersion : stacks.getAvailableArchetypeVersions()) {
+            executeCreateArchetype(archetypeVersion, false);
+            executeCreateArchetype(archetypeVersion, true);
+        }
+    }
+
+  
+    /**
+     * @param archetypeVersion
+     * @throws ComponentLookupException
+     * @throws PlexusContainerException
+     */
+    private void executeCreateArchetype(ArchetypeVersion archetypeVersion, boolean eap) throws Exception {
+        String archetype = String.format("%s:%s:%s", archetypeVersion.getArchetype().getGroupId(), archetypeVersion.getArchetype().getArtifactId(),archetypeVersion.getVersion());
+        log.info("Creating project from Archetype: "  + archetype + " - Enterprise? " + eap);
+        String goal = "org.apache.maven.plugins:maven-archetype-plugin:2.2:generate";
+        Properties properties = new Properties();
+        if (eap){
+            properties.put("enterprise", "true");
+        }
+        properties.put("archetypeGroupId", archetypeVersion.getArchetype().getGroupId());
+        properties.put("archetypeArtifactId", archetypeVersion.getArchetype().getArtifactId());
+        properties.put("archetypeVersion", archetypeVersion.getVersion());
+        properties.put("groupId", "org.jboss.as.quickstarts");
+        String artifactId = System.currentTimeMillis() + "-" + archetype.replaceAll("[^a-zA-Z_0-9]", "") + (eap?"-enterprise":"");
+        properties.put("artifactId", artifactId);
+        properties.put("version", "0.0.1-SNAPSHOT");
+        Verifier verifier = new org.apache.maven.it.Verifier(outputDir, true);
+        verifier.setAutoclean(false);
+        verifier.setSystemProperties(properties);
+        verifier.executeGoal(goal);
+        
+        log.info("Building Archetype: "  + archetype);
+        Verifier buildVerifier = new Verifier(outputDir + "/" + artifactId);
+        buildVerifier.executeGoal("compile");
+    }
+    
 }
