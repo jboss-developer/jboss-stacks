@@ -30,6 +30,7 @@
                 <configuration>
                     <systemPropertyVariables>
                         <outPutDirectory>${project.build.directory}</outPutDirectory>
+                        <testOutputDirectory>${project.build.testOutputDirectory}</testOutputDirectory>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>

@@ -55,8 +55,10 @@ public class StacksTest {
     private static StacksClient stacksClient;
 
     private static Log log = LogFactory.getLog(StacksTest.class);
-    
+
     private String outputDir = System.getProperty("outPutDirectory");
+    
+    private String testOutputDirectory = System.getProperty("testOutputDirectory");
 
     private static File stacksFile;
 
@@ -64,7 +66,7 @@ public class StacksTest {
     public static void setupClient() throws MalformedURLException {
 
         // suppress shrinkwrap warning messages
-        Logger shrinkwrapLogger = Logger.getLogger("org.jboss.shrinkwrap.resolver");
+        Logger shrinkwrapLogger = Logger.getLogger("org.jboss.shrinkwrap");
         shrinkwrapLogger.setLevel(Level.SEVERE);
 
         stacksFile = new File("./stacks.yaml");
@@ -83,11 +85,13 @@ public class StacksTest {
 
     @Test
     public void testBasicParse() {
+        log.info("Testing Basic parsing");
         stacksClient.getStacks();
     }
 
     @Test
     public void testIdEqualsYamlLink() throws IOException {
+        log.info("Testing if Ids are equals YAML links");
         BufferedReader br = new BufferedReader(new FileReader(stacksFile));
         try {
             String id = null;
@@ -113,6 +117,7 @@ public class StacksTest {
 
     @Test
     public void testRecommendedBomVersions() {
+        log.info("Testing if recommended Bom Version has the correspondent BomVersion");
         Stacks stacks = stacksClient.getStacks();
         for (Bom bom : stacks.getAvailableBoms()) {
             boolean hasBomRecommnendeVersion = false;
@@ -130,6 +135,7 @@ public class StacksTest {
 
     @Test
     public void testRecommendedArchetypeVersions() {
+        log.info("Testing if recommended Archetype Version has the correspondent ArchetypeVersion");
         Stacks stacks = stacksClient.getStacks();
         for (Archetype archetype : stacks.getAvailableArchetypes()) {
             boolean hasBomRecommnendeVersion = false;
@@ -150,26 +156,29 @@ public class StacksTest {
         Stacks stacks = stacksClient.getStacks();
         for (BomVersion bomVersion : stacks.getAvailableBomVersions()) {
             String artifact = String.format("%s:%s:pom:%s", bomVersion.getBom().getGroupId(), bomVersion.getBom().getArtifactId(), bomVersion.getVersion());
+            //Use only declared ???RepositoryRequired settings for each BOM
             try {
-                Maven.resolver().resolve(artifact).withMavenCentralRepo(true).withoutTransitivity().asFile();
+                if (bomVersion.getLabels().get("EAP600RepositoryRequired") != null){
+                    log.info("Resolving EAP 6.0.0 BOM: " + artifact);
+                    Maven.configureResolver().fromClassloaderResource("settings-eap600.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
+                }
+                if (bomVersion.getLabels().get("EAP601RepositoryRequired") != null){
+                    log.info("Resolving EAP 6.1.0 BOM: " + artifact);
+                    Maven.configureResolver().fromClassloaderResource("settings-eap601.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
+                }
+                if (bomVersion.getLabels().get("WFK2RepositoryRequired") != null){
+                    log.info("Resolving WFK 2.0.0 BOM: " + artifact);
+                    Maven.configureResolver().fromClassloaderResource("settings-wfk200.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
+                }
+                if (bomVersion.getLabels().get("WFK21RepositoryRequired") != null){
+                    log.info("Resolving WFK 2.1.0 BOM: " + artifact);
+                    Maven.configureResolver().fromClassloaderResource("settings-wfk210.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
+                }
             } catch (ResolutionException e) {
-                StringBuilder sb = new StringBuilder("Can't resolve BOM [" + artifact + "] ");
-                // Help the user to debug why the test is falling
-                if (bomVersion.getLabels().get("WFK2RepositoryRequired") != null) {
-                    sb.append(" - NOTE: This artifact needs a WFK 2.0 and EAP 6.0.0 repositories");
-                }
-                if (bomVersion.getLabels().get("WFK21RepositoryRequired") != null) {
-                    sb.append(" - NOTE: This artifact needs a WFK 2.1 and EAP 6.0.0 repositories");
-                }
-                if (bomVersion.getLabels().get("EAP600RepositoryRequired") != null) {
-                    sb.append(" - NOTE: This artifact needs a EAP 6.0.0 repository");
-                }
-                if (bomVersion.getLabels().get("EAP601RepositoryRequired") != null) {
-                    sb.append(" - NOTE: This artifact needs a EAP 6.0.1 repository");
-                }
-                Assert.assertNull(sb.toString(), e);
+                Assert.assertNull("Can't resolve Archetype [" + artifact + "] ", e);
             } catch (Exception e) {
-                e.printStackTrace();
+                log.error(e.getMessage(), e);
+                Assert.fail("Can't throw exception");
             }
         }
     }
@@ -181,11 +190,13 @@ public class StacksTest {
             String artifact = String.format("%s:%s:%s", archetypeVersion.getArchetype().getGroupId(), archetypeVersion.getArchetype().getArtifactId(),
                     archetypeVersion.getVersion());
             try {
+                log.info("Resolving Archetype " + artifact);
                 Maven.resolver().resolve(artifact).withMavenCentralRepo(true).withoutTransitivity().asFile();
             } catch (ResolutionException e) {
                 Assert.assertNull("Can't resolve Archetype [" + artifact + "] ", e);
             } catch (Exception e) {
-                e.printStackTrace();
+                log.error(e.getMessage(), e);
+                Assert.fail("Can't throw exception");
             }
         }
     }
@@ -198,16 +209,18 @@ public class StacksTest {
             if (runtime.getLabels().get("runtime-type").equals("AS")) {
                 String artifact = String.format("%s:%s:pom:%s", runtime.getGroupId(), runtime.getArtifactId(), runtime.getVersion());
                 try {
+                    log.info("Resolving Runtime " + artifact);
                     Maven.resolver().resolve(artifact).withMavenCentralRepo(true).withoutTransitivity().asResolvedArtifact();
                 } catch (ResolutionException e) {
                     Assert.assertNull("Can't resolve Runtime [" + artifact + "] ", e);
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    log.error(e.getMessage(), e);
+                    Assert.fail("Can't throw exception");
                 }
             }
         }
     }
-    
+
     @Test
     public void testArchetypes() throws Exception {
         Stacks stacks = stacksClient.getStacks();
@@ -217,35 +230,37 @@ public class StacksTest {
         }
     }
 
-  
     /**
      * @param archetypeVersion
      * @throws ComponentLookupException
      * @throws PlexusContainerException
      */
     private void executeCreateArchetype(ArchetypeVersion archetypeVersion, boolean eap) throws Exception {
-        String archetype = String.format("%s:%s:%s", archetypeVersion.getArchetype().getGroupId(), archetypeVersion.getArchetype().getArtifactId(),archetypeVersion.getVersion());
-        log.info("Creating project from Archetype: "  + archetype + " - Enterprise? " + eap);
+        String archetype = String.format("%s:%s:%s", archetypeVersion.getArchetype().getGroupId(), archetypeVersion.getArchetype().getArtifactId(), archetypeVersion.getVersion());
+        String archetypeWithEnterprise = archetype + (eap?" - Enterprise":"");
+        log.info("Creating project from Archetype: " + archetypeWithEnterprise);
         String goal = "org.apache.maven.plugins:maven-archetype-plugin:2.2:generate";
         Properties properties = new Properties();
-        if (eap){
+        if (eap) {
             properties.put("enterprise", "true");
         }
         properties.put("archetypeGroupId", archetypeVersion.getArchetype().getGroupId());
         properties.put("archetypeArtifactId", archetypeVersion.getArchetype().getArtifactId());
         properties.put("archetypeVersion", archetypeVersion.getVersion());
         properties.put("groupId", "org.jboss.as.quickstarts");
-        String artifactId = System.currentTimeMillis() + "-" + archetype.replaceAll("[^a-zA-Z_0-9]", "") + (eap?"-enterprise":"");
+        String artifactId = System.currentTimeMillis() + "-" + archetype.replaceAll("[^a-zA-Z_0-9]", "") + (eap ? "-enterprise" : "");
         properties.put("artifactId", artifactId);
         properties.put("version", "0.0.1-SNAPSHOT");
-        Verifier verifier = new org.apache.maven.it.Verifier(outputDir, true);
+        Verifier verifier = new org.apache.maven.it.Verifier(outputDir);
         verifier.setAutoclean(false);
         verifier.setSystemProperties(properties);
+        verifier.setLogFileName(artifactId + "-generarte.txt");
         verifier.executeGoal(goal);
-        
-        log.info("Building Archetype: "  + archetype);
-        Verifier buildVerifier = new Verifier(outputDir + "/" + artifactId);
-        buildVerifier.executeGoal("compile");
+
+        log.info("Building project from Archetype: " + archetypeWithEnterprise);
+        Verifier buildVerifier = new Verifier(outputDir + File.separator + artifactId);
+        buildVerifier.addCliOption("-s " + testOutputDirectory + File.separator + "settings-all.xml");
+        buildVerifier.executeGoal("compile"); //buildVerifier log is inside each project
     }
-    
+
 }
