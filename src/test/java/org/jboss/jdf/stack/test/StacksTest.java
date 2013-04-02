@@ -251,6 +251,7 @@ public class StacksTest {
 
     @Test
     public void testRuntimeResolver() {
+        log.info("Testing if the Archetype is resovable");
         Stacks stacks = stacksClient.getStacks();
         for (Runtime runtime : stacks.getAvailableRuntimes()) {
             // Only AS has maven artifact / EAP don't
@@ -266,6 +267,15 @@ public class StacksTest {
                     Assert.fail("Can't throw exception");
                 }
             }
+        }
+    }
+    
+    @Test
+    public void testRuntimeCategoryLabel(){
+        log.info("Testing if all runtimes have the 'runtime-category' label");
+        Stacks stacks = stacksClient.getStacks();
+        for (Runtime runtime: stacks.getAvailableRuntimes()){
+            Assert.assertNotNull(runtime + " should have 'runtime-category' label", runtime.getLabels().get("runtime-category"));
         }
     }
 
