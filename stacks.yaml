@@ -21,7 +21,7 @@
 licenses:
  - &lgpl http://www.gnu.org/copyleft/lesser.txt
 #metadatas
- - &lastArchetypeRelease 7.1.3.CR3
+ - &lastArchetypeRelease 7.1.3.CR4
  - &lastJDFBomRelease 1.0.4.Final
  - &lastSpecBomRelease 3.0.2.Final
  - &eap600SpecBomRelease 3.0.0.Final-redhat-1
@@ -248,6 +248,16 @@ availableBoms:
    artifactId: jboss-javaee-6.0-with-security
    recommendedVersion: *wfk21BomRelease
          
+   ###############################
+#   Waiting final release
+# - &jboss-javaee-6_0-with-spring
+#   id: jboss-javaee-6_0-with-spring
+#   name: JJava EE 6 with Spring
+#   description: Dependency Management for Java EE 6 Specification APIs with Spring
+#   groupId: org.jboss.bom
+#   artifactId: jboss-javaee-6.0-with-spring
+#   recommendedVersion: *lastJDFBomRelease
+
    ###############################
    
  - &jboss-javaee-6_0-with-tools
@@ -757,6 +767,17 @@ availableBomVersions:
    labels: {
       WFK21RepositoryRequired: true,
    }
+
+   #######################################################
+   #   JBoss Java EE 6 Specification APIs with Spring    #
+   ######################################################
+
+# Waiting final release
+# - &jboss-javaee-6_0-with-spring-last
+#   id: jboss-javaee-6_0-with-spring-last
+#   bom: *jboss-javaee-6_0-with-spring
+#   version: *lastJDFBomRelease
+#   labels: {}    
             
    ##################################################
    #   Java EE 6 with tools recommended by JBoss    #
@@ -1241,7 +1262,6 @@ availableRuntimes:
    #   A S 7.1   #
    ###############
 
-
  - &jboss-as711runtime
    id: jboss-as711runtime
    name: JBoss AS 7.1.1 (Brontes)
@@ -1267,6 +1287,7 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-resteasy-last
     - *jboss-javaee-6_0-with-richfaces-last
     - *jboss-javaee-6_0-with-security-last
+#    - *jboss-javaee-6_0-with-spring-last
     - *jboss-javaee-6_0-with-transactions-last
    defaultBom: *jboss-javaee-6_0-all-last
    defaultArchetype: *jboss-javaee6-webapp-archetype-last
@@ -1286,64 +1307,20 @@ availableRuntimes:
         pom: "https://github.com/jbossas/jboss-as/blob/1f0c1d8348752595441cc295d3d07f79f4cb8347/pom.xml"
     }
 
-   ###############
 
- - &jboss-as710runtime
-   id: jboss-as710runtime
-   name: JBoss AS 7.1.0 (Thunder)
-   groupId: org.jboss.as
-   artifactId: jboss-as-dist
-   version: 7.1.0.Final
-   license: *lgpl
-   url: http://www.jboss.org/jbossas
-   downloadUrl: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip
-   boms:
-    - *jboss-javaee-6_0-last
-    - *jboss-javaee-6_0-all-last
-    - *jboss-javaee-6_0-web-last
-    - *jboss-javaee-6_0-with-errai-last
-    - *jboss-javaee-6_0-with-tools-last
-    - *jboss-javaee-6_0-with-hibernate-last
-    - *jboss-javaee-6_0-with-hibernate3-last
-    - *jboss-javaee-6_0-with-infinispan-last
-    - *jboss-javaee-6_0-with-logging-last
-    - *jboss-javaee-6_0-with-osgi-last
-    - *jboss-javaee-6_0-with-resteasy-last
-    - *jboss-javaee-6_0-with-richfaces-last
-    - *jboss-javaee-6_0-with-security-last
-    - *jboss-javaee-6_0-with-transactions-last
-   defaultBom: *jboss-javaee-6_0-all-last
-   defaultArchetype: *jboss-javaee6-webapp-archetype-last
-   archetypes:
-    - *jboss-javaee6-webapp-archetype-last
-    - *jboss-javaee6-webapp-blank-archetype-last
-    - *jboss-javaee6-webapp-ear-archetype-last
-    - *jboss-javaee6-webapp-ear-blank-archetype-last
-    - *jboss-html5-mobile-archetype-last
-    - *jboss-html5-mobile-blank-archetype-last
-    - *richfaces-archetype-kitchensink-423final2
-    - *jboss-errai-kitchensink-archetype-211final
-   labels: {
-        runtime-category: SERVER,
-        runtime-type: AS,
-        requiresLogModule: false,
-        pom: "https://github.com/jbossas/jboss-as/blob/2e3f3e9645bcd8da66dcf0190111c512825a44a4/pom.xml"
-    }
- 
-        
 ##########################################################
 #                                                        #
 #   L I S T    O F    A L L     R E L E A S E S          #
 #                                                        #
 ##########################################################
- 
+
 
 minorReleases: 
 
    ##################
    #   E A P  6.X   #
    ##################
-   
+
  - &jbeap61
    name: JBoss EAP
    version: 6.1
@@ -1353,17 +1330,16 @@ minorReleases:
    name: JBoss EAP
    version: 6.0
    recommendedRuntime: *jbosseap601runtime
-         
+
    ###############
    #   A S 7.X   #
    ###############
-   
+
  - &jbas71
    name: JBoss AS
    version: 7.1
    recommendedRuntime: *jboss-as711runtime
-   
- 
+
 ############################################
 
 majorReleases:
@@ -1371,7 +1347,7 @@ majorReleases:
    ###############
    #   A S 7     #
    ###############
-   
+
  - name: JBoss AS
    version: 7
    recommendedRuntime: *jboss-as711runtime
@@ -1381,7 +1357,7 @@ majorReleases:
    ##################
    #   E A P  6     #
    ##################
-   
+
  - name: JBoss EAP
    version: 6
    recommendedRuntime: *jbosseap601runtime
