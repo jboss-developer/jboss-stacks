@@ -1025,7 +1025,20 @@ availableArchetypes:
    groupId: org.jboss.errai.archetypes
    artifactId: jboss-errai-kitchensink-archetype
    recommendedVersion: 2.1.1.Final
-   repositoryURL: 
+   repositoryURL:
+
+   ############################
+   #  SPRING   Archetype   #
+   ############################
+
+ - &jboss-spring-kitchensink-archetype
+   id: jboss-spring-kitchensink-archetype
+   name: Spring Kitchen Sink Webapp Archetype
+   description: An archetype that generates a starter Spring MVC application with Java EE persistence settings (server bootstrapped JPA, JTA transaction management) for JBoss AS7
+   groupId: org.jboss.spring.archetypes
+   artifactId: jboss-spring-mvc-archetype
+   recommendedVersion: 1.0.0.Final
+   repositoryURL:
 
 ###############################################################################################
 #                                                                                             #
@@ -1122,6 +1135,17 @@ availableArchetypeVersions:
    version: 2.1.1.Final
    repositoryURL: 
    labels: {}
+
+   ###########################################
+   #   Spring Kitchen Sink Webapp Archetype   #
+   ###########################################
+
+ - &jboss-spring-kitchensink-archetype-100final
+   id: jboss-spring-kitchensink-archetype-100final
+   archetype: *jboss-spring-kitchensink-archetype
+   version: 1.0.0.Final
+   repositoryURL:
+   labels: {}
    
    
 ##########################################################################
@@ -1175,6 +1199,7 @@ availableRuntimes:
     - *jboss-html5-mobile-blank-archetype-last
     - *richfaces-archetype-kitchensink-423final2
     - *jboss-errai-kitchensink-archetype-211final
+    - *jboss-spring-kitchensink-archetype-100final
    labels: {
         runtime-category: SERVER,
         runtime-type: EAP
@@ -1208,7 +1233,8 @@ availableRuntimes:
     - *jboss-html5-mobile-archetype-last
     - *jboss-html5-mobile-blank-archetype-last
     - *richfaces-archetype-kitchensink-423final2
-    - *jboss-errai-kitchensink-archetype-211final  
+    - *jboss-errai-kitchensink-archetype-211final
+    - *jboss-spring-kitchensink-archetype-100final
    labels: {
         runtime-category: SERVER,
         runtime-type: EAP
@@ -1250,7 +1276,8 @@ availableRuntimes:
     - *jboss-html5-mobile-archetype-last
     - *jboss-html5-mobile-blank-archetype-last
     - *richfaces-archetype-kitchensink-423final2
-    - *jboss-errai-kitchensink-archetype-211final  
+    - *jboss-errai-kitchensink-archetype-211final
+    - *jboss-spring-kitchensink-archetype-100final
    labels: {
         runtime-category: SERVER,
         runtime-type: EAP,
@@ -1300,6 +1327,7 @@ availableRuntimes:
     - *jboss-html5-mobile-blank-archetype-last
     - *richfaces-archetype-kitchensink-423final2
     - *jboss-errai-kitchensink-archetype-211final
+    - *jboss-spring-kitchensink-archetype-100final
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
