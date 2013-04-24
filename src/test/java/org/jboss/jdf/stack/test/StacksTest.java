@@ -218,6 +218,9 @@ public class StacksTest {
                 } else if (bomVersion.getLabels().get("WFK21RepositoryRequired") != null) {
                     log.debug("Resolving WFK 2.1.0 BOM: " + artifact);
                     Maven.configureResolver().fromClassloaderResource("settings-wfk210.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
+                } else if (bomVersion.getLabels().get("WFK22RepositoryRequired") != null) {
+                    log.debug("Resolving WFK 2.2.0 BOM: " + artifact);
+                    Maven.configureResolver().fromClassloaderResource("settings-wfk220.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
                 } else {
                     log.debug("Using none repository for " + bomVersion);
                     Maven.configureResolver().fromClassloaderResource("settings-centralonly.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
@@ -269,12 +272,12 @@ public class StacksTest {
             }
         }
     }
-    
+
     @Test
-    public void testRuntimeCategoryLabel(){
+    public void testRuntimeCategoryLabel() {
         log.info("Testing if all runtimes have the 'runtime-category' label");
         Stacks stacks = stacksClient.getStacks();
-        for (Runtime runtime: stacks.getAvailableRuntimes()){
+        for (Runtime runtime : stacks.getAvailableRuntimes()) {
             Assert.assertNotNull(runtime + " should have 'runtime-category' label", runtime.getLabels().get("runtime-category"));
         }
     }

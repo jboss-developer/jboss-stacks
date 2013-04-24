@@ -21,7 +21,7 @@
 licenses:
  - &lgpl http://www.gnu.org/copyleft/lesser.txt
 #metadatas
- - &lastArchetypeRelease 7.1.3.CR4
+ - &lastArchetypeRelease 7.1.3.CR6
 #Infinispan will keep using 1.0.4.Final because of bug: https://issues.jboss.org/browse/JDF-266
  - &lastJDFBomRelease 1.0.5.Final
  - &lastSpecBomRelease 3.0.2.Final
@@ -29,6 +29,7 @@ licenses:
  - &eap601SpecBomRelease 3.0.1.Final-redhat-1
  - &eap610SpecBomRelease 3.0.2.Final-redhat-1
  - &wfk21BomRelease 1.0.1.Final-redhat-1
+ - &wfk22BomRelease 1.0.4.Final-redhat-wfk-1
  - &eap601BomRelease 1.0.2.Final-redhat-1
  - &eap610BomRelease 1.0.4.Final-redhat-1
  
@@ -304,7 +305,7 @@ availableBoms:
    description: WFK Spring 2.5.0 dependencies
    groupId: com.redhat.jboss.wfk.boms
    artifactId: spring-2.5-bom
-   recommendedVersion: 2.1.0-redhat-1
+   recommendedVersion: 2.2.0-redhat-1
 
  - &spring-3_0-bom-wfk
    id: spring-3_0-bom-wfk
@@ -312,7 +313,7 @@ availableBoms:
    description: WFK Spring 3.0.x dependencies
    groupId: com.redhat.jboss.wfk.boms
    artifactId: spring-3.0-bom
-   recommendedVersion: 2.1.0-redhat-1
+   recommendedVersion: 2.2.0-redhat-1
 
  - &spring-3_1-bom-wfk
    id: spring-3_1-bom-wfk
@@ -320,7 +321,15 @@ availableBoms:
    description: WFK Spring 3.1.x dependencies
    groupId: com.redhat.jboss.wfk.boms
    artifactId: spring-3.1-bom
-   recommendedVersion: 2.1.0-redhat-1
+   recommendedVersion: 2.2.0-redhat-1
+
+ - &spring-3_2-bom-wfk
+   id: spring-3_2-bom-wfk
+   name: Spring 3.2 BOM (WFK BOM)
+   description: WFK Spring 3.2.x dependencies
+   groupId: com.redhat.jboss.wfk.boms
+   artifactId: spring-3.2-bom
+   recommendedVersion: 2.2.0-redhat-1
       
 #####################################################################################
 #                                                                                   #
@@ -457,6 +466,14 @@ availableBomVersions:
        EAP610AlphaRepositoryRequired: true,
        EarlyAccess: true,
    }   
+
+ - &jboss-javaee-6_0-with-deltaspike-wfk-22
+   id: jboss-javaee-6_0-with-deltaspike-wfk-22
+   bom: *jboss-javaee-6_0-with-deltaspike
+   version: *wfk22BomRelease
+   labels: {
+       WFK22RepositoryRequired: true,
+   }   
    
    ###################################
    #   Java EE 6 with Errai and GWT  #
@@ -501,6 +518,13 @@ availableBomVersions:
       WFK21RepositoryRequired: true,
    }
    
+ - &jboss-javaee-6_0-with-errai-wfk-22
+   id: jboss-javaee-6_0-with-errai-wfk-22
+   bom: *jboss-javaee-6_0-with-errai
+   version: *wfk22BomRelease
+   labels: {
+      WFK22RepositoryRequired: true,
+   }   
    
    ##################################
    #   Java EE 6 with Hibernate     #
@@ -552,7 +576,16 @@ availableBomVersions:
    labels: {
       WFK21RepositoryRequired: true,
    }   
-  
+
+ - &jboss-javaee-6_0-with-hibernate-wfk-22
+   id: jboss-javaee-6_0-with-hibernate-wfk-22
+   bom: *jboss-javaee-6_0-with-hibernate
+   version: *wfk22BomRelease
+   labels: {
+      WFK22RepositoryRequired: true,
+   }
+   
+
    ##########################################################
    #   JBoss Java EE 6 Specification APIs with Hibernate 3  #
    ##########################################################
@@ -732,6 +765,13 @@ availableBomVersions:
       WFK21RepositoryRequired: true,
    }   
 
+ - &jboss-javaee-6_0-with-richfaces-wfk-22
+   id: jboss-javaee-6_0-with-richfaces-wfk-22
+   bom: *jboss-javaee-6_0-with-richfaces
+   version: *wfk22BomRelease
+   labels: {
+      WFK22RepositoryRequired: true,
+   }   
    
    ########################################################
    #   JBoss Java EE 6 Specification APIs with Security   #
@@ -835,7 +875,15 @@ availableBomVersions:
         jbossASPluginVersion: 7.3.Final,
         WFK21RepositoryRequired: true,
    }    
-   
+
+ - &jboss-javaee-6_0-with-tools-wfk-22
+   id: jboss-javaee-6_0-with-tools-wfk-22
+   bom: *jboss-javaee-6_0-with-tools
+   version: *wfk22BomRelease
+   labels: {
+        jbossASPluginVersion: 7.3.Final,
+        WFK22RepositoryRequired: true,
+   }   
    
    #########################################
    #   Java EE 6 with JBoss Transactions   #
@@ -899,6 +947,14 @@ availableBomVersions:
    labels: {
       WFK21RepositoryRequired: true,
    }
+
+ - &spring-2_5-bom-wfk-22
+   id: spring-2_5-bom-wfk-22
+   bom: *spring-2_5-bom-wfk
+   version: 2.2.0-redhat-1
+   labels: {
+      WFK22RepositoryRequired: true,
+   }
    
  - &spring-3_0-bom-wfk-21
    id: spring-3_0-bom-wfk-21
@@ -908,12 +964,36 @@ availableBomVersions:
       WFK21RepositoryRequired: true,
    }
 
+ - &spring-3_0-bom-wfk-22
+   id: spring-3_0-bom-wfk-22
+   bom: *spring-3_0-bom-wfk
+   version: 2.2.0-redhat-1
+   labels: {
+      WFK22RepositoryRequired: true,
+   }
+
  - &spring-3_1-bom-wfk-21
    id: spring-3_1-bom-wfk-21
    bom: *spring-3_1-bom-wfk
    version: 2.1.0-redhat-1
    labels: {
       WFK21RepositoryRequired: true,
+   }
+
+ - &spring-3_1-bom-wfk-22
+   id: spring-3_1-bom-wfk-22
+   bom: *spring-3_1-bom-wfk
+   version: 2.2.0-redhat-1
+   labels: {
+      WFK22RepositoryRequired: true,
+   }
+
+ - &spring-3_2-bom-wfk-22
+   id: spring-3_2-bom-wfk-22
+   bom: *spring-3_2-bom-wfk
+   version: 2.2.0-redhat-1
+   labels: {
+      WFK22RepositoryRequired: true,
    }
     
 ##############################################################################
@@ -1179,7 +1259,7 @@ availableRuntimes:
         runtime-type: EAP
    }
 
-# EAP 6.0.1 doesn't use WFK 2.1 BOMs
+# EAP 6.0.1 uses WFK 2.2 BOMs
  - &jbosseap601runtime
    id: jbosseap601runtime
    name: JBoss EAP 6.0.1
@@ -1189,14 +1269,23 @@ availableRuntimes:
     - *jboss-javaee-6_0-eap601
     - *jboss-javaee-6_0-web-eap601
     - *jboss-javaee-6_0-all-eap601
+    - *jboss-javaee-6_0-with-deltaspike-wfk-22
     - *jboss-javaee-6_0-with-errai-eap601
+    - *jboss-javaee-6_0-with-errai-wfk-22
     - *jboss-javaee-6_0-with-hibernate-eap601
+    - *jboss-javaee-6_0-with-hibernate-wfk-22
     - *jboss-javaee-6_0-with-hibernate3-eap601
     - *jboss-javaee-6_0-with-logging-eap601
     - *jboss-javaee-6_0-with-osgi-eap601
+    - *jboss-javaee-6_0-with-richfaces-wfk-22
     - *jboss-javaee-6_0-with-security-eap601
     - *jboss-javaee-6_0-with-tools-eap601
+    - *jboss-javaee-6_0-with-tools-wfk-22
     - *jboss-javaee-6_0-with-transactions-eap601
+    - *spring-2_5-bom-wfk-22
+    - *spring-3_0-bom-wfk-22
+    - *spring-3_1-bom-wfk-22
+    - *spring-3_2-bom-wfk-22
    defaultBom: *jboss-javaee-6_0-web-eap601
    defaultArchetype: *jboss-javaee6-webapp-archetype-last
    archetypes:
