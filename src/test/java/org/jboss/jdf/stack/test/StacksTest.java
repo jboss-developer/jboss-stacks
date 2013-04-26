@@ -60,6 +60,8 @@ public class StacksTest {
 
     private String testOutputDirectory = System.getProperty("testOutputDirectory");
 
+    private boolean skipArchetypeBuildTests = Boolean.parseBoolean(System.getProperty("skipArchetypeBuildTests"));
+
     private static File stacksFile;
 
     @BeforeClass
@@ -142,7 +144,9 @@ public class StacksTest {
     public void testDefaultArchetypeVersion() {
         log.info("Test if runtime default Archetype is listed as a runtime Archetype");
         for (Runtime runtime : stacksClient.getStacks().getAvailableRuntimes()) {
-            Assert.assertTrue("Runtime " + runtime + " default Archetype is not one of runtime Archetypes", runtime.getArchetypes().contains(runtime.getDefaultArchetype()));
+            if (runtime.getArchetypes() != null) { // JPP Doesn't have Archetypes
+                Assert.assertTrue("Runtime " + runtime + " default Archetype is not one of runtime Archetypes", runtime.getArchetypes().contains(runtime.getDefaultArchetype()));
+            }
         }
     }
 
@@ -221,6 +225,9 @@ public class StacksTest {
                 } else if (bomVersion.getLabels().get("WFK22RepositoryRequired") != null) {
                     log.debug("Resolving WFK 2.2.0 BOM: " + artifact);
                     Maven.configureResolver().fromClassloaderResource("settings-wfk220.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
+                } else if (bomVersion.getLabels().get("JPP6RepositoryRequired") != null) {
+                    log.info("Resolving JPP 6.0.0 BOM: " + artifact);
+                    Maven.configureResolver().fromClassloaderResource("settings-jpp600.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
                 } else {
                     log.debug("Using none repository for " + bomVersion);
                     Maven.configureResolver().fromClassloaderResource("settings-centralonly.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
@@ -284,10 +291,12 @@ public class StacksTest {
 
     @Test
     public void testArchetypes() throws Exception {
-        Stacks stacks = stacksClient.getStacks();
-        for (ArchetypeVersion archetypeVersion : stacks.getAvailableArchetypeVersions()) {
-            executeCreateArchetype(archetypeVersion, false);
-            executeCreateArchetype(archetypeVersion, true);
+        if (!skipArchetypeBuildTests) {
+            Stacks stacks = stacksClient.getStacks();
+            for (ArchetypeVersion archetypeVersion : stacks.getAvailableArchetypeVersions()) {
+                executeCreateArchetype(archetypeVersion, false);
+                executeCreateArchetype(archetypeVersion, true);
+            }
         }
     }
 

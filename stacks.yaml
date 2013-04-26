@@ -22,8 +22,7 @@ licenses:
  - &lgpl http://www.gnu.org/copyleft/lesser.txt
 #metadatas
  - &lastArchetypeRelease 7.1.3.CR6
-#Infinispan will keep using 1.0.4.Final because of bug: https://issues.jboss.org/browse/JDF-266
- - &lastJDFBomRelease 1.0.5.Final
+ - &lastJDFBomRelease 1.0.6.Final
  - &lastSpecBomRelease 3.0.2.Final
  - &eap600SpecBomRelease 3.0.0.Final-redhat-1
  - &eap601SpecBomRelease 3.0.1.Final-redhat-1
@@ -158,7 +157,7 @@ availableBoms:
    description: Dependency Management for Java EE 6 Specification APIs with Infinispan
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-infinispan
-   recommendedVersion: 1.0.4.Final #It is using 1.0.4 versin because of issue: https://issues.jboss.org/browse/JDF-266
+   recommendedVersion: *lastJDFBomRelease
    
  - &jboss-javaee-6_0-with-infinispan-wfk
    id: jboss-javaee-6_0-with-infinispan-wfk
@@ -330,6 +329,19 @@ availableBoms:
    groupId: com.redhat.jboss.wfk.boms
    artifactId: spring-3.2-bom
    recommendedVersion: 2.2.0-redhat-1
+   
+   
+   ##############################   
+   #  JBoss Portal    B O M S   # 
+   ##############################
+
+ - &gatein-3_5-bom
+   id: gatein-3_5-bom
+   name: GateIn Portal 3.5 BOM
+   description: Bill of Materials for GateIn Portal 3.5
+   groupId: org.jboss.bom
+   artifactId: gatein-3.5-bom
+   recommendedVersion: 1.0.0.Final-redhat-2
       
 #####################################################################################
 #                                                                                   #
@@ -629,7 +641,7 @@ availableBomVersions:
  - &jboss-javaee-6_0-with-infinispan-last
    id: jboss-javaee-6_0-with-infinispan-last
    bom: *jboss-javaee-6_0-with-infinispan
-   version: 1.0.4.Final #Is is using 1.0.4 versin because of issue: https://issues.jboss.org/browse/JDF-266
+   version: *lastJDFBomRelease
    labels: {}
 
  - &jboss-javaee-6_0-with-infinispan-eap61
@@ -995,6 +1007,21 @@ availableBomVersions:
    labels: {
       WFK22RepositoryRequired: true,
    }
+   
+
+   ##############################
+   #   GateIn Portal 3.5 BOM    #
+   ##############################
+
+ - &gatein-3_5-bom-jpp6
+   id: gatein-3_5-bom-jpp6
+   bom: *gatein-3_5-bom
+   version: 1.0.0.Final-redhat-2
+   labels: {
+      JPP6RepositoryRequired: true,
+   }
+
+   
     
 ##############################################################################
 #                                                                            #
@@ -1396,6 +1423,27 @@ availableRuntimes:
     }
 
 
+   ###############
+   #  J P P  6   #
+   ###############
+
+ - &jbossjpp600runtime
+   id: jbossjpp600runtime
+   name: JBoss Portal Platform 6.0.0
+   version: 6.0.0
+   license: *lgpl
+   url: http://www.jboss.org/jbossas
+   downloadUrl: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=jbportal&version=6.0.0
+   boms:
+    - *gatein-3_5-bom-jpp6
+   defaultBom: *gatein-3_5-bom-jpp6
+   defaultArchetype: 
+   archetypes:
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: JPP,
+    }
+
 ##########################################################
 #                                                        #
 #   L I S T    O F    A L L     R E L E A S E S          #
@@ -1428,6 +1476,17 @@ minorReleases:
    version: 7.1
    recommendedRuntime: *jboss-as711runtime
 
+   ###############
+   #   JPP 6.0   #
+   ###############
+
+ - &jpp600
+   name: JBoss Portal Platform
+   version: 6.0
+   recommendedRuntime: *jbossjpp600runtime
+   
+   
+
 ############################################
 
 majorReleases:
@@ -1452,3 +1511,15 @@ majorReleases:
    minorReleases:
     - *jbeap60
     - *jbeap61
+    
+   ##################
+   #   J P P  6     #
+   ##################
+
+ - name: JBoss Portal Platform
+   version: 6
+   recommendedRuntime: *jbossjpp600runtime
+   minorReleases:
+    - *jpp600
+    
+    
