@@ -26,11 +26,11 @@ licenses:
  - &lastSpecBomRelease 3.0.2.Final
  - &eap600SpecBomRelease 3.0.0.Final-redhat-1
  - &eap601SpecBomRelease 3.0.1.Final-redhat-1
- - &eap610SpecBomRelease 3.0.2.Final-redhat-1
+ - &eap610SpecBomRelease 3.0.2.Final-redhat-2
  - &wfk21BomRelease 1.0.1.Final-redhat-1
  - &wfk22BomRelease 1.0.4.Final-redhat-wfk-1
  - &eap601BomRelease 1.0.2.Final-redhat-1
- - &eap610BomRelease 1.0.4.Final-redhat-1
+ - &eap610BomRelease 1.0.4.Final-redhat-3
  
 #################################################################
 #                                                               #
@@ -400,7 +400,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-web
    version: *eap610SpecBomRelease
    labels: {
-       EAP610AlphaRepositoryRequired: true,
+       EAP610RepositoryRequired: true,
        EarlyAccess: true,
    }
    
@@ -435,7 +435,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0
    version: *eap610SpecBomRelease
    labels: {
-       EAP610AlphaRepositoryRequired: true,
+       EAP610RepositoryRequired: true,
        EarlyAccess: true,
    }
    
@@ -449,16 +449,6 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-all
    version: *lastJDFBomRelease
    labels: {}
-   
- - &jboss-javaee-6_0-with-all-eap61
-   id: jboss-javaee-6_0-with-all-eap61
-   bom: *jboss-javaee-6_0-with-all
-   version: *eap610BomRelease
-   labels: {
-       EAP610AlphaRepositoryRequired: true,
-       EarlyAccess: true,
-   }
-
 
    ###################################
    #   Java EE 6 with Deltaspike     #
@@ -475,7 +465,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-deltaspike
    version: *eap610BomRelease
    labels: {
-       EAP610AlphaRepositoryRequired: true,
+       EAP610RepositoryRequired: true,
        EarlyAccess: true,
    }   
 
@@ -518,7 +508,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-errai
    version: *eap610BomRelease
    labels: {
-       EAP610AlphaRepositoryRequired: true,
+       EAP610RepositoryRequired: true,
        EarlyAccess: true,
    }   
 
@@ -577,7 +567,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-hibernate
    version: *eap610BomRelease
    labels: {
-       EAP610AlphaRepositoryRequired: true,
+       EAP610RepositoryRequired: true,
        EarlyAccess: true,
    }   
    
@@ -621,7 +611,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-hibernate3
    version: *eap610BomRelease
    labels: {
-       EAP610AlphaRepositoryRequired: true,
+       EAP610RepositoryRequired: true,
        EarlyAccess: true,
    }   
 
@@ -649,7 +639,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-infinispan
    version: *eap610BomRelease
    labels: {
-       EAP610AlphaRepositoryRequired: true,
+       EAP610RepositoryRequired: true,
        EarlyAccess: true,
    }   
 
@@ -684,7 +674,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-logging
    version: *eap610BomRelease
    labels: {
-       EAP610AlphaRepositoryRequired: true,
+       EAP610RepositoryRequired: true,
        EarlyAccess: true,
    }   
 
@@ -719,7 +709,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-osgi
    version: *eap610BomRelease
    labels: {
-       EAP610AlphaRepositoryRequired: true,
+       EAP610RepositoryRequired: true,
        EarlyAccess: true,
    }   
 
@@ -740,15 +730,6 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-resteasy
    version: *lastJDFBomRelease
    labels: {}
-
- - &jboss-javaee-6_0-with-resteasy-eap61
-   id: jboss-javaee-6_0-with-resteasy-eap61
-   bom: *jboss-javaee-6_0-with-resteasy
-   version: *eap610BomRelease
-   labels: {
-       EAP610AlphaRepositoryRequired: true,
-       EarlyAccess: true,
-   }   
       
    ########################################################
    #   JBoss Java EE 6 Specification APIs with Richfaces  #
@@ -759,15 +740,6 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-richfaces
    version: *lastJDFBomRelease
    labels: {}
-
- - &jboss-javaee-6_0-with-richfaces-eap61
-   id: jboss-javaee-6_0-with-richfaces-eap61
-   bom: *jboss-javaee-6_0-with-richfaces
-   version: *eap610BomRelease
-   labels: {
-       EAP610AlphaRepositoryRequired: true,
-       EarlyAccess: true,
-   }   
 
  - &jboss-javaee-6_0-with-richfaces-wfk-21
    id: jboss-javaee-6_0-with-richfaces-wfk-21
@@ -808,7 +780,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-security
    version: *eap610BomRelease
    labels: {
-       EAP610AlphaRepositoryRequired: true,
+       EAP610RepositoryRequired: true,
        EarlyAccess: true,
    }   
       
@@ -875,7 +847,7 @@ availableBomVersions:
    version: *eap610BomRelease
    labels: {
        jbossASPluginVersion: 7.3.Final,
-       EAP610AlphaRepositoryRequired: true,
+       EAP610RepositoryRequired: true,
        EarlyAccess: true,
    }   
    
@@ -936,7 +908,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-with-transactions
    version: *eap610BomRelease
    labels: {
-       EAP610AlphaRepositoryRequired: true,
+       EAP610RepositoryRequired: true,
        EarlyAccess: true,
    }   
    
@@ -1270,7 +1242,7 @@ availableRuntimes:
     - *spring-2_5-bom-wfk-21
     - *spring-3_0-bom-wfk-21
     - *spring-3_1-bom-wfk-21
-   defaultBom: *jboss-javaee-6_0-300redhat1
+   defaultBom: *jboss-javaee-6_0-web-300redhat1
    defaultArchetype: *jboss-javaee6-webapp-archetype-last
    archetypes:
     - *jboss-javaee6-webapp-archetype-last
@@ -1330,19 +1302,18 @@ availableRuntimes:
    }
    
    #####################
-   #   E A P 6.1 Alpha #
-   ####################
+   #   E A P 6.1 Beta  #
+   #####################
 
  - &jbosseap610runtime
    id: jbosseap610runtime
-   name: JBoss EAP 6.1.0 Alpha-1
-   version: 6.1.0.Alpha1
-   url: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=appplatform&version=6.1.0+Alpha
-   downloadUrl: http://download.jboss.org/jbosseap/6/jboss-eap-6.1.0.Alpha/jboss-eap-6.1.0.Alpha.zip
+   name: JBoss EAP 6.1.0 Beta 1
+   version: 6.1.0.Beta1
+   url: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=appplatform&version=6.1.0+Beta
+   downloadUrl: https://www.jboss.org/download-manager/content/origin/files/sha256/64/644eedc15c62d9264dbbc442f69189e9915dfdba447eaa990ed10bea299d03a3/jboss-eap-6.1.0.Beta.zip
    boms:
     - *jboss-javaee-6_0-eap61
     - *jboss-javaee-6_0-web-eap61
-    - *jboss-javaee-6_0-with-all-eap61
     - *jboss-javaee-6_0-with-deltaspike-eap61
     - *jboss-javaee-6_0-with-errai-eap61
     - *jboss-javaee-6_0-with-hibernate-eap61
@@ -1350,12 +1321,10 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-infinispan-eap61
     - *jboss-javaee-6_0-with-logging-eap61
     - *jboss-javaee-6_0-with-osgi-eap61
-    - *jboss-javaee-6_0-with-resteasy-eap61
-    - *jboss-javaee-6_0-with-richfaces-eap61
     - *jboss-javaee-6_0-with-security-eap61
     - *jboss-javaee-6_0-with-tools-eap61
     - *jboss-javaee-6_0-with-transactions-eap61
-   defaultBom: *jboss-javaee-6_0-eap61
+   defaultBom: *jboss-javaee-6_0-web-eap61
    defaultArchetype: *jboss-javaee6-webapp-archetype-last
    archetypes:
     - *jboss-javaee6-webapp-archetype-last
@@ -1364,7 +1333,6 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-blank-archetype-last
     - *jboss-html5-mobile-archetype-last
     - *jboss-html5-mobile-blank-archetype-last
-    - *richfaces-archetype-kitchensink-423final2
     - *jboss-errai-kitchensink-archetype-211final  
    labels: {
         runtime-category: SERVER,

@@ -213,9 +213,9 @@ public class StacksTest {
                 } else if (bomVersion.getLabels().get("EAP601RepositoryRequired") != null) {
                     log.debug("Resolving EAP 6.0.1 BOM: " + artifact);
                     Maven.configureResolver().fromClassloaderResource("settings-eap601.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
-                } else if (bomVersion.getLabels().get("EAP610AlphaRepositoryRequired") != null) {
-                    log.debug("Resolving EAP 6.1.0-alpha BOM: " + artifact);
-                    Maven.configureResolver().fromClassloaderResource("settings-eap610alpha.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
+                } else if (bomVersion.getLabels().get("EAP610RepositoryRequired") != null) {
+                    log.debug("Resolving EAP 6.1.0 BOM: " + artifact);
+                    Maven.configureResolver().fromClassloaderResource("settings-eap610.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
                 } else if (bomVersion.getLabels().get("WFK2RepositoryRequired") != null) {
                     log.debug("Resolving WFK 2.0.0 BOM: " + artifact);
                     Maven.configureResolver().fromClassloaderResource("settings-wfk200.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
@@ -226,7 +226,7 @@ public class StacksTest {
                     log.debug("Resolving WFK 2.2.0 BOM: " + artifact);
                     Maven.configureResolver().fromClassloaderResource("settings-wfk220.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
                 } else if (bomVersion.getLabels().get("JPP6RepositoryRequired") != null) {
-                    log.info("Resolving JPP 6.0.0 BOM: " + artifact);
+                    log.debug("Resolving JPP 6.0.0 BOM: " + artifact);
                     Maven.configureResolver().fromClassloaderResource("settings-jpp600.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
                 } else {
                     log.debug("Using none repository for " + bomVersion);
