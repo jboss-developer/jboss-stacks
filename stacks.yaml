@@ -1416,7 +1416,7 @@ availableRuntimes:
    #   JBoss 3.2 #
    ###############
  - &jboss-as328SP1runtime
-   id: jboss328SP1runtime
+   id: jboss-as328SP1runtime
    name: JBoss 3.2.8 SP 1
    version: 3.2.8.SP1
    license: *lgpl21
@@ -1433,7 +1433,7 @@ availableRuntimes:
    # JBoss 4.0.5 #
    ###############
  - &jboss-as405runtime
-   id: jboss405runtime
+   id: jboss-as405runtime
    name: JBoss 4.0.5
    version: 4.0.5
    license: *lgpl21
@@ -1449,7 +1449,7 @@ availableRuntimes:
    # JBoss 4.2.3 #
    ###############
  - &jboss-as423runtime
-   id: jboss423runtime
+   id: jboss-as423runtime
    name: JBoss 4.2.3
    version: 4.2.3
    license: *lgpl21
@@ -1465,7 +1465,7 @@ availableRuntimes:
    # JBoss 5.0.1 #
    ###############
  - &jboss-as501runtime
-   id: jboss501runtime
+   id: jboss-as501runtime
    name: JBoss 5.0.1
    version: 5.0.1
    license: *lgpl21
@@ -1482,7 +1482,7 @@ availableRuntimes:
    # JBoss 5.1.0 #
    ###############
  - &jboss-as510runtime
-   id: jboss510runtime
+   id: jboss-as510runtime
    name: JBoss 5.1.0
    version: 5.1.0
    license: *lgpl21
@@ -1499,7 +1499,7 @@ availableRuntimes:
    # JBoss 6.0.0 #
    ###############
  - &jboss-as600runtime
-   id: jboss600runtime
+   id: jboss-as600runtime
    name: JBoss 6.0.0
    version: 6.0.0
    license: *lgpl21
@@ -1516,7 +1516,7 @@ availableRuntimes:
    # JBoss 6.1.0 #
    ###############
  - &jboss-as610runtime
-   id: jboss610runtime
+   id: jboss-as610runtime
    name: JBoss 6.1.0
    version: 6.1.0
    license: *lgpl21
@@ -1533,7 +1533,7 @@ availableRuntimes:
    # JBoss 7.0.1 #
    ###############
  - &jboss-as701runtime
-   id: jboss701runtime
+   id: jboss-as701runtime
    name: JBoss 7.0.1
    version: 7.0.1
    license: *lgpl21
@@ -1550,7 +1550,7 @@ availableRuntimes:
    # JBoss 7.0.2 #
    ###############
  - &jboss-as702runtime
-   id: jboss702runtime
+   id: jboss-as702runtime
    name: JBoss 7.0.2
    version: 7.0.2
    license: *lgpl21
@@ -1566,7 +1566,7 @@ availableRuntimes:
    # JBoss 7.1.0 #
    ###############
  - &jboss-as710runtime
-   id: jboss710runtime
+   id: jboss-as710runtime
    name: JBoss 7.1.0
    version: 7.1.0
    license: *lgpl21
