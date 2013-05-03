@@ -1219,11 +1219,11 @@ availableRuntimes:
    name: JBoss Seam 2.0.2.SP1
    version: 2.0.2
    license: *lgpl21
-   url: http://sourceforge.net/projects/jboss/files/JBoss%20Seam/2.0.2.SP1/jboss-seam-2.0.2.SP1.zip?use_mirror=autoselect
+   downloadUrl: http://downloads.sourceforge.net/project/jboss/JBoss%20Seam/2.0.2.SP1/jboss-seam-2.0.2.SP1.zip?r=&ts=1367507020
    labels: {
-        runtime-category: TODO,
-        runtime-type: TODO,
-        runtime-size: 96468992
+        runtime-category: PROJECT,
+        runtime-type: SEAM,
+        runtime-size: 92250255
    }
 
    ###############
@@ -1234,11 +1234,11 @@ availableRuntimes:
    name: JBoss Seam 2.1.2.SP1
    version: 2.1.2
    license: *lgpl21
-   url: http://sourceforge.net/projects/jboss/files/JBoss%20Seam/2.1.2/jboss-seam-2.1.2.zip?use_mirror=autoselect
+   downloadUrl: http://sourceforge.net/projects/jboss/files/JBoss%20Seam/2.1.2/jboss-seam-2.1.2.zip?use_mirror=autoselect
    labels: {
-        runtime-category: TODO,
-        runtime-type: TODO,
-        runtime-size: 143654912
+        runtime-category: PROJECT,
+        runtime-type: SEAM,
+        runtime-size: 142604794
    }
 
    ###############
@@ -1249,11 +1249,11 @@ availableRuntimes:
    name: JBoss Seam 2.2.2
    version: 2.2.2
    license: *lgpl21
-   url: http://sourceforge.net/projects/jboss/files/JBoss%20Seam/2.2.2.Final/jboss-seam-2.2.2.Final.zip?use_mirror=autoselect
+   downloadUrl: http://sourceforge.net/projects/jboss/files/JBoss%20Seam/2.2.2.Final/jboss-seam-2.2.2.Final.zip?use_mirror=autoselect
    labels: {
-        runtime-category: TODO,
-        runtime-type: TODO,
-        runtime-size: 118489088
+        runtime-category: PROJECT,
+        runtime-type: SEAM,
+        runtime-size: 113161101
    }
   
    ###############
@@ -1264,11 +1264,11 @@ availableRuntimes:
    name: JBoss Seam 2.3.0
    version: 2.3.0
    license: *lgpl21
-   url: http://sourceforge.net/projects/jboss/files/JBoss%20Seam/2.3.0.Final/jboss-seam-distribution-2.3.0.Final-dist.zip/download?use_mirror=autoselect
+   downloadUrl: http://sourceforge.net/projects/jboss/files/JBoss%20Seam/2.3.0.Final/jboss-seam-distribution-2.3.0.Final-dist.zip/download?use_mirror=autoselect
    labels: {
-        runtime-category: TODO,
-        runtime-type: TODO,
-        runtime-size: 137363456
+        runtime-category: PROJECT,
+        runtime-type: SEAM,
+        runtime-size: 131413606
    }
 
 
@@ -1320,7 +1320,7 @@ availableRuntimes:
    labels: {
         runtime-category: SERVER,
         runtime-type: EAP,
-        runtime-size: 175429416,
+        runtime-size: 114875787,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.60
    }
 
@@ -1408,8 +1408,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: EAP,
         EarlyAccess: true,
-        runtime-size: 114831134,
-        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.61
+        runtime-size: 115036532
    }
 
    ###############
@@ -1420,7 +1419,7 @@ availableRuntimes:
    name: JBoss 3.2.8 SP 1
    version: 3.2.8.SP1
    license: *lgpl21
-   url: http://repository.jboss.org/sourceforge/jboss-3.2.8.SP1.zip
+   downloadUrl: http://repository.jboss.org/sourceforge/jboss-3.2.8.SP1.zip
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -1437,7 +1436,7 @@ availableRuntimes:
    name: JBoss 4.0.5
    version: 4.0.5
    license: *lgpl21
-   url: http://repository.jboss.org/sourceforge/jboss-4.0.5.GA.zip
+   downloadUrl: http://repository.jboss.org/sourceforge/jboss-4.0.5.GA.zip
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -1453,11 +1452,11 @@ availableRuntimes:
    name: JBoss 4.2.3
    version: 4.2.3
    license: *lgpl21
-   url: http://sourceforge.net/projects/jboss/files/JBoss/JBoss-4.2.3.GA/jboss-4.2.3.GA-jdk6.zip?use_mirror=autoselect
+   downloadUrl: http://sourceforge.net/projects/jboss/files/JBoss/JBoss-4.2.3.GA/jboss-4.2.3.GA-jdk6.zip?use_mirror=autoselect
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
-        runtime-size: 104333312,
+        runtime-size: 99479031,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.42
    }
 
@@ -1469,11 +1468,11 @@ availableRuntimes:
    name: JBoss 5.0.1
    version: 5.0.1
    license: *lgpl21
-   url: http://repository.jboss.org/sourceforge/jboss-5.0.1.GA.zip
+   downloadUrl: http://repository.jboss.org/sourceforge/jboss-5.0.1.GA.zip
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
-        runtime-size: 104333312,
+        runtime-size: 109099657,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.50
    }
 
@@ -1486,11 +1485,11 @@ availableRuntimes:
    name: JBoss 5.1.0
    version: 5.1.0
    license: *lgpl21
-   url: http://repository.jboss.org/sourceforge/jboss-5.1.0.GA.zip
+   downloadUrl: http://repository.jboss.org/sourceforge/jboss-5.1.0.GA.zip
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
-        runtime-size: 139984896,
+        runtime-size: 133466607,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.51
    }
 
@@ -1503,11 +1502,11 @@ availableRuntimes:
    name: JBoss 6.0.0
    version: 6.0.0
    license: *lgpl21
-#   url: TODO 
+   downloadUrl:  http://sourceforge.net/projects/jboss/files/JBoss/JBoss-6.0.0.Final/jboss-as-distribution-6.0.0.Final.zip/download
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
-        runtime-size: 1520854016,
+        runtime-size: 181267148,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.60
    }
 
@@ -1520,28 +1519,28 @@ availableRuntimes:
    name: JBoss 6.1.0
    version: 6.1.0
    license: *lgpl21
-   url: http://download.jboss.org/jbossas/6.1/jboss-as-distribution-6.1.0.Final.zip?use_mirror=autoselect
+   downloadUrl: http://download.jboss.org/jbossas/6.1/jboss-as-distribution-6.1.0.Final.zip?use_mirror=autoselect
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
-        runtime-size: 191889408,
+        runtime-size: 182762510,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.60
    }
 
 
    ###############
-   # JBoss 7.0.1 #
+   # JBoss 7.0.1 182762510#
    ###############
  - &jboss-as701runtime
    id: jboss-as701runtime
    name: JBoss 7.0.1
    version: 7.0.1
    license: *lgpl21
-   url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.1.Final/jboss-as-7.0.1.Final.zip?use_mirror=autoselect
+   downloadUrl: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.1.Final/jboss-as-7.0.1.Final.zip?use_mirror=autoselect
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
-        runtime-size: 77594624,
+        runtime-size: 77938120,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.70
    }
 
@@ -1554,11 +1553,11 @@ availableRuntimes:
    name: JBoss 7.0.2
    version: 7.0.2
    license: *lgpl21
-   url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-7.0.2.Final.zip?use_mirror=autoselect
+   downloadUrl: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-7.0.2.Final.zip?use_mirror=autoselect
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
-        runtime-size: 77594624,
+        runtime-size: 79337435,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.70
    }
    
@@ -1570,11 +1569,11 @@ availableRuntimes:
    name: JBoss 7.1.0
    version: 7.1.0
    license: *lgpl21
-   url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip?use_mirror=autoselect
+   downloadUrl: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip?use_mirror=autoselect
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
-        runtime-size: 104857600,
+        runtime-size: 105289213,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.71
    }
 
@@ -1625,7 +1624,7 @@ availableRuntimes:
         runtime-type: AS,
         requiresLogModule: false,
         pom: "https://github.com/jbossas/jboss-as/blob/1f0c1d8348752595441cc295d3d07f79f4cb8347/pom.xml",
-        runtime-size: 114831134,
+        runtime-size: 133255203,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.71
     }
 
@@ -1649,8 +1648,7 @@ availableRuntimes:
    labels: {
         runtime-category: SERVER,
         runtime-type: JPP,
-        runtime-size: 195687247,
-        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.60,
+        runtime-size: 195687247
     }
 
 ##########################################################
