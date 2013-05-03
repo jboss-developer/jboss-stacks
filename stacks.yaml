@@ -1310,7 +1310,6 @@ availableRuntimes:
    name: JBoss EAP 6.1.0 Beta 1
    version: 6.1.0.Beta1
    url: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=appplatform&version=6.1.0+Beta
-   downloadUrl: https://www.jboss.org/download-manager/content/origin/files/sha256/64/644eedc15c62d9264dbbc442f69189e9915dfdba447eaa990ed10bea299d03a3/jboss-eap-6.1.0.Beta.zip
    boms:
     - *jboss-javaee-6_0-eap61
     - *jboss-javaee-6_0-web-eap61
@@ -1352,7 +1351,7 @@ availableRuntimes:
    artifactId: jboss-as-dist
    version: 7.1.1.Final
    license: *lgpl
-   url: http://www.jboss.org/jbossas
+   url: http://www.jboss.org/jbossas/downloads
    downloadUrl: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip
    boms:
     - *jboss-javaee-6_0-last
@@ -1400,8 +1399,7 @@ availableRuntimes:
    name: JBoss Portal Platform 6.0.0
    version: 6.0.0
    license: *lgpl
-   url: http://www.jboss.org/jbossas
-   downloadUrl: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=jbportal&version=6.0.0
+   url: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=jbportal&version=6.0.0
    boms:
     - *gatein-3_5-bom-jpp6
    defaultBom: *gatein-3_5-bom-jpp6
