@@ -20,6 +20,7 @@
 
 licenses:
  - &lgpl http://www.gnu.org/copyleft/lesser.txt
+ - &lgpl21 http://www.gnu.org/licenses/lgpl-2.1.html
 #metadatas
  - &lastArchetypeRelease 7.1.3.CR6
  - &lastJDFBomRelease 1.0.6.Final
@@ -1218,6 +1219,7 @@ availableRuntimes:
    id: jbosseap600runtime
    name: JBoss EAP 6.0.0
    version: 6.0.0
+   license: *lgpl21
    url: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=appplatform&version=6.0.0
    boms:
     - *jboss-javaee-6_0-300redhat1
@@ -1255,7 +1257,9 @@ availableRuntimes:
     - *jboss-errai-kitchensink-archetype-211final
    labels: {
         runtime-category: SERVER,
-        runtime-type: EAP
+        runtime-type: EAP,
+        runtime-size: 175429416,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.60
    }
 
 # EAP 6.0.1 uses WFK 2.2 BOMs
@@ -1263,6 +1267,7 @@ availableRuntimes:
    id: jbosseap601runtime
    name: JBoss EAP 6.0.1
    version: 6.0.1
+   license: *lgpl21
    url: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=appplatform&version=6.0.1
    boms:
     - *jboss-javaee-6_0-eap601
@@ -1298,7 +1303,9 @@ availableRuntimes:
     - *jboss-errai-kitchensink-archetype-211final  
    labels: {
         runtime-category: SERVER,
-        runtime-type: EAP
+        runtime-type: EAP,
+        runtime-size: 116488459,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.60
    }
    
    #####################
@@ -1309,6 +1316,7 @@ availableRuntimes:
    id: jbosseap610runtime
    name: JBoss EAP 6.1.0 Beta 1
    version: 6.1.0.Beta1
+   license: *lgpl21
    url: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=appplatform&version=6.1.0+Beta
    boms:
     - *jboss-javaee-6_0-eap61
@@ -1337,11 +1345,61 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: EAP,
         EarlyAccess: true,
+        runtime-size: 114831134,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.61
+   }
+
+   ###############
+   # JBoss 7.0.1 #
+   ###############
+ - &jboss-as701runtime
+   id: jboss701runtime
+   name: JBoss 7.0.1
+   version: 7.0.1
+   license: *lgpl21
+   url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.1.Final/jboss-as-7.0.1.Final.zip?use_mirror=autoselect
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        runtime-size: 77594624,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.70
    }
 
 
    ###############
-   #   A S 7.1   #
+   # JBoss 7.0.2 #
+   ###############
+ - &jboss-as702runtime
+   id: jboss702runtime
+   name: JBoss 7.0.2
+   version: 7.0.2
+   license: *lgpl21
+   url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-7.0.2.Final.zip?use_mirror=autoselect
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        runtime-size: 77594624,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.70
+   }
+   
+   ###############
+   # JBoss 7.1.0 #
+   ###############
+ - &jboss-as710runtime
+   id: jboss710runtime
+   name: JBoss 7.1.0
+   version: 7.1.0
+   license: *lgpl21
+   url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip?use_mirror=autoselect
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        runtime-size: 104857600,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.71
+   }
+
+   ###############
+   #   A S 7.1.1 #
    ###############
 
  - &jboss-as711runtime
@@ -1386,7 +1444,9 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/jbossas/jboss-as/blob/1f0c1d8348752595441cc295d3d07f79f4cb8347/pom.xml"
+        pom: "https://github.com/jbossas/jboss-as/blob/1f0c1d8348752595441cc295d3d07f79f4cb8347/pom.xml",
+        runtime-size: 114831134,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.71
     }
 
 
@@ -1408,6 +1468,8 @@ availableRuntimes:
    labels: {
         runtime-category: SERVER,
         runtime-type: JPP,
+        runtime-size: 195687247,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.60,
     }
 
 ##########################################################
@@ -1433,6 +1495,7 @@ minorReleases:
    version: 6.0
    recommendedRuntime: *jbosseap601runtime
 
+
    ###############
    #   A S 7.X   #
    ###############
@@ -1441,6 +1504,16 @@ minorReleases:
    name: JBoss AS
    version: 7.1
    recommendedRuntime: *jboss-as711runtime
+
+ - &jbas702
+   name: JBoss AS
+   version: 7.0.2
+   recommendedRuntime: *jboss-as702runtime
+
+ - &jbas701
+   name: JBoss AS
+   version: 7.0.1
+   recommendedRuntime: *jboss-as701runtime
 
    ###############
    #   JPP 6.0   #
@@ -1457,6 +1530,8 @@ minorReleases:
 
 majorReleases:
 
+
+
    ###############
    #   A S 7     #
    ###############
@@ -1466,6 +1541,8 @@ majorReleases:
    recommendedRuntime: *jboss-as711runtime
    minorReleases:
     - *jbas71
+    - *jbas702
+    - *jbas701
 
    ##################
    #   E A P  6     #
@@ -1489,3 +1566,5 @@ majorReleases:
     - *jpp600
     
     
+
+
