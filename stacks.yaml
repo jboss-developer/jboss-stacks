@@ -1353,7 +1353,7 @@ availableRuntimes:
    # JBoss 7.0.1 #
    ###############
  - &jboss-as701runtime
-   id: jboss701runtime
+   id: jboss-as701runtime
    name: JBoss 7.0.1
    version: 7.0.1
    license: *lgpl21
@@ -1371,7 +1371,7 @@ availableRuntimes:
    # JBoss 7.0.2 #
    ###############
  - &jboss-as702runtime
-   id: jboss702runtime
+   id: jboss-as702runtime
    name: JBoss 7.0.2
    version: 7.0.2
    license: *lgpl21
@@ -1388,7 +1388,7 @@ availableRuntimes:
    # JBoss 7.1.0 #
    ###############
  - &jboss-as710runtime
-   id: jboss710runtime
+   id: jboss-as710runtime
    name: JBoss 7.1.0
    version: 7.1.0
    license: *lgpl21

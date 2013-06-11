@@ -136,7 +136,9 @@ public class StacksTest {
     public void testDefaultBomVersion() {
         log.info("Test if runtime default BOM is listed as a runtime BOM");
         for (Runtime runtime : stacksClient.getStacks().getAvailableRuntimes()) {
-            Assert.assertTrue("Runtime " + runtime + " default BOM is not one of runtime BOMS", runtime.getBoms().contains(runtime.getDefaultBom()));
+            if (runtime.getDefaultBom() != null && runtime.getBoms() != null){ //Some runtimes doesn't contain BOMs
+                Assert.assertTrue("Runtime " + runtime + " default BOM is not one of runtime BOMS", runtime.getBoms().contains(runtime.getDefaultBom()));
+            }
         }
     }
 
@@ -144,7 +146,7 @@ public class StacksTest {
     public void testDefaultArchetypeVersion() {
         log.info("Test if runtime default Archetype is listed as a runtime Archetype");
         for (Runtime runtime : stacksClient.getStacks().getAvailableRuntimes()) {
-            if (runtime.getArchetypes() != null) { // JPP Doesn't have Archetypes
+            if (runtime.getDefaultArchetype() != null && runtime.getArchetypes() != null) { // Some Runtimes doesn't have Archetypes
                 Assert.assertTrue("Runtime " + runtime + " default Archetype is not one of runtime Archetypes", runtime.getArchetypes().contains(runtime.getDefaultArchetype()));
             }
         }
@@ -265,7 +267,7 @@ public class StacksTest {
         Stacks stacks = stacksClient.getStacks();
         for (Runtime runtime : stacks.getAvailableRuntimes()) {
             // Only AS has maven artifact / EAP don't
-            if (runtime.getLabels().get("runtime-type").equals("AS")) {
+            if (runtime.getLabels().get("runtime-type").equals("AS") && runtime.getGroupId() != null && runtime.getArtifactId() != null) {
                 String artifact = String.format("%s:%s:pom:%s", runtime.getGroupId(), runtime.getArtifactId(), runtime.getVersion());
                 try {
                     log.info("Resolving Runtime " + artifact);
