@@ -1357,7 +1357,8 @@ availableRuntimes:
    name: JBoss 7.0.1
    version: 7.0.1
    license: *lgpl21
-   url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.1.Final/jboss-as-7.0.1.Final.zip?use_mirror=autoselect
+   url: http://www.jboss.org/jbossas/downloads
+   downloadUrl: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.1.Final/jboss-as-7.0.1.Final.zip?use_mirror=autoselect
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -1374,7 +1375,8 @@ availableRuntimes:
    name: JBoss 7.0.2
    version: 7.0.2
    license: *lgpl21
-   url: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-7.0.2.Final.zip?use_mirror=autoselect
+   url: http://www.jboss.org/jbossas/downloads
+   downloadUrl: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-7.0.2.Final.zip?use_mirror=autoselect
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -1390,7 +1392,8 @@ availableRuntimes:
    name: JBoss 7.1.0
    version: 7.1.0
    license: *lgpl21
-   url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip?use_mirror=autoselect
+   url:  http://www.jboss.org/jbossas/downloads
+   downloadUrl: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip?use_mirror=autoselect
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
