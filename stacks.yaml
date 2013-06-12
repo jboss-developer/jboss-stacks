@@ -27,11 +27,11 @@ licenses:
  - &lastSpecBomRelease 3.0.2.Final
  - &eap600SpecBomRelease 3.0.0.Final-redhat-1
  - &eap601SpecBomRelease 3.0.1.Final-redhat-1
- - &eap610SpecBomRelease 3.0.2.Final-redhat-2
+ - &eap610SpecBomRelease 3.0.2.Final-redhat-3
  - &wfk21BomRelease 1.0.1.Final-redhat-1
  - &wfk22BomRelease 1.0.4.Final-redhat-wfk-1
  - &eap601BomRelease 1.0.2.Final-redhat-1
- - &eap610BomRelease 1.0.4.Final-redhat-3
+ - &eap610BomRelease 1.0.4.Final-redhat-4
  
 #################################################################
 #                                                               #
@@ -63,9 +63,9 @@ availableBoms:
    groupId: org.jboss.spec
    artifactId: jboss-javaee-web-6.0
    recommendedVersion: *lastSpecBomRelease
-   
+
    ###############################
-   
+
  - &jboss-javaee-6_0
    id: jboss-javaee-6_0
    name: Java EE 6
@@ -73,7 +73,7 @@ availableBoms:
    groupId: org.jboss.spec
    artifactId: jboss-javaee-6.0
    recommendedVersion: *lastSpecBomRelease
-   
+
    ##############################
 
    ##########################
@@ -99,7 +99,7 @@ availableBoms:
    recommendedVersion: *lastJDFBomRelease
 
    ##############################
-   
+
  - &jboss-javaee-6_0-with-errai
    id: jboss-javaee-6_0-with-errai
    name: Java EE 6 with Errai and GWT
@@ -124,7 +124,7 @@ availableBoms:
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-hibernate
    recommendedVersion: *lastJDFBomRelease
-   
+
  - &jboss-javaee-6_0-with-hibernate-wfk
    id: jboss-javaee-6_0-with-hibernate-wfk
    name: Java EE 6 with Hibernate (WFK BOM)
@@ -133,7 +133,7 @@ availableBoms:
    artifactId: jboss-javaee-6.0-with-hibernate
    recommendedVersion: *wfk21BomRelease
    ###################################
-   
+
  - &jboss-javaee-6_0-with-hibernate3
    id: jboss-javaee-6_0-with-hibernate3
    name: Java EE 6 with Hibernate 3
@@ -141,7 +141,7 @@ availableBoms:
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-hibernate3
    recommendedVersion: *lastJDFBomRelease
-   
+
  - &jboss-javaee-6_0-with-hibernate3-wfk
    id: jboss-javaee-6_0-with-hibernate3-wfk
    name: Java EE 6 with Hibernate 3 (WFK BOM)
@@ -149,9 +149,9 @@ availableBoms:
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-hibernate3
    recommendedVersion: *wfk21BomRelease
-   
+
    ####################################
-   
+
  - &jboss-javaee-6_0-with-infinispan
    id: jboss-javaee-6_0-with-infinispan
    name: Java EE 6 with Infinispan
@@ -159,7 +159,7 @@ availableBoms:
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-infinispan
    recommendedVersion: *lastJDFBomRelease
-   
+
  - &jboss-javaee-6_0-with-infinispan-wfk
    id: jboss-javaee-6_0-with-infinispan-wfk
    name: Java EE 6 with Infinispan (WFK BOM)
@@ -167,9 +167,9 @@ availableBoms:
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-infinispan
    recommendedVersion: *wfk21BomRelease
-   
+
    ####################################
-   
+
  - &jboss-javaee-6_0-with-logging
    id: jboss-javaee-6_0-with-logging
    name: Java EE 6 with Logging Tools
@@ -177,7 +177,7 @@ availableBoms:
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-logging
    recommendedVersion: *lastJDFBomRelease
-   
+
  - &jboss-javaee-6_0-with-logging-wfk
    id: jboss-javaee-6_0-with-logging-wfk
    name: Java EE 6 with Logging Tools (WFK BOM)
@@ -185,9 +185,9 @@ availableBoms:
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-logging
    recommendedVersion: *wfk21BomRelease
-   
+
    ###################################
-   
+
  - &jboss-javaee-6_0-with-osgi
    id: jboss-javaee-6_0-with-osgi
    name: Java EE 6 with OSGI
@@ -195,7 +195,7 @@ availableBoms:
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-osgi
    recommendedVersion: *lastJDFBomRelease
-   
+
  - &jboss-javaee-6_0-with-osgi-wfk
    id: jboss-javaee-6_0-with-osgi-wfk
    name: Java EE 6 with OSGI (WFK BOM)
@@ -203,7 +203,7 @@ availableBoms:
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-osgi
    recommendedVersion: *wfk21BomRelease
-   
+
    ####################################
 
  - &jboss-javaee-6_0-with-resteasy
@@ -213,7 +213,7 @@ availableBoms:
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-resteasy
    recommendedVersion: *lastJDFBomRelease
-   
+
    ####################################
 
  - &jboss-javaee-6_0-with-richfaces
@@ -223,7 +223,7 @@ availableBoms:
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-richfaces
    recommendedVersion: *lastJDFBomRelease
-   
+
  - &jboss-javaee-6_0-with-richfaces-wfk
    id: jboss-javaee-6_0-with-richfaces-wfk
    name: Java EE 6 with Richfaces (WFK BOM)
@@ -231,9 +231,9 @@ availableBoms:
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-richfaces
    recommendedVersion: *wfk21BomRelease
-      
+
    ##################################
-   
+
  - &jboss-javaee-6_0-with-security
    id: jboss-javaee-6_0-with-security
    name: Java EE 6 with Security
@@ -241,7 +241,7 @@ availableBoms:
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-security
    recommendedVersion: *lastJDFBomRelease
-     
+
  - &jboss-javaee-6_0-with-security-wfk
    id: jboss-javaee-6_0-with-security-wfk
    name: Java EE 6 with Security (WFK BOM)
@@ -249,7 +249,7 @@ availableBoms:
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-security
    recommendedVersion: *wfk21BomRelease
-         
+
    ###############################
  - &jboss-javaee-6_0-with-spring
    id: jboss-javaee-6_0-with-spring
@@ -260,7 +260,7 @@ availableBoms:
    recommendedVersion: *lastJDFBomRelease
 
    ###############################
-   
+
  - &jboss-javaee-6_0-with-tools
    id: jboss-javaee-6_0-with-tools
    name: Java EE 6 with tools recommended by JBoss
@@ -268,7 +268,7 @@ availableBoms:
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-tools
    recommendedVersion: *lastJDFBomRelease
-   
+
  - &jboss-javaee-6_0-with-tools-wfk
    id: jboss-javaee-6_0-with-tools-wfk
    name: Java EE 6 with tools recommended by JBoss (WFK BOM)
@@ -276,9 +276,9 @@ availableBoms:
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-tools
    recommendedVersion: *wfk21BomRelease
-       
+
    ################################
- 
+
  - &jboss-javaee-6_0-with-transactions
    id: jboss-javaee-6_0-with-transactions
    name: Java EE 6 with JBoss Transactions
@@ -286,7 +286,7 @@ availableBoms:
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-transactions
    recommendedVersion: *lastJDFBomRelease
-   
+
  - &jboss-javaee-6_0-with-transactions-wfk
    id: jboss-javaee-6_0-with-transactions-wfk
    name: Java EE 6 with JBoss Transactions (WFK BOM)
@@ -294,11 +294,11 @@ availableBoms:
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-transactions
    recommendedVersion: *wfk21BomRelease
-   
+
    #########################
    #   W F K    B O M S    #
    #########################
-   
+
  - &spring-2_5-bom-wfk
    id: spring-2_5-bom-wfk
    name: Spring 2.5 BOM (WFK BOM)
@@ -330,8 +330,19 @@ availableBoms:
    groupId: com.redhat.jboss.wfk.boms
    artifactId: spring-3.2-bom
    recommendedVersion: 2.2.0-redhat-1
-   
-   
+
+   ##############################
+   #  JBoss EAP 6.1    B O M S  #
+   ##############################
+
+ - &jboss-wfk-arquillian
+   id: jboss-wfk-arquillian
+   name: JBoss Web Framework Kit Arquillian Bill of Materials
+   description: Dependency Management for Arquillian Testing Tool
+   groupId: org.jboss.bom
+   artifactId: jboss-wfk-arquillian
+   recommendedVersion: *eap610BomRelease
+
    ##############################   
    #  JBoss Portal    B O M S   # 
    ##############################
@@ -343,7 +354,7 @@ availableBoms:
    groupId: org.jboss.bom
    artifactId: gatein-3.5-bom
    recommendedVersion: 1.0.0.Final-redhat-2
-      
+
 #####################################################################################
 #                                                                                   #
 #   L I S T    O F    A L L     A V A I L A B L E    B O M      V E R S I O N S     #
@@ -355,13 +366,13 @@ availableBomVersions:
    ###################
    #  Java EE 6  All #
    ###################
-    
+
  - &jboss-javaee-6_0-all-last
    id: jboss-javaee-6_0-all-last
    bom: *jboss-javaee-6_0-all
    version: *lastSpecBomRelease
    labels: {}
-   
+
  - &jboss-javaee-6_0-all-eap601
    id: jboss-javaee-6_0-all-eap601
    bom: *jboss-javaee-6_0-all
@@ -379,7 +390,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-web
    version: *lastSpecBomRelease
    labels: {}
-   
+
  - &jboss-javaee-6_0-web-300redhat1 
    id: jboss-javaee-6_0-web-300redhat1
    bom: *jboss-javaee-6_0-web
@@ -387,7 +398,7 @@ availableBomVersions:
    labels: {
        EAP600RepositoryRequired: true,
    }
-   
+
  - &jboss-javaee-6_0-web-eap601 
    id: jboss-javaee-6_0-web-eap601
    bom: *jboss-javaee-6_0-web
@@ -402,9 +413,8 @@ availableBomVersions:
    version: *eap610SpecBomRelease
    labels: {
        EAP610RepositoryRequired: true,
-       EarlyAccess: true,
    }
-   
+
    #################
    #   Java EE 6   #
    #################
@@ -414,7 +424,7 @@ availableBomVersions:
    bom: *jboss-javaee-6_0
    version: *lastSpecBomRelease
    labels: {}
-   
+
  - &jboss-javaee-6_0-300redhat1
    id: jboss-javaee-6_0-300redhat1
    bom: *jboss-javaee-6_0
@@ -422,7 +432,7 @@ availableBomVersions:
    labels: {
        EAP600RepositoryRequired: true,
    }
-   
+
  - &jboss-javaee-6_0-eap601
    id: jboss-javaee-6_0-eap601
    bom: *jboss-javaee-6_0
@@ -430,16 +440,14 @@ availableBomVersions:
    labels: {
        EAP601RepositoryRequired: true,
    }
-   
+
  - &jboss-javaee-6_0-eap61
    id: jboss-javaee-6_0-eap61
    bom: *jboss-javaee-6_0
    version: *eap610SpecBomRelease
    labels: {
        EAP610RepositoryRequired: true,
-       EarlyAccess: true,
    }
-   
 
    ###################################
    #       Java EE 6 with All        #
@@ -454,21 +462,20 @@ availableBomVersions:
    ###################################
    #   Java EE 6 with Deltaspike     #
    ###################################
-   
+
  - &jboss-javaee-6_0-with-deltaspike-last
    id: jboss-javaee-6_0-with-deltaspike-last
    bom: *jboss-javaee-6_0-with-deltaspike
    version: *lastJDFBomRelease
    labels: {}
-   
+
  - &jboss-javaee-6_0-with-deltaspike-eap61
    id: jboss-javaee-6_0-with-deltaspike-eap61
    bom: *jboss-javaee-6_0-with-deltaspike
    version: *eap610BomRelease
    labels: {
        EAP610RepositoryRequired: true,
-       EarlyAccess: true,
-   }   
+   }
 
  - &jboss-javaee-6_0-with-deltaspike-wfk-22
    id: jboss-javaee-6_0-with-deltaspike-wfk-22
@@ -476,12 +483,12 @@ availableBomVersions:
    version: *wfk22BomRelease
    labels: {
        WFK22RepositoryRequired: true,
-   }   
-   
+   }
+
    ###################################
    #   Java EE 6 with Errai and GWT  #
    ###################################
-   
+
  - &jboss-javaee-6_0-with-errai-last
    id: jboss-javaee-6_0-with-errai-last
    bom: *jboss-javaee-6_0-with-errai
@@ -495,7 +502,7 @@ availableBomVersions:
    labels: {
       EAP600RepositoryRequired: true,
    }
-   
+
  - &jboss-javaee-6_0-with-errai-eap601
    id: jboss-javaee-6_0-with-errai-eap601
    bom: *jboss-javaee-6_0-with-errai
@@ -510,8 +517,7 @@ availableBomVersions:
    version: *eap610BomRelease
    labels: {
        EAP610RepositoryRequired: true,
-       EarlyAccess: true,
-   }   
+   }
 
  - &jboss-javaee-6_0-with-errai-wfk-21
    id: jboss-javaee-6_0-with-errai-wfk-21
@@ -520,19 +526,19 @@ availableBomVersions:
    labels: {
       WFK21RepositoryRequired: true,
    }
-   
+
  - &jboss-javaee-6_0-with-errai-wfk-22
    id: jboss-javaee-6_0-with-errai-wfk-22
    bom: *jboss-javaee-6_0-with-errai
    version: *wfk22BomRelease
    labels: {
       WFK22RepositoryRequired: true,
-   }   
-   
+   }
+
    ##################################
    #   Java EE 6 with Hibernate     #
    ##################################
-   
+
  - &jboss-javaee-6_0-with-hibernate-last
    id: jboss-javaee-6_0-with-hibernate-last
    bom: *jboss-javaee-6_0-with-hibernate
@@ -554,7 +560,7 @@ availableBomVersions:
    labels: {
       EAP600RepositoryRequired: true,
    }
-   
+
  - &jboss-javaee-6_0-with-hibernate-eap601
    id: jboss-javaee-6_0-with-hibernate-eap601
    bom: *jboss-javaee-6_0-with-hibernate
@@ -569,16 +575,15 @@ availableBomVersions:
    version: *eap610BomRelease
    labels: {
        EAP610RepositoryRequired: true,
-       EarlyAccess: true,
-   }   
-   
+   }
+
  - &jboss-javaee-6_0-with-hibernate-wfk-21
    id: jboss-javaee-6_0-with-hibernate-wfk-21
    bom: *jboss-javaee-6_0-with-hibernate-wfk
    version: *wfk21BomRelease
    labels: {
       WFK21RepositoryRequired: true,
-   }   
+   }
 
  - &jboss-javaee-6_0-with-hibernate-wfk-22
    id: jboss-javaee-6_0-with-hibernate-wfk-22
@@ -587,12 +592,11 @@ availableBomVersions:
    labels: {
       WFK22RepositoryRequired: true,
    }
-   
 
    ##########################################################
    #   JBoss Java EE 6 Specification APIs with Hibernate 3  #
    ##########################################################
-   
+
  - &jboss-javaee-6_0-with-hibernate3-last
    id: jboss-javaee-6_0-with-hibernate3-last
    bom: *jboss-javaee-6_0-with-hibernate3
@@ -606,29 +610,27 @@ availableBomVersions:
    labels: {
       EAP601RepositoryRequired: true,
    }
-   
+
  - &jboss-javaee-6_0-with-hibernate3-eap61
    id: jboss-javaee-6_0-with-hibernate3-eap61
    bom: *jboss-javaee-6_0-with-hibernate3
    version: *eap610BomRelease
    labels: {
        EAP610RepositoryRequired: true,
-       EarlyAccess: true,
-   }   
+   }
 
-   
  - &jboss-javaee-6_0-with-hibernate3-wfk-21
    id: jboss-javaee-6_0-with-hibernate3-wfk-21
    bom: *jboss-javaee-6_0-with-hibernate3-wfk
    version: *wfk21BomRelease
    labels: {
       WFK21RepositoryRequired: true,
-   }   
-   
+   }
+
    ##########################################################
    #   JBoss Java EE 6 Specification APIs with Infinispan   #
    ##########################################################
-   
+
  - &jboss-javaee-6_0-with-infinispan-last
    id: jboss-javaee-6_0-with-infinispan-last
    bom: *jboss-javaee-6_0-with-infinispan
@@ -641,8 +643,7 @@ availableBomVersions:
    version: *eap610BomRelease
    labels: {
        EAP610RepositoryRequired: true,
-       EarlyAccess: true,
-   }   
+   }
 
  - &jboss-javaee-6_0-with-infinispan-wfk-21
    id: jboss-javaee-6_0-with-infinispan-wfk-21
@@ -650,17 +651,17 @@ availableBomVersions:
    version: *wfk21BomRelease
    labels: {
       WFK21RepositoryRequired: true,
-   }   
+   }
 
    ##############################################################
    #   JBoss Java EE 6 Specification APIs with Logging Tools    #
    ##############################################################
-   
+
  - &jboss-javaee-6_0-with-logging-last
    id: jboss-javaee-6_0-with-logging-last
    bom: *jboss-javaee-6_0-with-logging
    version: *lastJDFBomRelease
-   labels: {}   
+   labels: {}
 
  - &jboss-javaee-6_0-with-logging-eap601
    id: jboss-javaee-6_0-with-logging-eap601
@@ -676,8 +677,7 @@ availableBomVersions:
    version: *eap610BomRelease
    labels: {
        EAP610RepositoryRequired: true,
-       EarlyAccess: true,
-   }   
+   }
 
  - &jboss-javaee-6_0-with-logging-wfk-21
    id: jboss-javaee-6_0-with-logging-wfk-21
@@ -690,7 +690,7 @@ availableBomVersions:
    #####################################################
    #   JBoss Java EE 6 Specification APIs with OSGI    #
    #####################################################
-   
+
  - &jboss-javaee-6_0-with-osgi-last
    id: jboss-javaee-6_0-with-osgi-last
    bom: *jboss-javaee-6_0-with-osgi
@@ -711,8 +711,7 @@ availableBomVersions:
    version: *eap610BomRelease
    labels: {
        EAP610RepositoryRequired: true,
-       EarlyAccess: true,
-   }   
+   }
 
  - &jboss-javaee-6_0-with-osgi-wfk-21
    id: jboss-javaee-6_0-with-osgi-wfk-21
@@ -720,22 +719,22 @@ availableBomVersions:
    version: *wfk21BomRelease
    labels: {
       WFK21RepositoryRequired: true,
-   }   
-   
+   }
+
    ########################################################
    #   JBoss Java EE 6 Specification APIs with Restasy    #
    ########################################################
-   
+
  - &jboss-javaee-6_0-with-resteasy-last
    id: jboss-javaee-6_0-with-resteasy-last
    bom: *jboss-javaee-6_0-with-resteasy
    version: *lastJDFBomRelease
    labels: {}
-      
+
    ########################################################
    #   JBoss Java EE 6 Specification APIs with Richfaces  #
    ########################################################
-   
+
  - &jboss-javaee-6_0-with-richfaces-last
    id: jboss-javaee-6_0-with-richfaces-last
    bom: *jboss-javaee-6_0-with-richfaces
@@ -748,7 +747,7 @@ availableBomVersions:
    version: *wfk21BomRelease
    labels: {
       WFK21RepositoryRequired: true,
-   }   
+   }
 
  - &jboss-javaee-6_0-with-richfaces-wfk-22
    id: jboss-javaee-6_0-with-richfaces-wfk-22
@@ -756,12 +755,12 @@ availableBomVersions:
    version: *wfk22BomRelease
    labels: {
       WFK22RepositoryRequired: true,
-   }   
-   
+   }
+
    ########################################################
    #   JBoss Java EE 6 Specification APIs with Security   #
    ########################################################
-   
+
  - &jboss-javaee-6_0-with-security-last
    id: jboss-javaee-6_0-with-security-last
    bom: *jboss-javaee-6_0-with-security
@@ -782,9 +781,8 @@ availableBomVersions:
    version: *eap610BomRelease
    labels: {
        EAP610RepositoryRequired: true,
-       EarlyAccess: true,
-   }   
-      
+   }
+
  - &jboss-javaee-6_0-with-security-wfk-21
    id: jboss-javaee-6_0-with-security-wfk-21
    bom: *jboss-javaee-6_0-with-security-wfk
@@ -801,8 +799,8 @@ availableBomVersions:
    id: jboss-javaee-6_0-with-spring-last
    bom: *jboss-javaee-6_0-with-spring
    version: *lastJDFBomRelease
-   labels: {}    
-            
+   labels: {}
+
    ##################################################
    #   Java EE 6 with tools recommended by JBoss    #
    ##################################################
@@ -813,8 +811,8 @@ availableBomVersions:
    version: *lastJDFBomRelease
    labels: {
         jbossASPluginVersion: 7.3.Final
-   }    
-   
+   }
+
  - &jboss-javaee-6_0-with-tools-100m11-redhat1
    id: jboss-javaee-6_0-with-tools-100m11-redhat1
    bom: *jboss-javaee-6_0-with-tools
@@ -822,7 +820,7 @@ availableBomVersions:
    labels: {
         jbossASPluginVersion: 7.3.Final,
         EAP600RepositoryRequired: true,
-   }    
+   }
 
  - &jboss-javaee-6_0-with-tools-100m12-redhat1
    id: jboss-javaee-6_0-with-tools-100m12-redhat1
@@ -831,8 +829,8 @@ availableBomVersions:
    labels: {
         jbossASPluginVersion: 7.3.Final,
         EAP600RepositoryRequired: true,
-   }    
-   
+   }
+
  - &jboss-javaee-6_0-with-tools-eap601
    id: jboss-javaee-6_0-with-tools-eap601
    bom: *jboss-javaee-6_0-with-tools
@@ -840,7 +838,7 @@ availableBomVersions:
    labels: {
         jbossASPluginVersion: 7.3.Final,
         EAP601RepositoryRequired: true,
-   }    
+   }
 
  - &jboss-javaee-6_0-with-tools-eap61
    id: jboss-javaee-6_0-with-tools-eap61
@@ -849,9 +847,8 @@ availableBomVersions:
    labels: {
        jbossASPluginVersion: 7.3.Final,
        EAP610RepositoryRequired: true,
-       EarlyAccess: true,
-   }   
-   
+   }
+
  - &jboss-javaee-6_0-with-tools-wfk-21
    id: jboss-javaee-6_0-with-tools-wfk-21
    bom: *jboss-javaee-6_0-with-tools-wfk
@@ -859,7 +856,7 @@ availableBomVersions:
    labels: {
         jbossASPluginVersion: 7.3.Final,
         WFK21RepositoryRequired: true,
-   }    
+   }
 
  - &jboss-javaee-6_0-with-tools-wfk-22
    id: jboss-javaee-6_0-with-tools-wfk-22
@@ -868,12 +865,12 @@ availableBomVersions:
    labels: {
         jbossASPluginVersion: 7.3.Final,
         WFK22RepositoryRequired: true,
-   }   
-   
+   }
+
    #########################################
    #   Java EE 6 with JBoss Transactions   #
    #########################################
-   
+
  - &jboss-javaee-6_0-with-transactions-last
    id: jboss-javaee-6_0-with-transactions-last
    bom: *jboss-javaee-6_0-with-transactions
@@ -887,7 +884,7 @@ availableBomVersions:
    labels: {
       EAP600RepositoryRequired: true,
    }
-   
+
  - &jboss-javaee-6_0-with-transactions-100m12-redhat1
    id: jboss-javaee-6_0-with-transactions-100m12-redhat1
    bom: *jboss-javaee-6_0-with-transactions
@@ -910,21 +907,20 @@ availableBomVersions:
    version: *eap610BomRelease
    labels: {
        EAP610RepositoryRequired: true,
-       EarlyAccess: true,
-   }   
-   
+   }
+
  - &jboss-javaee-6_0-with-transactions-wfk-21
    id: jboss-javaee-6_0-with-transactions-wfk-21
    bom: *jboss-javaee-6_0-with-transactions-wfk
    version: *wfk21BomRelease
    labels: {
       WFK21RepositoryRequired: true,
-   }   
-      
+   }
+
    ##############################
    #    W F K   Spring BOMs     #
    ##############################
-   
+
  - &spring-2_5-bom-wfk-21
    id: spring-2_5-bom-wfk-21
    bom: *spring-2_5-bom-wfk
@@ -940,7 +936,7 @@ availableBomVersions:
    labels: {
       WFK22RepositoryRequired: true,
    }
-   
+
  - &spring-3_0-bom-wfk-21
    id: spring-3_0-bom-wfk-21
    bom: *spring-3_0-bom-wfk
@@ -980,7 +976,18 @@ availableBomVersions:
    labels: {
       WFK22RepositoryRequired: true,
    }
-   
+
+   ##############################
+   #   EAP 6.1 Arquillian BOM   #
+   ##############################
+
+ - &jboss-wfk-arquillian-eap61
+   id: jboss-wfk-arquillian-eap61
+   bom: *jboss-wfk-arquillian
+   version: *eap610BomRelease
+   labels: {
+       EAP610RepositoryRequired: true,
+   }
 
    ##############################
    #   GateIn Portal 3.5 BOM    #
@@ -994,8 +1001,6 @@ availableBomVersions:
       JPP6RepositoryRequired: true,
    }
 
-   
-    
 ##############################################################################
 #                                                                            #
 #   L I S T    O F    A L L     A V A I L A B L E    A R C H E T Y P E S     #
@@ -1009,7 +1014,7 @@ availableArchetypes:
    ############################################
    #   W E B     A P P   A R C H E T Y P E S  #
    ############################################
-  
+
  - &jboss-javaee6-webapp-blank-archetype
    id: jboss-javaee6-webapp-blank-archetype
    name: Java EE 6 Webapp (Blank Skeleton)
@@ -1019,8 +1024,8 @@ availableArchetypes:
    recommendedVersion: *lastArchetypeRelease
    repositoryURL: 
 
-   #######################   
-   
+   #######################
+
  - &jboss-javaee6-webapp-archetype
    id: jboss-javaee6-webapp-archetype
    name: Java EE 6 Webapp
@@ -1043,8 +1048,8 @@ availableArchetypes:
    artifactId: jboss-javaee6-webapp-ear-blank-archetype
    recommendedVersion: *lastArchetypeRelease
    repositoryURL: 
-   
-   ####################   
+
+   ####################
 
  - &jboss-javaee6-webapp-ear-archetype
    id: jboss-javaee6-webapp-ear-archetype
@@ -1068,9 +1073,9 @@ availableArchetypes:
    artifactId: jboss-html5-mobile-archetype
    recommendedVersion: *lastArchetypeRelease
    repositoryURL: 
-     
+
    ################## 
-     
+
  - &jboss-html5-mobile-archetype
    id: jboss-html5-mobile-archetype
    name: Java EE 6 HTML5 Mobile Web Application
@@ -1113,7 +1118,7 @@ availableArchetypes:
 ###############################################################################################
 
 availableArchetypeVersions:
- 
+
    #######################
    #   Java EE 6 Webapp  #
    #######################
@@ -1124,22 +1129,22 @@ availableArchetypeVersions:
    version: *lastArchetypeRelease
    repositoryURL: 
    labels: {}
-   
+
    ########################################
    #   Java EE 6 Webapp (Blank Skeleton)  #
    ########################################
-   
+
  - &jboss-javaee6-webapp-blank-archetype-last
    id: jboss-javaee6-webapp-blank-archetype-last
    archetype: *jboss-javaee6-webapp-blank-archetype
    version: *lastArchetypeRelease
    repositoryURL: 
    labels: {}
-   
+
    ########################################
    #   JBoss AS 7 / Java EE 6 EAR Webapp  #
    ########################################
-    
+
  - &jboss-javaee6-webapp-ear-archetype-last
    id: jboss-javaee6-webapp-ear-archetype-last
    archetype: *jboss-javaee6-webapp-ear-archetype
@@ -1150,29 +1155,29 @@ availableArchetypeVersions:
    ##########################################################
    #   JBoss AS 7 / Java EE 6 EAR Webapp  (Blank Skeleton)  #
    ##########################################################
-   
+
  - &jboss-javaee6-webapp-ear-blank-archetype-last
    id: jboss-javaee6-webapp-ear-blank-archetype-last
    archetype: *jboss-javaee6-webapp-ear-blank-archetype
    version: *lastArchetypeRelease
    repositoryURL: 
    labels: {}
-   
+
    ###############################################
    #   Java EE 6 HTML5 Mobile Web Application    #
    ###############################################
-   
+
  - &jboss-html5-mobile-archetype-last
    id: jboss-html5-mobile-archetype-last
    archetype: *jboss-html5-mobile-archetype
    version: *lastArchetypeRelease
    repositoryURL: 
    labels: {}
-   
+
    ###############################################################
    #   Java EE 6 HTML5 Mobile Web Application  (Blank Skeleton)  #
    ###############################################################
-   
+
  - &jboss-html5-mobile-blank-archetype-last
    id: jboss-html5-mobile-blank-archetype-last
    archetype: *jboss-html5-mobile-blank-archetype
@@ -1183,26 +1188,25 @@ availableArchetypeVersions:
    ####################################################
    #   RichFaces Archetypes Kitchen Sink Application  #
    ####################################################
-   
+
  - &richfaces-archetype-kitchensink-423final2
    id: richfaces-archetype-kitchensink-423final2
    archetype: *richfaces-archetype-kitchensink
    version: 4.2.3.Final-2
    repositoryURL: 
    labels: {}
-   
+
    ###########################################
    #   Errai Kitchen Sink Webapp Archetype   #
    ###########################################
-   
+
  - &jboss-errai-kitchensink-archetype-211final
    id: jboss-errai-kitchensink-archetype-211final
    archetype: *jboss-errai-kitchensink-archetype
    version: 2.1.1.Final
    repositoryURL: 
    labels: {}
-   
-   
+
 ##########################################################################
 #                                                                        #
 #   L I S T    O F    A L L     A V A I L A B L E    R U N T I M E S     #
@@ -1307,17 +1311,17 @@ availableRuntimes:
         runtime-size: 116488459,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.60
    }
-   
+
    #####################
-   #   E A P 6.1 Beta  #
+   #   E A P 6.1       #
    #####################
 
  - &jbosseap610runtime
    id: jbosseap610runtime
-   name: JBoss EAP 6.1.0 Beta 1
-   version: 6.1.0.Beta1
+   name: JBoss EAP 6.1.0
+   version: 6.1.0
    license: *lgpl21
-   url: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=appplatform&version=6.1.0+Beta
+   url: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=appplatform&version=6.1.0
    boms:
     - *jboss-javaee-6_0-eap61
     - *jboss-javaee-6_0-web-eap61
@@ -1331,6 +1335,7 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-security-eap61
     - *jboss-javaee-6_0-with-tools-eap61
     - *jboss-javaee-6_0-with-transactions-eap61
+    - *jboss-wfk-arquillian-eap61
    defaultBom: *jboss-javaee-6_0-web-eap61
    defaultArchetype: *jboss-javaee6-webapp-archetype-last
    archetypes:
@@ -1344,7 +1349,6 @@ availableRuntimes:
    labels: {
         runtime-category: SERVER,
         runtime-type: EAP,
-        EarlyAccess: true,
         runtime-size: 114831134,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.61
    }
@@ -1366,7 +1370,6 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.70
    }
 
-
    ###############
    # JBoss 7.0.2 #
    ###############
@@ -1383,7 +1386,7 @@ availableRuntimes:
         runtime-size: 77594624,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.70
    }
-   
+
    ###############
    # JBoss 7.1.0 #
    ###############
@@ -1452,7 +1455,6 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.71
     }
 
-
    ###############
    #  J P P  6   #
    ###############
@@ -1481,7 +1483,6 @@ availableRuntimes:
 #                                                        #
 ##########################################################
 
-
 minorReleases: 
 
    ##################
@@ -1497,7 +1498,6 @@ minorReleases:
    name: JBoss EAP
    version: 6.0
    recommendedRuntime: *jbosseap601runtime
-
 
    ###############
    #   A S 7.X   #
@@ -1526,14 +1526,10 @@ minorReleases:
    name: JBoss Portal Platform
    version: 6.0
    recommendedRuntime: *jbossjpp600runtime
-   
-   
 
 ############################################
 
 majorReleases:
-
-
 
    ###############
    #   A S 7     #
@@ -1557,7 +1553,7 @@ majorReleases:
    minorReleases:
     - *jbeap60
     - *jbeap61
-    
+
    ##################
    #   J P P  6     #
    ##################
@@ -1567,7 +1563,3 @@ majorReleases:
    recommendedRuntime: *jbossjpp600runtime
    minorReleases:
     - *jpp600
-    
-    
-
-

@@ -25,7 +25,7 @@
             <repositories>
                 <repository>
                     <id>jboss-eap-610</id>
-                    <url>http://maven.repository.redhat.com/techpreview/eap6/6.1.0.Beta1/maven-repository/</url>
+                    <url>http://maven.repository.redhat.com/techpreview/eap6/6.1.0/maven-repository/</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -37,7 +37,7 @@
             <pluginRepositories>
                 <pluginRepository>
                     <id>jboss-eap-610-maven-plugin-repository</id>
-                    <url>http://maven.repository.redhat.com/techpreview/eap6/6.1.0.Beta1/maven-repository/</url>
+                    <url>http://maven.repository.redhat.com/techpreview/eap6/6.1.0/maven-repository/</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
