@@ -1507,7 +1507,7 @@ availableRuntimes:
    name: GateIn Portal 3.6.0 Beta02
    version: 3.6.0.Beta02
    license: *lgpl
-   url: http://gatein.org
+   url: http://www.jboss.org/gatein/download
    downloadUrl: http://downloads.jboss.org/gatein/Releases/Portal/3.6.0.Beta02/GateIn-3.6.0.Beta02-jbossas-7.zip
    boms:
     - *gatein-3_6-bom-100
