@@ -361,7 +361,7 @@ availableBoms:
    description: Bill of Materials for GateIn Portal 3.6
    groupId: org.jboss.bom
    artifactId: gatein-3.6-bom
-   recommendedVersion: 1.0.0.Beta02
+   recommendedVersion: 1.0.1.Final
 
 #####################################################################################
 #                                                                                   #
@@ -1013,10 +1013,10 @@ availableBomVersions:
    #   GateIn Portal 3.6 BOM    #
    ##############################
 
- - &gatein-3_6-bom-100
-   id: gatein-3_6-bom-100
+ - &gatein-3_6-bom-101
+   id: gatein-3_6-bom-101
    bom: *gatein-3_6-bom
-   version: 1.0.0.Beta02
+   version: 1.0.1.Final
    labels: {
       EarlyAccess: true,
    }
@@ -1510,8 +1510,8 @@ availableRuntimes:
    url: http://www.jboss.org/gatein/download
    downloadUrl: http://downloads.jboss.org/gatein/Releases/Portal/3.6.0.Beta02/GateIn-3.6.0.Beta02-jbossas-7.zip
    boms:
-    - *gatein-3_6-bom-100
-   defaultBom: *gatein-3_6-bom-100
+    - *gatein-3_6-bom-101
+   defaultBom: *gatein-3_6-bom-101
    defaultArchetype: 
    archetypes:
    labels: {
