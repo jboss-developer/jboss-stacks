@@ -12,7 +12,7 @@
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 # Lesser General Public License for more details.
- 
+
 # You should have received a copy of the GNU Lesser General Public
 # License along with this software; if not, write to the Free
 # Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
@@ -32,7 +32,7 @@ licenses:
  - &wfk22BomRelease 1.0.4.Final-redhat-wfk-1
  - &eap601BomRelease 1.0.2.Final-redhat-1
  - &eap610BomRelease 1.0.4.Final-redhat-4
- 
+
 #################################################################
 #                                                               #
 #   L I S T    O F    A L L     A V A I L A B L E    B O M S    #
@@ -42,8 +42,8 @@ licenses:
 
 availableBoms:
 
-   ##############################   
-   #    S P E C S     B O M S   # 
+   ##############################
+   #    S P E C S     B O M S   #
    ##############################
 
  - &jboss-javaee-6_0-all
@@ -53,7 +53,7 @@ availableBoms:
    groupId: org.jboss.spec
    artifactId: jboss-javaee-all-6.0
    recommendedVersion: *lastSpecBomRelease
-   
+
    ##############################
 
  - &jboss-javaee-6_0-web
@@ -78,7 +78,7 @@ availableBoms:
 
    ##########################
    #    J D F    B O M S    #
-   ########################## 
+   ##########################
 
  - &jboss-javaee-6_0-with-all
    id: jboss-javaee-6_0-with-all
@@ -343,8 +343,8 @@ availableBoms:
    artifactId: jboss-wfk-arquillian
    recommendedVersion: *eap610BomRelease
 
-   ##############################   
-   #  JBoss Portal    B O M S   # 
+   ##############################
+   #  JBoss Portal    B O M S   #
    ##############################
 
  - &gatein-3_5-bom
@@ -386,20 +386,20 @@ availableBomVersions:
    bom: *jboss-javaee-6_0-all
    version: *eap601SpecBomRelease
    labels: {
-       EAP601RepositoryRequired: true,     
+       EAP601RepositoryRequired: true,
    }
 
    ###################
    #  Java EE 6 Web  #
    ###################
 
- - &jboss-javaee-6_0-web-last 
+ - &jboss-javaee-6_0-web-last
    id: jboss-javaee-6_0-web-last
    bom: *jboss-javaee-6_0-web
    version: *lastSpecBomRelease
    labels: {}
 
- - &jboss-javaee-6_0-web-300redhat1 
+ - &jboss-javaee-6_0-web-300redhat1
    id: jboss-javaee-6_0-web-300redhat1
    bom: *jboss-javaee-6_0-web
    version: 3.0.0.Final-redhat-1
@@ -407,7 +407,7 @@ availableBomVersions:
        EAP600RepositoryRequired: true,
    }
 
- - &jboss-javaee-6_0-web-eap601 
+ - &jboss-javaee-6_0-web-eap601
    id: jboss-javaee-6_0-web-eap601
    bom: *jboss-javaee-6_0-web
    version: *eap601SpecBomRelease
@@ -460,7 +460,7 @@ availableBomVersions:
    ###################################
    #       Java EE 6 with All        #
    ###################################
-   
+
  - &jboss-javaee-6_0-with-all-last
    id: jboss-javaee-6_0-with-all-last
    bom: *jboss-javaee-6_0-with-all
@@ -1017,9 +1017,7 @@ availableBomVersions:
    id: gatein-3_6-bom-101
    bom: *gatein-3_6-bom
    version: 1.0.1.Final
-   labels: {
-      EarlyAccess: true,
-   }
+   labels: {}
 
 
 ##############################################################################
@@ -1043,7 +1041,7 @@ availableArchetypes:
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-blank-archetype
    recommendedVersion: *lastArchetypeRelease
-   repositoryURL: 
+   repositoryURL:
 
    #######################
 
@@ -1055,7 +1053,7 @@ availableArchetypes:
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-archetype
    recommendedVersion: *lastArchetypeRelease
-   repositoryURL: 
+   repositoryURL:
 
    #############################################
    #   E A R    A P P     A R C H E T Y P E S  #
@@ -1068,7 +1066,7 @@ availableArchetypes:
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-ear-blank-archetype
    recommendedVersion: *lastArchetypeRelease
-   repositoryURL: 
+   repositoryURL:
 
    ####################
 
@@ -1080,7 +1078,7 @@ availableArchetypes:
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-ear-archetype
    recommendedVersion: *lastArchetypeRelease
-   repositoryURL: 
+   repositoryURL:
 
    ############################
    #    HTML5     Archetype   #
@@ -1093,9 +1091,9 @@ availableArchetypes:
    groupId: org.jboss.aerogear.archetypes
    artifactId: jboss-html5-mobile-archetype
    recommendedVersion: *lastArchetypeRelease
-   repositoryURL: 
+   repositoryURL:
 
-   ################## 
+   ##################
 
  - &jboss-html5-mobile-archetype
    id: jboss-html5-mobile-archetype
@@ -1117,7 +1115,7 @@ availableArchetypes:
    groupId: org.richfaces.archetypes
    artifactId: richfaces-archetype-kitchensink
    recommendedVersion: 4.2.3.Final-2
-   repositoryURL: 
+   repositoryURL:
 
    ############################
    #  E R R A I   Archetype   #
@@ -1130,7 +1128,7 @@ availableArchetypes:
    groupId: org.jboss.errai.archetypes
    artifactId: jboss-errai-kitchensink-archetype
    recommendedVersion: 2.1.1.Final
-   repositoryURL: 
+   repositoryURL:
 
 ###############################################################################################
 #                                                                                             #
@@ -1148,7 +1146,7 @@ availableArchetypeVersions:
    id: jboss-javaee6-webapp-archetype-last
    archetype: *jboss-javaee6-webapp-archetype
    version: *lastArchetypeRelease
-   repositoryURL: 
+   repositoryURL:
    labels: {}
 
    ########################################
@@ -1159,7 +1157,7 @@ availableArchetypeVersions:
    id: jboss-javaee6-webapp-blank-archetype-last
    archetype: *jboss-javaee6-webapp-blank-archetype
    version: *lastArchetypeRelease
-   repositoryURL: 
+   repositoryURL:
    labels: {}
 
    ########################################
@@ -1170,7 +1168,7 @@ availableArchetypeVersions:
    id: jboss-javaee6-webapp-ear-archetype-last
    archetype: *jboss-javaee6-webapp-ear-archetype
    version: *lastArchetypeRelease
-   repositoryURL: 
+   repositoryURL:
    labels: {}
 
    ##########################################################
@@ -1181,7 +1179,7 @@ availableArchetypeVersions:
    id: jboss-javaee6-webapp-ear-blank-archetype-last
    archetype: *jboss-javaee6-webapp-ear-blank-archetype
    version: *lastArchetypeRelease
-   repositoryURL: 
+   repositoryURL:
    labels: {}
 
    ###############################################
@@ -1192,7 +1190,7 @@ availableArchetypeVersions:
    id: jboss-html5-mobile-archetype-last
    archetype: *jboss-html5-mobile-archetype
    version: *lastArchetypeRelease
-   repositoryURL: 
+   repositoryURL:
    labels: {}
 
    ###############################################################
@@ -1203,7 +1201,7 @@ availableArchetypeVersions:
    id: jboss-html5-mobile-blank-archetype-last
    archetype: *jboss-html5-mobile-blank-archetype
    version: *lastArchetypeRelease
-   repositoryURL: 
+   repositoryURL:
    labels: {}
 
    ####################################################
@@ -1214,7 +1212,7 @@ availableArchetypeVersions:
    id: richfaces-archetype-kitchensink-423final2
    archetype: *richfaces-archetype-kitchensink
    version: 4.2.3.Final-2
-   repositoryURL: 
+   repositoryURL:
    labels: {}
 
    ###########################################
@@ -1225,7 +1223,7 @@ availableArchetypeVersions:
    id: jboss-errai-kitchensink-archetype-211final
    archetype: *jboss-errai-kitchensink-archetype
    version: 2.1.1.Final
-   repositoryURL: 
+   repositoryURL:
    labels: {}
 
 ##########################################################################
@@ -1325,7 +1323,7 @@ availableRuntimes:
     - *jboss-html5-mobile-archetype-last
     - *jboss-html5-mobile-blank-archetype-last
     - *richfaces-archetype-kitchensink-423final2
-    - *jboss-errai-kitchensink-archetype-211final  
+    - *jboss-errai-kitchensink-archetype-211final
    labels: {
         runtime-category: SERVER,
         runtime-type: EAP,
@@ -1366,7 +1364,7 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-blank-archetype-last
     - *jboss-html5-mobile-archetype-last
     - *jboss-html5-mobile-blank-archetype-last
-    - *jboss-errai-kitchensink-archetype-211final  
+    - *jboss-errai-kitchensink-archetype-211final
    labels: {
         runtime-category: SERVER,
         runtime-type: EAP,
@@ -1489,7 +1487,7 @@ availableRuntimes:
    boms:
     - *gatein-3_5-bom-jpp6
    defaultBom: *gatein-3_5-bom-jpp6
-   defaultArchetype: 
+   defaultArchetype:
    archetypes:
    labels: {
         runtime-category: SERVER,
@@ -1504,31 +1502,30 @@ availableRuntimes:
 
  - &gatein360runtime
    id: gatein360runtime
-   name: GateIn Portal 3.6.0 Beta02
-   version: 3.6.0.Beta02
+   name: GateIn Portal 3.6.0
+   version: 3.6.0.Final
    license: *lgpl
    url: http://www.jboss.org/gatein/download
-   downloadUrl: http://downloads.jboss.org/gatein/Releases/Portal/3.6.0.Beta02/GateIn-3.6.0.Beta02-jbossas-7.zip
+   downloadUrl: http://downloads.jboss.org/gatein/Releases/Portal/3.6.0.Final/GateIn-3.6.0.Final-jbossas7.zip
    boms:
     - *gatein-3_6-bom-101
    defaultBom: *gatein-3_6-bom-101
-   defaultArchetype: 
+   defaultArchetype:
    archetypes:
    labels: {
         runtime-category: SERVER,
         runtime-type: GateIn,
-        EarlyAccess: true,
-        runtime-size: 210299486,
+        runtime-size: 209420675,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.71,
     }
-    
+
 ##########################################################
 #                                                        #
 #   L I S T    O F    A L L     R E L E A S E S          #
 #                                                        #
 ##########################################################
 
-minorReleases: 
+minorReleases:
 
    ##################
    #   E A P  6.X   #
