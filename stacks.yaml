@@ -20,9 +20,9 @@
 
 licenses:
  - &lgpl http://www.gnu.org/copyleft/lesser.txt
- - &lgpl21 http://www.gnu.org/licenses/lgpl-2.1.txt
+ - &lgpl21 http://www.gnu.org/licenses/lgpl-2.1.html
 #metadatas
- - &lastArchetypeRelease 7.1.3.CR8
+ - &lastArchetypeRelease 7.1.3.CR6
  - &lastJDFBomRelease 1.0.6.Final
  - &lastSpecBomRelease 3.0.2.Final
  - &eap600SpecBomRelease 3.0.0.Final-redhat-1
