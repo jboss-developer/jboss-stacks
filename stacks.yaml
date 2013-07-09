@@ -1243,7 +1243,7 @@ availableRuntimes:
    name: JBoss EAP 6.0.0
    version: 6.0.0
    license: *lgpl21
-   url: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=appplatform&version=6.0.0
+   url: http://www.jboss.org/products
    boms:
     - *jboss-javaee-6_0-300redhat1
     - *jboss-javaee-6_0-web-300redhat1
@@ -1291,7 +1291,7 @@ availableRuntimes:
    name: JBoss EAP 6.0.1
    version: 6.0.1
    license: *lgpl21
-   url: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=appplatform&version=6.0.1
+   url: http://www.jboss.org/products
    boms:
     - *jboss-javaee-6_0-eap601
     - *jboss-javaee-6_0-web-eap601
@@ -1340,7 +1340,7 @@ availableRuntimes:
    name: JBoss EAP 6.1.0
    version: 6.1.0
    license: *lgpl21
-   url: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=appplatform&version=6.1.0
+   url: http://www.jboss.org/products
    boms:
     - *jboss-javaee-6_0-eap61
     - *jboss-javaee-6_0-web-eap61
@@ -1483,7 +1483,7 @@ availableRuntimes:
    name: JBoss Portal Platform 6.0.0
    version: 6.0.0
    license: *lgpl
-   url: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=jbportal&version=6.0.0
+   url: http://www.jboss.org/products
    boms:
     - *gatein-3_5-bom-jpp6
    defaultBom: *gatein-3_5-bom-jpp6
