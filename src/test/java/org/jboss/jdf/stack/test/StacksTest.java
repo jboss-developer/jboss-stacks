@@ -227,6 +227,9 @@ public class StacksTest {
                 } else if (bomVersion.getLabels().get("WFK22RepositoryRequired") != null) {
                     log.debug("Resolving WFK 2.2.0 BOM: " + artifact);
                     Maven.configureResolver().fromClassloaderResource("settings-wfk220.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
+                } else if (bomVersion.getLabels().get("WFK23RepositoryRequired") != null) {
+                    log.debug("Resolving WFK 2.3.0 BOM: " + artifact);
+                    Maven.configureResolver().fromClassloaderResource("settings-wfk230.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
                 } else if (bomVersion.getLabels().get("JPP6RepositoryRequired") != null) {
                     log.debug("Resolving JPP 6.0.0 BOM: " + artifact);
                     Maven.configureResolver().fromClassloaderResource("settings-jpp600.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
