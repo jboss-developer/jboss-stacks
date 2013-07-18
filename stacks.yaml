@@ -348,14 +348,6 @@ availableBoms:
    #  JBoss Portal    B O M S   #
    ##############################
 
- - &gatein-3_5-bom
-   id: gatein-3_5-bom
-   name: GateIn Portal 3.5 BOM
-   description: Bill of Materials for GateIn Portal 3.5
-   groupId: org.jboss.bom
-   artifactId: gatein-3.5-bom
-   recommendedVersion: 1.0.0.Final-redhat-2
-
  - &gatein-3_6-bom
    id: gatein-3_6-bom
    name: GateIn Portal 3.6 BOM
@@ -363,6 +355,14 @@ availableBoms:
    groupId: org.jboss.bom
    artifactId: gatein-3.6-bom
    recommendedVersion: 1.0.1.Final
+
+ - &gatein-3_5-bom
+   id: gatein-3_5-bom
+   name: GateIn Portal 3.5 BOM
+   description: Bill of Materials for GateIn Portal 3.5
+   groupId: org.jboss.bom
+   artifactId: gatein-3.5-bom
+   recommendedVersion: 1.0.0.Final-redhat-2
 
 #####################################################################################
 #                                                                                   #
@@ -493,7 +493,7 @@ availableBomVersions:
    labels: {
        WFK22RepositoryRequired: true,
    }
-   
+
  - &jboss-javaee-6_0-with-deltaspike-wfk-23
    id: jboss-javaee-6_0-with-deltaspike-wfk-23
    bom: *jboss-javaee-6_0-with-deltaspike
@@ -551,7 +551,7 @@ availableBomVersions:
    labels: {
       WFK22RepositoryRequired: true,
    }
-   
+
  - &jboss-javaee-6_0-with-errai-wfk-23
    id: jboss-javaee-6_0-with-errai-wfk-23
    bom: *jboss-javaee-6_0-with-errai
@@ -617,7 +617,7 @@ availableBomVersions:
    labels: {
       WFK22RepositoryRequired: true,
    }
-   
+
  - &jboss-javaee-6_0-with-hibernate-wfk-23
    id: jboss-javaee-6_0-with-hibernate-wfk-23
    bom: *jboss-javaee-6_0-with-hibernate
@@ -789,7 +789,7 @@ availableBomVersions:
    labels: {
       WFK22RepositoryRequired: true,
    }
-   
+
  - &jboss-javaee-6_0-with-richfaces-wfk-23
    id: jboss-javaee-6_0-with-richfaces-wfk-23
    bom: *jboss-javaee-6_0-with-richfaces
@@ -907,7 +907,7 @@ availableBomVersions:
         jbossASPluginVersion: 7.3.Final,
         WFK22RepositoryRequired: true,
    }
-   
+
  - &jboss-javaee-6_0-with-tools-wfk-23
    id: jboss-javaee-6_0-with-tools-wfk-23
    bom: *jboss-javaee-6_0-with-tools
@@ -986,7 +986,7 @@ availableBomVersions:
    labels: {
       WFK22RepositoryRequired: true,
    }
-   
+
  - &spring-2_5-bom-wfk-23
    id: spring-2_5-bom-wfk-23
    bom: *spring-2_5-bom-wfk
@@ -1050,7 +1050,7 @@ availableBomVersions:
    labels: {
       WFK22RepositoryRequired: true,
    }
-   
+
  - &spring-3_2-bom-wfk-23
    id: spring-3_2-bom-wfk-23
    bom: *spring-3_2-bom-wfk
@@ -1071,9 +1071,18 @@ availableBomVersions:
        EAP610RepositoryRequired: true,
    }
 
-   #######################################
-   #   GateIn Portal 3.5 BOM (JPP 6.0)   #
-   #######################################
+   ###################
+   #   JPP 6.x BOMs  #
+   ###################
+
+ - &gatein-3_6-bom-101-redhat1
+   id: gatein-3_6-bom-101-redhat1
+   bom: *gatein-3_6-bom
+   version: 1.0.1.Final-redhat-1
+   labels: {
+      JPP61RepositoryRequired: true,
+      EarlyAccess: true,
+   }
 
  - &gatein-3_5-bom-jpp6
    id: gatein-3_5-bom-jpp6
@@ -1557,6 +1566,29 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.71
     }
 
+   #################
+   #  J P P  6.1   #
+   #################
+
+ - &jbossjpp610runtime
+   id: jbossjpp610runtime
+   name: JBoss Portal Platform 6.1.0 Beta
+   version: 6.1.0.Beta01
+   license: *lgpl
+   url: https://www.jboss.org/products/jpp.html
+   boms:
+    - *gatein-3_6-bom-101-redhat1
+   defaultBom: *gatein-3_6-bom-101-redhat1
+   defaultArchetype:
+   archetypes:
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: JPP,
+        runtime-size: 195687247,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.61,
+        EarlyAccess: true,
+    }
+
    ###############
    #  J P P  6   #
    ###############
@@ -1644,13 +1676,18 @@ minorReleases:
    recommendedRuntime: *jboss-as701runtime
 
    ###############
-   #   JPP 6.0   #
+   #   JPP 6.x   #
    ###############
 
  - &jpp600
    name: JBoss Portal Platform
    version: 6.0
    recommendedRuntime: *jbossjpp600runtime
+
+ - &jpp610
+   name: JBoss Portal Platform
+   version: 6.1
+   recommendedRuntime: *jbossjpp610runtime
 
    ##################
    #   GateIn 3.6   #
@@ -1694,9 +1731,10 @@ majorReleases:
 
  - name: JBoss Portal Platform
    version: 6
-   recommendedRuntime: *jbossjpp600runtime
+   recommendedRuntime: *jbossjpp610runtime
    minorReleases:
     - *jpp600
+    - *jpp610
 
    ##################
    #   GateIn 3     #
