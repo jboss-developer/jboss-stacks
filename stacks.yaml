@@ -30,6 +30,7 @@ licenses:
  - &eap610SpecBomRelease 3.0.2.Final-redhat-3
  - &wfk21BomRelease 1.0.1.Final-redhat-1
  - &wfk22BomRelease 1.0.4.Final-redhat-wfk-1
+ - &wfk23BomRelease 1.0.4.Final-redhat-wfk-2
  - &eap601BomRelease 1.0.2.Final-redhat-1
  - &eap610BomRelease 1.0.4.Final-redhat-4
 
@@ -305,7 +306,7 @@ availableBoms:
    description: WFK Spring 2.5.0 dependencies
    groupId: com.redhat.jboss.wfk.boms
    artifactId: spring-2.5-bom
-   recommendedVersion: 2.2.0-redhat-1
+   recommendedVersion: 2.3.0-redhat-1
 
  - &spring-3_0-bom-wfk
    id: spring-3_0-bom-wfk
@@ -313,7 +314,7 @@ availableBoms:
    description: WFK Spring 3.0.x dependencies
    groupId: com.redhat.jboss.wfk.boms
    artifactId: spring-3.0-bom
-   recommendedVersion: 2.2.0-redhat-1
+   recommendedVersion: 2.3.0-redhat-1
 
  - &spring-3_1-bom-wfk
    id: spring-3_1-bom-wfk
@@ -321,7 +322,7 @@ availableBoms:
    description: WFK Spring 3.1.x dependencies
    groupId: com.redhat.jboss.wfk.boms
    artifactId: spring-3.1-bom
-   recommendedVersion: 2.2.0-redhat-1
+   recommendedVersion: 2.3.0-redhat-1
 
  - &spring-3_2-bom-wfk
    id: spring-3_2-bom-wfk
@@ -329,7 +330,7 @@ availableBoms:
    description: WFK Spring 3.2.x dependencies
    groupId: com.redhat.jboss.wfk.boms
    artifactId: spring-3.2-bom
-   recommendedVersion: 2.2.0-redhat-1
+   recommendedVersion: 2.3.0-redhat-1
 
    ##############################
    #  JBoss EAP 6.1    B O M S  #
@@ -492,6 +493,14 @@ availableBomVersions:
    labels: {
        WFK22RepositoryRequired: true,
    }
+   
+ - &jboss-javaee-6_0-with-deltaspike-wfk-23
+   id: jboss-javaee-6_0-with-deltaspike-wfk-23
+   bom: *jboss-javaee-6_0-with-deltaspike
+   version: *wfk23BomRelease
+   labels: {
+       WFK23RepositoryRequired: true,
+   }
 
    ###################################
    #   Java EE 6 with Errai and GWT  #
@@ -541,6 +550,14 @@ availableBomVersions:
    version: *wfk22BomRelease
    labels: {
       WFK22RepositoryRequired: true,
+   }
+   
+ - &jboss-javaee-6_0-with-errai-wfk-23
+   id: jboss-javaee-6_0-with-errai-wfk-23
+   bom: *jboss-javaee-6_0-with-errai
+   version: *wfk23BomRelease
+   labels: {
+      WFK23RepositoryRequired: true,
    }
 
    ##################################
@@ -599,6 +616,14 @@ availableBomVersions:
    version: *wfk22BomRelease
    labels: {
       WFK22RepositoryRequired: true,
+   }
+   
+ - &jboss-javaee-6_0-with-hibernate-wfk-23
+   id: jboss-javaee-6_0-with-hibernate-wfk-23
+   bom: *jboss-javaee-6_0-with-hibernate
+   version: *wfk23BomRelease
+   labels: {
+      WFK23RepositoryRequired: true,
    }
 
    ##########################################################
@@ -764,6 +789,14 @@ availableBomVersions:
    labels: {
       WFK22RepositoryRequired: true,
    }
+   
+ - &jboss-javaee-6_0-with-richfaces-wfk-23
+   id: jboss-javaee-6_0-with-richfaces-wfk-23
+   bom: *jboss-javaee-6_0-with-richfaces
+   version: *wfk23BomRelease
+   labels: {
+      WFK23RepositoryRequired: true,
+   }
 
    ########################################################
    #   JBoss Java EE 6 Specification APIs with Security   #
@@ -874,6 +907,15 @@ availableBomVersions:
         jbossASPluginVersion: 7.3.Final,
         WFK22RepositoryRequired: true,
    }
+   
+ - &jboss-javaee-6_0-with-tools-wfk-23
+   id: jboss-javaee-6_0-with-tools-wfk-23
+   bom: *jboss-javaee-6_0-with-tools
+   version: *wfk23BomRelease
+   labels: {
+        jbossASPluginVersion: 7.3.Final,
+        WFK23RepositoryRequired: true,
+   }
 
    #########################################
    #   Java EE 6 with JBoss Transactions   #
@@ -944,6 +986,14 @@ availableBomVersions:
    labels: {
       WFK22RepositoryRequired: true,
    }
+   
+ - &spring-2_5-bom-wfk-23
+   id: spring-2_5-bom-wfk-23
+   bom: *spring-2_5-bom-wfk
+   version: 2.3.0-redhat-1
+   labels: {
+      WFK23RepositoryRequired: true,
+   }
 
  - &spring-3_0-bom-wfk-21
    id: spring-3_0-bom-wfk-21
@@ -959,6 +1009,14 @@ availableBomVersions:
    version: 2.2.0-redhat-1
    labels: {
       WFK22RepositoryRequired: true,
+   }
+
+ - &spring-3_0-bom-wfk-23
+   id: spring-3_0-bom-wfk-23
+   bom: *spring-3_0-bom-wfk
+   version: 2.3.0-redhat-1
+   labels: {
+      WFK23RepositoryRequired: true,
    }
 
  - &spring-3_1-bom-wfk-21
@@ -977,12 +1035,28 @@ availableBomVersions:
       WFK22RepositoryRequired: true,
    }
 
+ - &spring-3_1-bom-wfk-23
+   id: spring-3_1-bom-wfk-23
+   bom: *spring-3_1-bom-wfk
+   version: 2.3.0-redhat-1
+   labels: {
+      WFK23RepositoryRequired: true,
+   }
+
  - &spring-3_2-bom-wfk-22
    id: spring-3_2-bom-wfk-22
    bom: *spring-3_2-bom-wfk
    version: 2.2.0-redhat-1
    labels: {
       WFK22RepositoryRequired: true,
+   }
+   
+ - &spring-3_2-bom-wfk-23
+   id: spring-3_2-bom-wfk-23
+   bom: *spring-3_2-bom-wfk
+   version: 2.3.0-redhat-1
+   labels: {
+      WFK23RepositoryRequired: true,
    }
 
    ##############################
@@ -1345,16 +1419,25 @@ availableRuntimes:
     - *jboss-javaee-6_0-eap61
     - *jboss-javaee-6_0-web-eap61
     - *jboss-javaee-6_0-with-deltaspike-eap61
+    - *jboss-javaee-6_0-with-deltaspike-wfk-23
     - *jboss-javaee-6_0-with-errai-eap61
+    - *jboss-javaee-6_0-with-errai-wfk-23
     - *jboss-javaee-6_0-with-hibernate-eap61
+    - *jboss-javaee-6_0-with-hibernate-wfk-23
     - *jboss-javaee-6_0-with-hibernate3-eap61
     - *jboss-javaee-6_0-with-infinispan-eap61
     - *jboss-javaee-6_0-with-logging-eap61
     - *jboss-javaee-6_0-with-osgi-eap61
+    - *jboss-javaee-6_0-with-richfaces-wfk-23
     - *jboss-javaee-6_0-with-security-eap61
     - *jboss-javaee-6_0-with-tools-eap61
+    - *jboss-javaee-6_0-with-tools-wfk-23
     - *jboss-javaee-6_0-with-transactions-eap61
     - *jboss-wfk-arquillian-eap61
+    - *spring-2_5-bom-wfk-23
+    - *spring-3_0-bom-wfk-23
+    - *spring-3_1-bom-wfk-23
+    - *spring-3_2-bom-wfk-23
    defaultBom: *jboss-javaee-6_0-web-eap61
    defaultArchetype: *jboss-javaee6-webapp-archetype-last
    archetypes:
