@@ -21,13 +21,42 @@
 
     <!-- Configure the JBoss EAP Maven repository -->
 
-    <!-- JPP is built on top of EAP 6.0.1, but it is using RichFaces from WFK 2.1.0 that is built on top of EAP 6.0.0 -->
         <profile>
             <id>jboss-repositories</id>
             <repositories>
                 <repository>
+                    <id>jboss-jpp-610</id>
+                    <url>http://maven.repository.redhat.com/techpreview/jpp6/6.1.0.Beta/maven-repository/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
                     <id>jboss-jpp-600</id>
                     <url>http://maven.repository.redhat.com/techpreview/jpp6/6.0.0/maven-repository/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>jboss-eap-610</id>
+                    <url>http://maven.repository.redhat.com/techpreview/eap6/6.1.0/maven-repository/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>jboss-eap-601</id>
+                    <url>http://maven.repository.redhat.com/techpreview/eap6/6.0.1/maven-repository/</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -46,8 +75,18 @@
                     </snapshots>
                 </repository>
                 <repository>
-                    <id>jboss-eap-601</id>
-                    <url>http://maven.repository.redhat.com/techpreview/eap6/6.0.1/maven-repository/</url>
+                    <id>jboss-wfk-230</id>
+                    <url>http://maven.repository.redhat.com/techpreview/wfk2/2.3.0/maven-repository/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>jboss-wfk-220</id>
+                    <url>http://maven.repository.redhat.com/techpreview/wfk2/2.2.0/maven-repository/</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>

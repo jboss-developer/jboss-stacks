@@ -1,7 +1,7 @@
 /*
  * JBoss, Home of Professional Open Source
  * Copyright 2013, Red Hat, Inc. and/or its affiliates, and individual
- * contributors by the @authors tag. See the copyright.txt in the 
+ * contributors by the @authors tag. See the copyright.txt in the
  * distribution for a full listing of individual contributors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -9,7 +9,7 @@
  * You may obtain a copy of the License at
  * http://www.apache.org/licenses/LICENSE-2.0
  * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,  
+ * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
@@ -48,7 +48,7 @@ import org.junit.Test;
 
 /**
  * @author <a href="mailto:benevides@redhat.com">Rafael Benevides</a>
- * 
+ *
  */
 public class StacksTest {
 
@@ -233,6 +233,9 @@ public class StacksTest {
                 } else if (bomVersion.getLabels().get("JPP6RepositoryRequired") != null) {
                     log.debug("Resolving JPP 6.0.0 BOM: " + artifact);
                     Maven.configureResolver().fromClassloaderResource("settings-jpp600.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
+                } else if (bomVersion.getLabels().get("JPP61RepositoryRequired") != null) {
+                    log.debug("Resolving JPP 6.1.0 BOM: " + artifact);
+                    Maven.configureResolver().fromClassloaderResource("settings-jpp610.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
                 } else {
                     log.debug("Using none repository for " + bomVersion);
                     Maven.configureResolver().fromClassloaderResource("settings-centralonly.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
