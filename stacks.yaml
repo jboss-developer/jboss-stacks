@@ -254,7 +254,7 @@ availableBoms:
    ###############################
  - &jboss-javaee-6_0-with-spring
    id: jboss-javaee-6_0-with-spring
-   name: JJava EE 6 with Spring
+   name: Java EE 6 with Spring
    description: Dependency Management for Java EE 6 Specification APIs with Spring
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-spring
