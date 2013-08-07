@@ -12,12 +12,16 @@
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
     <profiles>
 
     <!-- Configure the JBoss EAP Maven repository -->
+    
+    <!-- JPP is built on top of EAP 6.1.0, but it is using RichFaces from WFK 2.3.0 -->
 
         <profile>
             <id>jboss-repositories</id>
@@ -25,16 +29,6 @@
                 <repository>
                     <id>jboss-jpp-610</id>
                     <url>http://maven.repository.redhat.com/techpreview/jpp6/6.1.0.Beta/maven-repository/</url>
-                    <releases>
-                        <enabled>true</enabled>
-                    </releases>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                </repository>
-                <repository>
-                    <id>jboss-jpp-600</id>
-                    <url>http://maven.repository.redhat.com/techpreview/jpp6/6.0.0/maven-repository/</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -53,48 +47,8 @@
                     </snapshots>
                 </repository>
                 <repository>
-                    <id>jboss-eap-601</id>
-                    <url>http://maven.repository.redhat.com/techpreview/eap6/6.0.1/maven-repository/</url>
-                    <releases>
-                        <enabled>true</enabled>
-                    </releases>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                </repository>
-                <repository>
-                    <id>jboss-eap-600</id>
-                    <url>http://maven.repository.redhat.com/techpreview/eap6/6.0.0/maven-repository/</url>
-                    <releases>
-                        <enabled>true</enabled>
-                    </releases>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                </repository>
-                <repository>
                     <id>jboss-wfk-230</id>
                     <url>http://maven.repository.redhat.com/techpreview/wfk2/2.3.0/maven-repository/</url>
-                    <releases>
-                        <enabled>true</enabled>
-                    </releases>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                </repository>
-                <repository>
-                    <id>jboss-wfk-220</id>
-                    <url>http://maven.repository.redhat.com/techpreview/wfk2/2.2.0/maven-repository/</url>
-                    <releases>
-                        <enabled>true</enabled>
-                    </releases>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                </repository>
-                <repository>
-                    <id>jboss-wfk-210</id>
-                    <url>http://maven.repository.redhat.com/techpreview/wfk2/2.1.0/maven-repository/</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
