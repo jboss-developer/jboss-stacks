@@ -1578,7 +1578,6 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-tools-last
     - *jboss-javaee-6_0-with-hibernate-last
     - *jboss-javaee-6_0-with-hibernate3-last
-    - *jboss-javaee-6_0-with-hibernate-last
     - *jboss-javaee-6_0-with-hsearch-last
     - *jboss-javaee-6_0-with-infinispan-last
     - *jboss-javaee-6_0-with-logging-last
