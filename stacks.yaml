@@ -19,7 +19,7 @@ licenses:
  - &lgpl21 http://www.gnu.org/licenses/lgpl-2.1.txt
 #metadatas
  - &lastArchetypeRelease 7.1.3.CR6
- - &lastJDFBomRelease 1.0.6.Final
+ - &lastJDFBomRelease 1.0.7.Final
  - &lastSpecBomRelease 3.0.2.Final
  - &eap600SpecBomRelease 3.0.0.Final-redhat-1
  - &eap601SpecBomRelease 3.0.1.Final-redhat-1
@@ -97,6 +97,16 @@ availableBoms:
 
    ##############################
 
+ - &jboss-javaee-6_0-with-drools
+   id: jboss-javaee-6_0-with-drools
+   name: Java EE 6 with Drools
+   description: Dependency Management for Java EE 6 Specification APIs with JBoss Drools
+   groupId: org.jboss.bom
+   artifactId: jboss-javaee-6.0-with-drools
+   recommendedVersion: *lastJDFBomRelease
+
+   ##############################
+
  - &jboss-javaee-6_0-with-errai
    id: jboss-javaee-6_0-with-errai
    name: Java EE 6 with Errai and GWT
@@ -112,12 +122,13 @@ availableBoms:
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-errai
    recommendedVersion: *wfk21BomRelease
+
    ##############################
 
  - &jboss-javaee-6_0-with-hibernate
    id: jboss-javaee-6_0-with-hibernate
    name: Java EE 6 with Hibernate
-   description: Historically, Hibernate facilitated the storage and retrieval of Java domain objects via Object/Relational Mapping. Today, Hibernate is a collection of related projects enabling developers to utilize POJO-style domain models in their applications in ways extending well beyond Object/Relational Mapping. This BOM builds on the Java EE full profile BOM, adding Hibernate Community projects including Hibernate ORM, Hibernate Search and Hibernate Validator. It also provides tool projects such as Hibernate JPA Model Gen and Hibernate Validator Annotation Processor.
+   description: Historically, Hibernate facilitated the storage and retrieval of Java domain objects via Object/Relational Mapping. Today, Hibernate is a collection of related projects enabling developers to utilize POJO-style domain models in their applications in ways extending well beyond Object/Relational Mapping. This BOM builds on the Java EE full profile BOM, adding Hibernate Community projects including Hibernate ORM, and Hibernate Validator. It also provides tool projects such as Hibernate JPA Model Gen and Hibernate Validator Annotation Processor.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-hibernate
    recommendedVersion: *lastJDFBomRelease
@@ -129,6 +140,7 @@ availableBoms:
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-hibernate
    recommendedVersion: *wfk21BomRelease
+   
    ###################################
 
  - &jboss-javaee-6_0-with-hibernate3
@@ -146,6 +158,16 @@ availableBoms:
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-hibernate3
    recommendedVersion: *wfk21BomRelease
+
+   ##############################
+
+ - &jboss-javaee-6_0-with-hsearch
+   id: jboss-javaee-6_0-with-hsearch
+   name: Java EE 6 with Hibernate Search
+   description: Dependency Management for Java EE 6 Specification APIs with Hibernate Search.
+   groupId: org.jboss.bom
+   artifactId: jboss-javaee-6.0-with-hsearch
+   recommendedVersion: *lastJDFBomRelease
 
    ####################################
 
@@ -248,6 +270,7 @@ availableBoms:
    recommendedVersion: *wfk21BomRelease
 
    ###############################
+   
  - &jboss-javaee-6_0-with-spring
    id: jboss-javaee-6_0-with-spring
    name: Java EE 6 with Spring
@@ -498,6 +521,16 @@ availableBomVersions:
        WFK23RepositoryRequired: true,
    }
 
+   ###############################
+   #   Java EE 6 with Drools     #
+   ###############################
+
+ - &jboss-javaee-6_0-with-drools-last
+   id: jboss-javaee-6_0-with-drools-last
+   bom: *jboss-javaee-6_0-with-drools
+   version: *lastJDFBomRelease
+   labels: {}
+
    ###################################
    #   Java EE 6 with Errai and GWT  #
    ###################################
@@ -655,6 +688,16 @@ availableBomVersions:
    labels: {
       WFK21RepositoryRequired: true,
    }
+   
+   ########################################
+   #   Java EE 6 with Hibernate Search    #
+   ########################################
+
+ - &jboss-javaee-6_0-with-hsearch-last
+   id: jboss-javaee-6_0-with-hsearch-last
+   bom: *jboss-javaee-6_0-with-hsearch
+   version: *lastJDFBomRelease
+   labels: {}
 
    ##########################################################
    #   JBoss Java EE 6 Specification APIs with Infinispan   #
@@ -1530,10 +1573,13 @@ availableRuntimes:
     - *jboss-javaee-6_0-web-last
     - *jboss-javaee-6_0-with-all-last
     - *jboss-javaee-6_0-with-deltaspike-last
+    - *jboss-javaee-6_0-with-drools-last
     - *jboss-javaee-6_0-with-errai-last
     - *jboss-javaee-6_0-with-tools-last
     - *jboss-javaee-6_0-with-hibernate-last
     - *jboss-javaee-6_0-with-hibernate3-last
+    - *jboss-javaee-6_0-with-hibernate-last
+    - *jboss-javaee-6_0-with-hsearch-last
     - *jboss-javaee-6_0-with-infinispan-last
     - *jboss-javaee-6_0-with-logging-last
     - *jboss-javaee-6_0-with-osgi-last
