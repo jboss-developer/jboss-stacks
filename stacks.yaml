@@ -21,7 +21,7 @@ licenses:
  - &lastArchetypeRelease 7.1.3.Final
  - &lastEAPArchetypeRelease 6.2.0-build-1
  - &lastWFKArchetypeRelease 2.4.0-build-1
- - &lastEAPBomRelease 6.2.0-build-5
+ - &lastEAPBomRelease 6.2.0-build-6
  - &lastWFKBomRelease 2.4.0-build-5
  - &lastJDGBomRelease 6.2.0-redhat-1
  - &lastBRMSBomRelease 5.3.1-redhat-1
@@ -1182,13 +1182,13 @@ availableBomVersions:
    #   JPP 6.x BOMs  #
    ###################
 
- - &gatein-3_6-bom-101-redhat1
-   id: gatein-3_6-bom-101-redhat1
+ - &gatein-3_6-bom-103-redhat2
+   id: gatein-3_6-bom-103-redhat2
    bom: *gatein-3_6-bom
-   version: 1.0.1.Final-redhat-1
+   version: 1.0.3.Final-redhat-2
    labels: {
-       additionalRepositories:  ["http://maven.repository.redhat.com/techpreview/all/", "http://maven.repository.redhat.com/earlyaccess/all/"],
-       EarlyAccess: true
+      JPP61RepositoryRequired: true,
+      EarlyAccess: true,
    }
 
  - &gatein-3_5-bom-jpp6
@@ -1835,21 +1835,20 @@ availableRuntimes:
 
  - &jbossjpp610runtime
    id: jbossjpp610runtime
-   name: JBoss Portal Platform 6.1.0 Beta
-   version: 6.1.0.Beta01
+   name: JBoss Portal Platform 6.1.0
+   version: 6.1.0
    license: *lgpl
    url: https://www.jboss.org/products/jpp.html
    boms:
-    - *gatein-3_6-bom-101-redhat1
-   defaultBom: *gatein-3_6-bom-101-redhat1
+    - *gatein-3_6-bom-103-redhat2
+   defaultBom: *gatein-3_6-bom-103-redhat2
    defaultArchetype:
    archetypes:
    labels: {
         runtime-category: SERVER,
         runtime-type: JPP,
-        runtime-size: 195687247,
+        runtime-size: 215313543,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.61,
-        EarlyAccess: true,
     }
 
    ###############
