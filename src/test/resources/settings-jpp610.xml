@@ -21,14 +21,24 @@
 
     <!-- Configure the JBoss EAP Maven repository -->
     
-    <!-- JPP is built on top of EAP 6.1.0, but it is using RichFaces from WFK 2.3.0 -->
+    <!-- JPP is built on top of EAP 6.1.1 and it is using RichFaces from WFK 2.3.0 -->
 
         <profile>
             <id>jboss-repositories</id>
             <repositories>
                 <repository>
                     <id>jboss-jpp-610</id>
-                    <url>http://maven.repository.redhat.com/techpreview/jpp6/6.1.0.Beta/maven-repository/</url>
+                    <url>http://maven.repository.redhat.com/techpreview/jpp6/6.1.0/maven-repository/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>jboss-eap-611</id>
+                    <url>http://maven.repository.redhat.com/techpreview/eap6/6.1.1/maven-repository/</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
