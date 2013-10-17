@@ -164,13 +164,13 @@ availableBoms:
    artifactId: jboss-javaee-6.0-with-errai
    recommendedVersion: *lastWFKBomRelease
 
- - &jboss-javaee-6_0-with-hsearch
-   id: jboss-javaee-6_0-with-hsearch
-   name: Java EE 6 with Hibernate Search
-   description: Dependency Management for Java EE 6 Specification APIs with Hibernate Search.
-   groupId: org.jboss.bom.wfk
-   artifactId: jboss-javaee-6.0-with-hsearch
-   recommendedVersion: *lastWFKBomRelease
+# - &jboss-javaee-6_0-with-hsearch
+#   id: jboss-javaee-6_0-with-hsearch
+#   name: Java EE 6 with Hibernate Search
+#   description: Dependency Management for Java EE 6 Specification APIs with Hibernate Search.
+#   groupId: org.jboss.bom.wfk
+#   artifactId: jboss-javaee-6.0-with-hsearch
+#   recommendedVersion: *lastWFKBomRelease
 
  - &jboss-javaee-6_0-with-richfaces
    id: jboss-javaee-6_0-with-richfaces
@@ -634,11 +634,11 @@ availableBomVersions:
    version: *lastWFKBomRelease
    labels: {}
 
- - &jboss-javaee-6_0-with-hsearch-last
-   id: jboss-javaee-6_0-with-hsearch-last
-   bom: *jboss-javaee-6_0-with-hsearch
-   version: *lastWFKBomRelease
-   labels: {}
+# - &jboss-javaee-6_0-with-hsearch-last
+#   id: jboss-javaee-6_0-with-hsearch-last
+#   bom: *jboss-javaee-6_0-with-hsearch
+#   version: *lastWFKBomRelease
+#   labels: {}
 
  - &jboss-javaee-6_0-with-richfaces-last
    id: jboss-javaee-6_0-with-richfaces-last
@@ -1614,7 +1614,7 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-errai-last
     - *jboss-javaee-6_0-with-hibernate-last
     - *jboss-javaee-6_0-with-hibernate3-last
-    - *jboss-javaee-6_0-with-hsearch-last
+#    - *jboss-javaee-6_0-with-hsearch-last
     - *jboss-javaee-6_0-with-infinispan-last
     - *jboss-javaee-6_0-with-logging-last
     - *jboss-javaee-6_0-with-osgi-last
