@@ -166,13 +166,13 @@ availableBoms:
    artifactId: jboss-javaee-6.0-with-errai
    recommendedVersion: *lastWFKBomRelease
 
-# - &jboss-javaee-6_0-with-hsearch
-#   id: jboss-javaee-6_0-with-hsearch
-#   name: Java EE 6 with Hibernate Search
-#   description: Dependency Management for Java EE 6 Specification APIs with Hibernate Search.
-#   groupId: org.jboss.bom.wfk
-#   artifactId: jboss-javaee-6.0-with-hsearch
-#   recommendedVersion: *lastWFKBomRelease
+ - &jboss-javaee-6_0-with-hsearch
+   id: jboss-javaee-6_0-with-hsearch
+   name: Java EE 6 with Hibernate Search
+   description: Dependency Management for Java EE 6 Specification APIs with Hibernate Search.
+   groupId: org.jboss.bom.wfk
+   artifactId: jboss-javaee-6.0-with-hsearch
+   recommendedVersion: *lastWFKBomRelease
 
  - &jboss-javaee-6_0-with-richfaces
    id: jboss-javaee-6_0-with-richfaces
@@ -665,8 +665,10 @@ availableBomVersions:
    id: jboss-javaee-6_0-with-hsearch-last
    bom: *jboss-javaee-6_0-with-hsearch
    version: *lastWFKBomRelease
-   labels: {}
-
+   labels: {
+       additionalRepositories:  ["http://maven.repository.redhat.com/techpreview/all/"],
+   }
+   
  - &jboss-javaee-6_0-with-richfaces-last
    id: jboss-javaee-6_0-with-richfaces-last
    bom: *jboss-javaee-6_0-with-richfaces
@@ -1184,7 +1186,7 @@ availableBomVersions:
    bom: *gatein-3_6-bom
    version: 1.0.3.Final-redhat-2
    labels: {
-      JPP61RepositoryRequired: true,
+      additionalRepositories:  ["http://maven.repository.redhat.com/techpreview/all/"],
       EarlyAccess: true,
    }
 
@@ -1796,7 +1798,7 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-errai-last
     - *jboss-javaee-6_0-with-hibernate-last
     - *jboss-javaee-6_0-with-hibernate3-last
-#    - *jboss-javaee-6_0-with-hsearch-last
+    - *jboss-javaee-6_0-with-hsearch-last
     - *jboss-javaee-6_0-with-infinispan-last
     - *jboss-javaee-6_0-with-logging-last
     - *jboss-javaee-6_0-with-osgi-last
