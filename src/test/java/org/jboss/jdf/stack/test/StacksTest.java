@@ -48,7 +48,7 @@ import org.junit.Test;
 
 /**
  * @author <a href="mailto:benevides@redhat.com">Rafael Benevides</a>
- *
+ * 
  */
 public class StacksTest {
 
@@ -123,7 +123,7 @@ public class StacksTest {
         for (BomVersion bomVersion : stacksClient.getStacks().getAvailableBomVersions()) {
             boolean used = false;
             for (Runtime runtime : stacksClient.getStacks().getAvailableRuntimes()) {
-                if (runtime.getBoms().contains(bomVersion)) {
+                if (runtime.getBoms() != null && runtime.getBoms().contains(bomVersion)) {
                     used = true;
                     break;
                 }
@@ -136,7 +136,7 @@ public class StacksTest {
     public void testDefaultBomVersion() {
         log.info("Test if runtime default BOM is listed as a runtime BOM");
         for (Runtime runtime : stacksClient.getStacks().getAvailableRuntimes()) {
-            if (runtime.getDefaultBom() != null && runtime.getBoms() != null){ //Some runtimes doesn't contain BOMs
+            if (runtime.getDefaultBom() != null && runtime.getBoms() != null) { // Some runtimes doesn't contain BOMs
                 Assert.assertTrue("Runtime " + runtime + " default BOM is not one of runtime BOMS", runtime.getBoms().contains(runtime.getDefaultBom()));
             }
         }
@@ -146,7 +146,8 @@ public class StacksTest {
     public void testDefaultArchetypeVersion() {
         log.info("Test if runtime default Archetype is listed as a runtime Archetype");
         for (Runtime runtime : stacksClient.getStacks().getAvailableRuntimes()) {
-            if (runtime.getDefaultArchetype() != null && runtime.getArchetypes() != null) { // Some Runtimes doesn't have Archetypes
+            if (runtime.getDefaultArchetype() != null && runtime.getArchetypes() != null) { // Some Runtimes doesn't have
+                                                                                            // Archetypes
                 Assert.assertTrue("Runtime " + runtime + " default Archetype is not one of runtime Archetypes", runtime.getArchetypes().contains(runtime.getDefaultArchetype()));
             }
         }
@@ -207,41 +208,16 @@ public class StacksTest {
         Stacks stacks = stacksClient.getStacks();
         for (BomVersion bomVersion : stacks.getAvailableBomVersions()) {
             String artifact = String.format("%s:%s:pom:%s", bomVersion.getBom().getGroupId(), bomVersion.getBom().getArtifactId(), bomVersion.getVersion());
-            // Use only declared ???RepositoryRequired settings for each BOM
             try {
-                if (bomVersion.getLabels().get("EAP600RepositoryRequired") != null) {
-                    log.debug("Resolving EAP 6.0.0 BOM: " + artifact);
-                    Maven.configureResolver().fromClassloaderResource("settings-eap600.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
-                } else if (bomVersion.getLabels().get("EAP601RepositoryRequired") != null) {
-                    log.debug("Resolving EAP 6.0.1 BOM: " + artifact);
-                    Maven.configureResolver().fromClassloaderResource("settings-eap601.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
-                } else if (bomVersion.getLabels().get("EAP610RepositoryRequired") != null) {
-                    log.debug("Resolving EAP 6.1.0 BOM: " + artifact);
-                    Maven.configureResolver().fromClassloaderResource("settings-eap610.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
-                } else if (bomVersion.getLabels().get("WFK2RepositoryRequired") != null) {
-                    log.debug("Resolving WFK 2.0.0 BOM: " + artifact);
-                    Maven.configureResolver().fromClassloaderResource("settings-wfk200.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
-                } else if (bomVersion.getLabels().get("WFK21RepositoryRequired") != null) {
-                    log.debug("Resolving WFK 2.1.0 BOM: " + artifact);
-                    Maven.configureResolver().fromClassloaderResource("settings-wfk210.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
-                } else if (bomVersion.getLabels().get("WFK22RepositoryRequired") != null) {
-                    log.debug("Resolving WFK 2.2.0 BOM: " + artifact);
-                    Maven.configureResolver().fromClassloaderResource("settings-wfk220.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
-                } else if (bomVersion.getLabels().get("WFK23RepositoryRequired") != null) {
-                    log.debug("Resolving WFK 2.3.0 BOM: " + artifact);
-                    Maven.configureResolver().fromClassloaderResource("settings-wfk230.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
-                } else if (bomVersion.getLabels().get("JPP6RepositoryRequired") != null) {
-                    log.debug("Resolving JPP 6.0.0 BOM: " + artifact);
-                    Maven.configureResolver().fromClassloaderResource("settings-jpp600.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
-                } else if (bomVersion.getLabels().get("JPP61RepositoryRequired") != null) {
-                    log.debug("Resolving JPP 6.1.0 BOM: " + artifact);
-                    Maven.configureResolver().fromClassloaderResource("settings-jpp610.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
+                if (bomVersion.getLabels().get("additionalRepositories") != null) {
+                    log.debug("Resolving BOM: " + artifact);
+                    Maven.configureResolver().fromClassloaderResource("settings-all.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
                 } else {
                     log.debug("Using none repository for " + bomVersion);
                     Maven.configureResolver().fromClassloaderResource("settings-centralonly.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
                 }
             } catch (ResolutionException e) {
-                Assert.assertNull("Can't resolve Bom [" + artifact + "] ", e);
+                Assert.assertNull("Can't resolve Bom [" + artifact + "] - ID: " + bomVersion.getId(), e);
             } catch (Exception e) {
                 log.error(e.getMessage(), e);
                 Assert.fail("Can't throw exception");
@@ -251,15 +227,21 @@ public class StacksTest {
 
     @Test
     public void testArchetypeResolver() {
+        log.info("Testing if the Archetype is resovable");
         Stacks stacks = stacksClient.getStacks();
         for (ArchetypeVersion archetypeVersion : stacks.getAvailableArchetypeVersions()) {
             String artifact = String.format("%s:%s:%s", archetypeVersion.getArchetype().getGroupId(), archetypeVersion.getArchetype().getArtifactId(),
                 archetypeVersion.getVersion());
             try {
-                log.info("Resolving Archetype " + artifact);
-                Maven.resolver().resolve(artifact).withMavenCentralRepo(true).withoutTransitivity().asFile();
+                if (archetypeVersion.getLabels().get("additionalRepositories") != null && archetypeVersion.getRepositoryURL() != null) {
+                    log.debug("Resolving Archetype: " + artifact);
+                    Maven.configureResolver().fromClassloaderResource("settings-all.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
+                } else {
+                    log.debug("Using none repository for " + archetypeVersion);
+                    Maven.configureResolver().fromClassloaderResource("settings-centralonly.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
+                }
             } catch (ResolutionException e) {
-                Assert.assertNull("Can't resolve Archetype [" + artifact + "] ", e);
+                Assert.assertNull("Can't resolve Archetype [" + artifact + "] - ID:" + archetypeVersion.getId(), e);
             } catch (Exception e) {
                 log.error(e.getMessage(), e);
                 Assert.fail("Can't throw exception");
@@ -269,7 +251,7 @@ public class StacksTest {
 
     @Test
     public void testRuntimeResolver() {
-        log.info("Testing if the Archetype is resovable");
+        log.info("Testing if the Runtime is resovable");
         Stacks stacks = stacksClient.getStacks();
         for (Runtime runtime : stacks.getAvailableRuntimes()) {
             // Only AS has maven artifact / EAP don't
