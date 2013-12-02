@@ -1809,7 +1809,7 @@ availableArchetypeVersions:
        additionalRepositories: {
          "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
        },
-       essentialDependencies: ["org.jboss.bom.eap:jboss-javaee-6.0-with-tools:pom:1.0.4.Final-redhat-9", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:1.0.4.Final-redhat-9"],
+       essentialDependencies: ["org.jboss.bom.wfk:jboss-javaee-6.0-with-tools:pom:2.4.0-redhat-2", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:1.0.4.Final-redhat-9"],
        type: html5-mobile, 
        target: product,
        environment: web-ee6,
@@ -1824,7 +1824,7 @@ availableArchetypeVersions:
        additionalRepositories: {
          "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
        },
-       essentialDependencies: ["org.jboss.bom.eap:jboss-javaee-6.0-with-tools:pom:1.0.4.Final-redhat-9", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:1.0.4.Final-redhat-9"],
+       essentialDependencies: ["org.jboss.bom.wfk:jboss-javaee-6.0-with-tools:pom:2.4.0-redhat-2", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:1.0.4.Final-redhat-9"],
        type: html5-mobile,
        target: product,
        environment: web-ee6,
