@@ -1,7 +1,7 @@
 # JBoss, Home of Professional Open Source
 # Copyright 2013, Red Hat, Inc. and/or its affiliates, and individual
 # contributors by the @authors tag. See the copyright.txt in the
-# distribution for a full listing of individual contributors.
+# distribution oldArchetypeReleasefor a full listing of individual contributors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ licenses:
  - &lgpl http://www.gnu.org/copyleft/lesser.txt
  - &lgpl21 http://www.gnu.org/licenses/lgpl-2.1.txt
 #metadatas
- - &lastArchetypeRelease 7.1.3.Final
+ - &oldArchetypeRelease 7.1.3.Final
  - &lastEAPArchetypeRelease 6.2.0-build-1
  - &lastEAPBomRelease 6.2.0-build-7
  - &lastWFKBomRelease 2.4.0-build-5
@@ -1646,52 +1646,78 @@ availableArchetypes:
    #   COMMUNITY     W E B     A P P   A R C H E T Y P E S  #
    ##########################################################
 
- - &jboss-javaee6-webapp-blank-archetype
-   id: jboss-javaee6-webapp-blank-archetype
+ - &jboss-javaee6-webapp-blank-archetype-old
+   id: jboss-javaee6-webapp-blank-archetype-old
    name: Java EE 6 Webapp (Blank Skeleton)
    description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true)
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-blank-archetype
-   recommendedVersion: *lastArchetypeRelease
+   recommendedVersion: *oldArchetypeRelease
    repositoryURL:
 
    #######################
 
- - &jboss-javaee6-webapp-archetype
-   id: jboss-javaee6-webapp-archetype
+ - &jboss-javaee6-webapp-archetype-old
+   id: jboss-javaee6-webapp-archetype-old
    name: Java EE 6 Webapp
    description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true)
-   blank: *jboss-javaee6-webapp-blank-archetype
+   blank: *jboss-javaee6-webapp-blank-archetype-old
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-archetype
-   recommendedVersion: *lastArchetypeRelease
+   recommendedVersion: *oldArchetypeRelease
    repositoryURL:
 
    ##############################################################
    #   COMMUNITY     E A R    A P P     A R C H E T Y P E S     #
    ##############################################################
 
- - &jboss-javaee6-webapp-ear-blank-archetype
-   id: jboss-javaee6-webapp-ear-blank-archetype
+ - &jboss-javaee6-webapp-ear-blank-archetype-old
+   id: jboss-javaee6-webapp-ear-blank-archetype-old
    name: JBoss AS 7 / Java EE 6 EAR Webapp (Blank Skeleton)
    description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true). The project is an EAR, with an EJB-JAR and WAR
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-ear-blank-archetype
-   recommendedVersion: *lastArchetypeRelease
+   recommendedVersion: *oldArchetypeRelease
    repositoryURL:
 
    ####################
 
- - &jboss-javaee6-webapp-ear-archetype
-   id: jboss-javaee6-webapp-ear-archetype
+ - &jboss-javaee6-webapp-ear-archetype-old
+   id: jboss-javaee6-webapp-ear-archetype-old
    name: JBoss AS 7 / Java EE 6 EAR Webapp
    description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true). The project is an EAR, with an EJB-JAR and WAR
-   blank: *jboss-javaee6-webapp-ear-blank-archetype
+   blank: *jboss-javaee6-webapp-ear-blank-archetype-old
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-ear-archetype
-   recommendedVersion: *lastArchetypeRelease
+   recommendedVersion: *oldArchetypeRelease
    repositoryURL:
 
+   ############################################################
+   #   COMMUNITY     H T M L   5      A R C H E T Y P E S     #
+   ############################################################
+   
+ - &jboss-html5-mobile-blank-archetype-old
+   id: jboss-html5-mobile-blank-archetype-old
+   name: Java EE 6 HTML5 Mobile Web Application (Blank Skeleton)
+   description: An archetype that generates a Java EE 6 application using HTML5, and JAX-RS to support both desktop and mobile web browsers
+   groupId: org.jboss.aerogear.archetypes
+   artifactId: jboss-html5-mobile-blank-archetype
+   recommendedVersion: *oldArchetypeRelease
+   repositoryURL:
+
+   ####################
+
+ - &jboss-html5-mobile-archetype-old
+   id: jboss-html5-mobile-archetype-old
+   name: Java EE 6 HTML5 Mobile Web Application
+   description: An archetype that generates a Java EE 6 application using HTML5, and JAX-RS to support both desktop and mobile web browsers
+   blank: *jboss-javaee6-webapp-ear-blank-archetype-old
+   groupId: org.jboss.aerogear.archetypes
+   artifactId: jboss-html5-mobile-archetype
+   recommendedVersion: *oldArchetypeRelease
+   repositoryURL:
+
+   
    ############################
    #  RichFaces Archetype     #
    ############################
@@ -1722,6 +1748,17 @@ availableArchetypes:
 #                                                                                             #
 #   L I S T    O F    A L L     A V A I L A B L E    A R C H E T Y P E S    V E R S I O N S   #
 #                                                                                             #
+# More info:                                                                                  #
+# - type : javaee-web, javaee-ear, html5-mobile, richfaces-kitchensink, errai-kitchensink     #
+# - isBlank : true if it's a blank archetype                                                  #
+#  - environment : web-ee6 or full-ee6, depending on the required Java EE                     #
+# profile. We'll add web-ee7, full-ee7 for future wildfly archetypes                          #
+# - target : product or community                                                             #
+# - additionalRepositories : changed list to a Map, as we need to have a repository key       #
+# - essentialDependencies : collection of GAV coordinates of essential                        #
+#   depenendencies tooling will try to resolve before creating the project.                   #
+#   If these deps are missing, the repos defined in additionalRepositories                    #
+#   will be proposed to be added to settings.xml                                              #
 ###############################################################################################
 
 availableArchetypeVersions:
@@ -1865,10 +1902,10 @@ availableArchetypeVersions:
    #  OLD Java EE 6 Webapp  #
    ##########################
 
- - &jboss-javaee6-webapp-archetype-last
-   id: jboss-javaee6-webapp-archetype-last
-   archetype: *jboss-javaee6-webapp-archetype
-   version: *lastArchetypeRelease
+ - &jboss-javaee6-webapp-archetype-old-version
+   id: jboss-javaee6-webapp-archetype-old-version
+   archetype: *jboss-javaee6-webapp-archetype-old
+   version: *oldArchetypeRelease
    repositoryURL:
    labels: {
        type: javaee-web,
@@ -1876,10 +1913,10 @@ availableArchetypeVersions:
        environment: web-ee6,
    }
 
- - &jboss-javaee6-webapp-blank-archetype-last
-   id: jboss-javaee6-webapp-blank-archetype-last
-   archetype: *jboss-javaee6-webapp-blank-archetype
-   version: *lastArchetypeRelease
+ - &jboss-javaee6-webapp-blank-archetype-old-version
+   id: jboss-javaee6-webapp-blank-archetype-old-version
+   archetype: *jboss-javaee6-webapp-blank-archetype-old
+   version: *oldArchetypeRelease
    repositoryURL:
    labels: {
        type: javaee-web,
@@ -1892,10 +1929,10 @@ availableArchetypeVersions:
    #   OLD   Java    EE 6   EAR Webapp    #
    ########################################
 
- - &jboss-javaee6-webapp-ear-archetype-last
-   id: jboss-javaee6-webapp-ear-archetype-last
-   archetype: *jboss-javaee6-webapp-ear-archetype
-   version: *lastArchetypeRelease
+ - &jboss-javaee6-webapp-ear-archetype-old-version
+   id: jboss-javaee6-webapp-ear-archetype-old-version
+   archetype: *jboss-javaee6-webapp-ear-archetype-old
+   version: *oldArchetypeRelease
    repositoryURL:
    labels: {
        type: javaee-ear,
@@ -1903,10 +1940,10 @@ availableArchetypeVersions:
        environment: full-ee6,
    }
 
- - &jboss-javaee6-webapp-ear-blank-archetype-last
-   id: jboss-javaee6-webapp-ear-blank-archetype-last
-   archetype: *jboss-javaee6-webapp-ear-blank-archetype
-   version: *lastArchetypeRelease
+ - &jboss-javaee6-webapp-ear-blank-archetype-old-version
+   id: jboss-javaee6-webapp-ear-blank-archetype-old-version
+   archetype: *jboss-javaee6-webapp-ear-blank-archetype-old
+   version: *oldArchetypeRelease
    repositoryURL:
    labels: {
        type: javaee-ear,
@@ -1915,6 +1952,33 @@ availableArchetypeVersions:
        isBlank: true,
    }
 
+   ###########################
+   #  OLD HTML 5 ARCHETYPE  #
+   ##########################
+
+ - &jboss-html5-mobile-archetype-old-version
+   id: jboss-html5-mobile-archetype-old-version
+   archetype: *jboss-html5-mobile-archetype-old
+   version: *oldArchetypeRelease
+   repositoryURL: 
+   labels: {
+       type: html5-mobile, 
+       target: community,
+       environment: web-ee6,
+   }
+
+ - &jboss-html5-mobile-blank-archetype-old-version
+   id: jboss-html5-mobile-blank-archetype-old-version
+   archetype: *jboss-html5-mobile-blank-archetype-old
+   version: *oldArchetypeRelease
+   repositoryURL:
+   labels: {
+       type: html5-mobile,
+       target: community,
+       environment: web-ee6,
+       isBlank: true,
+   }   
+   
 ##########################################################################
 #                                                                        #
 #   L I S T    O F    A L L     A V A I L A B L E    R U N T I M E S     #
@@ -1957,12 +2021,14 @@ availableRuntimes:
     - *spring-3_0-bom-wfk-21
     - *spring-3_1-bom-wfk-21
    defaultBom: *jboss-javaee-6_0-web-300redhat1
-   defaultArchetype: *jboss-javaee6-webapp-archetype-last
+   defaultArchetype: *jboss-javaee6-webapp-archetype-old-version
    archetypes:
-    - *jboss-javaee6-webapp-archetype-last
-    - *jboss-javaee6-webapp-blank-archetype-last
-    - *jboss-javaee6-webapp-ear-archetype-last
-    - *jboss-javaee6-webapp-ear-blank-archetype-last
+    - *jboss-javaee6-webapp-archetype-old-version
+    - *jboss-javaee6-webapp-blank-archetype-old-version
+    - *jboss-javaee6-webapp-ear-archetype-old-version
+    - *jboss-javaee6-webapp-ear-blank-archetype-old-version
+    - *jboss-html5-mobile-archetype-old-version
+    - *jboss-html5-mobile-blank-archetype-old-version
     - *richfaces-archetype-kitchensink-423final2
     - *jboss-errai-kitchensink-archetype-211final
    labels: {
@@ -2001,12 +2067,14 @@ availableRuntimes:
     - *spring-3_1-bom-wfk-22
     - *spring-3_2-bom-wfk-22
    defaultBom: *jboss-javaee-6_0-web-eap601
-   defaultArchetype: *jboss-javaee6-webapp-archetype-last
+   defaultArchetype: *jboss-javaee6-webapp-archetype-old-version
    archetypes:
-    - *jboss-javaee6-webapp-archetype-last
-    - *jboss-javaee6-webapp-blank-archetype-last
-    - *jboss-javaee6-webapp-ear-archetype-last
-    - *jboss-javaee6-webapp-ear-blank-archetype-last
+    - *jboss-javaee6-webapp-archetype-old-version
+    - *jboss-javaee6-webapp-blank-archetype-old-version
+    - *jboss-javaee6-webapp-ear-archetype-old-version
+    - *jboss-javaee6-webapp-ear-blank-archetype-old-version
+    - *jboss-html5-mobile-archetype-old-version
+    - *jboss-html5-mobile-blank-archetype-old-version
     - *richfaces-archetype-kitchensink-423final2
     - *jboss-errai-kitchensink-archetype-211final
    labels: {
@@ -2060,12 +2128,12 @@ availableRuntimes:
     - *spring-3_1-bom-wfk-24
     - *spring-3_2-bom-wfk-24
    defaultBom: *jboss-javaee-6_0-web-eap61
-   defaultArchetype: *jboss-javaee6-webapp-archetype-last
+   defaultArchetype: *jboss-javaee6-webapp-archetype-old-version
    archetypes:
-    - *jboss-javaee6-webapp-archetype-last
-    - *jboss-javaee6-webapp-blank-archetype-last
-    - *jboss-javaee6-webapp-ear-archetype-last
-    - *jboss-javaee6-webapp-ear-blank-archetype-last
+    - *jboss-javaee6-webapp-archetype-old-version
+    - *jboss-javaee6-webapp-blank-archetype-old-version
+    - *jboss-javaee6-webapp-ear-archetype-old-version
+    - *jboss-javaee6-webapp-ear-blank-archetype-old-version
     - *jboss-html5-mobile-archetype-wfk-24
     - *jboss-html5-mobile-blank-archetype-wfk-24
     - *jboss-errai-kitchensink-archetype-211final
@@ -2188,12 +2256,14 @@ availableRuntimes:
     - *jboss-javaee-6_0-with-tools-last-wfk
     - *jboss-javaee-6_0-with-transactions-last
    defaultBom: *jboss-javaee-6_0-all-last
-   defaultArchetype: *jboss-javaee6-webapp-archetype-last
+   defaultArchetype: *jboss-javaee6-webapp-archetype-old-version
    archetypes:
-    - *jboss-javaee6-webapp-archetype-last
-    - *jboss-javaee6-webapp-blank-archetype-last
-    - *jboss-javaee6-webapp-ear-archetype-last
-    - *jboss-javaee6-webapp-ear-blank-archetype-last
+    - *jboss-javaee6-webapp-archetype-old-version
+    - *jboss-javaee6-webapp-blank-archetype-old-version
+    - *jboss-javaee6-webapp-ear-archetype-old-version
+    - *jboss-javaee6-webapp-ear-blank-archetype-old-version
+    - *jboss-html5-mobile-archetype-old-version
+    - *jboss-html5-mobile-blank-archetype-old-version
     - *richfaces-archetype-kitchensink-423final2
     - *jboss-errai-kitchensink-archetype-211final
    labels: {
