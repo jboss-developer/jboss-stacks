@@ -1570,6 +1570,107 @@ availableBomVersions:
 
 availableArchetypes:
 
+
+   ##########################################################
+   #   COMMUNITY     W E B     A P P   A R C H E T Y P E S  #
+   ##########################################################
+
+ - &jboss-javaee6-webapp-blank-archetype
+   id: jboss-javaee6-webapp-blank-archetype
+   name: Java EE 6 Webapp (Blank Skeleton)
+   description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true)
+   groupId: org.jboss.spec.archetypes
+   artifactId: jboss-javaee6-webapp-blank-archetype
+   recommendedVersion: *lastArchetypeRelease
+   repositoryURL:
+
+   #######################
+
+ - &jboss-javaee6-webapp-archetype
+   id: jboss-javaee6-webapp-archetype
+   name: Java EE 6 Webapp
+   description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true)
+   blank: *jboss-javaee6-webapp-blank-archetype
+   groupId: org.jboss.spec.archetypes
+   artifactId: jboss-javaee6-webapp-archetype
+   recommendedVersion: *lastArchetypeRelease
+   repositoryURL:
+
+   ##############################################################
+   #   COMMUNITY     E A R    A P P     A R C H E T Y P E S     #
+   ##############################################################
+
+ - &jboss-javaee6-webapp-ear-blank-archetype
+   id: jboss-javaee6-webapp-ear-blank-archetype
+   name: JBoss AS 7 / Java EE 6 EAR Webapp (Blank Skeleton)
+   description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true). The project is an EAR, with an EJB-JAR and WAR
+   groupId: org.jboss.spec.archetypes
+   artifactId: jboss-javaee6-webapp-ear-blank-archetype
+   recommendedVersion: *lastArchetypeRelease
+   repositoryURL:
+
+   ####################
+
+ - &jboss-javaee6-webapp-ear-archetype
+   id: jboss-javaee6-webapp-ear-archetype
+   name: JBoss AS 7 / Java EE 6 EAR Webapp
+   description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true). The project is an EAR, with an EJB-JAR and WAR
+   blank: *jboss-javaee6-webapp-ear-blank-archetype
+   groupId: org.jboss.spec.archetypes
+   artifactId: jboss-javaee6-webapp-ear-archetype
+   recommendedVersion: *lastArchetypeRelease
+   repositoryURL:
+
+   ##################################
+   #    HTML5 Community Archetype   #
+   ##################################
+
+ - &jboss-html5-mobile-blank-archetype
+   id: jboss-html5-mobile-blank-archetype
+   name: Java EE 6 HTML5 Mobile Web Application
+   description: An archetype that generates a Java EE 6 application using HTML5, and JAX-RS to support both desktop and mobile web browsers
+   groupId: org.jboss.aerogear.archetypes
+   artifactId: jboss-html5-mobile-archetype
+   recommendedVersion: *lastArchetypeRelease
+   repositoryURL:
+
+   ##################
+
+ - &jboss-html5-mobile-archetype
+   id: jboss-html5-mobile-archetype
+   name: Java EE 6 HTML5 Mobile Web Application
+   description: An archetype that generates a Java EE 6 application using HTML5, and JAX-RS to support both desktop and mobile web browsers
+   groupId: org.jboss.aerogear.archetypes
+   artifactId: jboss-html5-mobile-archetype
+   recommendedVersion: *lastArchetypeRelease
+   repositoryURL:
+   
+   ############################
+   #  RichFaces Archetype     #
+   ############################
+
+ - &richfaces-archetype-kitchensink
+   id: richfaces-archetype-kitchensink
+   name: RichFaces Archetypes Kitchen Sink Application
+   description: RichFaces Kitchen Sink Application
+   groupId: org.richfaces.archetypes
+   artifactId: richfaces-archetype-kitchensink
+   recommendedVersion: 4.2.3.Final-2
+   repositoryURL:
+
+   ############################
+   #  E R R A I   Archetype   #
+   ############################
+
+ - &jboss-errai-kitchensink-archetype
+   id: jboss-errai-kitchensink-archetype
+   name: Errai Kitchen Sink Webapp Archetype
+   description: A starter Errai + Java EE 6 webapp project for use on JBoss AS 7 / EAP 6, generated from the jboss-errai-kitchensink-archetype archetype
+   groupId: org.jboss.errai.archetypes
+   artifactId: jboss-errai-kitchensink-archetype
+   recommendedVersion: 2.1.1.Final
+   repositoryURL:
+   
   #############################################
   #   E A P / W F K     A R C H E T Y P E S   #
   #############################################
@@ -1642,81 +1743,6 @@ availableArchetypes:
    repositoryURL: 
 
 
-   ##########################################################
-   #   COMMUNITY     W E B     A P P   A R C H E T Y P E S  #
-   ##########################################################
-
- - &jboss-javaee6-webapp-blank-archetype
-   id: jboss-javaee6-webapp-blank-archetype
-   name: Java EE 6 Webapp (Blank Skeleton)
-   description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true)
-   groupId: org.jboss.spec.archetypes
-   artifactId: jboss-javaee6-webapp-blank-archetype
-   recommendedVersion: *lastArchetypeRelease
-   repositoryURL:
-
-   #######################
-
- - &jboss-javaee6-webapp-archetype
-   id: jboss-javaee6-webapp-archetype
-   name: Java EE 6 Webapp
-   description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true)
-   blank: *jboss-javaee6-webapp-blank-archetype
-   groupId: org.jboss.spec.archetypes
-   artifactId: jboss-javaee6-webapp-archetype
-   recommendedVersion: *lastArchetypeRelease
-   repositoryURL:
-
-   ##############################################################
-   #   COMMUNITY     E A R    A P P     A R C H E T Y P E S     #
-   ##############################################################
-
- - &jboss-javaee6-webapp-ear-blank-archetype
-   id: jboss-javaee6-webapp-ear-blank-archetype
-   name: JBoss AS 7 / Java EE 6 EAR Webapp (Blank Skeleton)
-   description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true). The project is an EAR, with an EJB-JAR and WAR
-   groupId: org.jboss.spec.archetypes
-   artifactId: jboss-javaee6-webapp-ear-blank-archetype
-   recommendedVersion: *lastArchetypeRelease
-   repositoryURL:
-
-   ####################
-
- - &jboss-javaee6-webapp-ear-archetype
-   id: jboss-javaee6-webapp-ear-archetype
-   name: JBoss AS 7 / Java EE 6 EAR Webapp
-   description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true). The project is an EAR, with an EJB-JAR and WAR
-   blank: *jboss-javaee6-webapp-ear-blank-archetype
-   groupId: org.jboss.spec.archetypes
-   artifactId: jboss-javaee6-webapp-ear-archetype
-   recommendedVersion: *lastArchetypeRelease
-   repositoryURL:
-
-   ############################
-   #  RichFaces Archetype     #
-   ############################
-
- - &richfaces-archetype-kitchensink
-   id: richfaces-archetype-kitchensink
-   name: RichFaces Archetypes Kitchen Sink Application
-   description: RichFaces Kitchen Sink Application
-   groupId: org.richfaces.archetypes
-   artifactId: richfaces-archetype-kitchensink
-   recommendedVersion: 4.2.3.Final-2
-   repositoryURL:
-
-   ############################
-   #  E R R A I   Archetype   #
-   ############################
-
- - &jboss-errai-kitchensink-archetype
-   id: jboss-errai-kitchensink-archetype
-   name: Errai Kitchen Sink Webapp Archetype
-   description: A starter Errai + Java EE 6 webapp project for use on JBoss AS 7 / EAP 6, generated from the jboss-errai-kitchensink-archetype archetype
-   groupId: org.jboss.errai.archetypes
-   artifactId: jboss-errai-kitchensink-archetype
-   recommendedVersion: 2.1.1.Final
-   repositoryURL:
 
 ###############################################################################################
 #                                                                                             #
@@ -1915,6 +1941,24 @@ availableArchetypeVersions:
        isBlank: true,
    }
 
+   ##############################################################
+   #   O L D   H T M L  5   A R C H E T Y P E  V E R S I O N S  #
+   ##############################################################
+
+ - &jboss-html5-mobile-archetype-last
+   id: jboss-html5-mobile-archetype-last
+   archetype: *jboss-html5-mobile-archetype
+   version: *lastArchetypeRelease
+   repositoryURL:
+   labels: {}
+
+ - &jboss-html5-mobile-blank-archetype-last
+   id: jboss-html5-mobile-blank-archetype-last
+   archetype: *jboss-html5-mobile-blank-archetype
+   version: *lastArchetypeRelease
+   repositoryURL:
+   labels: {}
+
 ##########################################################################
 #                                                                        #
 #   L I S T    O F    A L L     A V A I L A B L E    R U N T I M E S     #
@@ -2066,6 +2110,8 @@ availableRuntimes:
     - *jboss-javaee6-webapp-blank-archetype-last
     - *jboss-javaee6-webapp-ear-archetype-last
     - *jboss-javaee6-webapp-ear-blank-archetype-last
+    - *jboss-html5-mobile-archetype-last
+    - *jboss-html5-mobile-blank-archetype-last
     - *jboss-html5-mobile-archetype-wfk-24
     - *jboss-html5-mobile-blank-archetype-wfk-24
     - *jboss-errai-kitchensink-archetype-211final
@@ -2094,6 +2140,8 @@ availableRuntimes:
 #    - *jboss-javaee6-webapp-blank-archetype-last-eap
 #    - *jboss-javaee6-webapp-ear-archetype-last-eap
 #    - *jboss-javaee6-webapp-ear-blank-archetype-last-eap
+#    - *jboss-html5-mobile-archetype-last
+#    - *jboss-html5-mobile-blank-archetype-last
 #    - *jboss-html5-mobile-archetype-last-wfk
 #    - *jboss-html5-mobile-blank-archetype-last-wfk
 #   labels: {
@@ -2194,6 +2242,8 @@ availableRuntimes:
     - *jboss-javaee6-webapp-blank-archetype-last
     - *jboss-javaee6-webapp-ear-archetype-last
     - *jboss-javaee6-webapp-ear-blank-archetype-last
+    - *jboss-html5-mobile-archetype-last
+    - *jboss-html5-mobile-blank-archetype-last
     - *richfaces-archetype-kitchensink-423final2
     - *jboss-errai-kitchensink-archetype-211final
    labels: {
