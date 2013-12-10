@@ -28,8 +28,10 @@ licenses:
  - &eap600SpecBomRelease 3.0.0.Final-redhat-1
  - &eap601SpecBomRelease 3.0.1.Final-redhat-1
  - &eap610SpecBomRelease 3.0.2.Final-redhat-3
+ - &eap620SpecBomRelease 3.0.2.Final-redhat-7
  - &eap601BomRelease 1.0.2.Final-redhat-1
  - &eap610BomRelease 1.0.4.Final-redhat-4
+ - &eap620BomRelease 6.2.0.GA
  - &wfk21BomRelease 1.0.1.Final-redhat-1
  - &wfk22BomRelease 1.0.4.Final-redhat-wfk-1
  - &wfk23BomRelease 1.0.4.Final-redhat-wfk-2
@@ -551,6 +553,16 @@ availableBomVersions:
        },
    }
 
+ - &jboss-javaee-6_0-web-eap62
+   id: jboss-javaee-6_0-web-eap62
+   bom: *jboss-javaee-6_0-web
+   version: *eap620SpecBomRelease
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
    #################
    #   Java EE 6   #
    #################
@@ -592,6 +604,15 @@ availableBomVersions:
        },
    }
 
+ - &jboss-javaee-6_0-eap62
+   id: jboss-javaee-6_0-eap62
+   bom: *jboss-javaee-6_0
+   version: *eap620SpecBomRelease
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
 
    ##########################################
    #    L A S T   E A P   B O M   VERSIONS  #
@@ -937,6 +958,16 @@ availableBomVersions:
        },
    }
 
+ - &jboss-javaee-6_0-with-hibernate-eap62
+   id: jboss-javaee-6_0-with-hibernate-eap62
+   bom: *jboss-javaee-6_0-with-hibernate
+   version: *eap620BomRelease
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
 
  - &jboss-javaee-6_0-with-hibernate-wfk-21
    id: jboss-javaee-6_0-with-hibernate-wfk-21
@@ -986,6 +1017,16 @@ availableBomVersions:
    id: jboss-javaee-6_0-with-hibernate3-eap61
    bom: *jboss-javaee-6_0-with-hibernate3-jdf
    version: *eap610BomRelease
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
+ - &jboss-javaee-6_0-with-hibernate3-eap62
+   id: jboss-javaee-6_0-with-hibernate3-eap62
+   bom: *jboss-javaee-6_0-with-hibernate3
+   version: *eap620BomRelease
    labels: {
        additionalRepositories: {
          "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
@@ -1056,6 +1097,16 @@ availableBomVersions:
        },
    }
 
+ - &jboss-javaee-6_0-with-logging-eap62
+   id: jboss-javaee-6_0-with-logging-eap62
+   bom: *jboss-javaee-6_0-with-logging
+   version: *eap620BomRelease
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
  - &jboss-javaee-6_0-with-logging-wfk-21
    id: jboss-javaee-6_0-with-logging-wfk-21
    bom: *jboss-javaee-6_0-with-logging-wfk21
@@ -1086,6 +1137,16 @@ availableBomVersions:
        },
    }
 
+ - &jboss-javaee-6_0-with-osgi-eap62
+   id: jboss-javaee-6_0-with-osgi-eap62
+   bom: *jboss-javaee-6_0-with-osgi
+   version: *eap620BomRelease
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
  - &jboss-javaee-6_0-with-osgi-wfk-21
    id: jboss-javaee-6_0-with-osgi-wfk-21
    bom: *jboss-javaee-6_0-with-osgi-wfk21
@@ -1096,6 +1157,16 @@ availableBomVersions:
        },
    }
  
+ - &jboss-javaee-6_0-with-resteasy-eap62
+   id: jboss-javaee-6_0-with-resteasy-eap62
+   bom: *jboss-javaee-6_0-with-resteasy
+   version: *eap620BomRelease
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
  - &jboss-javaee-6_0-with-richfaces-wfk-21
    id: jboss-javaee-6_0-with-richfaces-wfk-21
    bom: *jboss-javaee-6_0-with-richfaces-wfk21
@@ -1150,6 +1221,16 @@ availableBomVersions:
    id: jboss-javaee-6_0-with-security-eap61
    bom: *jboss-javaee-6_0-with-security-jdf
    version: *eap610BomRelease
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
+ - &jboss-javaee-6_0-with-security-eap62
+   id: jboss-javaee-6_0-with-security-eap62
+   bom: *jboss-javaee-6_0-with-security
+   version: *eap620BomRelease
    labels: {
        additionalRepositories: {
          "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
@@ -1214,6 +1295,16 @@ availableBomVersions:
    id: jboss-javaee-6_0-with-tools-eap61
    bom: *jboss-javaee-6_0-with-tools-jdf
    version: *eap610BomRelease
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
+ - &jboss-javaee-6_0-with-tools-eap62
+   id: jboss-javaee-6_0-with-tools-eap62
+   bom: *jboss-javaee-6_0-with-tools
+   version: *eap620BomRelease
    labels: {
        additionalRepositories: {
          "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
@@ -1302,6 +1393,16 @@ availableBomVersions:
    id: jboss-javaee-6_0-with-transactions-eap61
    bom: *jboss-javaee-6_0-with-transactions-jdf
    version: *eap610BomRelease
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
+ - &jboss-javaee-6_0-with-transactions-eap62
+   id: jboss-javaee-6_0-with-transactions-eap62
+   bom: *jboss-javaee-6_0-with-transactions
+   version: *eap620BomRelease
    labels: {
        additionalRepositories: {
          "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
@@ -2111,29 +2212,36 @@ availableRuntimes:
    #   E A P 6.2       #
    #####################
 
-# - &jbosseap620runtime
-#   id: jbosseap620runtime
-#   name: JBoss EAP 6.2.0
-#   version: 6.2.0
-#   license: *lgpl21
-#   url: http://www.jboss.org/products
-#   boms:
-#   defaultBom: 
-#   defaultArchetype: *jboss-javaee6-webapp-archetype-last-eap
-#   archetypes:
-#    - *jboss-javaee6-webapp-archetype-last-eap
-#    - *jboss-javaee6-webapp-blank-archetype-last-eap
-#    - *jboss-javaee6-webapp-ear-archetype-last-eap
-#    - *jboss-javaee6-webapp-ear-blank-archetype-last-eap
-#    - *jboss-html5-mobile-archetype-last
-#    - *jboss-html5-mobile-archetype-last-wfk
-#    - *jboss-html5-mobile-blank-archetype-last-wfk
-#   labels: {
-#        runtime-category: SERVER,
-#        runtime-type: EAP,
-#        runtime-size: 000000000,
-#        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.62
-#   }   
+ - &jbosseap620runtime
+   id: jbosseap620runtime
+   name: JBoss EAP 6.2.0
+   version: 6.2.0
+   license: *lgpl21
+   url: http://www.jboss.org/products
+   defaultBom: *jboss-javaee-6_0-web-eap62
+   boms:
+     - *jboss-javaee-6_0-eap62
+     - *jboss-javaee-6_0-web-eap62
+     - *jboss-javaee-6_0-with-hibernate-eap62
+     - *jboss-javaee-6_0-with-hibernate3-eap62
+     - *jboss-javaee-6_0-with-logging-eap62
+     - *jboss-javaee-6_0-with-osgi-eap62
+     - *jboss-javaee-6_0-with-resteasy-eap62
+     - *jboss-javaee-6_0-with-security-eap62
+     - *jboss-javaee-6_0-with-tools-eap62
+     - *jboss-javaee-6_0-with-transactions-eap62
+   defaultArchetype: *jboss-javaee6-webapp-archetype-last-eap
+   archetypes:
+    - *jboss-javaee6-webapp-archetype-last-eap
+    - *jboss-javaee6-webapp-blank-archetype-last-eap
+    - *jboss-javaee6-webapp-ear-archetype-last-eap
+    - *jboss-javaee6-webapp-ear-blank-archetype-last-eap
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: EAP,
+        runtime-size: 144590074,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.61
+   }   
 
    ###############
    # JBoss 7.0.1 #
@@ -2327,10 +2435,10 @@ minorReleases:
    version: 6.0
    recommendedRuntime: *jbosseap601runtime
 
-# - &jbeap62
-#   name: JBoss EAP
-#   version: 6.2
-#   recommendedRuntime: *jbosseap620runtime
+ - &jbeap62
+   name: JBoss EAP
+   version: 6.2
+   recommendedRuntime: *jbosseap620runtime
 
    ###############
    #   A S 7.X   #
@@ -2396,11 +2504,11 @@ majorReleases:
 
  - name: JBoss EAP
    version: 6
-   recommendedRuntime: *jbosseap610runtime
+   recommendedRuntime: *jbosseap620runtime
    minorReleases:
     - *jbeap60
     - *jbeap61
-#    - *jbeap62
+    - *jbeap62
 
    ##################
    #   J P P  6     #
