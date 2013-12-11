@@ -19,7 +19,6 @@ licenses:
  - &lgpl21 http://www.gnu.org/licenses/lgpl-2.1.txt
 #metadatas
  - &lastArchetypeRelease 7.1.3.Final
- - &lastEAPArchetypeRelease 6.2.0-build-1
  - &lastEAPBomRelease 6.2.0-build-7
  - &lastWFKBomRelease 2.4.0-build-5
  - &lastJDGBomRelease 6.2.0-redhat-1
@@ -1765,49 +1764,49 @@ availableArchetypes:
   #   E A P / W F K     A R C H E T Y P E S   #
   #############################################
 
- - &jboss-javaee6-webapp-blank-archetype-eap
-   id: jboss-javaee6-webapp-blank-archetype-eap
-   name: Java EE 6 Webapp (Blank Skeleton)
-   description: An archetype that generates a starter Java EE 6 webapp project for JBoss EAP 6
-   groupId: org.jboss.archetype.eap
-   artifactId: jboss-javaee6-webapp-blank-archetype
-   recommendedVersion: *lastEAPArchetypeRelease
-   repositoryURL: 
+# - &jboss-javaee6-webapp-blank-archetype-eap
+#   id: jboss-javaee6-webapp-blank-archetype-eap
+#   name: Java EE 6 Webapp (Blank Skeleton)
+#   description: An archetype that generates a starter Java EE 6 webapp project for JBoss EAP 6
+#   groupId: org.jboss.archetype.eap
+#   artifactId: jboss-javaee6-webapp-blank-archetype
+#   recommendedVersion: *lastEAPArchetypeRelease
+#   repositoryURL: 
 
    #######################
 
- - &jboss-javaee6-webapp-archetype-eap
-   id: jboss-javaee6-webapp-archetype-eap
-   name: Java EE 6 Webapp
-   description: An archetype that generates a starter Java EE 6 webapp project for JBoss EAP 6 
-   blank: *jboss-javaee6-webapp-blank-archetype-eap
-   groupId: org.jboss.archetype.eap
-   artifactId: jboss-javaee6-webapp-archetype
-   recommendedVersion: *lastEAPArchetypeRelease
-   repositoryURL: 
+# - &jboss-javaee6-webapp-archetype-eap
+#   id: jboss-javaee6-webapp-archetype-eap
+#   name: Java EE 6 Webapp
+#   description: An archetype that generates a starter Java EE 6 webapp project for JBoss EAP 6 
+#   blank: *jboss-javaee6-webapp-blank-archetype-eap
+#   groupId: org.jboss.archetype.eap
+#   artifactId: jboss-javaee6-webapp-archetype
+#   recommendedVersion: *lastEAPArchetypeRelease
+#   repositoryURL: 
 
    #######################
 
- - &jboss-javaee6-webapp-ear-blank-archetype-eap
-   id: jboss-javaee6-webapp-ear-blank-archetype-eap
-   name: JBoss AS 7 / Java EE 6 EAR Webapp (Blank Skeleton)
-   description: An archetype that generates a starter Java EE 6 webapp project for JBoss EAP 6. The project is an EAR, with an EJB-JAR and WAR
-   groupId: org.jboss.archetype.eap
-   artifactId: jboss-javaee6-webapp-ear-blank-archetype
-   recommendedVersion: *lastEAPArchetypeRelease
-   repositoryURL: 
+# - &jboss-javaee6-webapp-ear-blank-archetype-eap
+#   id: jboss-javaee6-webapp-ear-blank-archetype-eap
+#   name: JBoss AS 7 / Java EE 6 EAR Webapp (Blank Skeleton)
+#   description: An archetype that generates a starter Java EE 6 webapp project for JBoss EAP 6. The project is an EAR, with an EJB-JAR and WAR
+#   groupId: org.jboss.archetype.eap
+#   artifactId: jboss-javaee6-webapp-ear-blank-archetype
+#   recommendedVersion: *lastEAPArchetypeRelease
+#   repositoryURL: 
 
    ####################
 
- - &jboss-javaee6-webapp-ear-archetype-eap
-   id: jboss-javaee6-webapp-ear-archetype-eap
-   name: JBoss AS 7 / Java EE 6 EAR Webapp
-   description: An archetype that generates a starter Java EE 6 webapp project for JBoss EAP 6. The project is an EAR, with an EJB-JAR and WAR
-   blank: *jboss-javaee6-webapp-ear-blank-archetype-eap
-   groupId: org.jboss.archetype.eap
-   artifactId: jboss-javaee6-webapp-ear-archetype
-   recommendedVersion: *lastEAPArchetypeRelease
-   repositoryURL: 
+# - &jboss-javaee6-webapp-ear-archetype-eap
+#   id: jboss-javaee6-webapp-ear-archetype-eap
+#   name: JBoss AS 7 / Java EE 6 EAR Webapp
+#   description: An archetype that generates a starter Java EE 6 webapp project for JBoss EAP 6. The project is an EAR, with an EJB-JAR and WAR
+#   blank: *jboss-javaee6-webapp-ear-blank-archetype-eap
+#   groupId: org.jboss.archetype.eap
+#   artifactId: jboss-javaee6-webapp-ear-archetype
+#   recommendedVersion: *lastEAPArchetypeRelease
+#   repositoryURL: 
 
    ####################
 
@@ -1846,71 +1845,71 @@ availableArchetypeVersions:
   #   E A P   A r c h e t y p e s        #
   ########################################
 
- - &jboss-javaee6-webapp-archetype-last-eap
-   id: jboss-javaee6-webapp-archetype-last-eap
-   archetype: *jboss-javaee6-webapp-archetype-eap
-   version: *lastEAPArchetypeRelease
-   repositoryURL: "http://jboss-developer.github.io/temp-maven-repo/"
-   labels: {
-       additionalRepositories: {
-         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
-         "contributor-repository": "http://jboss-developer.github.io/temp-maven-repo/",
-       },
-       essentialDependencies: ["org.jboss.bom.eap:jboss-javaee-6.0-with-tools:pom:6.2.0-build-5", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.2.0-build-5"],
-       type: javaee-web,
-       target: product,
-       environment: web-ee6,
-   }
+# - &jboss-javaee6-webapp-archetype-last-eap
+#   id: jboss-javaee6-webapp-archetype-last-eap
+#   archetype: *jboss-javaee6-webapp-archetype-eap
+#   version: *lastEAPArchetypeRelease
+#   repositoryURL: "http://jboss-developer.github.io/temp-maven-repo/"
+#   labels: {
+#       additionalRepositories: {
+#         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+#         "contributor-repository": "http://jboss-developer.github.io/temp-maven-repo/",
+#       },
+#       essentialDependencies: ["org.jboss.bom.eap:jboss-javaee-6.0-with-tools:pom:6.2.0-build-5", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.2.0-build-5"],
+#       type: javaee-web,
+#       target: product,
+#       environment: web-ee6,
+#   }
 
- - &jboss-javaee6-webapp-blank-archetype-last-eap
-   id: jboss-javaee6-webapp-blank-archetype-last-eap
-   archetype: *jboss-javaee6-webapp-blank-archetype-eap
-   version: *lastEAPArchetypeRelease
-   repositoryURL: "http://jboss-developer.github.io/temp-maven-repo/"
-   labels: {
-       additionalRepositories: {
-         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
-         "contributor-repository": "http://jboss-developer.github.io/temp-maven-repo/",
-       },
-       essentialDependencies: ["org.jboss.bom.eap:jboss-javaee-6.0-with-tools:pom:6.2.0-build-5", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.2.0-build-5"],
-       type: javaee-web,
-       target: product,
-       environment: web-ee6,
-       isBlank: true,
-   }
+# - &jboss-javaee6-webapp-blank-archetype-last-eap
+#   id: jboss-javaee6-webapp-blank-archetype-last-eap
+#   archetype: *jboss-javaee6-webapp-blank-archetype-eap
+#   version: *lastEAPArchetypeRelease
+#   repositoryURL: "http://jboss-developer.github.io/temp-maven-repo/"
+#   labels: {
+#       additionalRepositories: {
+#         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+#         "contributor-repository": "http://jboss-developer.github.io/temp-maven-repo/",
+#       },
+#       essentialDependencies: ["org.jboss.bom.eap:jboss-javaee-6.0-with-tools:pom:6.2.0-build-5", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.2.0-build-5"],
+#       type: javaee-web,
+#       target: product,
+#       environment: web-ee6,
+#       isBlank: true,
+#   }
 
- - &jboss-javaee6-webapp-ear-archetype-last-eap
-   id: jboss-javaee6-webapp-ear-archetype-last-eap
-   archetype: *jboss-javaee6-webapp-ear-archetype-eap
-   version: *lastEAPArchetypeRelease
-   repositoryURL: "http://jboss-developer.github.io/temp-maven-repo/"
-   labels: {
-       additionalRepositories: {
-         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
-         "contributor-repository": "http://jboss-developer.github.io/temp-maven-repo/",
-       },
-       essentialDependencies: ["org.jboss.bom.eap:jboss-javaee-6.0-with-tools:pom:6.2.0-build-5", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.2.0-build-5"],
-       type: javaee-ear, 
-       target: product,
-       environment: full-ee6,
-   }
+# - &jboss-javaee6-webapp-ear-archetype-last-eap
+#   id: jboss-javaee6-webapp-ear-archetype-last-eap
+#   archetype: *jboss-javaee6-webapp-ear-archetype-eap
+#   version: *lastEAPArchetypeRelease
+#   repositoryURL: "http://jboss-developer.github.io/temp-maven-repo/"
+#   labels: {
+#       additionalRepositories: {
+#         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+#         "contributor-repository": "http://jboss-developer.github.io/temp-maven-repo/",
+#       },
+#       essentialDependencies: ["org.jboss.bom.eap:jboss-javaee-6.0-with-tools:pom:6.2.0-build-5", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.2.0-build-5"],
+#       type: javaee-ear, 
+#       target: product,
+#       environment: full-ee6,
+#   }
 
- - &jboss-javaee6-webapp-ear-blank-archetype-last-eap
-   id: jboss-javaee6-webapp-ear-blank-archetype-last-eap
-   archetype: *jboss-javaee6-webapp-ear-blank-archetype-eap
-   version: *lastEAPArchetypeRelease
-   repositoryURL: "http://jboss-developer.github.io/temp-maven-repo/"
-   labels: {
-       additionalRepositories: {
-         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
-         "contributor-repository": "http://jboss-developer.github.io/temp-maven-repo/",
-       },
-       essentialDependencies: ["org.jboss.bom.eap:jboss-javaee-6.0-with-tools:pom:6.2.0-build-5", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.2.0-build-5"],
-       type: javaee-ear, 
-       target: product,
-       environment: full-ee6,
-       isBlank: true,
-   }
+# - &jboss-javaee6-webapp-ear-blank-archetype-last-eap
+#   id: jboss-javaee6-webapp-ear-blank-archetype-last-eap
+#   archetype: *jboss-javaee6-webapp-ear-blank-archetype-eap
+#   version: *lastEAPArchetypeRelease
+#   repositoryURL: "http://jboss-developer.github.io/temp-maven-repo/"
+#   labels: {
+#       additionalRepositories: {
+#         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+#         "contributor-repository": "http://jboss-developer.github.io/temp-maven-repo/",
+#       },
+#       essentialDependencies: ["org.jboss.bom.eap:jboss-javaee-6.0-with-tools:pom:6.2.0-build-5", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.2.0-build-5"],
+#       type: javaee-ear, 
+#       target: product,
+#       environment: full-ee6,
+#       isBlank: true,
+#   }
    
    ######################################################
    #   H T M L  5   A R C H E T Y P E  V E R S I O N S  #
@@ -2230,12 +2229,12 @@ availableRuntimes:
      - *jboss-javaee-6_0-with-security-eap62
      - *jboss-javaee-6_0-with-tools-eap62
      - *jboss-javaee-6_0-with-transactions-eap62
-   defaultArchetype: *jboss-javaee6-webapp-archetype-last-eap
+   defaultArchetype: #*jboss-javaee6-webapp-archetype-last-eap
    archetypes:
-    - *jboss-javaee6-webapp-archetype-last-eap
-    - *jboss-javaee6-webapp-blank-archetype-last-eap
-    - *jboss-javaee6-webapp-ear-archetype-last-eap
-    - *jboss-javaee6-webapp-ear-blank-archetype-last-eap
+#    - *jboss-javaee6-webapp-archetype-last-eap
+#    - *jboss-javaee6-webapp-blank-archetype-last-eap
+#    - *jboss-javaee6-webapp-ear-archetype-last-eap
+#    - *jboss-javaee6-webapp-ear-blank-archetype-last-eap
    labels: {
         runtime-category: SERVER,
         runtime-type: EAP,
