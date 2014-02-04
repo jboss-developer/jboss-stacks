@@ -2344,6 +2344,32 @@ availableRuntimes:
         runtime-size: 114831134,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.71
     }
+    
+   ###############
+   #   Wildfly   #
+   ###############
+
+ - &wildfly-8cr1runtime
+   id: wildfly-8cr1runtime
+   name: Wildfly 8CR1
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 8.0.0.CR1
+   license: *lgpl
+   url: http://wildfly.org/downloads/
+   downloadUrl: http://download.jboss.org/wildfly/8.0.0.CR1/wildfly-8.0.0.CR1.zip
+   boms:
+   defaultBom: 
+   defaultArchetype: 
+   archetypes:
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/8.0.0.CR1/pom.xml",
+        runtime-size: 154598817,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.wildfly.80
+    }    
 
    #################
    #  J P P  6.1   #
@@ -2459,6 +2485,15 @@ minorReleases:
    recommendedRuntime: *jboss-as701runtime
 
    ###############
+   #   Wildfly 8 #
+   ###############
+
+ - &wildfly800cr1
+   name: Wildfly
+   version: 8.0.0.CR1
+   recommendedRuntime: *wildfly-8cr1runtime
+
+   ###############
    #   JPP 6.x   #
    ###############
 
@@ -2496,6 +2531,16 @@ majorReleases:
     - *jbas71
     - *jbas702
     - *jbas701
+
+   ################
+   #   Wildfly 8  #
+   ################
+
+ - name: Wildfly
+   version: 8
+   recommendedRuntime: *wildfly-8cr1runtime
+   minorReleases:
+    - *wildfly800cr1
 
    ##################
    #   E A P  6     #
