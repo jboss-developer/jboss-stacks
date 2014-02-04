@@ -38,3 +38,14 @@ File format evolution
 ----------------------
 
 Each branch represents a file format. If you need to update the stacks.yaml format, create a new branch to to avoid breaking compatibility with previous format versions
+
+
+ArchetypeVersion labels
+----------------------
+
+- type : javaee-web, javaee-ear, html5-mobile, richfaces-kitchensink, errai-kitchensink
+- isBlank : true if it's a blank archetype
+- environment : web-ee6 or full-ee6, depending on the required Java EE profile. We'll add web-ee7, full-ee7 for future wildfly archetypes
+- target : product or community
+- additionalRepositories : a Map containing repository-id as key and the repository url as value
+- essentialDependencies : collection of GAV coordinates of essential depenendencies tooling will try to resolve before creating the project. If these deps are missing the repos defined in additionalRepositories will be proposed to be added to settings.xml
