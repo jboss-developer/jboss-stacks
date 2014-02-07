@@ -1757,7 +1757,7 @@ availableArchetypes:
    description: A starter Errai + Java EE 6 webapp project for use on JBoss AS 7 / EAP 6, generated from the jboss-errai-kitchensink-archetype archetype
    groupId: org.jboss.errai.archetypes
    artifactId: jboss-errai-kitchensink-archetype
-   recommendedVersion: 2.1.1.Final
+   recommendedVersion: 2.3.2.Final
    repositoryURL:
    
   #############################################
@@ -1965,10 +1965,10 @@ availableArchetypeVersions:
    #   Errai Kitchen Sink Webapp Archetype   #
    ###########################################
 
- - &jboss-errai-kitchensink-archetype-211final
-   id: jboss-errai-kitchensink-archetype-211final
+ - &jboss-errai-kitchensink-archetype-232final
+   id: jboss-errai-kitchensink-archetype-232final
    archetype: *jboss-errai-kitchensink-archetype
-   version: 2.1.1.Final
+   version: 2.3.2.Final
    repositoryURL:
    labels: {
        type: errai-kitchensink,
@@ -2094,7 +2094,7 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-archetype-old
     - *jboss-javaee6-webapp-ear-blank-archetype-old
     - *richfaces-archetype-kitchensink-423final2
-    - *jboss-errai-kitchensink-archetype-211final
+    - *jboss-errai-kitchensink-archetype-232final
    labels: {
         runtime-category: SERVER,
         runtime-type: EAP,
@@ -2138,7 +2138,7 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-archetype-old
     - *jboss-javaee6-webapp-ear-blank-archetype-old
     - *richfaces-archetype-kitchensink-423final2
-    - *jboss-errai-kitchensink-archetype-211final
+    - *jboss-errai-kitchensink-archetype-232final
    labels: {
         runtime-category: SERVER,
         runtime-type: EAP,
@@ -2199,7 +2199,7 @@ availableRuntimes:
     - *jboss-html5-mobile-archetype-old
     - *jboss-html5-mobile-archetype-wfk-24
  #    - *jboss-html5-mobile-blank-archetype-wfk-24
-    - *jboss-errai-kitchensink-archetype-211final
+    - *jboss-errai-kitchensink-archetype-232final
    labels: {
         runtime-category: SERVER,
         runtime-type: EAP,
@@ -2335,7 +2335,7 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-blank-archetype-old
     - *jboss-html5-mobile-archetype-old
     - *richfaces-archetype-kitchensink-423final2
-    - *jboss-errai-kitchensink-archetype-211final
+    - *jboss-errai-kitchensink-archetype-232final
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
