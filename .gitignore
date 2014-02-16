@@ -15,3 +15,9 @@ jboss/server/minimal/data/**/*
 jboss/server/minimal/work/**/*
 .*
 target
+
+#Ignore Intellij files
+*.iml
+*.iws
+*.ipr
+.idea/
