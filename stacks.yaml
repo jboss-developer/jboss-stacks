@@ -2346,12 +2346,12 @@ availableRuntimes:
     }
     
    ###############
-   #   Wildfly   #
+   #   WildFly   #
    ###############
 
  - &wildfly-8finalruntime
    id: wildfly-8finalruntime
-   name: Wildfly 8 Final
+   name: WildFly 8 Final
    groupId: org.wildfly
    artifactId: wildfly-dist
    version: 8.0.0.Final
@@ -2485,11 +2485,11 @@ minorReleases:
    recommendedRuntime: *jboss-as701runtime
 
    ###############
-   #   Wildfly 8 #
+   #   WildFly 8 #
    ###############
 
  - &wildfly800final
-   name: Wildfly
+   name: WildFly
    version: 8.0.0.Final
    recommendedRuntime: *wildfly-8finalruntime
 
@@ -2533,10 +2533,10 @@ majorReleases:
     - *jbas701
 
    ################
-   #   Wildfly 8  #
+   #   WildFly 8  #
    ################
 
- - name: Wildfly
+ - name: WildFly
    version: 8
    recommendedRuntime: *wildfly-8finalruntime
    minorReleases:
