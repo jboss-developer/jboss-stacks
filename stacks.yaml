@@ -2368,7 +2368,7 @@ availableRuntimes:
         requiresLogModule: false,
         pom: "https://github.com/wildfly/wildfly/blob/8.0.0.Final/pom.xml",
         runtime-size: 154598817,
-        wtp-runtime-type: org.jboss.ide.eclipse.as.wildfly.80
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.80
     }
 
    #################
