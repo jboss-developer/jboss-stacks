@@ -1959,6 +1959,10 @@ availableArchetypeVersions:
        type: richfaces-kitchensink,
        target: community,
        environment: web-ee6,
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+       essentialDependencies: ["org.jboss.bom:jboss-javaee-6.0-with-tools:pom:1.0.2.Final-redhat-1"]
    }
 
    ###########################################
@@ -1974,6 +1978,10 @@ availableArchetypeVersions:
        type: errai-kitchensink,
        target: community,
        environment: web-ee6,
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+       essentialDependencies: ["org.jboss.bom:jboss-javaee-6.0-with-errai:pom:1.0.4.Final-redhat-wfk-2"]
    }
 
    ###########################
@@ -1989,6 +1997,10 @@ availableArchetypeVersions:
        type: javaee-web,
        target: community,
        environment: web-ee6,
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+       essentialDependencies: ["org.jboss.bom:jboss-javaee-6.0-with-tools:pom:1.0.4.Final-redhat-4"]
    }
 
  - &jboss-javaee6-webapp-blank-archetype-old
@@ -2001,6 +2013,10 @@ availableArchetypeVersions:
        target: community,
        environment: web-ee6,
        isBlank: true,
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+       essentialDependencies: ["org.jboss.bom:jboss-javaee-6.0-with-tools:pom:1.0.4.Final-redhat-4"]
    }
 
    ########################################
@@ -2016,6 +2032,10 @@ availableArchetypeVersions:
        type: javaee-ear,
        target: community,
        environment: full-ee6,
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+       essentialDependencies: ["org.jboss.bom:jboss-javaee-6.0-with-tools:pom:1.0.4.Final-redhat-4"]
    }
 
  - &jboss-javaee6-webapp-ear-blank-archetype-old
@@ -2028,6 +2048,10 @@ availableArchetypeVersions:
        target: community,
        environment: full-ee6,
        isBlank: true,
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+       essentialDependencies: ["org.jboss.bom:jboss-javaee-6.0-with-tools:pom:1.0.4.Final-redhat-4"]
    }
 
    ##############################################################
