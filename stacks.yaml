@@ -2180,6 +2180,7 @@ availableRuntimes:
    version: 6.1.0
    license: *lgpl21
    url: http://www.jboss.org/products
+   downloadUrl: http://www.jboss.org/download-manager/jdf/content/origin/files/sha256/16/16ea1e0cef29e94c0d795bbc4b4c431dcb14c4d10831dce5ff48194ff4fb2aee/jboss-eap-6.1.0.zip
    boms:
     - *jboss-javaee-6_0-eap61
     - *jboss-javaee-6_0-web-eap61
@@ -2225,6 +2226,7 @@ availableRuntimes:
  #    - *jboss-html5-mobile-blank-archetype-wfk-24
     - *jboss-errai-kitchensink-archetype-232final
    labels: {
+        requiresCredentials: true,
         runtime-category: SERVER,
         runtime-type: EAP,
         runtime-size: 114831134,
@@ -2241,6 +2243,7 @@ availableRuntimes:
    version: 6.2.0
    license: *lgpl21
    url: http://www.jboss.org/products
+   downloadUrl: http://www.jboss.org/download-manager/jdf/content/origin/files/sha256/62/627773f1798623eb599bbf7d39567f60941a706dc971c17f5232ffad028bc6f4/jboss-eap-6.2.0.zip
    defaultBom: *jboss-javaee-6_0-web-eap62
    boms:
      - *jboss-javaee-6_0-eap62
@@ -2260,6 +2263,7 @@ availableRuntimes:
 #    - *jboss-javaee6-webapp-ear-archetype-last-eap
 #    - *jboss-javaee6-webapp-ear-blank-archetype-last-eap
    labels: {
+        requiresCredentials: true,
         runtime-category: SERVER,
         runtime-type: EAP,
         runtime-size: 144590074,
@@ -2405,12 +2409,14 @@ availableRuntimes:
    version: 6.1.0
    license: *lgpl
    url: https://www.jboss.org/products/jpp.html
+   downloadUrl: http://www.jboss.org/download-manager/jdf/content/origin/files/sha256/39/39bf73f848596a6b19d949622b536f7e35c7773ccc4e987a5fa15c32af842b11/jboss-jpp-6.1.0.zip
    boms:
     - *gatein-3_6-bom-103-redhat2
    defaultBom: *gatein-3_6-bom-103-redhat2
    defaultArchetype:
    archetypes:
    labels: {
+        requiresCredentials: true,
         runtime-category: SERVER,
         runtime-type: JPP,
         runtime-size: 215313543,
@@ -2598,3 +2604,4 @@ majorReleases:
    recommendedRuntime: *gatein360runtime
    minorReleases:
     - *gatein360
+
