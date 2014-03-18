@@ -724,6 +724,7 @@ availableBomVersions:
    labels: {
        additionalRepositories: {
          "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+         "jboss-developer-repo": "http://jboss-developer.github.io/temp-maven-repo/",
        },
        EarlyAccess: true,
    }
@@ -737,6 +738,7 @@ availableBomVersions:
    labels: {
        additionalRepositories: {
          "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+         "jboss-developer-repo": "http://jboss-developer.github.io/temp-maven-repo/",
        },
        EarlyAccess: true,
    }
@@ -749,6 +751,7 @@ availableBomVersions:
    labels: {
        additionalRepositories: {
          "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+         "jboss-developer-repo": "http://jboss-developer.github.io/temp-maven-repo/",
        },
        EarlyAccess: true,
    }
@@ -761,6 +764,7 @@ availableBomVersions:
    labels: {
        additionalRepositories: {
          "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+         "jboss-developer-repo": "http://jboss-developer.github.io/temp-maven-repo/",
        },
        EarlyAccess: true,
    }
@@ -774,6 +778,7 @@ availableBomVersions:
    labels: {
        additionalRepositories: {
          "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+         "jboss-developer-repo": "http://jboss-developer.github.io/temp-maven-repo/",
        },
        EarlyAccess: true,
    }
@@ -785,6 +790,7 @@ availableBomVersions:
    labels: {
        additionalRepositories: {
          "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+         "jboss-developer-repo": "http://jboss-developer.github.io/temp-maven-repo/",
        },
        EarlyAccess: true,
    }

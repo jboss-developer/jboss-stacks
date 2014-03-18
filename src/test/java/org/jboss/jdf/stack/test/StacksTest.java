@@ -23,9 +23,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Map;
 import java.util.Properties;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -41,6 +40,7 @@ import org.jboss.jdf.stacks.model.BomVersion;
 import org.jboss.jdf.stacks.model.Runtime;
 import org.jboss.jdf.stacks.model.Stacks;
 import org.jboss.shrinkwrap.resolver.api.ResolutionException;
+import org.jboss.shrinkwrap.resolver.api.maven.ConfigurableMavenResolverSystem;
 import org.jboss.shrinkwrap.resolver.api.maven.Maven;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -66,10 +66,6 @@ public class StacksTest {
 
     @BeforeClass
     public static void setupClient() throws MalformedURLException {
-
-        // suppress shrinkwrap warning messages
-        Logger shrinkwrapLogger = Logger.getLogger("org.jboss.shrinkwrap");
-        shrinkwrapLogger.setLevel(Level.SEVERE);
 
         stacksFile = new File("./stacks.yaml");
 
@@ -120,9 +116,10 @@ public class StacksTest {
     @Test
     public void testBomVersionUsed() {
         log.info("Test if a BomVersion is used on any Runtime");
-        for (BomVersion bomVersion : stacksClient.getStacks().getAvailableBomVersions()) {
+        Stacks stacks = stacksClient.getStacks();
+        for (BomVersion bomVersion : stacks.getAvailableBomVersions()) {
             boolean used = false;
-            for (Runtime runtime : stacksClient.getStacks().getAvailableRuntimes()) {
+            for (Runtime runtime : stacks.getAvailableRuntimes()) {
                 if (runtime.getBoms() != null && runtime.getBoms().contains(bomVersion)) {
                     used = true;
                     break;
@@ -202,6 +199,7 @@ public class StacksTest {
         }
     }
 
+    @SuppressWarnings("unchecked")
     @Test
     public void testBomResolver() {
         log.info("Testing if the BOM is resovable");
@@ -210,8 +208,14 @@ public class StacksTest {
             String artifact = String.format("%s:%s:pom:%s", bomVersion.getBom().getGroupId(), bomVersion.getBom().getArtifactId(), bomVersion.getVersion());
             try {
                 if (bomVersion.getLabels().get("additionalRepositories") != null) {
+                    Map<String, String> additionalRepositories = (Map<String, String>) bomVersion.getLabels().get("additionalRepositories");
+                    ConfigurableMavenResolverSystem resolver = Maven.configureResolver();
+                    for (String id : additionalRepositories.keySet()) {
+                        String url = additionalRepositories.get(id);
+                        resolver = resolver.withRemoteRepo(id, url, "default");
+                    }
                     log.debug("Resolving BOM: " + artifact);
-                    Maven.configureResolver().fromClassloaderResource("settings-all.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
+                    resolver.fromClassloaderResource("settings-centralonly.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
                 } else {
                     log.debug("Using none repository for " + bomVersion);
                     Maven.configureResolver().fromClassloaderResource("settings-centralonly.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
@@ -233,9 +237,12 @@ public class StacksTest {
             String artifact = String.format("%s:%s:%s", archetypeVersion.getArchetype().getGroupId(), archetypeVersion.getArchetype().getArtifactId(),
                 archetypeVersion.getVersion());
             try {
-                if (archetypeVersion.getLabels().get("additionalRepositories") != null && archetypeVersion.getRepositoryURL() != null) {
+                if (archetypeVersion.getRepositoryURL() != null) {
                     log.debug("Resolving Archetype: " + artifact);
-                    Maven.configureResolver().fromClassloaderResource("settings-all.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
+                    Maven.configureResolver()
+                        .withRemoteRepo("definedArchetypeURL", archetypeVersion.getRepositoryURL(), "default")
+                        .fromClassloaderResource("settings-centralonly.xml", getClass().getClassLoader())
+                        .resolve(artifact).withoutTransitivity().asFile();
                 } else {
                     log.debug("Using none repository for " + archetypeVersion);
                     Maven.configureResolver().fromClassloaderResource("settings-centralonly.xml", getClass().getClassLoader()).resolve(artifact).withoutTransitivity().asFile();
@@ -259,7 +266,7 @@ public class StacksTest {
                 String artifact = String.format("%s:%s:pom:%s", runtime.getGroupId(), runtime.getArtifactId(), runtime.getVersion());
                 try {
                     log.info("Resolving Runtime " + artifact);
-                    Maven.resolver().resolve(artifact).withMavenCentralRepo(true).withoutTransitivity().asResolvedArtifact();
+                    Maven.configureResolver().withMavenCentralRepo(true).resolve(artifact).withoutTransitivity().asResolvedArtifact();
                 } catch (ResolutionException e) {
                     Assert.assertNull("Can't resolve Runtime [" + artifact + "] ", e);
                 } catch (Exception e) {
