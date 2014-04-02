@@ -287,6 +287,18 @@ public class StacksTest {
     }
 
     @Test
+    public void testArchetypesLabel() {
+        log.info("Testing if all archetypes have the right labels");
+        Stacks stacks = stacksClient.getStacks();
+        String[] labels = new String[] { "type", "target", "environment" };
+        for (ArchetypeVersion archetypeVersion : stacks.getAvailableArchetypeVersions()) {
+            for (String label : labels) {
+                Assert.assertNotNull(archetypeVersion + " should have '" + label + "' label", archetypeVersion.getLabels().get(label));
+            }
+        }
+    }
+
+    @Test
     public void testArchetypes() throws Exception {
         if (!skipArchetypeBuildTests) {
             Stacks stacks = stacksClient.getStacks();
