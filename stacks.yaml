@@ -2119,7 +2119,7 @@ availableArchetypeVersions:
    version: *wfk25ArchetypeRelease
    repositoryURL:
    labels: {
-       type: richfaces-kitchensink,
+       type: "",
        target: product,
        environment: web-ee6,
        additionalRepositories: {
@@ -2138,7 +2138,7 @@ availableArchetypeVersions:
    version: *wfk25ArchetypeRelease
    repositoryURL:
    labels: {
-       type: richfaces-kitchensink,
+       type: spring-kitchensink,
        target: product,
        environment: web-ee6,
        additionalRepositories: {

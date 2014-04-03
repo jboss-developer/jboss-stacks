@@ -43,7 +43,7 @@ Each branch represents a file format. If you need to update the stacks.yaml form
 ArchetypeVersion labels
 ----------------------
 
-- type : javaee-web, javaee-ear, html5-mobile, richfaces-kitchensink, errai-kitchensink
+- type : javaee-web, javaee-ear, html5-mobile, richfaces-kitchensink, errai-kitchensink, spring-kitchensink
 - isBlank : true if it's a blank archetype
 - environment : web-ee6 or full-ee6, depending on the required Java EE profile. We'll add web-ee7, full-ee7 for future wildfly archetypes
 - target : product or community
