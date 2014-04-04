@@ -2406,6 +2406,11 @@ availableRuntimes:
     - *jboss-html5-mobile-archetype-old
     - *jboss-html5-mobile-archetype-wfk-24
  #    - *jboss-html5-mobile-blank-archetype-wfk-24
+    - *richfaces-archetype-simpleapp-wfk-25
+    - *richfaces-archetype-kitchensink-wfk-25
+    - *jboss-spring-mvc-archetype-wfk-25
+    - *jboss-html5-mobile-blank-archetype-wfk-25
+    - *jboss-html5-mobile-archetype-wfk-25
     - *jboss-errai-kitchensink-archetype-232final
    labels: {
         requiresCredentials: true,
