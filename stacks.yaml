@@ -2575,13 +2575,13 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.71
     }
     
-   ###############
-   #   WildFly   #
-   ###############
+   ####################
+   #   WildFly  8.0.0 #
+   ####################
 
  - &wildfly-8finalruntime
    id: wildfly-8finalruntime
-   name: WildFly 8 Final
+   name: WildFly 8.0.0 Final
    groupId: org.wildfly
    artifactId: wildfly-dist
    version: 8.0.0.Final
@@ -2597,6 +2597,32 @@ availableRuntimes:
         runtime-type: AS,
         requiresLogModule: false,
         pom: "https://github.com/wildfly/wildfly/blob/8.0.0.Final/pom.xml",
+        runtime-size: 154598817,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.80
+    }
+
+   ####################
+   #   WildFly  8.1.0 #
+   ####################
+
+ - &wildfly-810finalruntime
+   id: wildfly-810finalruntime
+   name: WildFly 8.1.0 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 8.1.0.Final
+   license: *lgpl
+   url: http://wildfly.org/downloads/
+   downloadUrl: http://download.jboss.org/wildfly/8.1.0.Final/wildfly-8.1.0.Final.zip
+   boms:
+   defaultBom:
+   defaultArchetype:
+   archetypes:
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/8.1.0.Final/pom.xml",
         runtime-size: 154598817,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.80
     }
@@ -2725,6 +2751,11 @@ minorReleases:
    version: 8.0.0.Final
    recommendedRuntime: *wildfly-8finalruntime
 
+ - &wildfly810final
+   name: WildFly
+   version: 8.1.0.Final
+   recommendedRuntime: *wildfly-8finalruntime
+
    ###############
    #   JPP 6.x   #
    ###############
@@ -2770,8 +2801,9 @@ majorReleases:
 
  - name: WildFly
    version: 8
-   recommendedRuntime: *wildfly-8finalruntime
+   recommendedRuntime: *wildfly-810finalruntime
    minorReleases:
+    - *wildfly810final
     - *wildfly800final
 
    ##################
