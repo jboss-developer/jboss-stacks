@@ -2276,7 +2276,7 @@ availableRuntimes:
    name: JBoss EAP 6.0.0
    version: 6.0.0
    license: *lgpl21
-   url:  https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=12673
+   url: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=appplatform
    boms:
     - *jboss-javaee-6_0-300redhat1
     - *jboss-javaee-6_0-web-300redhat1
@@ -2322,7 +2322,7 @@ availableRuntimes:
    name: JBoss EAP 6.0.1
    version: 6.0.1
    license: *lgpl21
-   url: https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=17633
+   url: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=appplatform
    boms:
     - *jboss-javaee-6_0-eap601
     - *jboss-javaee-6_0-web-eap601
