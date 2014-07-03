@@ -80,19 +80,19 @@ availableRuntimes:
    }
   
    ###############
-   #  Seam 2.3.0 #
+   #  Seam 2.3.1 #
    ###############
- - &seam230runtime
-   id: seam230runtime
-   name: JBoss Seam 2.3.0
-   version: 2.3.0
+ - &seam231runtime
+   id: seam231runtime
+   name: JBoss Seam 2.3.1
+   version: 2.3.1
    license: *lgpl21
    url: http://www.seamframework.org/Seam2/Downloads
-   downloadUrl: http://sourceforge.net/projects/jboss/files/JBoss%20Seam/2.3.0.Final/jboss-seam-distribution-2.3.0.Final-dist.zip/download?use_mirror=autoselect
+   downloadUrl: http://sourceforge.net/projects/jboss/files/JBoss%20Seam/2.3.1.Final/jboss-seam-2.3.1.Final-dist.zip?use_mirror=autoselect
    labels: {
         runtime-category: PROJECT,
         runtime-type: SEAM,
-        runtime-size: 131413606
+        runtime-size: 162335848
    }
 
 
