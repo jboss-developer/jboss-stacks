@@ -333,7 +333,7 @@ public class StacksTest {
         Verifier verifier = new org.apache.maven.it.Verifier(outputDir);
         verifier.setAutoclean(false);
         verifier.setSystemProperties(properties);
-        verifier.setLogFileName(artifactId + "-generarte.txt");
+        verifier.setLogFileName(artifactId + "-generate.txt");
         verifier.executeGoal(goal);
 
         log.info("Building project from Archetype: " + archetypeWithEnterprise);
