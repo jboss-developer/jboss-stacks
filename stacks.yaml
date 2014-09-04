@@ -41,6 +41,7 @@ licenses:
  - &wfk24ArchetypeRelease 2.4.0.Final
  - &wfk25ArchetypeRelease 2.5.0.Final
  - &eap620ArchetypeRelease 6.2.0.GA
+ - &eap630ArchetypeRelease 6.3.0.GA
 
 #################################################################
 #                                                               #
@@ -1889,6 +1890,21 @@ availableArchetypeVersions:
        environment: web-ee6,
    }
 
+ - &jboss-javaee6-webapp-archetype-eap63
+   id: jboss-javaee6-webapp-archetype-eap63
+   archetype: *jboss-javaee6-webapp-archetype-eap
+   version: *eap630ArchetypeRelease
+   repositoryURL: 
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+       essentialDependencies: ["org.jboss.bom.eap:jboss-javaee-6.0-with-tools:pom:6.3.0.GA", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.3.0.GA"],
+       type: javaee-web,
+       target: product,
+       environment: web-ee6,
+   }
+
  - &jboss-javaee6-webapp-blank-archetype-eap62
    id: jboss-javaee6-webapp-blank-archetype-eap62
    archetype: *jboss-javaee6-webapp-blank-archetype-eap
@@ -1899,6 +1915,22 @@ availableArchetypeVersions:
          "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
        },
        essentialDependencies: ["org.jboss.bom.eap:jboss-javaee-6.0-with-tools:pom:6.2.0.GA", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.2.0.GA"],
+       type: javaee-web,
+       target: product,
+       environment: web-ee6,
+       isBlank: true,
+   }
+
+ - &jboss-javaee6-webapp-blank-archetype-eap63
+   id: jboss-javaee6-webapp-blank-archetype-eap63
+   archetype: *jboss-javaee6-webapp-blank-archetype-eap
+   version: *eap630ArchetypeRelease
+   repositoryURL: 
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+       essentialDependencies: ["org.jboss.bom.eap:jboss-javaee-6.0-with-tools:pom:6.3.0.GA", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.3.0.GA"],
        type: javaee-web,
        target: product,
        environment: web-ee6,
@@ -1920,6 +1952,21 @@ availableArchetypeVersions:
        environment: full-ee6,
    }
 
+ - &jboss-javaee6-webapp-ear-archetype-eap63
+   id: jboss-javaee6-webapp-ear-archetype-eap63
+   archetype: *jboss-javaee6-webapp-ear-archetype-eap
+   version: *eap630ArchetypeRelease
+   repositoryURL: 
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+       essentialDependencies: ["org.jboss.bom.eap:jboss-javaee-6.0-with-tools:pom:6.3.0.GA", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.3.0.GA"],
+       type: javaee-ear, 
+       target: product,
+       environment: full-ee6,
+   }
+
  - &jboss-javaee6-webapp-ear-blank-archetype-eap62
    id: jboss-javaee6-webapp-ear-blank-archetype-eap62
    archetype: *jboss-javaee6-webapp-ear-blank-archetype-eap
@@ -1930,6 +1977,22 @@ availableArchetypeVersions:
          "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
        },
        essentialDependencies: ["org.jboss.bom.eap:jboss-javaee-6.0-with-tools:pom:6.2.0.GA", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.2.0.GA"],
+       type: javaee-ear, 
+       target: product,
+       environment: full-ee6,
+       isBlank: true,
+   }
+
+ - &jboss-javaee6-webapp-ear-blank-archetype-eap63
+   id: jboss-javaee6-webapp-ear-blank-archetype-eap63
+   archetype: *jboss-javaee6-webapp-ear-blank-archetype-eap
+   version: *eap630ArchetypeRelease
+   repositoryURL: 
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+       essentialDependencies: ["org.jboss.bom.eap:jboss-javaee-6.0-with-tools:pom:6.3.0.GA", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.3.0.GA"],
        type: javaee-ear, 
        target: product,
        environment: full-ee6,
@@ -2409,8 +2472,12 @@ availableRuntimes:
      - *jboss-javaee-6_0-with-security-eap63
      - *jboss-javaee-6_0-with-tools-eap63
      - *jboss-javaee-6_0-with-transactions-eap63
-   defaultArchetype: 
+   defaultArchetype: *jboss-javaee6-webapp-archetype-eap63
    archetypes:
+     - *jboss-javaee6-webapp-archetype-eap63
+     - *jboss-javaee6-webapp-blank-archetype-eap63
+     - *jboss-javaee6-webapp-ear-archetype-eap63
+     - *jboss-javaee6-webapp-ear-blank-archetype-eap63
    labels: {
         requiresCredentials: true,
         runtime-category: SERVER,
