@@ -2455,7 +2455,7 @@ availableRuntimes:
    version: 6.3.0
    license: *lgpl21
    url: http://www.jboss.org/products
-   downloadUrl: https://www.jboss.org/download-manager/jdf/file/jboss-eap-6.3.0.GA-installer.jar
+   downloadUrl: https://www.jboss.org/download-manager/jdf/file/jboss-eap-6.3.0.GA.zip
    defaultBom: *jboss-javaee-6_0-web-eap63
    boms:
      - *jboss-javaee-6_0-all-last
