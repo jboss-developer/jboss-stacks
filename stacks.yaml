@@ -2564,8 +2564,20 @@ availableRuntimes:
      - *jboss-javaee-6_0-with-spring-wfk-25
      - *jboss-javaee-6_0-with-spring4-wfk-25
      - *jboss-javaee-6_0-with-tools-wfk-25
+     #WFK 2.6 BOMS
+     - *jboss-javaee-6_0-with-deltaspike-wfk-26
+     - *jboss-javaee-6_0-with-hsearch-wfk-26
+     - *jboss-javaee-6_0-with-richfaces-wfk-26
+     - *jboss-javaee-6_0-with-spring-wfk-26
+     - *jboss-javaee-6_0-with-spring4-wfk-26
+     - *jboss-javaee-6_0-with-tools-wfk-26
    defaultArchetype: *jboss-javaee6-webapp-archetype-eap62
    archetypes:
+     - *richfaces-archetype-simpleapp-wfk-26
+     - *richfaces-archetype-kitchensink-wfk-26
+     - *jboss-spring-mvc-archetype-wfk-26
+     - *jboss-html5-mobile-blank-archetype-wfk-26
+     - *jboss-html5-mobile-archetype-wfk-26
      - *richfaces-archetype-simpleapp-wfk-25
      - *richfaces-archetype-kitchensink-wfk-25
      - *jboss-spring-mvc-archetype-wfk-25
