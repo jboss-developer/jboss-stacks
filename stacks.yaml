@@ -119,7 +119,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-deltaspike-old
    id: jboss-javaee-6_0-with-deltaspike-old
-   name: Java EE 6 with Deltaspike
+   name: Java EE 6 with Deltaspike (Old BOM)
    description: Dependency Management for Java EE 6 Specification APIs with Deltaspike
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-deltaspike
@@ -127,7 +127,7 @@ availableBoms:
    
  - &jboss-javaee-6_0-with-deltaspike
    id: jboss-javaee-6_0-with-deltaspike
-   name: Java EE 6 with Deltaspike
+   name: Java EE 6 with Deltaspike (WFK BOM)
    description: Dependency Management for Java EE 6 Specification APIs with Deltaspike
    groupId: org.jboss.bom.wfk
    artifactId: jboss-javaee-6.0-with-deltaspike
@@ -137,7 +137,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-errai-old
    id: jboss-javaee-6_0-with-errai-old
-   name: Java EE 6 with Errai and GWT
+   name: Java EE 6 with Errai and GWT (Old BOM)
    description: Errai provides a comprehensive framework and tools for building rich web applications, leveraging the GWT compiler. With standard server-side APIs, such as CDI, in the browser, managing large web applications was never so easy. This BOM adds both Errai and GWT to your project.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-errai
@@ -145,7 +145,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-errai-wfk21
    id: jboss-javaee-6_0-with-errai-wfk21
-   name: Java EE 6 with Errai and GWT (WFK BOM)
+   name: Java EE 6 with Errai and GWT (WFK 2.1 BOM)
    description: Errai provides a comprehensive framework and tools for building rich web applications, leveraging the GWT compiler. With standard server-side APIs, such as CDI, in the browser, managing large web applications was never so easy. This BOM adds both Errai and GWT to your project.
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-errai
@@ -163,7 +163,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-hibernate-old
    id: jboss-javaee-6_0-with-hibernate-old
-   name: Java EE 6 with Hibernate
+   name: Java EE 6 with Hibernate (Old BOM)
    description: Historically, Hibernate facilitated the storage and retrieval of Java domain objects via Object/Relational Mapping. Today, Hibernate is a collection of related projects enabling developers to utilize POJO-style domain models in their applications in ways extending well beyond Object/Relational Mapping. This BOM builds on the Java EE full profile BOM, adding Hibernate Community projects including Hibernate ORM, and Hibernate Validator. It also provides tool projects such as Hibernate JPA Model Gen and Hibernate Validator Annotation Processor.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-hibernate
@@ -171,7 +171,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-hibernate-wfk21
    id: jboss-javaee-6_0-with-hibernate-wfk21
-   name: Java EE 6 with Hibernate (WFK BOM)
+   name: Java EE 6 with Hibernate (WFK 2.1 BOM)
    description: Historically, Hibernate facilitated the storage and retrieval of Java domain objects via Object/Relational Mapping. Today, Hibernate is a collection of related projects enabling developers to utilize POJO-style domain models in their applications in ways extending well beyond Object/Relational Mapping. This BOM builds on the Java EE full profile BOM, adding Hibernate Community projects including Hibernate ORM, Hibernate Search and Hibernate Validator. It also provides tool projects such as Hibernate JPA Model Gen and Hibernate Validator Annotation Processor.
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-hibernate
@@ -179,7 +179,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-hibernate
    id: jboss-javaee-6_0-with-hibernate
-   name: Java EE 6 with Hibernate (WFK BOM)
+   name: Java EE 6 with Hibernate (EAP BOM)
    description: Historically, Hibernate facilitated the storage and retrieval of Java domain objects via Object/Relational Mapping. Today, Hibernate is a collection of related projects enabling developers to utilize POJO-style domain models in their applications in ways extending well beyond Object/Relational Mapping. This BOM builds on the Java EE full profile BOM, adding Hibernate Community projects including Hibernate ORM, Hibernate Search and Hibernate Validator. It also provides tool projects such as Hibernate JPA Model Gen and Hibernate Validator Annotation Processor.
    groupId: org.jboss.bom.eap
    artifactId: jboss-javaee-6.0-with-hibernate
@@ -189,7 +189,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-hibernate3-old
    id: jboss-javaee-6_0-with-hibernate3-old
-   name: Java EE 6 with Hibernate 3
+   name: Java EE 6 with Hibernate 3 (Old BOM)
    description: Dependency Management for Java EE 6 Specification APIs with Hibernate 3 projects.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-hibernate3
@@ -197,7 +197,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-hibernate3-wfk21
    id: jboss-javaee-6_0-with-hibernate3-wfk21
-   name: Java EE 6 with Hibernate 3 (WFK BOM)
+   name: Java EE 6 with Hibernate 3 (WFK 2.1 BOM)
    description: Dependency Management for Java EE 6 Specification APIs with Hibernate 3 projects.
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-hibernate3
@@ -205,7 +205,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-hibernate3
    id: jboss-javaee-6_0-with-hibernate3
-   name: Java EE 6 with Hibernate 3 (WFK BOM)
+   name: Java EE 6 with Hibernate 3 (EAP BOM)
    description: Dependency Management for Java EE 6 Specification APIs with Hibernate 3 projects.
    groupId: org.jboss.bom.eap
    artifactId: jboss-javaee-6.0-with-hibernate3
@@ -215,7 +215,7 @@ availableBoms:
    
  - &jboss-javaee-6_0-with-hsearch
    id: jboss-javaee-6_0-with-hsearch
-   name: Java EE 6 with Hibernate Search
+   name: Java EE 6 with Hibernate Search (WFK BOM)
    description: Dependency Management for Java EE 6 Specification APIs with Hibernate Search.
    groupId: org.jboss.bom.wfk
    artifactId: jboss-javaee-6.0-with-hsearch
@@ -225,7 +225,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-infinispan-old
    id: jboss-javaee-6_0-with-infinispan-old
-   name: Java EE 6 with Infinispan
+   name: Java EE 6 with Infinispan (Old BOM)
    description: Dependency Management for Java EE 6 Specification APIs with Infinispan
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-infinispan
@@ -233,7 +233,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-infinispan-wfk21
    id: jboss-javaee-6_0-with-infinispan-wfk21
-   name: Java EE 6 with Infinispan (WFK BOM)
+   name: Java EE 6 with Infinispan (WFK 2.1 BOM)
    description: Dependency Management for Java EE 6 Specification APIs with Infinispan
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-infinispan
@@ -243,7 +243,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-logging-old
    id: jboss-javaee-6_0-with-logging-old
-   name: Java EE 6 with Logging Tools
+   name: Java EE 6 with Logging Tools (Old BOM)
    description: Dependency Management for Java EE 6 Specification APIs with Logging Tools
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-logging
@@ -251,7 +251,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-logging-wfk21
    id: jboss-javaee-6_0-with-logging-wfk21
-   name: Java EE 6 with Logging Tools (WFK BOM)
+   name: Java EE 6 with Logging Tools (WFK 2.1 BOM)
    description: Dependency Management for Java EE 6 Specification APIs with Logging Tools
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-logging
@@ -259,7 +259,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-logging
    id: jboss-javaee-6_0-with-logging
-   name: Java EE 6 with Logging Tools (WFK BOM)
+   name: Java EE 6 with Logging Tools (EAP BOM)
    description: Dependency Management for Java EE 6 Specification APIs with Logging Tools
    groupId: org.jboss.bom.eap
    artifactId: jboss-javaee-6.0-with-logging
@@ -269,7 +269,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-osgi-old
    id: jboss-javaee-6_0-with-osgi-old
-   name: Java EE 6 with OSGI
+   name: Java EE 6 with OSGI (Old BOM)
    description: Dependency Management for Java EE 6 Specification APIs with OSGI.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-osgi
@@ -277,7 +277,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-osgi-wfk21
    id: jboss-javaee-6_0-with-osgi-wfk21
-   name: Java EE 6 with OSGI (WFK BOM)
+   name: Java EE 6 with OSGI (WFK 2.1 BOM)
    description: Dependency Management for Java EE 6 Specification APIs with OSGI.
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-osgi
@@ -285,7 +285,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-osgi
    id: jboss-javaee-6_0-with-osgi
-   name: Java EE 6 with OSGI (WFK BOM)
+   name: Java EE 6 with OSGI (EAP BOM)
    description: Dependency Management for Java EE 6 Specification APIs with OSGI.
    groupId: org.jboss.bom.eap
    artifactId: jboss-javaee-6.0-with-osgi
@@ -295,7 +295,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-resteasy
    id: jboss-javaee-6_0-with-resteasy
-   name: Java EE 6 with Resteasy
+   name: Java EE 6 with Resteasy (EAP BOM)
    description: Dependency Management for Java EE 6 Specification APIs with Resteasy.
    groupId: org.jboss.bom.eap
    artifactId: jboss-javaee-6.0-with-resteasy
@@ -305,7 +305,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-richfaces-old
    id: jboss-javaee-6_0-with-richfaces-old
-   name: Java EE 6 with Richfaces
+   name: Java EE 6 with Richfaces (Old BOM)
    description: Dependency Management for Java EE 6 Specification APIs with Richfaces.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-richfaces
@@ -313,7 +313,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-richfaces-wfk21
    id: jboss-javaee-6_0-with-richfaces-wfk21
-   name: Java EE 6 with Richfaces (WFK BOM)
+   name: Java EE 6 with Richfaces (WFK 2.1 BOM)
    description: Dependency Management for Java EE 6 Specification APIs with Richfaces.
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-richfaces
@@ -331,7 +331,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-security-old
    id: jboss-javaee-6_0-with-security-old
-   name: Java EE 6 with Security
+   name: Java EE 6 with Security (Old BOM)
    description: Dependency Management for Java EE 6 Specification APIs with JBoss specific Security features. Currently included is JBoss Negotiation.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-security
@@ -339,7 +339,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-security-wfk21
    id: jboss-javaee-6_0-with-security-wfk21
-   name: Java EE 6 with Security (WFK BOM)
+   name: Java EE 6 with Security (WFK 2.1 BOM)
    description: Dependency Management for Java EE 6 Specification APIs with JBoss specific Security features. Currently included is JBoss Negotiation.
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-security
@@ -347,7 +347,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-security
    id: jboss-javaee-6_0-with-security
-   name: Java EE 6 with Security (WFK BOM)
+   name: Java EE 6 with Security (EAP BOM)
    description: Dependency Management for Java EE 6 Specification APIs with JBoss specific Security features. Currently included is JBoss Negotiation.
    groupId: org.jboss.bom.eap
    artifactId: jboss-javaee-6.0-with-security
@@ -357,7 +357,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-spring
    id: jboss-javaee-6_0-with-spring
-   name: Java EE 6 with Spring
+   name: Java EE 6 with Spring (WFK BOM)
    description: Dependency Management for Java EE 6 Specification APIs with Spring
    groupId: org.jboss.bom.wfk
    artifactId: jboss-javaee-6.0-with-spring
@@ -367,7 +367,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-spring4
    id: jboss-javaee-6_0-with-spring4
-   name: Java EE 6 with Spring
+   name: Java EE 6 with Spring (WFK BOM)
    description: Dependency Management for Java EE 6 Specification APIs with Spring
    groupId: org.jboss.bom.wfk
    artifactId: jboss-javaee-6.0-with-spring4
@@ -377,7 +377,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-tools-old
    id: jboss-javaee-6_0-with-tools-old
-   name: Java EE 6 with tools recommended by JBoss
+   name: Java EE 6 with tools recommended by JBoss (Old BOM)
    description: Java EE lacks any testing APIs, and for this reason JBoss developed the Arquillian project, along with its various component projects, such as Arquillian Drone, and the sister project Shrinkwrap. This BOM builds on the Java EE full profile BOM, adding Arquillian to the mix. It also provides a version of JUnit and TestNG recommended for use with Arquillian. Furthermore, this BOM adds the JBoss AS Maven deployment plugin. EAP 6s recommended mode of deployment is via the management APIs, and the Maven plugin is the recommended way to do this, if the customer is using Maven for building.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-tools
@@ -385,15 +385,15 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-tools-wfk21
    id: jboss-javaee-6_0-with-tools-wfk21
-   name: Java EE 6 with tools recommended by JBoss (WFK BOM)
+   name: Java EE 6 with tools recommended by JBoss (WFK 2.1 BOM)
    description: Java EE lacks any testing APIs, and for this reason JBoss developed the Arquillian project, along with its various component projects, such as Arquillian Drone, and the sister project Shrinkwrap. This BOM builds on the Java EE full profile BOM, adding Arquillian to the mix. It also provides a version of JUnit and TestNG recommended for use with Arquillian. Furthermore, this BOM adds the JBoss AS Maven deployment plugin. EAP 6s recommended mode of deployment is via the management APIs, and the Maven plugin is the recommended way to do this, if the customer is using Maven for building.
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-tools
    recommendedVersion: *wfk21BomRelease
 
  - &jboss-javaee-6_0-with-tools-eap
-   id: jboss-javaee-6_0-with-tools-eap
-   name: Java EE 6 with tools recommended by JBoss (WFK BOM)
+   id: jboss-javaee-6_0-with-tools-eap 
+   name: Java EE 6 with tools recommended by JBoss (EAP BOM)
    description: Java EE lacks any testing APIs, and for this reason JBoss developed the Arquillian project, along with its various component projects, such as Arquillian Drone, and the sister project Shrinkwrap. This BOM builds on the Java EE full profile BOM, adding Arquillian to the mix. It also provides a version of JUnit and TestNG recommended for use with Arquillian. Furthermore, this BOM adds the JBoss AS Maven deployment plugin. EAP 6s recommended mode of deployment is via the management APIs, and the Maven plugin is the recommended way to do this, if the customer is using Maven for building.
    groupId: org.jboss.bom.eap
    artifactId: jboss-javaee-6.0-with-tools
@@ -411,7 +411,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-transactions-old
    id: jboss-javaee-6_0-with-transactions-old
-   name: Java EE 6 with JBoss Transactions
+   name: Java EE 6 with JBoss Transactions (Old BOM)
    description: JBoss AS includes a world class transaction manager. In order to access its full capabilites, including for example XTS, WS-AT and WS-BA, you need to use the JBossTS APIs. This BOM adds the JBossTS APIs to the stack.
    groupId: org.jboss.bom
    artifactId: jboss-javaee-6.0-with-transactions
@@ -419,7 +419,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-transactions-wfk21
    id: jboss-javaee-6_0-with-transactions-wfk21
-   name: Java EE 6 with JBoss Transactions (WFK BOM)
+   name: Java EE 6 with JBoss Transactions (WFK 2.1 BOM)
    description: JBoss AS includes a world class transaction manager. In order to access its full capabilites, including for example XTS, WS-AT and WS-BA, you need to use the JBossTS APIs. This BOM adds the JBossTS APIs to the stack.
    groupId: com.redhat.jboss.wfk.boms
    artifactId: jboss-javaee-6.0-with-transactions
@@ -427,7 +427,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-transactions
    id: jboss-javaee-6_0-with-transactions
-   name: Java EE 6 with JBoss Transactions (WFK BOM)
+   name: Java EE 6 with JBoss Transactions (EAP BOM)
    description: JBoss AS includes a world class transaction manager. In order to access its full capabilites, including for example XTS, WS-AT and WS-BA, you need to use the JBossTS APIs. This BOM adds the JBossTS APIs to the stack.
    groupId: org.jboss.bom.eap
    artifactId: jboss-javaee-6.0-with-transactions
@@ -475,7 +475,7 @@ availableBoms:
 
  - &jboss-wfk-arquillian
    id: jboss-wfk-arquillian
-   name: JBoss Web Framework Kit Arquillian Bill of Materials
+   name: JBoss Web Framework Kit Arquillian Bill of Materials (Old BOM)
    description: Dependency Management for Arquillian Testing Tool
    groupId: org.jboss.bom
    artifactId: jboss-wfk-arquillian
@@ -487,7 +487,7 @@ availableBoms:
 
  - &gatein-3_6-bom
    id: gatein-3_6-bom
-   name: GateIn Portal 3.6 BOM
+   name: GateIn Portal 3.6 BOM (Old BOM)
    description: Bill of Materials for GateIn Portal 3.6
    groupId: org.jboss.bom
    artifactId: gatein-3.6-bom
@@ -495,7 +495,7 @@ availableBoms:
 
  - &gatein-3_5-bom
    id: gatein-3_5-bom
-   name: GateIn Portal 3.5 BOM
+   name: GateIn Portal 3.5 BOM (Old BOM)
    description: Bill of Materials for GateIn Portal 3.5
    groupId: org.jboss.bom
    artifactId: gatein-3.5-bom
