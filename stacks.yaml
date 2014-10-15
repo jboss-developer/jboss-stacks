@@ -357,7 +357,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-spring
    id: jboss-javaee-6_0-with-spring
-   name: Java EE 6 with Spring (WFK BOM)
+   name: Java EE 6 with Spring 3 (WFK BOM)
    description: Dependency Management for Java EE 6 Specification APIs with Spring
    groupId: org.jboss.bom.wfk
    artifactId: jboss-javaee-6.0-with-spring
@@ -367,7 +367,7 @@ availableBoms:
 
  - &jboss-javaee-6_0-with-spring4
    id: jboss-javaee-6_0-with-spring4
-   name: Java EE 6 with Spring (WFK BOM)
+   name: Java EE 6 with Spring 4 (WFK BOM)
    description: Dependency Management for Java EE 6 Specification APIs with Spring
    groupId: org.jboss.bom.wfk
    artifactId: jboss-javaee-6.0-with-spring4
@@ -1741,7 +1741,7 @@ availableArchetypes:
 
  - &jboss-javaee6-webapp-blank-archetype
    id: jboss-javaee6-webapp-blank-archetype
-   name: Java EE 6 Webapp (Blank Skeleton)
+   name: Java EE 6 Webapp (Old Blank Skeleton)
    description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true)
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-blank-archetype
@@ -1752,7 +1752,7 @@ availableArchetypes:
 
  - &jboss-javaee6-webapp-archetype
    id: jboss-javaee6-webapp-archetype
-   name: Java EE 6 Webapp
+   name: Java EE 6 Webapp (Old Archetype)
    description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true)
    blank: *jboss-javaee6-webapp-blank-archetype
    groupId: org.jboss.spec.archetypes
@@ -1766,7 +1766,7 @@ availableArchetypes:
 
  - &jboss-javaee6-webapp-ear-blank-archetype
    id: jboss-javaee6-webapp-ear-blank-archetype
-   name: JBoss AS 7 / Java EE 6 EAR Webapp (Blank Skeleton)
+   name: JBoss AS 7 / Java EE 6 EAR Webapp (Old Blank Skeleton)
    description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true). The project is an EAR, with an EJB-JAR and WAR
    groupId: org.jboss.spec.archetypes
    artifactId: jboss-javaee6-webapp-ear-blank-archetype
@@ -1777,7 +1777,7 @@ availableArchetypes:
 
  - &jboss-javaee6-webapp-ear-archetype
    id: jboss-javaee6-webapp-ear-archetype
-   name: JBoss AS 7 / Java EE 6 EAR Webapp
+   name: JBoss AS 7 / Java EE 6 EAR Webapp (Old Archetype)
    description: An archetype that generates a starter Java EE 6 webapp project for JBoss AS 7 (by default) or EAP 6 (if the "enterprise" property is true). The project is an EAR, with an EJB-JAR and WAR
    blank: *jboss-javaee6-webapp-ear-blank-archetype
    groupId: org.jboss.spec.archetypes
@@ -1791,7 +1791,7 @@ availableArchetypes:
 
  - &jboss-html5-mobile-archetype
    id: jboss-html5-mobile-archetype
-   name: Java EE 6 HTML5 Mobile Web Application
+   name: Java EE 6 HTML5 Mobile Web Application (Old Archetype)
    description: An archetype that generates a Java EE 6 application using HTML5, and JAX-RS to support both desktop and mobile web browsers
    groupId: org.jboss.aerogear.archetypes
    artifactId: jboss-html5-mobile-archetype
@@ -1876,7 +1876,7 @@ availableArchetypes:
 
  - &jboss-html5-mobile-blank-archetype-wfk
    id: jboss-html5-mobile-blank-archetype-wfk
-   name: Java EE 6 HTML5 Mobile Web Application
+   name: JBoss WFK Archetype - Java EE 6 HTML5 Mobile Web Application (Blank Skeleton)
    description: An archetype that generates a Java EE 6 application using HTML5, and JAX-RS to support both desktop and mobile web browsers
    groupId: org.jboss.archetype.wfk
    artifactId: jboss-html5-mobile-blank-archetype
@@ -1887,7 +1887,7 @@ availableArchetypes:
 
  - &jboss-html5-mobile-archetype-wfk
    id: jboss-html5-mobile-archetype-wfk
-   name: Java EE 6 HTML5 Mobile Web Application
+   name: JBoss WFK Archetype - Java EE 6 HTML5 Mobile Web Application
    description: An archetype that generates a Java EE 6 application using HTML5, and JAX-RS to support both desktop and mobile web browsers
    blank: *jboss-html5-mobile-blank-archetype-wfk
    groupId: org.jboss.archetype.wfk
