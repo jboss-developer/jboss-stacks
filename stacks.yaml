@@ -358,7 +358,7 @@ availableBoms:
  - &jboss-javaee-6_0-with-spring
    id: jboss-javaee-6_0-with-spring
    name: Java EE 6 with Spring 3 (WFK BOM)
-   description: Dependency Management for Java EE 6 Specification APIs with Spring
+   description: Dependency Management for Java EE 6 Specification APIs with Spring 3
    groupId: org.jboss.bom.wfk
    artifactId: jboss-javaee-6.0-with-spring
    recommendedVersion: *lastWFKBomRelease   
@@ -368,7 +368,7 @@ availableBoms:
  - &jboss-javaee-6_0-with-spring4
    id: jboss-javaee-6_0-with-spring4
    name: Java EE 6 with Spring 4 (WFK BOM)
-   description: Dependency Management for Java EE 6 Specification APIs with Spring
+   description: Dependency Management for Java EE 6 Specification APIs with Spring 4
    groupId: org.jboss.bom.wfk
    artifactId: jboss-javaee-6.0-with-spring4
    recommendedVersion: *lastWFKBomRelease   
