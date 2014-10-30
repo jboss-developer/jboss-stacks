@@ -93,7 +93,9 @@ public class StacksTest {
         BufferedReader br = new BufferedReader(new FileReader(stacksFile));
         try {
             String id = null;
+            int lineNumber = 0;
             while (br.ready()) {
+               lineNumber++;
                 String line = br.readLine();
                 if (line.contains("&")) {
                     int pos = line.indexOf('&') + 1;
@@ -102,7 +104,7 @@ public class StacksTest {
                 if (id != null && line.contains("id:")) {
                     int pos = line.lastIndexOf("id: ") + 3;
                     String value = line.substring(pos, line.length()).trim();
-                    Assert.assertEquals("Id and Value should have the same value", id, value);
+                    Assert.assertEquals("Id and Value should have the same value at line " + lineNumber, id, value);
                 }
             }
 
