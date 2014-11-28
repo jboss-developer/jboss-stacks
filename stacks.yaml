@@ -1927,7 +1927,7 @@ availableArchetypes:
    description: An archetype that generates a Java EE 6 application using HTML5, and JAX-RS to support both desktop and mobile web browsers
    groupId: org.jboss.archetype.wfk
    artifactId: jboss-html5-mobile-blank-archetype
-   recommendedVersion: *wfk25ArchetypeRelease
+   recommendedVersion: *wfk26ArchetypeRelease
    repositoryURL:
 
    ##################
