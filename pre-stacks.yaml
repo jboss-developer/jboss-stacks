@@ -20,7 +20,7 @@
 
 licenses:
  - &lgpl http://www.gnu.org/copyleft/lesser.txt
- - &lgpl21 http://www.gnu.org/licenses/lgpl-2.1.html
+ - &lgpl21 http://www.gnu.org/licenses/lgpl-2.1.txt
 
    
 ##########################################################################
