@@ -1855,7 +1855,7 @@ availableArchetypes:
    description: RichFaces Kitchen Sink Application
    groupId: org.richfaces.archetypes
    artifactId: richfaces-archetype-kitchensink
-   recommendedVersion: 4.2.3.Final-2
+   recommendedVersion: 4.5.1.Final
    repositoryURL:
 
    ############################
@@ -2196,19 +2196,15 @@ availableArchetypeVersions:
    #   RichFaces Archetypes   #
    ############################
 
- - &richfaces-archetype-kitchensink-423final2
-   id: richfaces-archetype-kitchensink-423final2
+ - &richfaces-archetype-kitchensink-latest
+   id: richfaces-archetype-kitchensink-latest
    archetype: *richfaces-archetype-kitchensink
-   version: 4.2.3.Final-2
+   version: 4.5.1.Final
    repositoryURL:
    labels: {
        type: richfaces-kitchensink,
        target: community,
        environment: web-ee6,
-       additionalRepositories: {
-         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
-       },
-       essentialDependencies: ["org.jboss.bom:jboss-javaee-6.0-with-tools:pom:1.0.2.Final-redhat-1"]
    }
 
  - &richfaces-archetype-kitchensink-wfk-25
@@ -2502,7 +2498,6 @@ availableRuntimes:
     - *jboss-javaee6-webapp-blank-archetype-old
     - *jboss-javaee6-webapp-ear-archetype-old
     - *jboss-javaee6-webapp-ear-blank-archetype-old
-    - *richfaces-archetype-kitchensink-423final2
     - *jboss-errai-kitchensink-archetype-232final
    labels: {
         runtime-category: SERVER,
@@ -2546,7 +2541,6 @@ availableRuntimes:
     - *jboss-javaee6-webapp-blank-archetype-old
     - *jboss-javaee6-webapp-ear-archetype-old
     - *jboss-javaee6-webapp-ear-blank-archetype-old
-    - *richfaces-archetype-kitchensink-423final2
     - *jboss-errai-kitchensink-archetype-232final
    labels: {
         runtime-category: SERVER,
@@ -2802,7 +2796,6 @@ availableRuntimes:
     - *jboss-javaee6-webapp-ear-archetype-old
     - *jboss-javaee6-webapp-ear-blank-archetype-old
     - *jboss-html5-mobile-archetype-old
-    - *richfaces-archetype-kitchensink-423final2
     - *jboss-errai-kitchensink-archetype-232final
    labels: {
         runtime-category: SERVER,
@@ -2830,6 +2823,11 @@ availableRuntimes:
    defaultBom:
    defaultArchetype:
    archetypes:
+    - *jboss-javaee7-webapp-archetype-wildfly-latest
+    - *jboss-javaee7-webapp-blank-archetype-wildfly-latest
+    - *jboss-javaee7-webapp-ear-archetype-wildfly-latest
+    - *jboss-javaee7-webapp-ear-blank-archetype-wildfly-latest
+    - *richfaces-archetype-kitchensink-latest
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -2860,6 +2858,7 @@ availableRuntimes:
     - *jboss-javaee7-webapp-blank-archetype-wildfly-latest
     - *jboss-javaee7-webapp-ear-archetype-wildfly-latest
     - *jboss-javaee7-webapp-ear-blank-archetype-wildfly-latest
+    - *richfaces-archetype-kitchensink-latest
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -2890,6 +2889,7 @@ availableRuntimes:
     - *jboss-javaee7-webapp-blank-archetype-wildfly-latest
     - *jboss-javaee7-webapp-ear-archetype-wildfly-latest
     - *jboss-javaee7-webapp-ear-blank-archetype-wildfly-latest
+    - *richfaces-archetype-kitchensink-latest
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,

@@ -34,9 +34,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <stacks.client.version>1.0.3.CR1</stacks.client.version>
+        <stacks.client.version>1.0.3.Final</stacks.client.version>
         <junit.version>4.10</junit.version>
-        <shrinkwrap.version>2.1.0</shrinkwrap.version>
+        <shrinkwrap.version>2.1.1</shrinkwrap.version>
     </properties>
 
     <dependencies>
@@ -55,7 +55,7 @@
         <dependency>
             <groupId>org.apache.maven.shared</groupId>
             <artifactId>maven-verifier</artifactId>
-            <version>1.4</version>
+            <version>1.5</version>
             <scope>test</scope>
         </dependency>
         <dependency>
