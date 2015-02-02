@@ -39,7 +39,7 @@ licenses:
  - &wfk25BomRelease 2.5.0-redhat-1
  - &wfk26BomRelease 2.6.0-redhat-1
  - &oldArchetypeRelease 7.1.3.Final
- - &wildflyArchetypeRelease 8.1.0.Final
+ - &wildflyArchetypeRelease 8.2.0.Final
  - &wfk24ArchetypeRelease 2.4.0.Final
  - &wfk25ArchetypeRelease 2.5.0.Final
  - &wfk26ArchetypeRelease 2.6.0.Final
@@ -1788,8 +1788,8 @@ availableArchetypes:
    #   COMMUNITY     W I L D F L Y     A P P   A R C H E T Y P E S  #
    ##################################################################
 
- - &jboss-javaee7-webapp-blank-archetype-wildfly
-   id: jboss-javaee7-webapp-blank-archetype-wildfly
+ - &wildfly-javaee7-webapp-blank-archetype
+   id:  wildfly-javaee7-webapp-blank-archetype
    name: Wildfly / Java EE 7 Webapp (Blank Skeleton)
    description: An archetype that generates a starter Java EE 7 webapp project for JBoss Wildfly
    groupId: org.wildfly.archetype
@@ -1799,11 +1799,11 @@ availableArchetypes:
 
    #######################
 
- - &jboss-javaee7-webapp-archetype-wildfly
-   id: jboss-javaee7-webapp-archetype-wildfly
+ - &wildfly-javaee7-webapp-archetype
+   id:  wildfly-javaee7-webapp-archetype
    name: Wildfly / Java EE 7 Webapp
    description: An archetype that generates a starter Java EE 7 webapp project for JBoss Wildfly
-   blank: *jboss-javaee7-webapp-blank-archetype-wildfly
+   blank: *wildfly-javaee7-webapp-blank-archetype
    groupId: org.wildfly.archetype
    artifactId: wildfly-javaee7-webapp-archetype
    recommendedVersion: *wildflyArchetypeRelease
@@ -1811,8 +1811,8 @@ availableArchetypes:
 
    #######################
 
- - &jboss-javaee7-webapp-ear-blank-archetype-wildfly
-   id: jboss-javaee7-webapp-ear-blank-archetype-wildfly
+ - &wildfly-javaee7-webapp-ear-blank-archetype
+   id: wildfly-javaee7-webapp-ear-blank-archetype
    name: Wildfly / Java EE 7 EAR Webapp (Blank Skeleton)
    description: An archetype that generates a starter Java EE 7 webapp project for Wildfly. The project is an EAR, with an EJB-JAR and WAR
    groupId: org.wildfly.archetype
@@ -1822,13 +1822,34 @@ availableArchetypes:
 
    ####################
 
- - &jboss-javaee7-webapp-ear-archetype-wildfly
-   id: jboss-javaee7-webapp-ear-archetype-wildfly
+ - &wildfly-javaee7-webapp-ear-archetype
+   id: wildfly-javaee7-webapp-ear-archetype
    name: Widlfy / Java EE 7 EAR Webapp
    description: An archetype that generates a starter Java EE 7 webapp project for JBoss Wildfly The project is an EAR, with an EJB-JAR and WAR
-   blank: *jboss-javaee7-webapp-ear-blank-archetype-wildfly
+   blank: *wildfly-javaee7-webapp-ear-blank-archetype
    groupId: org.wildfly.archetype
    artifactId: wildfly-javaee7-webapp-ear-archetype
+   recommendedVersion: *wildflyArchetypeRelease
+   repositoryURL: 
+
+ - &wildfly-html5-mobile-blank-archetype
+   id: wildfly-html5-mobile-blank-archetype
+   name: Wildfly / Java EE 7 EAR Webapp (Blank Skeleton)
+   description: An archetype that generates a starter Java EE 7 webapp project for Wildfly. The project is an EAR, with an EJB-JAR and WAR
+   groupId: org.wildfly.archetype
+   artifactId: wildfly-html5-mobile-blank-archetype
+   recommendedVersion: *wildflyArchetypeRelease
+   repositoryURL: 
+
+   ####################
+
+ - &wildfly-html5-mobile-archetype
+   id: wildfly-html5-mobile-archetype
+   name: Widlfy / Java EE 7 EAR Webapp
+   description: An archetype that generates a Java EE 7 application using HTML5, and JAX-RS to support both desktop and mobile web browsers
+   blank: *wildfly-html5-mobile-blank-archetype
+   groupId: org.wildfly.archetype
+   artifactId: wildfly-html5-mobile-archetype
    recommendedVersion: *wildflyArchetypeRelease
    repositoryURL: 
 
@@ -2389,9 +2410,9 @@ availableArchetypeVersions:
    #  W I L D F L Y   JAVA EE 7 EAR / Webapp  #
    ############################################
 
- - &jboss-javaee7-webapp-archetype-wildfly-latest
-   id: jboss-javaee7-webapp-archetype-wildfly-latest
-   archetype: *jboss-javaee7-webapp-archetype-wildfly
+ - &wildfly-javaee7-webapp-archetype-latest
+   id: wildfly-javaee7-webapp-archetype-latest
+   archetype: *wildfly-javaee7-webapp-archetype
    version: *wildflyArchetypeRelease
    repositoryURL:
    labels: {
@@ -2400,9 +2421,9 @@ availableArchetypeVersions:
        environment: web-ee7,
    }
 
- - &jboss-javaee7-webapp-blank-archetype-wildfly-latest
-   id: jboss-javaee7-webapp-blank-archetype-wildfly-latest
-   archetype: *jboss-javaee7-webapp-blank-archetype-wildfly
+ - &wildfly-javaee7-webapp-blank-archetype-latest
+   id: wildfly-javaee7-webapp-blank-archetype-latest
+   archetype: *wildfly-javaee7-webapp-blank-archetype
    version: *wildflyArchetypeRelease
    repositoryURL:
    labels: {
@@ -2412,9 +2433,9 @@ availableArchetypeVersions:
        isBlank: true,
    }
 
- - &jboss-javaee7-webapp-ear-archetype-wildfly-latest
-   id: jboss-javaee7-webapp-ear-archetype-wildfly-latest
-   archetype: *jboss-javaee7-webapp-ear-archetype-wildfly
+ - &wildfly-javaee7-webapp-ear-archetype-latest
+   id: wildfly-javaee7-webapp-ear-archetype-latest
+   archetype: *wildfly-javaee7-webapp-ear-archetype
    version: *wildflyArchetypeRelease
    repositoryURL:
    labels: {
@@ -2423,9 +2444,9 @@ availableArchetypeVersions:
        environment: full-ee7,
    }
 
- - &jboss-javaee7-webapp-ear-blank-archetype-wildfly-latest
-   id: jboss-javaee7-webapp-ear-blank-archetype-wildfly-latest
-   archetype: *jboss-javaee7-webapp-ear-blank-archetype-wildfly
+ - &wildfly-javaee7-webapp-ear-blank-archetype-latest
+   id: wildfly-javaee7-webapp-ear-blank-archetype-latest
+   archetype: *wildfly-javaee7-webapp-ear-blank-archetype
    version: *wildflyArchetypeRelease
    repositoryURL:
    labels: {
@@ -2434,6 +2455,31 @@ availableArchetypeVersions:
        environment: full-ee7,
        isBlank: true,
    }
+   
+ - &wildfly-html5-mobile-archetype-latest
+   id: wildfly-html5-mobile-archetype-latest
+   archetype: *wildfly-html5-mobile-archetype
+   version: *wildflyArchetypeRelease
+   repositoryURL:
+   labels: {
+       type: html5-mobile, 
+       target: community,
+       environment: web-ee7,
+   }
+
+ - &wildfly-html5-mobile-blank-archetype-latest
+   id: wildfly-html5-mobile-blank-archetype-latest
+   archetype: *wildfly-html5-mobile-blank-archetype
+   version: *wildflyArchetypeRelease
+   repositoryURL:
+   labels: {
+       type: html5-mobile, 
+       target: community,
+       environment: web-ee7,
+       isBlank: true,
+   }
+
+
 
    ##############################################################
    #   O L D   H T M L  5   A R C H E T Y P E  V E R S I O N S  #
@@ -2823,11 +2869,12 @@ availableRuntimes:
    defaultBom:
    defaultArchetype:
    archetypes:
-    - *jboss-javaee7-webapp-archetype-wildfly-latest
-    - *jboss-javaee7-webapp-blank-archetype-wildfly-latest
-    - *jboss-javaee7-webapp-ear-archetype-wildfly-latest
-    - *jboss-javaee7-webapp-ear-blank-archetype-wildfly-latest
-    - *richfaces-archetype-kitchensink-latest
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -2852,13 +2899,14 @@ availableRuntimes:
    downloadUrl: http://download.jboss.org/wildfly/8.1.0.Final/wildfly-8.1.0.Final.zip
    boms:
    defaultBom:
-   defaultArchetype: *jboss-javaee7-webapp-archetype-wildfly-latest
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
    archetypes:
-    - *jboss-javaee7-webapp-archetype-wildfly-latest
-    - *jboss-javaee7-webapp-blank-archetype-wildfly-latest
-    - *jboss-javaee7-webapp-ear-archetype-wildfly-latest
-    - *jboss-javaee7-webapp-ear-blank-archetype-wildfly-latest
-    - *richfaces-archetype-kitchensink-latest
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -2883,13 +2931,14 @@ availableRuntimes:
    downloadUrl: http://download.jboss.org/wildfly/8.2.0.Final/wildfly-8.2.0.Final.zip
    boms:
    defaultBom:
-   defaultArchetype: *jboss-javaee7-webapp-archetype-wildfly-latest
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
    archetypes:
-    - *jboss-javaee7-webapp-archetype-wildfly-latest
-    - *jboss-javaee7-webapp-blank-archetype-wildfly-latest
-    - *jboss-javaee7-webapp-ear-archetype-wildfly-latest
-    - *jboss-javaee7-webapp-ear-blank-archetype-wildfly-latest
-    - *richfaces-archetype-kitchensink-latest
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
