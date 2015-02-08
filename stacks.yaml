@@ -30,19 +30,21 @@ licenses:
  - &eap610BomRelease 1.0.4.Final-redhat-4
  - &eap620BomRelease 6.2.0.GA
  - &eap630BomRelease 6.3.0.GA
- - &lastEAPBomRelease 6.2.0.GA
- - &lastWFKBomRelease 2.6.0-redhat-1
+ - &lastEAPBomRelease 6.3.0.GA
+ - &lastWFKBomRelease 2.7.0-redhat-1
  - &wfk21BomRelease 1.0.1.Final-redhat-1
  - &wfk22BomRelease 1.0.4.Final-redhat-wfk-1
  - &wfk23BomRelease 1.0.4.Final-redhat-wfk-2
  - &wfk24BomRelease 2.4.0-redhat-2
  - &wfk25BomRelease 2.5.0-redhat-1
  - &wfk26BomRelease 2.6.0-redhat-1
+ - &wfk27BomRelease 2.7.0-redhat-1
  - &oldArchetypeRelease 7.1.3.Final
  - &wildflyArchetypeRelease 8.2.0.Final
  - &wfk24ArchetypeRelease 2.4.0.Final
  - &wfk25ArchetypeRelease 2.5.0.Final
  - &wfk26ArchetypeRelease 2.6.0.Final
+ - &wfk27ArchetypeRelease 2.7.0.Final
  - &eap620ArchetypeRelease 6.2.0.GA
  - &eap630ArchetypeRelease 6.3.0.GA
 
@@ -376,6 +378,16 @@ availableBoms:
    
    ###############################
 
+ - &jboss-javaee-6_0-with-spring4_1
+   id: jboss-javaee-6_0-with-spring4_1
+   name: Java EE 6 with Spring 4.1 (WFK BOM)
+   description: Dependency Management for Java EE 6 Specification APIs with Spring 4.1
+   groupId: org.jboss.bom.wfk
+   artifactId: jboss-javaee-6.0-with-spring4.1
+   recommendedVersion: *lastWFKBomRelease   
+   
+   ###############################
+
  - &jboss-javaee-6_0-with-tools-old
    id: jboss-javaee-6_0-with-tools-old
    name: Java EE 6 with tools recommended by JBoss (Old BOM)
@@ -444,7 +456,7 @@ availableBoms:
    description: WFK Spring 2.5.0 dependencies
    groupId: com.redhat.jboss.wfk.boms
    artifactId: spring-2.5-bom
-   recommendedVersion: 2.4.0-redhat-1
+   recommendedVersion: 2.7.0-redhat-1
 
  - &spring-3_0-bom-wfk
    id: spring-3_0-bom-wfk
@@ -452,7 +464,7 @@ availableBoms:
    description: WFK Spring 3.0.x dependencies
    groupId: com.redhat.jboss.wfk.boms
    artifactId: spring-3.0-bom
-   recommendedVersion: 2.4.0-redhat-1
+   recommendedVersion: 2.7.0-redhat-1
 
  - &spring-3_1-bom-wfk
    id: spring-3_1-bom-wfk
@@ -460,7 +472,7 @@ availableBoms:
    description: WFK Spring 3.1.x dependencies
    groupId: com.redhat.jboss.wfk.boms
    artifactId: spring-3.1-bom
-   recommendedVersion: 2.4.0-redhat-1
+   recommendedVersion: 2.7.0-redhat-1
 
  - &spring-3_2-bom-wfk
    id: spring-3_2-bom-wfk
@@ -468,7 +480,7 @@ availableBoms:
    description: WFK Spring 3.2.x dependencies
    groupId: com.redhat.jboss.wfk.boms
    artifactId: spring-3.2-bom
-   recommendedVersion: 2.4.0-redhat-1
+   recommendedVersion: 2.7.0-redhat-1
 
    ##############################
    #  JBoss EAP 6.1    B O M S  #
@@ -714,6 +726,16 @@ availableBomVersions:
    id: jboss-javaee-6_0-with-deltaspike-wfk-26
    bom: *jboss-javaee-6_0-with-deltaspike
    version: *wfk26BomRelease
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
+ - &jboss-javaee-6_0-with-deltaspike-wfk-27
+   id: jboss-javaee-6_0-with-deltaspike-wfk-27
+   bom: *jboss-javaee-6_0-with-deltaspike
+   version: *wfk27BomRelease
    labels: {
        additionalRepositories: {
          "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
@@ -978,6 +1000,15 @@ availableBomVersions:
        },
    }
 
+ - &jboss-javaee-6_0-with-hsearch-wfk-27
+   id: jboss-javaee-6_0-with-hsearch-wfk-27
+   bom: *jboss-javaee-6_0-with-hsearch
+   version: *wfk27BomRelease
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
 
  - &jboss-javaee-6_0-with-infinispan-eap61
    id: jboss-javaee-6_0-with-infinispan-eap61
@@ -1180,6 +1211,16 @@ availableBomVersions:
        },
    }
 
+ - &jboss-javaee-6_0-with-richfaces-wfk-27
+   id: jboss-javaee-6_0-with-richfaces-wfk-27
+   bom: *jboss-javaee-6_0-with-richfaces
+   version: *wfk27BomRelease
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
  - &jboss-javaee-6_0-with-security-eap601
    id: jboss-javaee-6_0-with-security-eap601
    bom: *jboss-javaee-6_0-with-security-old
@@ -1252,21 +1293,30 @@ availableBomVersions:
        },
    }
 
- - &jboss-javaee-6_0-with-spring4-wfk-25
-   id: jboss-javaee-6_0-with-spring4-wfk-25
-   bom: *jboss-javaee-6_0-with-spring4
-   version: *wfk25BomRelease
+ - &jboss-javaee-6_0-with-spring-wfk-26
+   id: jboss-javaee-6_0-with-spring-wfk-26
+   bom: *jboss-javaee-6_0-with-spring
+   version: *wfk26BomRelease
    labels: {
        additionalRepositories: {
          "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
        },
    }
 
-   
- - &jboss-javaee-6_0-with-spring-wfk-26
-   id: jboss-javaee-6_0-with-spring-wfk-26
+ - &jboss-javaee-6_0-with-spring-wfk-27
+   id: jboss-javaee-6_0-with-spring-wfk-27
    bom: *jboss-javaee-6_0-with-spring
-   version: *wfk26BomRelease
+   version: *wfk27BomRelease
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
+ - &jboss-javaee-6_0-with-spring4-wfk-25
+   id: jboss-javaee-6_0-with-spring4-wfk-25
+   bom: *jboss-javaee-6_0-with-spring4
+   version: *wfk25BomRelease
    labels: {
        additionalRepositories: {
          "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
@@ -1283,6 +1333,26 @@ availableBomVersions:
        },
    }
 
+ - &jboss-javaee-6_0-with-spring4-wfk-27
+   id: jboss-javaee-6_0-with-spring4-wfk-27
+   bom: *jboss-javaee-6_0-with-spring4
+   version: *wfk27BomRelease
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
+ - &jboss-javaee-6_0-with-spring4_1-wfk-27
+   id: jboss-javaee-6_0-with-spring4_1-wfk-27
+   bom: *jboss-javaee-6_0-with-spring4_1
+   version: *wfk27BomRelease
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+ 
  - &jboss-javaee-6_0-with-tools-100m11-redhat1
    id: jboss-javaee-6_0-with-tools-100m11-redhat1
    bom: *jboss-javaee-6_0-with-tools-old
@@ -1402,6 +1472,16 @@ availableBomVersions:
    id: jboss-javaee-6_0-with-tools-wfk-26
    bom: *jboss-javaee-6_0-with-tools-wfk
    version: *wfk26BomRelease
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
+ - &jboss-javaee-6_0-with-tools-wfk-27
+   id: jboss-javaee-6_0-with-tools-wfk-27
+   bom: *jboss-javaee-6_0-with-tools-wfk
+   version: *wfk27BomRelease
    labels: {
        additionalRepositories: {
          "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
@@ -1552,6 +1632,35 @@ availableBomVersions:
        },
    }
 
+ - &spring-2_5-bom-wfk-25
+   id: spring-2_5-bom-wfk-25
+   bom: *spring-2_5-bom-wfk
+   version: 2.5.0-redhat-1
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
+ - &spring-2_5-bom-wfk-26
+   id: spring-2_5-bom-wfk-26
+   bom: *spring-2_5-bom-wfk
+   version: 2.6.0-redhat-1
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
+ - &spring-2_5-bom-wfk-27
+   id: spring-2_5-bom-wfk-27
+   bom: *spring-2_5-bom-wfk
+   version: 2.7.0-redhat-1
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
 
  - &spring-3_0-bom-wfk-21
    id: spring-3_0-bom-wfk-21
@@ -1597,6 +1706,35 @@ availableBomVersions:
    }
 
 
+ - &spring-3_0-bom-wfk-25
+   id: spring-3_0-bom-wfk-25
+   bom: *spring-3_0-bom-wfk
+   version: 2.5.0-redhat-1
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+ - &spring-3_0-bom-wfk-26
+   id: spring-3_0-bom-wfk-26
+   bom: *spring-3_0-bom-wfk
+   version: 2.6.0-redhat-1
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
+ - &spring-3_0-bom-wfk-27
+   id: spring-3_0-bom-wfk-27
+   bom: *spring-3_0-bom-wfk
+   version: 2.7.0-redhat-1
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
  - &spring-3_1-bom-wfk-21
    id: spring-3_1-bom-wfk-21
    bom: *spring-3_1-bom-wfk
@@ -1640,6 +1778,35 @@ availableBomVersions:
        },
    }
 
+ - &spring-3_1-bom-wfk-25
+   id: spring-3_1-bom-wfk-25
+   bom: *spring-3_1-bom-wfk
+   version: 2.5.0-redhat-1
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
+ - &spring-3_1-bom-wfk-26
+   id: spring-3_1-bom-wfk-26
+   bom: *spring-3_1-bom-wfk
+   version: 2.6.0-redhat-1
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
+ - &spring-3_1-bom-wfk-27
+   id: spring-3_1-bom-wfk-27
+   bom: *spring-3_1-bom-wfk
+   version: 2.7.0-redhat-1
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
 
  - &spring-3_2-bom-wfk-22
    id: spring-3_2-bom-wfk-22
@@ -1673,6 +1840,35 @@ availableBomVersions:
        },
    }
 
+ - &spring-3_2-bom-wfk-25
+   id: spring-3_2-bom-wfk-25
+   bom: *spring-3_2-bom-wfk
+   version: 2.5.0-redhat-1
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
+ - &spring-3_2-bom-wfk-26
+   id: spring-3_2-bom-wfk-26
+   bom: *spring-3_2-bom-wfk
+   version: 2.6.0-redhat-1
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
+
+ - &spring-3_2-bom-wfk-27
+   id: spring-3_2-bom-wfk-27
+   bom: *spring-3_2-bom-wfk
+   version: 2.7.0-redhat-1
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+   }
 
    ##############################
    #   EAP 6.1 Arquillian BOM   #
@@ -1948,7 +2144,7 @@ availableArchetypes:
    description: An archetype that generates a Java EE 6 application using HTML5, and JAX-RS to support both desktop and mobile web browsers
    groupId: org.jboss.archetype.wfk
    artifactId: jboss-html5-mobile-blank-archetype
-   recommendedVersion: *wfk26ArchetypeRelease
+   recommendedVersion: *wfk27ArchetypeRelease
    repositoryURL:
 
    ##################
@@ -1960,7 +2156,7 @@ availableArchetypes:
    blank: *jboss-html5-mobile-blank-archetype-wfk
    groupId: org.jboss.archetype.wfk
    artifactId: jboss-html5-mobile-archetype
-   recommendedVersion: *wfk26ArchetypeRelease
+   recommendedVersion: *wfk27ArchetypeRelease
    repositoryURL: 
 
  - &richfaces-archetype-simpleapp-wfk
@@ -1970,7 +2166,7 @@ availableArchetypes:
    blank: 
    groupId: org.jboss.archetype.wfk
    artifactId: richfaces-archetype-simpleapp
-   recommendedVersion: *wfk26ArchetypeRelease
+   recommendedVersion: *wfk27ArchetypeRelease
    repositoryURL: 
 
  - &richfaces-archetype-kitchensink-wfk
@@ -1980,7 +2176,7 @@ availableArchetypes:
    blank: 
    groupId: org.jboss.archetype.wfk
    artifactId: richfaces-archetype-kitchensink
-   recommendedVersion: *wfk26ArchetypeRelease
+   recommendedVersion: *wfk27ArchetypeRelease
    repositoryURL: 
 
  - &jboss-spring-mvc-archetype-wfk
@@ -1990,7 +2186,7 @@ availableArchetypes:
    blank: 
    groupId: org.jboss.archetype.wfk
    artifactId: jboss-spring-mvc-archetype
-   recommendedVersion: *wfk26ArchetypeRelease
+   recommendedVersion: *wfk27ArchetypeRelease
    repositoryURL: 
 
 
@@ -2165,6 +2361,37 @@ availableArchetypeVersions:
        environment: web-ee6,
    }
    
+ - &jboss-html5-mobile-archetype-wfk-26
+   id: jboss-html5-mobile-archetype-wfk-26
+   archetype: *jboss-html5-mobile-archetype-wfk
+   version: *wfk26ArchetypeRelease
+   repositoryURL: 
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+       essentialDependencies: ["org.jboss.bom.wfk:jboss-javaee-6.0-with-tools:pom:2.6.0-redhat-1", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.2.3.GA"],
+       type: html5-mobile, 
+       target: product,
+       environment: web-ee6,
+   }
+
+
+ - &jboss-html5-mobile-archetype-wfk-27
+   id: jboss-html5-mobile-archetype-wfk-27
+   archetype: *jboss-html5-mobile-archetype-wfk
+   version: *wfk27ArchetypeRelease
+   repositoryURL: 
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+       essentialDependencies: ["org.jboss.bom.wfk:jboss-javaee-6.0-with-tools:pom:2.7.0-redhat-1", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.3.2.GA"],
+       type: html5-mobile, 
+       target: product,
+       environment: web-ee6,
+   }
+
  - &jboss-html5-mobile-blank-archetype-wfk-25
    id: jboss-html5-mobile-blank-archetype-wfk-25
    archetype: *jboss-html5-mobile-blank-archetype-wfk
@@ -2182,21 +2409,6 @@ availableArchetypeVersions:
    }
    
 
- - &jboss-html5-mobile-archetype-wfk-26
-   id: jboss-html5-mobile-archetype-wfk-26
-   archetype: *jboss-html5-mobile-archetype-wfk
-   version: *wfk26ArchetypeRelease
-   repositoryURL: 
-   labels: {
-       additionalRepositories: {
-         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
-       },
-       essentialDependencies: ["org.jboss.bom.wfk:jboss-javaee-6.0-with-tools:pom:2.6.0-redhat-1", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.2.3.GA"],
-       type: html5-mobile, 
-       target: product,
-       environment: web-ee6,
-   }
-   
  - &jboss-html5-mobile-blank-archetype-wfk-26
    id: jboss-html5-mobile-blank-archetype-wfk-26
    archetype: *jboss-html5-mobile-blank-archetype-wfk
@@ -2207,6 +2419,23 @@ availableArchetypeVersions:
          "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
        },
        essentialDependencies: ["org.jboss.bom.wfk:jboss-javaee-6.0-with-tools:pom:2.6.0-redhat-1", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.2.3.GA"],
+       type: html5-mobile, 
+       target: product,
+       environment: web-ee6,
+       isBlank : true
+   }
+
+
+ - &jboss-html5-mobile-blank-archetype-wfk-27
+   id: jboss-html5-mobile-blank-archetype-wfk-27
+   archetype: *jboss-html5-mobile-blank-archetype-wfk
+   version: *wfk27ArchetypeRelease
+   repositoryURL: 
+   labels: {
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+       essentialDependencies: ["org.jboss.bom.wfk:jboss-javaee-6.0-with-tools:pom:2.7.0-redhat-1", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.3.2.GA"],
        type: html5-mobile, 
        target: product,
        environment: web-ee6,
@@ -2287,6 +2516,37 @@ availableArchetypeVersions:
        },
        essentialDependencies: ["org.jboss.bom.eap:jboss-javaee-6.0-with-richfaces:pom:2.6.0-redhat-1"],
    }
+
+ - &richfaces-archetype-kitchensink-wfk-27
+   id: richfaces-archetype-kitchensink-wfk-27
+   archetype: *richfaces-archetype-kitchensink-wfk
+   version: *wfk27ArchetypeRelease
+   repositoryURL:
+   labels: {
+       type: richfaces-kitchensink,
+       target: product,
+       environment: web-ee6,
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+       essentialDependencies: ["org.jboss.bom.wfk:jboss-javaee-6.0-with-tools:pom:2.7.0-redhat-1", "org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.3.2.GA"],
+   }
+
+ - &richfaces-archetype-simpleapp-wfk-27
+   id: richfaces-archetype-simpleapp-wfk-27
+   archetype: *richfaces-archetype-simpleapp-wfk
+   version: *wfk27ArchetypeRelease
+   repositoryURL:
+   labels: {
+       type: "",
+       target: product,
+       environment: web-ee6,
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+       essentialDependencies: ["org.jboss.bom.eap:jboss-javaee-6.0-with-richfaces:pom:2.7.0-redhat-1"],
+   }
+   
    #########################
    #   Spring Archetypes   #
    #########################
@@ -2319,6 +2579,21 @@ availableArchetypeVersions:
          "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
        },
        essentialDependencies: ["org.jboss.bom.wfk:jboss-javaee-6.0-with-spring4:pom:2.6.0-redhat-1","org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.2.3.GA"],
+   }
+
+ - &jboss-spring-mvc-archetype-wfk-27
+   id: jboss-spring-mvc-archetype-wfk-27
+   archetype: *jboss-spring-mvc-archetype-wfk
+   version: *wfk27ArchetypeRelease
+   repositoryURL:
+   labels: {
+       type: spring-kitchensink,
+       target: product,
+       environment: web-ee6,
+       additionalRepositories: {
+         "redhat-techpreview-all-repository": "http://maven.repository.redhat.com/techpreview/all/",
+       },
+       essentialDependencies: ["org.jboss.bom.wfk:jboss-javaee-6.0-with-spring4:pom:2.7.0-redhat-1","org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.3.2.GA"],
    }
 
    ###########################################
@@ -2691,6 +2966,10 @@ availableRuntimes:
      - *jboss-javaee-6_0-with-tools-eap62
      - *jboss-javaee-6_0-with-transactions-eap62
      #WFK 2.5 BOMS
+     - *spring-2_5-bom-wfk-25
+     - *spring-3_0-bom-wfk-25
+     - *spring-3_1-bom-wfk-25
+     - *spring-3_2-bom-wfk-25     
      - *jboss-javaee-6_0-with-deltaspike-wfk-25
      - *jboss-javaee-6_0-with-hsearch-wfk-25
      - *jboss-javaee-6_0-with-richfaces-wfk-25
@@ -2698,12 +2977,16 @@ availableRuntimes:
      - *jboss-javaee-6_0-with-spring4-wfk-25
      - *jboss-javaee-6_0-with-tools-wfk-25
      #WFK 2.6 BOMS
+     - *spring-2_5-bom-wfk-26
+     - *spring-3_0-bom-wfk-26
+     - *spring-3_1-bom-wfk-26
+     - *spring-3_2-bom-wfk-26     
      - *jboss-javaee-6_0-with-deltaspike-wfk-26
      - *jboss-javaee-6_0-with-hsearch-wfk-26
      - *jboss-javaee-6_0-with-richfaces-wfk-26
      - *jboss-javaee-6_0-with-spring-wfk-26
      - *jboss-javaee-6_0-with-spring4-wfk-26
-     - *jboss-javaee-6_0-with-tools-wfk-26
+     - *jboss-javaee-6_0-with-tools-wfk-26   
    defaultArchetype: *jboss-javaee6-webapp-archetype-eap62
    archetypes:
      - *richfaces-archetype-simpleapp-wfk-26
@@ -2744,7 +3027,7 @@ availableRuntimes:
      - *jboss-javaee-6_0-all-last
      - *jboss-javaee-6_0-last
      - *jboss-javaee-6_0-web-last
-     #EAP 6.2 BOMS
+     #EAP 6.3 BOMS
      - *jboss-javaee-6_0-eap63
      - *jboss-javaee-6_0-web-eap63
      - *jboss-javaee-6_0-with-hibernate-eap63
@@ -2755,8 +3038,25 @@ availableRuntimes:
      - *jboss-javaee-6_0-with-security-eap63
      - *jboss-javaee-6_0-with-tools-eap63
      - *jboss-javaee-6_0-with-transactions-eap63
+     #WFK 2.7 BOMS
+     - *spring-2_5-bom-wfk-27
+     - *spring-3_0-bom-wfk-27
+     - *spring-3_1-bom-wfk-27
+     - *spring-3_2-bom-wfk-27     
+     - *jboss-javaee-6_0-with-deltaspike-wfk-27
+     - *jboss-javaee-6_0-with-hsearch-wfk-27
+     - *jboss-javaee-6_0-with-richfaces-wfk-27
+     - *jboss-javaee-6_0-with-spring-wfk-27
+     - *jboss-javaee-6_0-with-spring4-wfk-27
+     - *jboss-javaee-6_0-with-spring4_1-wfk-27
+     - *jboss-javaee-6_0-with-tools-wfk-27     
    defaultArchetype: *jboss-javaee6-webapp-archetype-eap63
    archetypes:
+     - *richfaces-archetype-simpleapp-wfk-27
+     - *richfaces-archetype-kitchensink-wfk-27
+     - *jboss-spring-mvc-archetype-wfk-27
+     - *jboss-html5-mobile-blank-archetype-wfk-27
+     - *jboss-html5-mobile-archetype-wfk-27   
      - *jboss-javaee6-webapp-archetype-eap63
      - *jboss-javaee6-webapp-blank-archetype-eap63
      - *jboss-javaee6-webapp-ear-archetype-eap63
