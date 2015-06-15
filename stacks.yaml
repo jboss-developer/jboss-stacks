@@ -17,6 +17,7 @@
 licenses:
  - &lgpl http://www.gnu.org/copyleft/lesser.txt
  - &lgpl21 http://www.gnu.org/licenses/lgpl-2.1.txt
+ - &apache20 http://www.apache.org/licenses/LICENSE-2.0.txt
 #metadatas
 # - &lastJDGBomRelease 6.2.0-redhat-1
 # - &lastBRMSBomRelease 5.3.1-redhat-1
@@ -3613,6 +3614,47 @@ availableRuntimes:
         runtime-size: 209420675,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.71,
     }
+
+
+   #####################
+   #  JBoss Fuse 6.0.0 #
+   #####################
+
+ - &fuse600
+   id: fuse600
+   name: JBoss Fuse 6.0.0
+   version: 6.0.0
+   license: *apache20
+   url: https://www.jboss.org/products/fuse.html
+   downloadUrl: https://www.jboss.org/download-manager/jdf/content/origin/files/sha256/e1/e154ea50a42480fd9a23795c369fa626a638db9452791e26728430ba50395515/jboss-fuse-full-6.0.0.redhat-024.zip
+   labels: {
+        requiresCredentials: true,
+        runtime-category: OSGI_SERVER,
+        runtime-type: FUSE,
+        runtime-size: 655603123,
+        wtp-runtime-type: org.fusesource.ide.fuseesb.runtime.60
+   }
+   
+   
+   #####################
+   #  JBoss Fuse 6.1.0 #
+   #####################
+
+ - &fuse610
+   id: fuse610
+   name: JBoss Fuse 6.1.0
+   version: 6.1.0
+   license: *apache20
+   url: https://www.jboss.org/products/fuse.html
+   downloadUrl: https://www.jboss.org/download-manager/jdf/content/origin/files/sha256/d4/d4222f5ed50d5d465bd105f5f2dbaee3ad0adda672bba7a18b0e262ef57458a5/jboss-fuse-full-6.1.0.redhat-379.zip
+   labels: {
+        requiresCredentials: true,
+        runtime-category: OSGI_SERVER,
+        runtime-type: FUSE,
+        runtime-size: 630068816,
+        wtp-runtime-type: org.fusesource.ide.fuseesb.runtime.61
+   }
+
 
 ##########################################################
 #                                                        #
