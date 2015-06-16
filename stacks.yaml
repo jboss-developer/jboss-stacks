@@ -3620,8 +3620,8 @@ availableRuntimes:
    #  JBoss Fuse 6.0.0 #
    #####################
 
- - &fuse600
-   id: fuse600
+ - &fuse600runtime
+   id: fuse600runtime
    name: JBoss Fuse 6.0.0
    version: 6.0.0
    license: *apache20
@@ -3640,8 +3640,8 @@ availableRuntimes:
    #  JBoss Fuse 6.1.0 #
    #####################
 
- - &fuse610
-   id: fuse610
+ - &fuse610runtime
+   id: fuse610runtime
    name: JBoss Fuse 6.1.0
    version: 6.1.0
    license: *apache20
@@ -3763,6 +3763,20 @@ minorReleases:
    version: 6.0
    recommendedRuntime: *jbossfsw600runtime
 
+   #############################
+   #  Fuse 6 #
+   #############################
+
+ - &fuse60
+   name: Fuse 
+   version: 6.0.0
+   recommendedRuntime: *fuse600runtime
+
+ - &fuse61
+   name: Fuse 
+   version: 6.1.0
+   recommendedRuntime: *fuse610runtime
+
    ##############################
    #  Data Virtualization 6.1.0 #
    ##############################
@@ -3846,6 +3860,18 @@ majorReleases:
    recommendedRuntime: *jbossfsw600runtime
    minorReleases:
     - *jbossfsw600
+
+   ##########################
+   #   Fuse 6 #
+   ##########################
+
+ - name: Fuse
+   version: 6
+   recommendedRuntime: *fuse610runtime
+   minorReleases:
+    - *fuse60
+    - *fuse61
+
 
    ############################
    #  Data Virtualization 6.1 #
