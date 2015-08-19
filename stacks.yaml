@@ -3510,7 +3510,7 @@ availableRuntimes:
         runtime-type: AS,
         requiresLogModule: false,
         pom: "https://github.com/wildfly/wildfly/blob/8.1.0.Final/pom.xml",
-        runtime-size: 154598817,
+        runtime-size: 129777493,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.80
     }
 
@@ -3542,7 +3542,103 @@ availableRuntimes:
         runtime-type: AS,
         requiresLogModule: false,
         pom: "https://github.com/wildfly/wildfly/blob/8.2.0.Final/pom.xml",
-        runtime-size: 154598817,
+        runtime-size: 132178731,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.80
+    }
+
+   ####################
+   #   WildFly  8.2.1 #
+   ####################
+
+ - &wildfly-821finalruntime
+   id: wildfly-821finalruntime
+   name: WildFly 8.2.1 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 8.2.1.Final
+   license: *lgpl
+   url: http://wildfly.org/downloads/
+   downloadUrl: http://download.jboss.org/wildfly/8.2.1.Final/wildfly-8.2.1.Final.zip
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/8.2.1.Final/pom.xml",
+        runtime-size: 132701605,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.80
+    }
+
+   ####################
+   #   WildFly  9.0.0 #
+   ####################
+
+ - &wildfly-900finalruntime
+   id: wildfly-900finalruntime
+   name: WildFly 9.0.0 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 9.0.0.Final
+   license: *lgpl
+   url: http://wildfly.org/downloads/
+   downloadUrl: http://download.jboss.org/wildfly/9.0.0.Final/wildfly-9.0.0.Final.zip
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/9.0.0.Final/pom.xml",
+        runtime-size: 133604638,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.80
+    }
+
+   ####################
+   #   WildFly  9.0.1 #
+   ####################
+
+ - &wildfly-901finalruntime
+   id: wildfly-901finalruntime
+   name: WildFly 9.0.1 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 9.0.1.Final
+   license: *lgpl
+   url: http://wildfly.org/downloads/
+   downloadUrl: http://download.jboss.org/wildfly/9.0.1.Final/wildfly-9.0.1.Final.zip
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/9.0.1.Final/pom.xml",
+        runtime-size: 133617224,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.80
     }
 
@@ -3745,12 +3841,31 @@ minorReleases:
  - &wildfly810final
    name: WildFly
    version: 8.1.0.Final
-   recommendedRuntime: *wildfly-8finalruntime
+   recommendedRuntime: *wildfly-810finalruntime
 
  - &wildfly820final
    name: WildFly
    version: 8.2.0.Final
    recommendedRuntime: *wildfly-820finalruntime
+
+ - &wildfly821final
+   name: WildFly
+   version: 8.2.1.Final
+   recommendedRuntime: *wildfly-821finalruntime
+
+   ###############
+   #   WildFly 9 #
+   ###############
+
+ - &wildfly900final
+   name: WildFly
+   version: 9.0.0.Final
+   recommendedRuntime: *wildfly-900finalruntime
+
+ - &wildfly901final
+   name: WildFly
+   version: 9.0.1.Final
+   recommendedRuntime: *wildfly-901finalruntime
 
    ###############
    #   JPP 6.x   #
@@ -3836,11 +3951,23 @@ majorReleases:
 
  - name: WildFly
    version: 8
-   recommendedRuntime: *wildfly-820finalruntime
+   recommendedRuntime: *wildfly-821finalruntime
    minorReleases:
+    - *wildfly821final
     - *wildfly820final
     - *wildfly810final
     - *wildfly800final
+
+   ################
+   #   WildFly 9  #
+   ################
+
+ - name: WildFly
+   version: 9
+   recommendedRuntime: *wildfly-901finalruntime
+   minorReleases:
+    - *wildfly901final
+    - *wildfly900final
 
    ##################
    #   E A P  6     #
