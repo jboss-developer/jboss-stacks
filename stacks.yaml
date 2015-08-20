@@ -3607,7 +3607,7 @@ availableRuntimes:
         requiresLogModule: false,
         pom: "https://github.com/wildfly/wildfly/blob/9.0.0.Final/pom.xml",
         runtime-size: 133604638,
-        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.80
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.90
     }
 
    ####################
@@ -3639,7 +3639,7 @@ availableRuntimes:
         requiresLogModule: false,
         pom: "https://github.com/wildfly/wildfly/blob/9.0.1.Final/pom.xml",
         runtime-size: 133617224,
-        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.80
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.90
     }
 
    #################
