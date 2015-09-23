@@ -3365,6 +3365,79 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.61
    }
 
+   #####################
+   #   DV    6.2       #
+   #####################
+
+ - &jbossdv620runtime
+   id: jbossdv620runtime
+   name: JBoss Data Virtualization 6.2.0
+   version: 6.2.0
+   license: *lgpl21
+   url: http://www.jboss.org/products
+   downloadUrl: https://www.jboss.org/download-manager/jdf/file/jboss-datavirt-6.2.0.GA-installer.jar
+   boms:
+     - *jboss-javaee-6_0-eap62
+     - *jboss-javaee-6_0-web-eap62
+     #EAP 6.2 BOMS
+     - *jboss-javaee-6_0-eap62
+     - *jboss-javaee-6_0-web-eap62
+     - *jboss-javaee-6_0-with-hibernate-eap62
+     - *jboss-javaee-6_0-with-hibernate3-eap62
+     - *jboss-javaee-6_0-with-logging-eap62
+     - *jboss-javaee-6_0-with-osgi-eap62
+     - *jboss-javaee-6_0-with-resteasy-eap62
+     - *jboss-javaee-6_0-with-security-eap62
+     - *jboss-javaee-6_0-with-tools-eap62
+     - *jboss-javaee-6_0-with-transactions-eap62
+     #WFK 2.5 BOMS
+     - *spring-2_5-bom-wfk-25
+     - *spring-3_0-bom-wfk-25
+     - *spring-3_1-bom-wfk-25
+     - *spring-3_2-bom-wfk-25     
+     - *jboss-javaee-6_0-with-deltaspike-wfk-25
+     - *jboss-javaee-6_0-with-hsearch-wfk-25
+     - *jboss-javaee-6_0-with-richfaces-wfk-25
+     - *jboss-javaee-6_0-with-spring-wfk-25
+     - *jboss-javaee-6_0-with-spring4-wfk-25
+     - *jboss-javaee-6_0-with-tools-wfk-25
+     #WFK 2.6 BOMS
+     - *spring-2_5-bom-wfk-26
+     - *spring-3_0-bom-wfk-26
+     - *spring-3_1-bom-wfk-26
+     - *spring-3_2-bom-wfk-26     
+     - *jboss-javaee-6_0-with-deltaspike-wfk-26
+     - *jboss-javaee-6_0-with-hsearch-wfk-26
+     - *jboss-javaee-6_0-with-richfaces-wfk-26
+     - *jboss-javaee-6_0-with-spring-wfk-26
+     - *jboss-javaee-6_0-with-spring4-wfk-26
+     - *jboss-javaee-6_0-with-tools-wfk-26
+   defaultBom: *jboss-javaee-6_0-web-eap62
+   defaultArchetype: *jboss-javaee6-webapp-archetype-eap62
+   archetypes:
+     - *richfaces-archetype-simpleapp-wfk-26
+     - *richfaces-archetype-kitchensink-wfk-26
+     - *jboss-spring-mvc-archetype-wfk-26
+     - *jboss-html5-mobile-blank-archetype-wfk-26
+     - *jboss-html5-mobile-archetype-wfk-26
+     - *richfaces-archetype-simpleapp-wfk-25
+     - *richfaces-archetype-kitchensink-wfk-25
+     - *jboss-spring-mvc-archetype-wfk-25
+     - *jboss-html5-mobile-blank-archetype-wfk-25
+     - *jboss-html5-mobile-archetype-wfk-25
+     - *jboss-javaee6-webapp-archetype-eap62
+     - *jboss-javaee6-webapp-blank-archetype-eap62
+     - *jboss-javaee6-webapp-ear-archetype-eap62
+     - *jboss-javaee6-webapp-ear-blank-archetype-eap62
+   labels: {
+        requiresCredentials: true,
+        runtime-category: SERVER,
+        runtime-type: EAP,
+        runtime-size: 193563910,
+        file-type: installer-jar,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.62
+   }
+
 
 
    ###############
@@ -3927,6 +4000,11 @@ minorReleases:
    version: 6.1
    recommendedRuntime: *jbossdv610runtime
 
+ - &jbossdv620
+   name: Data Virtualization
+   version: 6.2
+   recommendedRuntime: *jbossdv620runtime
+
 
 
 ############################################
@@ -4033,9 +4111,10 @@ majorReleases:
 
  - name: Data Virtualization
    version: 6
-   recommendedRuntime: *jbossdv610runtime
+   recommendedRuntime: *jbossdv620runtime
    minorReleases:
     - *jbossdv610
+    - *jbossdv620
 
 
 
