@@ -3435,7 +3435,7 @@ availableRuntimes:
         runtime-type: EAP,
         runtime-size: 193563910,
         file-type: installer-jar,
-        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.62
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.61
    }
 
 
