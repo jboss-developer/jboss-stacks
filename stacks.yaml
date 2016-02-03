@@ -3747,6 +3747,38 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.90
     }
 
+   ####################
+   #   WildFly  10.0.0 #
+   ####################
+
+ - &wildfly-1000finalruntime
+   id: wildfly-1000finalruntime
+   name: WildFly 10.0.0 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 10.0.0.Final
+   license: *lgpl
+   url: http://wildfly.org/downloads/
+   downloadUrl: http://download.jboss.org/wildfly/10.0.0.Final/wildfly-10.0.0.Final.zip
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/10.0.0.Final/pom.xml",
+        runtime-size: 138158431,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.100
+    }
+
    #################
    #  J P P  6.1   #
    #################
@@ -3996,6 +4028,15 @@ minorReleases:
    version: 9.0.2.Final
    recommendedRuntime: *wildfly-902finalruntime
 
+   ################
+   #   WildFly 10 #
+   ################
+
+ - &wildfly1000final
+   name: WildFly
+   version: 10.0.0.Final
+   recommendedRuntime: *wildfly-1000finalruntime
+
    ###############
    #   JPP 6.x   #
    ###############
@@ -4103,6 +4144,16 @@ majorReleases:
     - *wildfly902final
     - *wildfly901final
     - *wildfly900final
+
+   #################
+   #   WildFly 10  #
+   #################
+
+ - name: WildFly
+   version: 10
+   recommendedRuntime: *wildfly-1000finalruntime
+   minorReleases:
+    - *wildfly1000final
 
    ##################
    #   E A P  6     #
