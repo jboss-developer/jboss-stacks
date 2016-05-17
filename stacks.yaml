@@ -3227,16 +3227,16 @@ availableRuntimes:
    } 
    
    ##########################
-   #   E A P 7.0 Beta       #
+   #   E A P 7.0            #
    ##########################
 
- - &jbosseap700betaruntime
-   id: jbosseap700betaruntime
-   name: JBoss EAP 7.0.0 Beta
+ - &jbosseap700runtime
+   id: jbosseap700runtime
+   name: JBoss EAP 7.0.0
    version: 7.0.0
    license: *lgpl21
    url: http://www.jboss.org/products
-   downloadUrl: https://www.jboss.org/download-manager/jdf/file/jboss-eap-7.0.0.Beta.zip
+   downloadUrl: https://developers.redhat.com/download-manager/file/jboss-eap-7.0.0.zip
    defaultBom: 
    boms:
    defaultArchetype: 
@@ -3245,7 +3245,7 @@ availableRuntimes:
         requiresCredentials: true,
         runtime-category: SERVER,
         runtime-type: EAP,
-        runtime-size: 157780735,
+        runtime-size: 163977055,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.70
    } 
    
@@ -3997,7 +3997,7 @@ minorReleases:
  - &jbeap70
    name: JBoss EAP
    version: 7.0
-   recommendedRuntime: *jbosseap700betaruntime
+   recommendedRuntime: *jbosseap700runtime
 
    ###############
    #   A S 7.X   #
@@ -4208,7 +4208,7 @@ majorReleases:
 
  - name: JBoss EAP
    version: 7
-   recommendedRuntime: *jbosseap700betaruntime
+   recommendedRuntime: *jbosseap700runtime
    minorReleases:
     - *jbeap70
 
