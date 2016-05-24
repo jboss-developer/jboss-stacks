@@ -3236,7 +3236,7 @@ availableRuntimes:
    version: 7.0.0
    license: *lgpl21
    url: http://www.jboss.org/products
-   downloadUrl: https://developers.redhat.com/download-manager/file/jboss-eap-7.0.0.zip
+   downloadUrl: https://www.jboss.org/download-manager/jdf/file/jboss-eap-7.0.0.zip
    defaultBom: 
    boms:
    defaultArchetype: 
