@@ -3951,6 +3951,24 @@ availableRuntimes:
         wtp-runtime-type: org.fusesource.ide.fuseesb.runtime.62
    }
 
+   #####################
+   #  JBoss Fuse 6.3.0 #
+   #####################
+
+ - &fuse630runtime
+   id: fuse630runtime
+   name: JBoss Fuse 6.3.0
+   version: 6.3.0
+   license: *apache20
+   url: https://www.jboss.org/products/fuse.html
+   downloadUrl: https://www.jboss.org/download-manager/jdf/content/origin/files/sha256/4e/4ef481bb22f4a9c688d03f46374917e0f2548229f94ebd817c33817baf203b0c/jboss-fuse-karaf-6.3.0.redhat-187.zip
+   labels: {
+        requiresCredentials: true,
+        runtime-category: OSGI_SERVER,
+        runtime-type: FUSE,
+        runtime-size: 785784505,
+        wtp-runtime-type: org.fusesource.ide.fuseesb.runtime.63
+   }
 
 
 ##########################################################
@@ -4121,6 +4139,11 @@ minorReleases:
    version: 6.2.1
    recommendedRuntime: *fuse621runtime
 
+ - &fuse63
+   name: Fuse 
+   version: 6.3.0
+   recommendedRuntime: *fuse630runtime
+
    ##############################
    #  Data Virtualization 6.1.0 #
    ##############################
@@ -4249,11 +4272,12 @@ majorReleases:
 
  - name: Fuse
    version: 6
-   recommendedRuntime: *fuse621runtime
+   recommendedRuntime: *fuse630runtime
    minorReleases:
     - *fuse60
     - *fuse61
     - *fuse62
+    - *fuse63
 
 
    ############################
