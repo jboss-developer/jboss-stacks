@@ -3463,6 +3463,25 @@ availableRuntimes:
    }
 
 
+   #####################
+   #   DV    6.3       #
+   #####################
+
+ - &jbossdv630runtime
+   id: jbossdv630runtime
+   name: JBoss Data Virtualization 6.3.0
+   version: 6.3.0
+   license: *lgpl21
+   url: http://www.jboss.org/products
+   downloadUrl: https://www.jboss.org/download-manager/jdf/content/origin/files/sha256/b4/b466affbcc1740bf2c7c73b60bb6ffa7e1ec844fc08447224ab15aa3bcee3949/jboss-dv-6.3.0-1-installer.jar
+   labels: {
+        requiresCredentials: true,
+        runtime-category: SERVER,
+        runtime-type: EAP,
+        runtime-size: 193563910,
+        file-type: installer-jar,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.61
+   }
 
    ###############
    # JBoss 7.0.1 #
@@ -4182,7 +4201,7 @@ minorReleases:
    recommendedRuntime: *fuse630runtime
 
    ##############################
-   #  Data Virtualization 6.1.0 #
+   #  Data Virtualization 6.x   #
    ##############################
 
  - &jbossdv610
@@ -4194,6 +4213,11 @@ minorReleases:
    name: Data Virtualization
    version: 6.2
    recommendedRuntime: *jbossdv620runtime
+
+ - &jbossdv630
+   name: Data Virtualization
+   version: 6.3
+   recommendedRuntime: *jbossdv630runtime
 
 
 
@@ -4324,10 +4348,11 @@ majorReleases:
 
  - name: Data Virtualization
    version: 6
-   recommendedRuntime: *jbossdv620runtime
+   recommendedRuntime: *jbossdv630runtime
    minorReleases:
     - *jbossdv610
     - *jbossdv620
+    - *jbossdv630
 
 
 
