@@ -3478,7 +3478,7 @@ availableRuntimes:
         requiresCredentials: true,
         runtime-category: SERVER,
         runtime-type: EAP,
-        runtime-size: 193563910,
+        runtime-size: 1001265731,
         file-type: installer-jar,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.61
    }
