@@ -3905,6 +3905,41 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.110
     }
 
+
+
+   #####################
+   #   WildFly  12.0.0 #
+   #####################
+
+ - &wildfly-1200finalruntime
+   id: wildfly-1200finalruntime
+   name: WildFly 12.0.0 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 12.0.0.Final
+   license: *lgpl
+   url: http://wildfly.org/downloads/
+   downloadUrl: http://download.jboss.org/wildfly/12.0.0.Final/wildfly-12.0.0.Final.zip
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/12.0.0.Final/pom.xml",
+        runtime-size: 170092513,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.120
+    }
+
+
    #################
    #  J P P  6.1   #
    #################
@@ -4209,6 +4244,16 @@ minorReleases:
    version: 11.0.0.Final
    recommendedRuntime: *wildfly-1100finalruntime
 
+   ################
+   #   WildFly 12 #
+   ################
+
+ - &wildfly1200final
+   name: WildFly
+   version: 12.0.0.Final
+   recommendedRuntime: *wildfly-1200finalruntime
+
+
    ###############
    #   JPP 6.x   #
    ###############
@@ -4347,6 +4392,16 @@ majorReleases:
    recommendedRuntime: *wildfly-1100finalruntime
    minorReleases:
     - *wildfly1100final
+
+   #################
+   #   WildFly 12  #
+   #################
+
+ - name: WildFly
+   version: 12
+   recommendedRuntime: *wildfly-1200finalruntime
+   minorReleases:
+    - *wildfly1200final
 
    ##################
    #   E A P  6     #
