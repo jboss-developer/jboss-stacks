@@ -197,9 +197,9 @@ availableRuntimes:
         runtime-type: CDK,
         runtime-size: 492211744,
         additionalDownloadURLs: {
-            "linux": "https://developers.redhat.com/download-manager/jdf/file/cdk-3.4.0-2-minishift-linux-amd64",
-            "macosx": "https://developers.redhat.com/download-manager/jdf/file/cdk-3.4.0-2-minishift-darwin-amd64",
-            "win32": "https://developers.redhat.com/download-manager/jdf/file/cdk-3.4.0-2-minishift-windows-amd64.exe",
+            "linux": "https://www.jboss.org/download-manager/jdf/file/cdk-3.4.0-2-minishift-linux-amd64",
+            "macosx": "https://www.jboss.org/download-manager/jdf/file/cdk-3.4.0-2-minishift-darwin-amd64",
+            "win32": "https://www.jboss.org/download-manager/jdf/file/cdk-3.4.0-2-minishift-windows-amd64.exe",
         },
         file-type: binary,
         wtp-runtime-type: org.jboss.tools.openshift.cdk.server.runtime.type.cdk.32
