@@ -4107,22 +4107,22 @@ availableRuntimes:
         wtp-runtime-type: org.fusesource.ide.fuseesb.runtime.63
    }
 
-   ###########################
-   #  Red Hat Fuse 7.0.0-TP4 #
-   ###########################
+   #######################
+   #  Red Hat Fuse 7.0.0 #
+   #######################
 
- - &fuse700tp4runtime
-   id: fuse700tp4runtime
-   name: Red Hat Fuse 7.0.0 TP4
+ - &fuse700runtime
+   id: fuse700runtime
+   name: Red Hat Fuse 7.0.0
    version: 7.0.0
    license: *apache20
    url: https://developers.redhat.com/products/fuse/overview
-   downloadUrl: https://www.jboss.org/download-manager/jdf/content/origin/files/sha256/bf/bf9086a0fe694843c02df59363cec926988038311be4ba5017d26058f687188c/jboss-fuse-karaf-7.0.0.fuse-000163-redhat-2.zip
+   downloadUrl: https://www.jboss.org/download-manager/jdf/content/origin/files/sha256/bf/bf9086a0fe694843c02df59363cec926988038311be4ba5017d26058f687188c/fuse-karaf-7.0.0.fuse-000191-redhat-1.zip
    labels: {
         requiresCredentials: true,
         runtime-category: OSGI_SERVER,
         runtime-type: FUSE,
-        runtime-size: 163981885,
+        runtime-size: 183584946,
         wtp-runtime-type: org.fusesource.ide.fuseesb.runtime.70
    }
 
@@ -4333,10 +4333,10 @@ minorReleases:
    #  Fuse 7 #
    ###########
 
- - &fuse70tp4
+ - &fuse70
    name: Fuse
    version: 7.0.0
-   recommendedRuntime: *fuse700tp4runtime
+   recommendedRuntime: *fuse700runtime
 
    ##############################
    #  Data Virtualization 6.x   #
@@ -4506,9 +4506,9 @@ majorReleases:
 
  - name: Fuse
    version: 7
-   recommendedRuntime: *fuse700tp4runtime
+   recommendedRuntime: *fuse700runtime
    minorReleases:
-    - *fuse70tp4
+    - *fuse70
 
    ############################
    #  Data Virtualization 6.1 #
