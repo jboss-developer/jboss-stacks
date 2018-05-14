@@ -30,7 +30,7 @@ availableRuntimes:
 
  - &minishift1140
    id: minishift1140
-   name: MiniShift v1.14.0
+   name: Minishift v1.14.0
    version: 1.14.0
    license: *apache20
    url: https://github.com/minishift/minishift/releases
@@ -46,8 +46,78 @@ availableRuntimes:
         },
         wtp-runtime-type: org.jboss.tools.openshift.cdk.server.runtime.type.minishift.17
    }
+   
+   
+   ########################
+   #   MiniShift 1.15.1   #
+   ########################
 
+ - &minishift1151
+   id: minishift1151
+   name: Minishift v1.15.1
+   version: 1.15.1
+   license: *apache20
+   url: https://github.com/minishift/minishift/releases
+   labels: {
+        requiresCredentials: false,
+        runtime-category: MINISHIFT,
+        runtime-type: MINISHIFT,
+        runtime-size: 5488875,
+        additionalDownloadURLs: {
+            "win32": "https://github.com/minishift/minishift/releases/download/v1.15.1/minishift-1.15.1-windows-amd64.zip",
+            "linux": "https://github.com/minishift/minishift/releases/download/v1.15.1/minishift-1.15.1-linux-amd64.tgz",
+            "macosx": "https://github.com/minishift/minishift/releases/download/v1.15.1/minishift-1.15.1-darwin-amd64.tgz",
+        },
+        wtp-runtime-type: org.jboss.tools.openshift.cdk.server.runtime.type.minishift.17
+   }
+   
+   
+   ########################
+   #   MiniShift 1.16.1   #
+   ########################
 
+ - &minishift1161
+   id: minishift1161
+   name: Minishift v1.16.1
+   version: 1.16.1
+   license: *apache20
+   url: https://github.com/minishift/minishift/releases
+   labels: {
+        requiresCredentials: false,
+        runtime-category: MINISHIFT,
+        runtime-type: MINISHIFT,
+        runtime-size: 5496776,
+        additionalDownloadURLs: {
+            "win32": "https://github.com/minishift/minishift/releases/download/v1.16.1/minishift-1.16.1-windows-amd64.zip",
+            "linux": "https://github.com/minishift/minishift/releases/download/v1.16.1/minishift-1.16.1-linux-amd64.tgz",
+            "macosx": "https://github.com/minishift/minishift/releases/download/v1.16.1/minishift-1.16.1-darwin-amd64.tgz",
+        },
+        wtp-runtime-type: org.jboss.tools.openshift.cdk.server.runtime.type.minishift.17
+   }
+   
+   
+   ########################
+   #   MiniShift 1.17.0   #
+   ########################
+
+ - &minishift1170
+   id: minishift1170
+   name: Minishift v1.17.0
+   version: 1.17.0
+   license: *apache20
+   url: https://github.com/minishift/minishift/releases
+   labels: {
+        requiresCredentials: false,
+        runtime-category: MINISHIFT,
+        runtime-type: MINISHIFT,
+        runtime-size: 5620140,
+        additionalDownloadURLs: {
+            "win32": "https://github.com/minishift/minishift/releases/download/v1.17.0/minishift-1.17.0-windows-amd64.zip",
+            "linux": "https://github.com/minishift/minishift/releases/download/v1.17.0/minishift-1.17.0-linux-amd64.tgz",
+            "macosx": "https://github.com/minishift/minishift/releases/download/v1.17.0/minishift-1.17.0-darwin-amd64.tgz",
+        },
+        wtp-runtime-type: org.jboss.tools.openshift.cdk.server.runtime.type.minishift.17
+   }
 
 
    ########################
