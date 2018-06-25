@@ -3939,6 +3939,38 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.120
     }
 
+   #####################
+   #   WildFly  13.0.0 #
+   #####################
+
+ - &wildfly-1300finalruntime
+   id: wildfly-1300finalruntime
+   name: WildFly 13.0.0 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 13.0.0.Final
+   license: *lgpl
+   url: http://wildfly.org/downloads/
+   downloadUrl: http://download.jboss.org/wildfly/13.0.0.Final/wildfly-13.0.0.Final.zip
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/13.0.0.Final/pom.xml",
+        runtime-size: 189007229,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.130
+    }
+
 
    #################
    #  J P P  6.1   #
@@ -4272,6 +4304,15 @@ minorReleases:
    version: 12.0.0.Final
    recommendedRuntime: *wildfly-1200finalruntime
 
+   ################
+   #   WildFly 13 #
+   ################
+
+ - &wildfly1300final
+   name: WildFly
+   version: 13.0.0.Final
+   recommendedRuntime: *wildfly-1300finalruntime
+
 
    ###############
    #   JPP 6.x   #
@@ -4430,6 +4471,16 @@ majorReleases:
    recommendedRuntime: *wildfly-1200finalruntime
    minorReleases:
     - *wildfly1200final
+
+   #################
+   #   WildFly 13  #
+   #################
+
+ - name: WildFly
+   version: 13
+   recommendedRuntime: *wildfly-1300finalruntime
+   minorReleases:
+    - *wildfly1300final
 
    ##################
    #   E A P  6     #
