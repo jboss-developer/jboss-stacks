@@ -109,6 +109,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         runtime-size: 55769924,
+        runtime-md5: 97147374ee5b048e4462c7ebaf3cccb5,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.32
    }
 
@@ -127,6 +128,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         runtime-size: 80866589,
+        runtime-md5: a39e85981958fea2411e9346e218aa39,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.40
    }
    
@@ -144,6 +146,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         runtime-size: 99479031,
+        runtime-md5: e548d9e369589f8b9be0abc642c19842,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.42
    }
 
@@ -161,6 +164,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         runtime-size: 109099657,
+        runtime-md5: dd308175c43796db824692cb0cdea82d,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.50
    }
 
@@ -179,6 +183,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         runtime-size: 133466607,
+        runtime-md5: 78322c75ca0c13002a04418b4a8bc920,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.51
    }
 
@@ -197,6 +202,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         runtime-size: 181267148,
+        runtime-md5: 81ed7c2c274881963467c11f204eedfc
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.60
    }
 
@@ -215,6 +221,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         runtime-size: 182762510,
+        runtime-md5: 2264e4d5ba448fa07716008d1452f1e7
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.60
    }
 

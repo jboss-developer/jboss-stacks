@@ -3054,6 +3054,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: EAP,
         runtime-size: 114831134,
+        runtime-md5: ff56dc5dc233dc4e0e153e3cfb2ecb1c,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.61
    }
    
@@ -3126,6 +3127,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: EAP,
         runtime-size: 144590074,
+        runtime-md5: 03ec01654cf4aee8c8e26313fae68c16,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.61
    }   
 
@@ -3183,6 +3185,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: EAP,
         runtime-size: 158177216,
+        runtime-md5: f1ce6b83cd117bc612e9d15ff64575dd,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.61
    } 
 
@@ -3223,6 +3226,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: EAP,
         runtime-size: 165179304,
+        runtime-md5: 9a5d37631919a111ddf42ceda1a9f0b5,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.61
    } 
    
@@ -3246,6 +3250,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: EAP,
         runtime-size: 163977055,
+        runtime-md5: cd02482daa0398bf5500e1628d28179a,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.70
    } 
 
@@ -3265,6 +3270,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: EAP,
         runtime-size: 183793648,
+        runtime-md5: 9f608e6603a8db05316e6effd5440fca,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.71
    } 
    
@@ -3516,6 +3522,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         runtime-size: 77594624,
+        runtime-md5: 89627c285f72c3d1e7f65d92ee1e01e3,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.70
    }
 
@@ -3533,6 +3540,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         runtime-size: 77594624,
+        runtime-md5: 774556618e73c2273fff91fa5e92c1d5,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.70
    }
 
@@ -3550,6 +3558,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         runtime-size: 104857600,
+        runtime-md5: c81973945f920b2793e99570ccbc39c3,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.71
    }
 
@@ -3582,6 +3591,7 @@ availableRuntimes:
         requiresLogModule: false,
         pom: "https://github.com/jbossas/jboss-as/blob/1f0c1d8348752595441cc295d3d07f79f4cb8347/pom.xml",
         runtime-size: 114831134,
+        runtime-md5: 175c92545454f4e7270821f4b8326c4e,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.71
     }
     
@@ -3614,6 +3624,7 @@ availableRuntimes:
         requiresLogModule: false,
         pom: "https://github.com/wildfly/wildfly/blob/8.0.0.Final/pom.xml",
         runtime-size: 154598817,
+        runtime-md5: 9df208525e7c8c03bd592a6a0f554bea,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.80
     }
 
@@ -3646,6 +3657,7 @@ availableRuntimes:
         requiresLogModule: false,
         pom: "https://github.com/wildfly/wildfly/blob/8.1.0.Final/pom.xml",
         runtime-size: 129777493,
+        runtime-md5: b7df11f92ee80155702a351aee4b003b,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.80
     }
 
@@ -3678,6 +3690,7 @@ availableRuntimes:
         requiresLogModule: false,
         pom: "https://github.com/wildfly/wildfly/blob/8.2.0.Final/pom.xml",
         runtime-size: 132178731,
+        runtime-md5: 86a51782581b90db44958a0ee7002c14,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.80
     }
 
@@ -3710,6 +3723,7 @@ availableRuntimes:
         requiresLogModule: false,
         pom: "https://github.com/wildfly/wildfly/blob/8.2.1.Final/pom.xml",
         runtime-size: 132701605,
+        runtime-md5: 071f6681512929e682d714155547d0a2,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.80
     }
 
@@ -3742,6 +3756,7 @@ availableRuntimes:
         requiresLogModule: false,
         pom: "https://github.com/wildfly/wildfly/blob/9.0.0.Final/pom.xml",
         runtime-size: 133604638,
+        runtime-md5: 5212c410bbc933edcf54efbeee429783,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.90
     }
 
@@ -3774,6 +3789,7 @@ availableRuntimes:
         requiresLogModule: false,
         pom: "https://github.com/wildfly/wildfly/blob/9.0.1.Final/pom.xml",
         runtime-size: 133617224,
+        runtime-md5: d8920358e99151915da08cd1cd576ab6,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.90
     }
 
@@ -3806,6 +3822,7 @@ availableRuntimes:
         requiresLogModule: false,
         pom: "https://github.com/wildfly/wildfly/blob/9.0.2.Final/pom.xml",
         runtime-size: 133617224,
+        runtime-md5: ca1233cca94a9a0d376fab1f1274ca1c,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.90
     }
 
@@ -3838,6 +3855,7 @@ availableRuntimes:
         requiresLogModule: false,
         pom: "https://github.com/wildfly/wildfly/blob/10.0.0.Final/pom.xml",
         runtime-size: 138158431,
+        runtime-md5: bbef420f1f3b3c463cf8c0b171d2a8c5,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.100
     }
 
@@ -3870,6 +3888,7 @@ availableRuntimes:
         requiresLogModule: false,
         pom: "https://github.com/wildfly/wildfly/blob/10.1.0.Final/pom.xml",
         runtime-size: 140015717,
+        runtime-md5: a7ff356fd3333529426e98937d8760cf,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.100
     }
 
@@ -3902,6 +3921,7 @@ availableRuntimes:
         requiresLogModule: false,
         pom: "https://github.com/wildfly/wildfly/blob/11.0.0.Final/pom.xml",
         runtime-size: 159148919,
+        runtime-md5: cabc51179090c24c2644c118df7422d9,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.110
     }
 
@@ -3936,6 +3956,7 @@ availableRuntimes:
         requiresLogModule: false,
         pom: "https://github.com/wildfly/wildfly/blob/12.0.0.Final/pom.xml",
         runtime-size: 170092513,
+        runtime-md5: 923a9e286098ce094d0216b2d4f175e3,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.120
     }
 
@@ -3968,6 +3989,7 @@ availableRuntimes:
         requiresLogModule: false,
         pom: "https://github.com/wildfly/wildfly/blob/13.0.0.Final/pom.xml",
         runtime-size: 189007229,
+        runtime-md5: 24cc6ee3148b809652a9ca20b99dadb2,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.130
     }
 
@@ -4038,6 +4060,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: GateIn,
         runtime-size: 209420675,
+        runtime-md5: f6e9699a8806445c9e3b34aefca5af46
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.71,
     }
 
@@ -4058,6 +4081,7 @@ availableRuntimes:
         runtime-category: OSGI_SERVER,
         runtime-type: FUSE,
         runtime-size: 655603123,
+        runtime-md5: 83f2e79611d1388a63d473be5f3aa7a6,
         wtp-runtime-type: org.fusesource.ide.fuseesb.runtime.60
    }
    
@@ -4078,6 +4102,7 @@ availableRuntimes:
         runtime-category: OSGI_SERVER,
         runtime-type: FUSE,
         runtime-size: 630068816,
+        runtime-md5: d7b00f38ea18ac5fa1ee715dd5163171,
         wtp-runtime-type: org.fusesource.ide.fuseesb.runtime.61
    }
 
@@ -4098,6 +4123,7 @@ availableRuntimes:
         runtime-category: OSGI_SERVER,
         runtime-type: FUSE,
         runtime-size: 643439105,
+        runtime-md5: 75b63dff8d57a20b557d2539f8b6a630,
         wtp-runtime-type: org.fusesource.ide.fuseesb.runtime.62
    }
 
@@ -4117,6 +4143,7 @@ availableRuntimes:
         runtime-category: OSGI_SERVER,
         runtime-type: FUSE,
         runtime-size: 667657318,
+        runtime-md5: 47094604ad4416709b93de748de6bc0d,
         wtp-runtime-type: org.fusesource.ide.fuseesb.runtime.62
    }
 
@@ -4136,6 +4163,7 @@ availableRuntimes:
         runtime-category: OSGI_SERVER,
         runtime-type: FUSE,
         runtime-size: 785784505,
+        runtime-md5: 47586ddc05b315e306c43cd2bb5a3fd4,
         wtp-runtime-type: org.fusesource.ide.fuseesb.runtime.63
    }
 
@@ -4155,6 +4183,7 @@ availableRuntimes:
         runtime-category: OSGI_SERVER,
         runtime-type: FUSE,
         runtime-size: 183584946,
+        runtime-md5: acddd1eb294c51df64f7ba7b675c5cfb,
         wtp-runtime-type: org.fusesource.ide.fuseesb.runtime.70
    }
 
