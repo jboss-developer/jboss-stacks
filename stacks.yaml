@@ -4060,8 +4060,8 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: GateIn,
         runtime-size: 209420675,
-        runtime-md5: f6e9699a8806445c9e3b34aefca5af46
-        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.71,
+        runtime-md5: f6e9699a8806445c9e3b34aefca5af46,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.71
     }
 
 
