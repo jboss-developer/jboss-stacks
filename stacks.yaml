@@ -4191,8 +4191,8 @@ availableRuntimes:
    #  Red Hat Fuse 7.0.1 #
    #######################
 
- - &fuse700runtime
-   id: fuse700runtime
+ - &fuse701runtime
+   id: fuse701runtime
    name: Red Hat Fuse 7.0.1
    version: 7.0.1
    license: *apache20
@@ -4425,8 +4425,8 @@ minorReleases:
 
  - &fuse70
    name: Fuse
-   version: 7.0.0
-   recommendedRuntime: *fuse700runtime
+   version: 7.0.1
+   recommendedRuntime: *fuse701runtime
 
    ##############################
    #  Data Virtualization 6.x   #
@@ -4606,7 +4606,7 @@ majorReleases:
 
  - name: Fuse
    version: 7
-   recommendedRuntime: *fuse700runtime
+   recommendedRuntime: *fuse701runtime
    minorReleases:
     - *fuse70
 
