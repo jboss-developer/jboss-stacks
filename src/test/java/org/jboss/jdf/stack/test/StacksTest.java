@@ -17,16 +17,12 @@
 
 package org.jboss.jdf.stack.test;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
 import java.util.Properties;
 
-import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.maven.it.Verifier;
 import org.codehaus.plexus.PlexusContainerException;
@@ -50,23 +46,19 @@ import org.junit.Test;
  * @author <a href="mailto:benevides@redhat.com">Rafael Benevides</a>
  * 
  */
-public class StacksTest {
-
-    private static StacksClient stacksClient;
-
-    private static Log log = LogFactory.getLog(StacksTest.class);
-
-    private String outputDir = System.getProperty("outPutDirectory");
-
-    private String testOutputDirectory = System.getProperty("testOutputDirectory");
+public class StacksTest extends AbstractStacksTest {
 
     private boolean skipArchetypeBuildTests = Boolean.parseBoolean(System.getProperty("skipArchetypeBuildTests"));
 
-    private static File stacksFile;
+    protected String outputDir = System.getProperty("outPutDirectory");
 
+    protected String testOutputDirectory = System.getProperty("testOutputDirectory");    
+    
     @BeforeClass
     public static void setupClient() throws MalformedURLException {
 
+    	log = LogFactory.getLog(StacksTest.class);
+    	
         stacksFile = new File("./stacks.yaml");
 
         URL url = stacksFile.toURI().toURL();
@@ -79,40 +71,6 @@ public class StacksTest {
 
         config.setCacheRefreshPeriodInSeconds(-1);
         config.setUrl(url);
-    }
-
-    @Test
-    public void testBasicParse() {
-        log.info("Testing Basic parsing");
-        stacksClient.getStacks();
-    }
-
-    @Test
-    public void testIdEqualsYamlLink() throws IOException {
-        log.info("Testing if Ids are equals YAML links");
-        BufferedReader br = new BufferedReader(new FileReader(stacksFile));
-        try {
-            String id = null;
-            int lineNumber = 0;
-            while (br.ready()) {
-               lineNumber++;
-                String line = br.readLine();
-                if (line.contains("&")) {
-                    int pos = line.indexOf('&') + 1;
-                    id = line.substring(pos, line.length()).trim();
-                }
-                if (id != null && line.contains("id:")) {
-                    int pos = line.lastIndexOf("id: ") + 3;
-                    String value = line.substring(pos, line.length()).trim();
-                    Assert.assertEquals("Id and Value should have the same value at line " + lineNumber, id, value);
-                }
-            }
-
-        } finally {
-            if (br != null) {
-                br.close();
-            }
-        }
     }
 
     @Test
@@ -276,15 +234,6 @@ public class StacksTest {
                     Assert.fail("Can't throw exception");
                 }
             }
-        }
-    }
-
-    @Test
-    public void testRuntimeCategoryLabel() {
-        log.info("Testing if all runtimes have the 'runtime-category' label");
-        Stacks stacks = stacksClient.getStacks();
-        for (Runtime runtime : stacks.getAvailableRuntimes()) {
-            Assert.assertNotNull(runtime + " should have 'runtime-category' label", runtime.getLabels().get("runtime-category"));
         }
     }
 
