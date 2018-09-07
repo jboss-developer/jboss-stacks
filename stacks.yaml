@@ -3994,6 +3994,40 @@ availableRuntimes:
     }
 
 
+   #####################
+   #   WildFly  14.0.0 #
+   #####################
+
+ - &wildfly-1400finalruntime
+   id: wildfly-1400finalruntime
+   name: WildFly 14.0.0 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 14.0.0.Final
+   license: *lgpl
+   url: http://wildfly.org/downloads/
+   downloadUrl: http://download.jboss.org/wildfly/14.0.0.Final/wildfly-14.0.0.Final.zip
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/14.0.0.Final/pom.xml",
+        runtime-size: 179331686,
+        runtime-md5: c3b25e1dabdf64ebbf3c50c9470d92f9,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.130
+    }
+
+
    #################
    #  J P P  6.1   #
    #################
