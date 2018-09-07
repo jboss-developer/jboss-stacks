@@ -4024,7 +4024,7 @@ availableRuntimes:
         pom: "https://github.com/wildfly/wildfly/blob/14.0.0.Final/pom.xml",
         runtime-size: 179331686,
         runtime-md5: c3b25e1dabdf64ebbf3c50c9470d92f9,
-        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.130
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.140
     }
 
 
