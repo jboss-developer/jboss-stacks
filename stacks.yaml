@@ -4028,6 +4028,40 @@ availableRuntimes:
     }
 
 
+   #####################
+   #   WildFly  14.0.1 #
+   #####################
+
+ - &wildfly-1401finalruntime
+   id: wildfly-1401finalruntime
+   name: WildFly 14.0.1 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 14.0.1.Final
+   license: *lgpl
+   url: http://wildfly.org/downloads/
+   downloadUrl: http://download.jboss.org/wildfly/14.0.1.Final/wildfly-14.0.1.Final.zip
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/14.0.1.Final/pom.xml",
+        runtime-size: 179320953,
+        runtime-md5: 61a1279e0549089dc95519fced661999,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.140
+    }
+
+
    #################
    #  J P P  6.1   #
    #################
@@ -4416,6 +4450,20 @@ minorReleases:
    version: 13.0.0.Final
    recommendedRuntime: *wildfly-1300finalruntime
 
+   ################
+   #   WildFly 14 #
+   ################
+
+ - &wildfly1400final
+   name: WildFly
+   version: 14.0.0.Final
+   recommendedRuntime: *wildfly-1400finalruntime
+
+ - &wildfly1401final
+   name: WildFly
+   version: 14.0.1.Final
+   recommendedRuntime: *wildfly-1401finalruntime
+
 
    ###############
    #   JPP 6.x   #
@@ -4590,6 +4638,17 @@ majorReleases:
    recommendedRuntime: *wildfly-1300finalruntime
    minorReleases:
     - *wildfly1300final
+
+   #################
+   #   WildFly 14  #
+   #################
+
+ - name: WildFly
+   version: 14
+   recommendedRuntime: *wildfly-1401finalruntime
+   minorReleases:
+    - *wildfly1401final
+    - *wildfly1400final
 
    ##################
    #   E A P  6     #
