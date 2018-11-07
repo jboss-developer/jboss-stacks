@@ -328,6 +328,29 @@ availableRuntimes:
    }
 
    ########################
+   #   MiniShift 1.26.1   #
+   ########################
+
+ - &minishift1261
+   id: minishift1261
+   name: Minishift v1.26.1
+   version: 1.26.1
+   license: *apache20
+   url: https://github.com/minishift/minishift/releases
+   labels: {
+        requiresCredentials: false,
+        runtime-category: MINISHIFT,
+        runtime-type: MINISHIFT,
+        runtime-size: 8104264,
+        additionalDownloadURLs: {
+            "win32": "https://github.com/minishift/minishift/releases/download/v1.26.1/minishift-1.26.1-windows-amd64.zip",
+            "linux": "https://github.com/minishift/minishift/releases/download/v1.26.1/minishift-1.26.1-linux-amd64.tgz",
+            "macosx": "https://github.com/minishift/minishift/releases/download/v1.26.1/minishift-1.26.1-darwin-amd64.tgz",
+        },
+        wtp-runtime-type: org.jboss.tools.openshift.cdk.server.runtime.type.minishift.17
+   }
+
+   ########################
    #       CDK 3.0.0      #
    ########################
 
