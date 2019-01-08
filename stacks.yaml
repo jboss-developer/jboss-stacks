@@ -4029,6 +4029,40 @@ availableRuntimes:
 
 
    #####################
+   #   WildFly  14.0.1 #
+   #####################
+
+ - &wildfly-1401finalruntime
+   id: wildfly-1401finalruntime
+   name: WildFly 14.0.1 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 14.0.1.Final
+   license: *lgpl
+   url: http://wildfly.org/downloads/
+   downloadUrl: http://download.jboss.org/wildfly/14.0.1.Final/wildfly-14.0.1.Final.zip
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/14.0.1.Final/pom.xml",
+        runtime-size: 179320953,
+        runtime-md5: 61a1279e0549089dc95519fced661999,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.140
+    }
+
+
+   #####################
    #   WildFly  15.0.0 #
    #####################
 
@@ -4063,18 +4097,18 @@ availableRuntimes:
 
 
    #####################
-   #   WildFly  14.0.1 #
+   #   WildFly  15.0.1 #
    #####################
 
- - &wildfly-1401finalruntime
-   id: wildfly-1401finalruntime
-   name: WildFly 14.0.1 Final
+ - &wildfly-1501finalruntime
+   id: wildfly-1501finalruntime
+   name: WildFly 15.0.1 Final
    groupId: org.wildfly
    artifactId: wildfly-dist
-   version: 14.0.1.Final
+   version: 15.0.1.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: http://download.jboss.org/wildfly/14.0.1.Final/wildfly-14.0.1.Final.zip
+   downloadUrl: http://download.jboss.org/wildfly/15.0.1.Final/wildfly-15.0.1.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -4089,10 +4123,10 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/14.0.1.Final/pom.xml",
-        runtime-size: 179320953,
-        runtime-md5: 61a1279e0549089dc95519fced661999,
-        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.140
+        pom: "https://github.com/wildfly/wildfly/blob/15.0.1.Final/pom.xml",
+        runtime-size: 180827189,
+        runtime-md5: be42a899ba01a797ec5c097e3c5737c4,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.150
     }
 
 
@@ -4526,6 +4560,11 @@ minorReleases:
    version: 15.0.0.Final
    recommendedRuntime: *wildfly-1500finalruntime
 
+ - &wildfly1501final
+   name: WildFly
+   version: 15.0.1.Final
+   recommendedRuntime: *wildfly-1501finalruntime
+
 
    ###############
    #   JPP 6.x   #
@@ -4724,6 +4763,7 @@ majorReleases:
    version: 15
    recommendedRuntime: *wildfly-1500finalruntime
    minorReleases:
+    - *wildfly1501final
     - *wildfly1500final
 
    ##################
