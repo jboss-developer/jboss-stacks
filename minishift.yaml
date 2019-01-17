@@ -419,6 +419,28 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.tools.openshift.cdk.server.runtime.type.minishift.17
    }
 
+   ########################
+   #   MiniShift 1.30.0   #
+   ########################
+
+ - &minishift1300
+   id: minishift1300
+   name: Minishift v1.30.0
+   version: 1.30.0
+   license: *apache20
+   url: https://github.com/minishift/minishift/releases
+   labels: {
+        requiresCredentials: false,
+        runtime-category: MINISHIFT,
+        runtime-type: MINISHIFT,
+        runtime-size: 9297798,
+        additionalDownloadURLs: {
+            "win32": "https://github.com/minishift/minishift/releases/download/v1.30.0/minishift-1.30.0-windows-amd64.zip",
+            "linux": "https://github.com/minishift/minishift/releases/download/v1.30.0/minishift-1.30.0-linux-amd64.tgz",
+            "macosx": "https://github.com/minishift/minishift/releases/download/v1.30.0/minishift-1.30.0-darwin-amd64.tgz",
+        },
+        wtp-runtime-type: org.jboss.tools.openshift.cdk.server.runtime.type.minishift.17
+   }
    
    ########################
    #       CDK 3.0.0      #
