@@ -141,7 +141,7 @@ availableRuntimes:
    version: 4.2.3
    license: *lgpl21
    url: http://www.jboss.org/jbossas
-   downloadUrl: http://sourceforge.net/projects/jboss/files/JBoss/JBoss-4.2.3.GA/jboss-4.2.3.GA-jdk6.zip?use_mirror=autoselect
+   downloadUrl: http://repository.jboss.org/sourceforge/jboss-4.2.3.GA.zip
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -197,7 +197,7 @@ availableRuntimes:
    version: 6.0.0
    license: *lgpl21
    url: http://www.jboss.org/jbossas
-   downloadUrl:  http://sourceforge.net/projects/jboss/files/JBoss/JBoss-6.0.0.Final/jboss-as-distribution-6.0.0.Final.zip?use_mirror=autoselect
+   downloadUrl:  https://repository.jboss.org/org/jboss/jbossas/jboss-as-distribution/6.0.0.Final/jboss-as-distribution-6.0.0.Final.zip
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
