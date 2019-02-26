@@ -3274,6 +3274,25 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.71
    } 
    
+ - &jbosseap720runtime
+   id: jbosseap720runtime
+   name: JBoss EAP 7.2.0
+   version: 7.2.0
+   license: *lgpl21
+   url: http://www.jboss.org/products
+   downloadUrl: https://www.jboss.org/download-manager/jdf/file/jboss-eap-7.2.0.zip
+   defaultBom: 
+   boms:
+   defaultArchetype: 
+   archetypes:
+   labels: {
+        requiresCredentials: true,
+        runtime-category: SERVER,
+        runtime-type: EAP,
+        runtime-size: 201457392,
+        runtime-md5: c06ac5dd62547d9982dea970c1b379f6,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.72
+   } 
       
    #####################
    #   F S W 6.0       #
@@ -4434,6 +4453,11 @@ minorReleases:
    version: 7.1
    recommendedRuntime: *jbosseap710runtime
 
+ - &jbeap72
+   name: JBoss EAP
+   version: 7.2
+   recommendedRuntime: *jbosseap720runtime
+
    ###############
    #   A S 7.X   #
    ###############
@@ -4786,10 +4810,11 @@ majorReleases:
 
  - name: JBoss EAP
    version: 7
-   recommendedRuntime: *jbosseap710runtime
+   recommendedRuntime: *jbosseap720runtime
    minorReleases:
     - *jbeap70
     - *jbeap71
+    - *jbeap72
 
    ##################
    #   J P P  6     #
