@@ -4148,6 +4148,38 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.150
     }
 
+   #####################
+   #   WildFly  16.0.0 #
+   #####################
+
+ - &wildfly-1600finalruntime
+   id: wildfly-1600finalruntime
+   name: WildFly 16.0.0 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 16.0.0.Final
+   license: *lgpl
+   url: http://wildfly.org/downloads/
+   downloadUrl: http://download.jboss.org/wildfly/16.0.0.Final/wildfly-16.0.0.Final.zip
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/16.0.0.Final/pom.xml",
+        runtime-size: 181814060,
+        runtime-md5: 6350533a4c7c21588aac8356cbd61095,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.160
+    }
 
    #################
    #  J P P  6.1   #
@@ -4589,6 +4621,14 @@ minorReleases:
    version: 15.0.1.Final
    recommendedRuntime: *wildfly-1501finalruntime
 
+   ################
+   #   WildFly 16 #
+   ################
+
+ - &wildfly1600final
+   name: WildFly
+   version: 16.0.0.Final
+   recommendedRuntime: *wildfly-1600finalruntime
 
    ###############
    #   JPP 6.x   #
@@ -4785,10 +4825,20 @@ majorReleases:
 
  - name: WildFly
    version: 15
-   recommendedRuntime: *wildfly-1500finalruntime
+   recommendedRuntime: *wildfly-1501finalruntime
    minorReleases:
     - *wildfly1501final
     - *wildfly1500final
+
+   #################
+   #   WildFly 16  #
+   #################
+
+ - name: WildFly
+   version: 16
+   recommendedRuntime: *wildfly-1600finalruntime
+   minorReleases:
+    - *wildfly1600final
 
    ##################
    #   E A P  6     #
