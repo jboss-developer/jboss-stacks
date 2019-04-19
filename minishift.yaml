@@ -730,11 +730,35 @@ availableRuntimes:
         requiresCredentials: true,
         runtime-category: MINISHIFT,
         runtime-type: CDK,
-        runtime-size: 485285728,
+        runtime-size: 487058496,
         additionalDownloadURLs: {
-            "linux": "https://www.jboss.org/download-manager/jdf/file/cdk-3.7.0-1-minishift-linux-amd64",
-            "macosx": "https://www.jboss.org/download-manager/jdf/file/cdk-3.7.0-1-minishift-darwin-amd64",
-            "win32": "https://www.jboss.org/download-manager/jdf/file/cdk-3.7.0-1-minishift-windows-amd64.exe",
+            "linux": "https://www.jboss.org/download-manager/jdf/file/cdk-3.7.0-2-minishift-linux-amd64",
+            "macosx": "https://www.jboss.org/download-manager/jdf/file/cdk-3.7.0-2-minishift-darwin-amd64",
+            "win32": "https://www.jboss.org/download-manager/jdf/file/cdk-3.7.0-2-minishift-windows-amd64.exe",
+        },
+        file-type: binary,
+        wtp-runtime-type: org.jboss.tools.openshift.cdk.server.runtime.type.cdk.32
+   }
+
+   ########################
+   #       CDK 3.8.0      #
+   ########################
+
+ - &cdk380
+   id: cdk380
+   name: CDK v3.8.0
+   version: 3.8.0
+   license: *apache20
+   url: https://developers.redhat.com/products/cdk/download/
+   labels: {
+        requiresCredentials: true,
+        runtime-category: MINISHIFT,
+        runtime-type: CDK,
+        runtime-size: 487322880,
+        additionalDownloadURLs: {
+            "linux": "https://www.jboss.org/download-manager/jdf/file/cdk-3.8.0-2-minishift-linux-amd64",
+            "macosx": "https://www.jboss.org/download-manager/jdf/file/cdk-3.8.0-2-minishift-darwin-amd64",
+            "win32": "https://www.jboss.org/download-manager/jdf/file/cdk-3.8.0-2-minishift-windows-amd64.exe",
         },
         file-type: binary,
         wtp-runtime-type: org.jboss.tools.openshift.cdk.server.runtime.type.cdk.32
