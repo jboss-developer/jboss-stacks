@@ -4181,6 +4181,39 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.160
     }
 
+   #####################
+   #   WildFly  17.0.0 #
+   #####################
+
+ - &wildfly-1700finalruntime
+   id: wildfly-1700finalruntime
+   name: WildFly 17.0.0 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 17.0.0.Final
+   license: *lgpl
+   url: http://wildfly.org/downloads/
+   downloadUrl: http://download.jboss.org/wildfly/17.0.0.Final/wildfly-17.0.0.Final.zip
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/17.0.0.Final/pom.xml",
+        runtime-size: 184615958,
+        runtime-md5: 56d9dc8054d767845fefca7730c661da,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.170
+    }
+
    #################
    #  J P P  6.1   #
    #################
@@ -4650,6 +4683,15 @@ minorReleases:
    version: 16.0.0.Final
    recommendedRuntime: *wildfly-1600finalruntime
 
+   ################
+   #   WildFly 17 #
+   ################
+
+ - &wildfly1700final
+   name: WildFly
+   version: 17.0.0.Final
+   recommendedRuntime: *wildfly-1700finalruntime
+
    ###############
    #   JPP 6.x   #
    ###############
@@ -4864,6 +4906,16 @@ majorReleases:
    recommendedRuntime: *wildfly-1600finalruntime
    minorReleases:
     - *wildfly1600final
+
+   #################
+   #   WildFly 17  #
+   #################
+
+ - name: WildFly
+   version: 17
+   recommendedRuntime: *wildfly-1700finalruntime
+   minorReleases:
+    - *wildfly1700final
 
    ##################
    #   E A P  6     #
