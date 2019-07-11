@@ -3536,7 +3536,7 @@ availableRuntimes:
    version: 7.0.1
    license: *lgpl21
    url: http://www.jboss.org/jbossas/downloads
-   downloadUrl: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.1.Final/jboss-as-7.0.1.Final.zip?use_mirror=autoselect
+   downloadUrl: https://download.jboss.org/jbossas/7.0/jboss-as-7.0.1.Final/jboss-as-7.0.1.Final.zip?use_mirror=autoselect
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -3554,7 +3554,7 @@ availableRuntimes:
    version: 7.0.2
    license: *lgpl21
    url: http://www.jboss.org/jbossas/downloads
-   downloadUrl: http://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-7.0.2.Final.zip?use_mirror=autoselect
+   downloadUrl: https://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-7.0.2.Final.zip?use_mirror=autoselect
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -3572,7 +3572,7 @@ availableRuntimes:
    version: 7.1.0
    license: *lgpl21
    url:  http://www.jboss.org/jbossas/downloads
-   downloadUrl: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip?use_mirror=autoselect
+   downloadUrl: https://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip?use_mirror=autoselect
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -3593,7 +3593,7 @@ availableRuntimes:
    version: 7.1.1.Final
    license: *lgpl
    url: http://www.jboss.org/jbossas/downloads
-   downloadUrl: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip
+   downloadUrl: https://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip
    boms:
    defaultBom: 
    defaultArchetype: *jboss-javaee6-webapp-archetype-old
@@ -3626,7 +3626,7 @@ availableRuntimes:
    version: 8.0.0.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: http://download.jboss.org/wildfly/8.0.0.Final/wildfly-8.0.0.Final.zip
+   downloadUrl: https://download.jboss.org/wildfly/8.0.0.Final/wildfly-8.0.0.Final.zip
    boms:
    defaultBom:
    defaultArchetype:
@@ -3659,7 +3659,7 @@ availableRuntimes:
    version: 8.1.0.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: http://download.jboss.org/wildfly/8.1.0.Final/wildfly-8.1.0.Final.zip
+   downloadUrl: https://download.jboss.org/wildfly/8.1.0.Final/wildfly-8.1.0.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -3692,7 +3692,7 @@ availableRuntimes:
    version: 8.2.0.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: http://download.jboss.org/wildfly/8.2.0.Final/wildfly-8.2.0.Final.zip
+   downloadUrl: https://download.jboss.org/wildfly/8.2.0.Final/wildfly-8.2.0.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -3725,7 +3725,7 @@ availableRuntimes:
    version: 8.2.1.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: http://download.jboss.org/wildfly/8.2.1.Final/wildfly-8.2.1.Final.zip
+   downloadUrl: https://download.jboss.org/wildfly/8.2.1.Final/wildfly-8.2.1.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -3758,7 +3758,7 @@ availableRuntimes:
    version: 9.0.0.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: http://download.jboss.org/wildfly/9.0.0.Final/wildfly-9.0.0.Final.zip
+   downloadUrl: https://download.jboss.org/wildfly/9.0.0.Final/wildfly-9.0.0.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -3791,7 +3791,7 @@ availableRuntimes:
    version: 9.0.1.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: http://download.jboss.org/wildfly/9.0.1.Final/wildfly-9.0.1.Final.zip
+   downloadUrl: https://download.jboss.org/wildfly/9.0.1.Final/wildfly-9.0.1.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -3824,7 +3824,7 @@ availableRuntimes:
    version: 9.0.2.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: http://download.jboss.org/wildfly/9.0.2.Final/wildfly-9.0.2.Final.zip
+   downloadUrl: https://download.jboss.org/wildfly/9.0.2.Final/wildfly-9.0.2.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -3857,7 +3857,7 @@ availableRuntimes:
    version: 10.0.0.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: http://download.jboss.org/wildfly/10.0.0.Final/wildfly-10.0.0.Final.zip
+   downloadUrl: https://download.jboss.org/wildfly/10.0.0.Final/wildfly-10.0.0.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -3890,7 +3890,7 @@ availableRuntimes:
    version: 10.1.0.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: http://download.jboss.org/wildfly/10.1.0.Final/wildfly-10.1.0.Final.zip
+   downloadUrl: https://download.jboss.org/wildfly/10.1.0.Final/wildfly-10.1.0.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -3923,7 +3923,7 @@ availableRuntimes:
    version: 11.0.0.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: http://download.jboss.org/wildfly/11.0.0.Final/wildfly-11.0.0.Final.zip
+   downloadUrl: https://download.jboss.org/wildfly/11.0.0.Final/wildfly-11.0.0.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -3958,7 +3958,7 @@ availableRuntimes:
    version: 12.0.0.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: http://download.jboss.org/wildfly/12.0.0.Final/wildfly-12.0.0.Final.zip
+   downloadUrl: https://download.jboss.org/wildfly/12.0.0.Final/wildfly-12.0.0.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -3991,7 +3991,7 @@ availableRuntimes:
    version: 13.0.0.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: http://download.jboss.org/wildfly/13.0.0.Final/wildfly-13.0.0.Final.zip
+   downloadUrl: https://download.jboss.org/wildfly/13.0.0.Final/wildfly-13.0.0.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -4025,7 +4025,7 @@ availableRuntimes:
    version: 14.0.0.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: http://download.jboss.org/wildfly/14.0.0.Final/wildfly-14.0.0.Final.zip
+   downloadUrl: https://download.jboss.org/wildfly/14.0.0.Final/wildfly-14.0.0.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -4059,7 +4059,7 @@ availableRuntimes:
    version: 14.0.1.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: http://download.jboss.org/wildfly/14.0.1.Final/wildfly-14.0.1.Final.zip
+   downloadUrl: https://download.jboss.org/wildfly/14.0.1.Final/wildfly-14.0.1.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -4093,7 +4093,7 @@ availableRuntimes:
    version: 15.0.0.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: http://download.jboss.org/wildfly/15.0.0.Final/wildfly-15.0.0.Final.zip
+   downloadUrl: https://download.jboss.org/wildfly/15.0.0.Final/wildfly-15.0.0.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -4127,7 +4127,7 @@ availableRuntimes:
    version: 15.0.1.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: http://download.jboss.org/wildfly/15.0.1.Final/wildfly-15.0.1.Final.zip
+   downloadUrl: https://download.jboss.org/wildfly/15.0.1.Final/wildfly-15.0.1.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -4160,7 +4160,7 @@ availableRuntimes:
    version: 16.0.0.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: http://download.jboss.org/wildfly/16.0.0.Final/wildfly-16.0.0.Final.zip
+   downloadUrl: https://download.jboss.org/wildfly/16.0.0.Final/wildfly-16.0.0.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -4193,7 +4193,7 @@ availableRuntimes:
    version: 17.0.0.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: http://download.jboss.org/wildfly/17.0.0.Final/wildfly-17.0.0.Final.zip
+   downloadUrl: https://download.jboss.org/wildfly/17.0.0.Final/wildfly-17.0.0.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -4226,7 +4226,7 @@ availableRuntimes:
    version: 17.0.1.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: http://download.jboss.org/wildfly/17.0.1.Final/wildfly-17.0.1.Final.zip
+   downloadUrl: https://download.jboss.org/wildfly/17.0.1.Final/wildfly-17.0.1.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -4303,7 +4303,7 @@ availableRuntimes:
    version: 3.6.0.Final
    license: *lgpl
    url: http://www.jboss.org/gatein/download
-   downloadUrl: http://downloads.jboss.org/gatein/Releases/Portal/3.6.0.Final/GateIn-3.6.0.Final-jbossas7.zip
+   downloadUrl: https://downloads.jboss.org/gatein/Releases/Portal/3.6.0.Final/GateIn-3.6.0.Final-jbossas7.zip
    boms:
     - *gatein-3_6-bom-101
    defaultBom: *gatein-3_6-bom-101

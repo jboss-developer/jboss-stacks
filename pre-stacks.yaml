@@ -104,7 +104,7 @@ availableRuntimes:
    name: JBoss 3.2.8 SP 1
    version: 3.2.8.SP1
    license: *lgpl21
-   downloadUrl: http://repository.jboss.org/sourceforge/jboss-3.2.8.SP1.zip
+   downloadUrl: https://repository.jboss.org/sourceforge/jboss-3.2.8.SP1.zip
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -123,7 +123,7 @@ availableRuntimes:
    version: 4.0.5
    license: *lgpl21
    url: http://www.jboss.org/jbossas
-   downloadUrl: http://repository.jboss.org/sourceforge/jboss-4.0.5.GA.zip
+   downloadUrl: https://repository.jboss.org/sourceforge/jboss-4.0.5.GA.zip
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -141,7 +141,7 @@ availableRuntimes:
    version: 4.2.3
    license: *lgpl21
    url: http://www.jboss.org/jbossas
-   downloadUrl: http://repository.jboss.org/sourceforge/jboss-4.2.3.GA.zip
+   downloadUrl: https://repository.jboss.org/sourceforge/jboss-4.2.3.GA.zip
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -159,7 +159,7 @@ availableRuntimes:
    version: 5.0.1
    license: *lgpl21
    url: http://www.jboss.org/jbossas
-   downloadUrl: http://repository.jboss.org/sourceforge/jboss-5.0.1.GA.zip
+   downloadUrl: https://repository.jboss.org/sourceforge/jboss-5.0.1.GA.zip
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -178,7 +178,7 @@ availableRuntimes:
    version: 5.1.0
    license: *lgpl21
    url: http://www.jboss.org/jbossas
-   downloadUrl: http://repository.jboss.org/sourceforge/jboss-5.1.0.GA.zip
+   downloadUrl: https://repository.jboss.org/sourceforge/jboss-5.1.0.GA.zip
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
@@ -216,7 +216,7 @@ availableRuntimes:
    version: 6.1.0
    license: *lgpl21
    url: http://www.jboss.org/jbossas
-   downloadUrl: http://download.jboss.org/jbossas/6.1/jboss-as-distribution-6.1.0.Final.zip?use_mirror=autoselect
+   downloadUrl: https://download.jboss.org/jbossas/6.1/jboss-as-distribution-6.1.0.Final.zip?use_mirror=autoselect
    labels: {
         runtime-category: SERVER,
         runtime-type: AS,
