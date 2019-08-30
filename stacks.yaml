@@ -4850,7 +4850,7 @@ minorReleases:
    version: 7.3.1
    recommendedRuntime: *fuse731runtime
 
-- &fuse74
+ - &fuse74
    name: Fuse
    version: 7.4.0
    recommendedRuntime: *fuse740runtime
