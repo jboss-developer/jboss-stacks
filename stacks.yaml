@@ -4300,6 +4300,39 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.180
     }
 
+   #####################
+   #   WildFly  18.0.1 #
+   #####################
+
+ - &wildfly-1801finalruntime
+   id: wildfly-1801finalruntime
+   name: WildFly 18.0.1 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 18.0.1.Final
+   license: *lgpl
+   url: http://wildfly.org/downloads/
+   downloadUrl: https://download.jboss.org/wildfly/18.0.1.Final/wildfly-18.0.1.Final.zip
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/18.0.1.Final/pom.xml",
+        runtime-size: 186544268,
+        runtime-md5: bb55109aeda5d091105f2a96255cda2c,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.180
+    }
+
    #################
    #  J P P  6.1   #
    #################
@@ -4837,6 +4870,11 @@ minorReleases:
    version: 18.0.0.Final
    recommendedRuntime: *wildfly-1800finalruntime
 
+ - &wildfly1801final
+   name: WildFly
+   version: 18.0.1.Final
+   recommendedRuntime: *wildfly-1801finalruntime
+
    ###############
    #   JPP 6.x   #
    ###############
@@ -5074,9 +5112,10 @@ majorReleases:
 
  - name: WildFly
    version: 18
-   recommendedRuntime: *wildfly-1800finalruntime
+   recommendedRuntime: *wildfly-1801finalruntime
    minorReleases:
-    - *wildfly1800final    
+    - *wildfly1800final
+    - *wildfly1801final    
 
    ##################
    #   E A P  6     #
