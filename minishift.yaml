@@ -558,6 +558,29 @@ availableRuntimes:
    }
 
    ########################
+   #   MiniShift 1.34.2   #
+   ########################
+
+ - &minishift1342
+   id: minishift1342
+   name: Minishift v1.34.2
+   version: 1.34.2
+   license: *apache20
+   url: https://github.com/minishift/minishift/releases
+   labels: {
+        requiresCredentials: false,
+        runtime-category: MINISHIFT,
+        runtime-type: MINISHIFT,
+        runtime-size: 10236081,
+        additionalDownloadURLs: {
+            "win32": "https://github.com/minishift/minishift/releases/download/v1.34.2/minishift-1.34.2-windows-amd64.zip",
+            "linux": "https://github.com/minishift/minishift/releases/download/v1.34.2/minishift-1.34.2-linux-amd64.tgz",
+            "macosx": "https://github.com/minishift/minishift/releases/download/v1.34.2/minishift-1.34.2-darwin-amd64.tgz",
+        },
+        wtp-runtime-type: org.jboss.tools.openshift.cdk.server.runtime.type.minishift.17
+   }
+
+   ########################
    #       CDK 3.0.0      #
    ########################
 
@@ -858,6 +881,30 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.tools.openshift.cdk.server.runtime.type.cdk.32
    }
    
+   ########################
+   #      CDK 3.11.0      #
+   ########################
+
+ - &cdk3110
+   id: cdk3110
+   name: CDK v3.11.0
+   version: 3.11.0
+   license: *apache20
+   url: https://developers.redhat.com/products/cdk/download/
+   labels: {
+        requiresCredentials: true,
+        runtime-category: MINISHIFT,
+        runtime-type: CDK,
+        runtime-size: 504284864,
+        additionalDownloadURLs: {
+            "linux": "https://www.jboss.org/download-manager/jdf/file/cdk-3.11.0-1-minishift-linux-amd64",
+            "macosx": "https://www.jboss.org/download-manager/jdf/file/cdk-3.11.0-1-minishift-darwin-amd64",
+            "win32": "https://www.jboss.org/download-manager/jdf/file/cdk-3.11.0-1-minishift-windows-amd64.exe",
+        },
+        file-type: binary,
+        wtp-runtime-type: org.jboss.tools.openshift.cdk.server.runtime.type.cdk.32
+   }
+
    ########################
    #       CRC 1.0.0      #
    ########################
