@@ -2998,7 +2998,7 @@ availableRuntimes:
    name: JBoss EAP 6.1.0
    version: 6.1.0
    license: *lgpl21
-   url: http://www.jboss.org/products
+   url: https://developers.redhat.com/products/eap
    downloadUrl: https://www.jboss.org/download-manager/jdf/content/origin/files/sha256/16/16ea1e0cef29e94c0d795bbc4b4c431dcb14c4d10831dce5ff48194ff4fb2aee/jboss-eap-6.1.0.zip
    boms:
     - *jboss-javaee-6_0-eap61
@@ -3067,7 +3067,7 @@ availableRuntimes:
    name: JBoss EAP 6.2.0
    version: 6.2.0
    license: *lgpl21
-   url: http://www.jboss.org/products
+   url: https://developers.redhat.com/products/eap
    downloadUrl: https://www.jboss.org/download-manager/jdf/content/origin/files/sha256/62/627773f1798623eb599bbf7d39567f60941a706dc971c17f5232ffad028bc6f4/jboss-eap-6.2.0.zip
    defaultBom: *jboss-javaee-6_0-web-eap62
    boms:
@@ -3140,7 +3140,7 @@ availableRuntimes:
    name: JBoss EAP 6.3.0
    version: 6.3.0
    license: *lgpl21
-   url: http://www.jboss.org/products
+   url: https://developers.redhat.com/products/eap
    downloadUrl: https://www.jboss.org/download-manager/jdf/file/jboss-eap-6.3.0.GA.zip
    defaultBom: *jboss-javaee-6_0-web-eap63
    boms:
@@ -3198,7 +3198,7 @@ availableRuntimes:
    name: JBoss EAP 6.4.0
    version: 6.4.0
    license: *lgpl21
-   url: http://www.jboss.org/products
+   url: https://developers.redhat.com/products/eap
    downloadUrl: https://www.jboss.org/download-manager/jdf/file/jboss-eap-6.4.0.GA.zip
    defaultBom: *jboss-javaee-6_0-web-eap64
    boms:
@@ -3239,7 +3239,7 @@ availableRuntimes:
    name: JBoss EAP 7.0.0
    version: 7.0.0
    license: *lgpl21
-   url: http://www.jboss.org/products
+   url: https://developers.redhat.com/products/eap
    downloadUrl: https://www.jboss.org/download-manager/jdf/file/jboss-eap-7.0.0.zip
    defaultBom: 
    boms:
@@ -3259,7 +3259,7 @@ availableRuntimes:
    name: JBoss EAP 7.1.0
    version: 7.1.0
    license: *lgpl21
-   url: http://www.jboss.org/products
+   url: https://developers.redhat.com/products/eap
    downloadUrl: https://www.jboss.org/download-manager/jdf/file/jboss-eap-7.1.0.zip
    defaultBom: 
    boms:
@@ -3279,7 +3279,7 @@ availableRuntimes:
    name: JBoss EAP 7.2.0
    version: 7.2.0
    license: *lgpl21
-   url: http://www.jboss.org/products
+   url: https://developers.redhat.com/products/eap
    downloadUrl: https://www.jboss.org/download-manager/jdf/file/jboss-eap-7.2.0.zip
    defaultBom: 
    boms:
@@ -3299,8 +3299,8 @@ availableRuntimes:
    name: JBoss EAP 7.3.0
    version: 7.3.0.Beta
    license: *lgpl21
-   url: http://www.jboss.org/products
-   downloadUrl: https://www.jboss.org/download-manager/file/jboss-eap-7.3.0.Beta.zip
+   url: https://developers.redhat.com/products/eap
+   downloadUrl: https://www.jboss.org/download-manager/jdf/file/jboss-eap-7.3.0.Beta.zip
    defaultBom: 
    boms:
    defaultArchetype: 
