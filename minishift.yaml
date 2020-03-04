@@ -911,7 +911,7 @@ availableRuntimes:
 
  - &crc100
    id: crc100
-   name: CRC v1.0.0
+   name: Red Hat CRC v1.0.0
    version: 1.0.0
    license: *apache20
    url: https://github.com/code-ready/crc/releases
@@ -934,7 +934,7 @@ availableRuntimes:
 
  - &crc110
    id: crc110
-   name: CRC v1.1.0
+   name: Red Hat CRC v1.1.0
    version: 1.1.0
    license: *apache20
    url: https://github.com/code-ready/crc/releases
@@ -957,7 +957,7 @@ availableRuntimes:
 
  - &crc120
    id: crc120
-   name: CRC v1.2.0
+   name: Red Hat CRC v1.2.0
    version: 1.2.0
    license: *apache20
    url: https://github.com/code-ready/crc/releases
@@ -980,7 +980,7 @@ availableRuntimes:
 
  - &crc130
    id: crc130
-   name: CRC v1.3.0
+   name: Red Hat CRC v1.3.0
    version: 1.3.0
    license: *apache20
    url: https://github.com/code-ready/crc/releases
@@ -1003,7 +1003,7 @@ availableRuntimes:
 
  - &crc140
    id: crc140
-   name: CRC v1.4.0
+   name: Red Hat CRC v1.4.0
    version: 1.4.0
    license: *apache20
    url: https://github.com/code-ready/crc/releases
@@ -1026,7 +1026,7 @@ availableRuntimes:
 
  - &crc150
    id: crc150
-   name: CRC v1.5.0
+   name: Red Hat CRC v1.5.0
    version: 1.5.0
    license: *apache20
    url: https://github.com/code-ready/crc/releases
@@ -1049,7 +1049,7 @@ availableRuntimes:
 
  - &crc160
    id: crc160
-   name: CRC v1.6.0
+   name: Red Hat CRC v1.6.0
    version: 1.6.0
    license: *apache20
    url: https://github.com/code-ready/crc/releases
