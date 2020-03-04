@@ -586,7 +586,7 @@ availableRuntimes:
 
  - &cdk300
    id: cdk300
-   name: CDK v3.0.0
+   name: Red Hat CDK v3.0.0
    version: 3.0.0
    license: *apache20
    url: https://developers.redhat.com/products/cdk/download/
@@ -612,7 +612,7 @@ availableRuntimes:
 
  - &cdk310
    id: cdk310
-   name: CDK v3.1.0
+   name: Red Hat CDK v3.1.0
    version: 3.1.0
    license: *apache20
    url: https://developers.redhat.com/products/cdk/download/
@@ -639,7 +639,7 @@ availableRuntimes:
 
  - &cdk311
    id: cdk311
-   name: CDK v3.1.1
+   name: Red Hat CDK v3.1.1
    version: 3.1.1
    license: *apache20
    url: https://developers.redhat.com/products/cdk/download/
@@ -665,7 +665,7 @@ availableRuntimes:
 
  - &cdk320
    id: cdk320
-   name: CDK v3.2.0
+   name: Red Hat CDK v3.2.0
    version: 3.2.0
    license: *apache20
    url: https://developers.redhat.com/products/cdk/download/
@@ -691,7 +691,7 @@ availableRuntimes:
 
  - &cdk330
    id: cdk330
-   name: CDK v3.3.0
+   name: Red Hat CDK v3.3.0
    version: 3.3.0
    license: *apache20
    url: https://developers.redhat.com/products/cdk/download/
@@ -717,7 +717,7 @@ availableRuntimes:
 
  - &cdk340
    id: cdk340
-   name: CDK v3.4.0
+   name: Red Hat CDK v3.4.0
    version: 3.4.0
    license: *apache20
    url: https://developers.redhat.com/products/cdk/download/
@@ -743,7 +743,7 @@ availableRuntimes:
 
  - &cdk350
    id: cdk350
-   name: CDK v3.5.0
+   name: Red Hat CDK v3.5.0
    version: 3.5.0
    license: *apache20
    url: https://developers.redhat.com/products/cdk/download/
@@ -767,7 +767,7 @@ availableRuntimes:
 
  - &cdk360
    id: cdk360
-   name: CDK v3.6.0
+   name: Red Hat CDK v3.6.0
    version: 3.6.0
    license: *apache20
    url: https://developers.redhat.com/products/cdk/download/
@@ -791,7 +791,7 @@ availableRuntimes:
 
  - &cdk370
    id: cdk370
-   name: CDK v3.7.0
+   name: Red Hat CDK v3.7.0
    version: 3.7.0
    license: *apache20
    url: https://developers.redhat.com/products/cdk/download/
@@ -815,7 +815,7 @@ availableRuntimes:
 
  - &cdk380
    id: cdk380
-   name: CDK v3.8.0
+   name: Red Hat CDK v3.8.0
    version: 3.8.0
    license: *apache20
    url: https://developers.redhat.com/products/cdk/download/
@@ -839,7 +839,7 @@ availableRuntimes:
 
  - &cdk390
    id: cdk390
-   name: CDK v3.9.0
+   name: Red Hat CDK v3.9.0
    version: 3.9.0
    license: *apache20
    url: https://developers.redhat.com/products/cdk/download/
