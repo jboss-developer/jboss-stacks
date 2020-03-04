@@ -2905,7 +2905,7 @@ availableRuntimes:
 
  - &jbosseap600runtime
    id: jbosseap600runtime
-   name: JBoss EAP 6.0.0
+   name: Red Hat JBoss EAP 6.0.0
    version: 6.0.0
    license: *lgpl21
    url: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=appplatform
@@ -2950,7 +2950,7 @@ availableRuntimes:
 # EAP 6.0.1 uses WFK 2.2 BOMs
  - &jbosseap601runtime
    id: jbosseap601runtime
-   name: JBoss EAP 6.0.1
+   name: Red Hat JBoss EAP 6.0.1
    version: 6.0.1
    license: *lgpl21
    url: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=appplatform
@@ -2995,7 +2995,7 @@ availableRuntimes:
 
  - &jbosseap610runtime
    id: jbosseap610runtime
-   name: JBoss EAP 6.1.0
+   name: Red Hat JBoss EAP 6.1.0
    version: 6.1.0
    license: *lgpl21
    url: https://developers.redhat.com/products/eap
@@ -3064,7 +3064,7 @@ availableRuntimes:
 
  - &jbosseap620runtime
    id: jbosseap620runtime
-   name: JBoss EAP 6.2.0
+   name: Red Hat JBoss EAP 6.2.0
    version: 6.2.0
    license: *lgpl21
    url: https://developers.redhat.com/products/eap
@@ -3137,7 +3137,7 @@ availableRuntimes:
 
  - &jbosseap630runtime
    id: jbosseap630runtime
-   name: JBoss EAP 6.3.0
+   name: Red Hat JBoss EAP 6.3.0
    version: 6.3.0
    license: *lgpl21
    url: https://developers.redhat.com/products/eap
@@ -3195,7 +3195,7 @@ availableRuntimes:
 
  - &jbosseap640runtime
    id: jbosseap640runtime
-   name: JBoss EAP 6.4.0
+   name: Red Hat JBoss EAP 6.4.0
    version: 6.4.0
    license: *lgpl21
    url: https://developers.redhat.com/products/eap
@@ -3236,7 +3236,7 @@ availableRuntimes:
 
  - &jbosseap700runtime
    id: jbosseap700runtime
-   name: JBoss EAP 7.0.0
+   name: Red Hat JBoss EAP 7.0.0
    version: 7.0.0
    license: *lgpl21
    url: https://developers.redhat.com/products/eap
@@ -3256,7 +3256,7 @@ availableRuntimes:
 
  - &jbosseap710runtime
    id: jbosseap710runtime
-   name: JBoss EAP 7.1.0
+   name: Red Hat JBoss EAP 7.1.0
    version: 7.1.0
    license: *lgpl21
    url: https://developers.redhat.com/products/eap
@@ -3276,7 +3276,7 @@ availableRuntimes:
    
  - &jbosseap720runtime
    id: jbosseap720runtime
-   name: JBoss EAP 7.2.0
+   name: Red Hat JBoss EAP 7.2.0
    version: 7.2.0
    license: *lgpl21
    url: https://developers.redhat.com/products/eap
