@@ -3296,11 +3296,11 @@ availableRuntimes:
         
  - &jbosseap730runtime
    id: jbosseap730runtime
-   name: JBoss EAP 7.3.0
-   version: 7.3.0.Beta
+   name: Red Hat JBoss EAP 7.3.0
+   version: 7.3.0
    license: *lgpl21
    url: https://developers.redhat.com/products/eap
-   downloadUrl: https://www.jboss.org/download-manager/jdf/file/jboss-eap-7.3.0.Beta.zip
+   downloadUrl: https://www.jboss.org/download-manager/jdf/file/jboss-eap-7.3.0.zip
    defaultBom: 
    boms:
    defaultArchetype: 
@@ -3309,8 +3309,8 @@ availableRuntimes:
         requiresCredentials: true,
         runtime-category: SERVER,
         runtime-type: EAP,
-        runtime-size: 201282922,
-        runtime-md5: dae47fa6414e6c2b0c8b977dad513523,
+        runtime-size: 206430757,
+        runtime-md5: 3dba80cc1be17b00cb901441111886f3,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.73
    }
       
