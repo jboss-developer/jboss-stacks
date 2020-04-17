@@ -904,6 +904,30 @@ availableRuntimes:
         file-type: binary,
         wtp-runtime-type: org.jboss.tools.openshift.cdk.server.runtime.type.cdk.32
    }
+   
+   ########################
+   #      CDK 3.12.0      #
+   ########################
+
+ - &cdk3120
+   id: cdk3120
+   name: Red Hat CDK v3.12.0
+   version: 3.12.0
+   license: *apache20
+   url: https://developers.redhat.com/products/cdk/download/
+   labels: {
+        requiresCredentials: true,
+        runtime-category: MINISHIFT,
+        runtime-type: CDK,
+        runtime-size: 504320832,
+        additionalDownloadURLs: {
+            "linux": "https://www.jboss.org/download-manager/jdf/file/cdk-3.12.0-1-minishift-linux-amd64",
+            "macosx": "https://www.jboss.org/download-manager/jdf/file/cdk-3.12.0-1-minishift-darwin-amd64",
+            "win32": "https://www.jboss.org/download-manager/jdf/file/cdk-3.12.0-1-minishift-windows-amd64.exe",
+        },
+        file-type: binary,
+        wtp-runtime-type: org.jboss.tools.openshift.cdk.server.runtime.type.cdk.32
+   }
 
    ########################
    #       CRC 1.0.0      #
@@ -1062,6 +1086,52 @@ availableRuntimes:
             "win32": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.6.0/crc-windows-amd64.zip",
             "linux": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.6.0/crc-linux-amd64.tar.xz",
             "macosx": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.6.0/crc-macos-amd64.tar.xz",
+        },
+        wtp-runtime-type: org.jboss.tools.openshift.crc.server.runtime.type.crc.100
+   }
+   
+   ########################
+   #       CRC 1.7.0      #
+   ########################
+
+ - &crc170
+   id: crc170
+   name: Red Hat CRC v1.7.0
+   version: 1.7.0
+   license: *apache20
+   url: https://github.com/code-ready/crc/releases
+   labels: {
+        requiresCredentials: false,
+        runtime-category: MINISHIFT,
+        runtime-type: CRC,
+        runtime-size: 2233469120,
+        additionalDownloadURLs: {
+            "win32": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.7.0/crc-windows-amd64.zip",
+            "linux": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.7.0/crc-linux-amd64.tar.xz",
+            "macosx": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.7.0/crc-macos-amd64.tar.xz",
+        },
+        wtp-runtime-type: org.jboss.tools.openshift.crc.server.runtime.type.crc.100
+   }
+   
+   ########################
+   #       CRC 1.8.0      #
+   ########################
+
+ - &crc180
+   id: crc180
+   name: Red Hat CRC v1.8.0
+   version: 1.8.0
+   license: *apache20
+   url: https://github.com/code-ready/crc/releases
+   labels: {
+        requiresCredentials: false,
+        runtime-category: MINISHIFT,
+        runtime-type: CRC,
+        runtime-size: 2166615100,
+        additionalDownloadURLs: {
+            "win32": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.8.0/crc-windows-amd64.zip",
+            "linux": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.8.0/crc-linux-amd64.tar.xz",
+            "macosx": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.8.0/crc-macos-amd64.tar.xz",
         },
         wtp-runtime-type: org.jboss.tools.openshift.crc.server.runtime.type.crc.100
    }
