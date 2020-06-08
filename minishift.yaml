@@ -1186,7 +1186,7 @@ availableRuntimes:
    #       CRC 1.11.0      #
    ########################
 
- - &crc1100
+ - &crc1110
    id: crc1110
    name: Red Hat CRC v1.11.0
    version: 1.11.0
