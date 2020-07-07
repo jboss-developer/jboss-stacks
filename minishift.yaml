@@ -928,6 +928,30 @@ availableRuntimes:
         file-type: binary,
         wtp-runtime-type: org.jboss.tools.openshift.cdk.server.runtime.type.cdk.32
    }
+   
+   ########################
+   #      CDK 3.13.0      #
+   ########################
+
+ - &cdk3130
+   id: cdk3130
+   name: Red Hat CDK v3.13.0
+   version: 3.13.0
+   license: *apache20
+   url: https://developers.redhat.com/products/cdk/download/
+   labels: {
+        requiresCredentials: true,
+        runtime-category: MINISHIFT,
+        runtime-type: CDK,
+        runtime-size: 507242080,
+        additionalDownloadURLs: {
+            "linux": "https://www.jboss.org/download-manager/jdf/file/cdk-3.13.0-1-minishift-linux-amd64",
+            "macosx": "https://www.jboss.org/download-manager/jdf/file/cdk-3.13.0-1-minishift-darwin-amd64",
+            "win32": "https://www.jboss.org/download-manager/jdf/file/cdk-3.13.0-1-minishift-windows-amd64.exe",
+        },
+        file-type: binary,
+        wtp-runtime-type: org.jboss.tools.openshift.cdk.server.runtime.type.cdk.32
+   }
 
    ########################
    #       CRC 1.0.0      #
@@ -1201,6 +1225,29 @@ availableRuntimes:
             "win32": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.11.0/crc-windows-amd64.zip",
             "linux": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.11.0/crc-linux-amd64.tar.xz",
             "macosx": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.11.0/crc-macos-amd64.tar.xz",
+        },
+        wtp-runtime-type: org.jboss.tools.openshift.crc.server.runtime.type.crc.100
+   }
+   
+   ########################
+   #       CRC 1.12.0     #
+   ########################
+
+ - &crc1120
+   id: crc1120
+   name: Red Hat CRC v1.12.0
+   version: 1.12.0
+   license: *apache20
+   url: https://github.com/code-ready/crc/releases
+   labels: {
+        requiresCredentials: false,
+        runtime-category: MINISHIFT,
+        runtime-type: CRC,
+        runtime-size: 2231789869,
+        additionalDownloadURLs: {
+            "win32": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.12.0/crc-windows-amd64.zip",
+            "linux": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.12.0/crc-linux-amd64.tar.xz",
+            "macosx": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.12.0/crc-macos-amd64.tar.xz",
         },
         wtp-runtime-type: org.jboss.tools.openshift.crc.server.runtime.type.crc.100
    }
