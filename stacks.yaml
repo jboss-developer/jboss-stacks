@@ -5135,7 +5135,7 @@ minorReleases:
 
  - &wildfly2100beta1
    name: WildFly
-   version: 20.0.0.Beta1
+   version: 21.0.0.Beta1
    recommendedRuntime: *wildfly-2100beta1runtime
 
    ###############
