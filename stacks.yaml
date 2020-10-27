@@ -4469,15 +4469,15 @@ availableRuntimes:
   #   WildFly  21.0.0 #
   #####################
 
- - &wildfly-2100beta1runtime
-   id: wildfly-2100beta1runtime
-   name: WildFly 21.0.0 Beta1
+ - &wildfly-2100finalruntime
+   id: wildfly-2100finalruntime
+   name: WildFly 21.0.0 Final
    groupId: org.wildfly
    artifactId: wildfly-dist
-   version: 21.0.0.Beta1
+   version: 21.0.0.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: https://download.jboss.org/wildfly/21.0.0.Beta1/wildfly-21.0.0.Beta1.zip
+   downloadUrl: https://download.jboss.org/wildfly/21.0.0.Final/wildfly-21.0.0.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -4492,7 +4492,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/21.0.0.Beta1/pom.xml",
+        pom: "https://github.com/wildfly/wildfly/blob/21.0.0.Final/pom.xml",
         runtime-size: 200382391,
         runtime-md5: 16b873c0b37534a229bd464fabeb9a4e,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.210
@@ -5133,10 +5133,10 @@ minorReleases:
    #   WildFly 21 #
    ################
 
- - &wildfly2100beta1
+ - &wildfly2100final
    name: WildFly
-   version: 21.0.0.Beta1
-   recommendedRuntime: *wildfly-2100beta1runtime
+   version: 21.0.0.Final
+   recommendedRuntime: *wildfly-2100finalruntime
 
    ###############
    #   JPP 6.x   #
@@ -5423,9 +5423,9 @@ majorReleases:
 
  - name: WildFly
    version: 21
-   recommendedRuntime: *wildfly-2100beta1runtime
+   recommendedRuntime: *wildfly-2100finalruntime
    minorReleases:
-    - *wildfly2100beta1
+    - *wildfly2100final
 
    ##################
    #   E A P  6     #
