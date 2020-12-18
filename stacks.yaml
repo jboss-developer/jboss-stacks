@@ -5247,6 +5247,15 @@ minorReleases:
    version: 21.0.2.Final
    recommendedRuntime: *wildfly-2102finalruntime
 
+   ################
+   #   WildFly 22 #
+   ################
+ - &wildfly2200Alpha1
+   name: WildFly
+   version: 22.0.0.Alpha1
+   recommendedRuntime: *wildfly-2200Alpha1runtime
+
+
    ###############
    #   JPP 6.x   #
    ###############
@@ -5537,6 +5546,17 @@ majorReleases:
     - *wildfly2100final
     - *wildfly2101final
     - *wildfly2102final
+
+   #################
+   #   WildFly 22  #
+   #################
+
+ - name: WildFly
+   version: 22
+   recommendedRuntime: *wildfly-2200Alpha1runtime
+   minorReleases:
+    - *wildfly2200Alpha1
+
 
    ##################
    #   E A P  6     #
