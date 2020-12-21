@@ -4568,15 +4568,15 @@ availableRuntimes:
   #   WildFly  22.0.0 #
   #####################
 
- - &wildfly-2200Alpha1runtime
-   id: wildfly-2200Alpha1runtime
-   name: WildFly 22.0.0 Alpha1
+ - &wildfly-2200Beta1runtime
+   id: wildfly-2200Beta1runtime
+   name: WildFly 22.0.0 Beta1
    groupId: org.wildfly
    artifactId: wildfly-dist
-   version: 22.0.0.Alpha1
+   version: 22.0.0.Beta1
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: https://download.jboss.org/wildfly/22.0.0.Alpha1/wildfly-preview-22.0.0.Alpha1.zip
+   downloadUrl: https://download.jboss.org/wildfly/22.0.0.Beta1/wildfly-22.0.0.Beta1.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -4591,9 +4591,9 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/22.0.0.Alpha1/pom.xml",
-        runtime-size: 199463000,
-        runtime-md5: 3dd0cfa124916ad5be0f5c66260945c3,
+        pom: "https://github.com/wildfly/wildfly/blob/22.0.0.Beta1/pom.xml",
+        runtime-size: 203035999,
+        runtime-md5: 85ae5621a9ce6b7984c7198da2509fde,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.220
     }
 
@@ -5250,10 +5250,10 @@ minorReleases:
    ################
    #   WildFly 22 #
    ################
- - &wildfly2200Alpha1
+ - &wildfly2200Beta1
    name: WildFly
-   version: 22.0.0.Alpha1
-   recommendedRuntime: *wildfly-2200Alpha1runtime
+   version: 22.0.0.Beta1
+   recommendedRuntime: *wildfly-2200Beta1runtime
 
 
    ###############
@@ -5553,9 +5553,9 @@ majorReleases:
 
  - name: WildFly
    version: 22
-   recommendedRuntime: *wildfly-2200Alpha1runtime
+   recommendedRuntime: *wildfly-2200Beta1runtime
    minorReleases:
-    - *wildfly2200Alpha1
+    - *wildfly2200Beta1
 
 
    ##################
