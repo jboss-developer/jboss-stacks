@@ -4970,6 +4970,26 @@ availableRuntimes:
         wtp-runtime-type: org.fusesource.ide.fuseesb.runtime.70
    }
 
+   #######################
+   #  Red Hat Fuse 7.8.0 #
+   #######################
+
+ - &fuse780runtime
+   id: fuse780runtime
+   name: Red Hat Fuse 7.8.0
+   version: 7.8.0
+   license: *apache20
+   url: https://developers.redhat.com/products/fuse/overview
+   downloadUrl: https://www.jboss.org/download-manager/jdf/content/origin/files/sha256/f0/f0e5dc5fae0cbc343e7017804000304d0ef7a1e794458e1881ee367055453f82/fuse-karaf-7.8.0.zip
+   labels: {
+        requiresCredentials: true,
+        runtime-category: OSGI_SERVER,
+        runtime-type: FUSE,
+        runtime-size: 204569175,
+        runtime-md5: 2a886a45fe521999b406d74f1c6ef9ee,
+        wtp-runtime-type: org.fusesource.ide.fuseesb.runtime.70
+   }
+
 
 ##########################################################
 #                                                        #
@@ -5356,6 +5376,11 @@ minorReleases:
    version: 7.7.0
    recommendedRuntime: *fuse770runtime
 
+ - &fuse78
+   name: Fuse
+   version: 7.8.0
+   recommendedRuntime: *fuse780runtime
+
    ##############################
    #  Data Virtualization 6.x   #
    ##############################
@@ -5635,7 +5660,7 @@ majorReleases:
 
  - name: Fuse
    version: 7
-   recommendedRuntime: *fuse770runtime
+   recommendedRuntime: *fuse780runtime
    minorReleases:
     - *fuse70
     - *fuse71
@@ -5645,6 +5670,7 @@ majorReleases:
     - *fuse75
     - *fuse76
     - *fuse77
+    - *fuse78
 
    ############################
    #  Data Virtualization 6.1 #
