@@ -4632,18 +4632,18 @@ availableRuntimes:
 
 
   #####################
-  #   WildFly  22.0.1 #
+  #   WildFly  23.0.0 #
   #####################
 
- - &wildfly-2300beta1runtime
-   id: wildfly-2300beta1runtime
-   name: WildFly 23.0.0 Beta 1
+ - &wildfly-2300finalruntime
+   id: wildfly-2300finalruntime
+   name: WildFly 23.0.0 Final
    groupId: org.wildfly
    artifactId: wildfly-dist
-   version: 23.0.0.Beta1
+   version: 23.0.0.Final
    license: *lgpl
    url: http://wildfly.org/downloads/
-   downloadUrl: https://download.jboss.org/wildfly/23.0.0.Beta1/wildfly-preview-23.0.0.Beta1.zip
+   downloadUrl: https://download.jboss.org/wildfly/23.0.0.Final/wildfly-23.0.0.Final.zip
    boms:
    defaultBom:
    defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
@@ -4658,9 +4658,9 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/23.0.0.Beta1/pom.xml",
-        runtime-size: 209332175,
-        runtime-md5: 1584b370a36b396ac6ea73264dc57c68,
+        pom: "https://github.com/wildfly/wildfly/blob/23.0.0.Final/pom.xml",
+        runtime-size: 212083712,
+        runtime-md5: 489f3c0a75dffe9ee89428741dfbc90f,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.230
     }
 
@@ -5351,10 +5351,10 @@ minorReleases:
    ################
    #   WildFly 23 #
    ################
- - &wildfly2300beta1
+ - &wildfly2300final
    name: WildFly
-   version: 23.0.0.Beta1
-   recommendedRuntime: *wildfly-2300beta1runtime
+   version: 23.0.0.Final
+   recommendedRuntime: *wildfly-2300finalruntime
 
 
    ###############
@@ -5671,9 +5671,9 @@ majorReleases:
 
  - name: WildFly
    version: 23
-   recommendedRuntime: *wildfly-2300beta1runtime
+   recommendedRuntime: *wildfly-2300finalruntime
    minorReleases:
-    - *wildfly2300beta1
+    - *wildfly2300final
 
    ##################
    #   E A P  6     #
