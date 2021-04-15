@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        java: ["11"]
+        java: ["1.8"]
       fail-fast: false
 
     steps:
@@ -42,6 +42,7 @@ jobs:
     # Archive artifacts to be applied in Publish Reports workflow
     - name: Archiving test artifacts
       uses: actions/upload-artifact@v2
+      if: always()
       with: 
         name: ${{ matrix.os }}-test-reports
         path: |
