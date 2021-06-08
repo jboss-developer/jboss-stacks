@@ -1600,3 +1600,71 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.tools.openshift.crc.server.runtime.type.crc.100
    }
    
+   ########################
+   #       CRC 1.25.0     #
+   ########################
+
+ - &crc1250
+   id: crc1250
+   name: Red Hat CRC v1.25.0
+   version: 1.25.0
+   license: *apache20
+   url: https://github.com/code-ready/crc/releases
+   labels: {
+        requiresCredentials: false,
+        runtime-category: MINISHIFT,
+        runtime-type: CRC,
+        runtime-size: 2460493767,
+        additionalDownloadURLs: {
+            "win32": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.25.0/crc-windows-amd64.zip",
+            "linux": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.25.0/crc-linux-amd64.tar.xz",
+            "macosx": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.25.0/crc-macos-amd64.tar.xz",
+        },
+        wtp-runtime-type: org.jboss.tools.openshift.crc.server.runtime.type.crc.100
+   }
+   
+   ########################
+   #       CRC 1.26.0     #
+   ########################
+
+ - &crc1260
+   id: crc1260
+   name: Red Hat CRC v1.26.0
+   version: 1.26.0
+   license: *apache20
+   url: https://github.com/code-ready/crc/releases
+   labels: {
+        requiresCredentials: false,
+        runtime-category: MINISHIFT,
+        runtime-type: CRC,
+        runtime-size: 2456003908,
+        additionalDownloadURLs: {
+            "win32": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.26.0/crc-windows-amd64.zip",
+            "linux": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.26.0/crc-linux-amd64.tar.xz",
+            "macosx": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.26.0/crc-macos-amd64.tar.xz",
+        },
+        wtp-runtime-type: org.jboss.tools.openshift.crc.server.runtime.type.crc.100
+   }
+
+   ########################
+   #       CRC 1.27.0     #
+   ########################
+
+ - &crc1270
+   id: crc1270
+   name: Red Hat CRC v1.27.0
+   version: 1.27.0
+   license: *apache20
+   url: https://github.com/code-ready/crc/releases
+   labels: {
+        requiresCredentials: false,
+        runtime-category: MINISHIFT,
+        runtime-type: CRC,
+        runtime-size: 2438025188,
+        additionalDownloadURLs: {
+            "win32": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.27.0/crc-windows-amd64.zip",
+            "linux": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.27.0/crc-linux-amd64.tar.xz",
+            "macosx": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.27.0/crc-macos-amd64.tar.xz",
+        },
+        wtp-runtime-type: org.jboss.tools.openshift.crc.server.runtime.type.crc.100
+   }   
