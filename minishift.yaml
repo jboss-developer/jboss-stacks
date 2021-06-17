@@ -1667,4 +1667,26 @@ availableRuntimes:
             "macosx": "https://mirror.openshift.com/pub/openshift-v4/clients/crc/1.27.0/crc-macos-amd64.tar.xz",
         },
         wtp-runtime-type: org.jboss.tools.openshift.crc.server.runtime.type.crc.100
+   }
+
+   ########################
+   #       CRC 1.28.0     #
+   ########################
+
+ - &crc1280
+   id: crc1280
+   name: Red Hat CRC v1.28.0
+   version: 1.28.0
+   license: *apache20
+   url: https://github.com/code-ready/crc/releases
+   labels: {
+        requiresCredentials: false,
+        runtime-category: MINISHIFT,
+        runtime-type: CRC,
+        runtime-size: 2486054199,
+        additionalDownloadURLs: {
+            "win32": "https://developers.redhat.com/content-gateway/file/pub/openshift-v4/clients/crc/1.28.0/crc-windows-amd64.zip",
+            "linux": "https://developers.redhat.com/content-gateway/file/pub/openshift-v4/clients/crc/1.28.0/crc-linux-amd64.tar.xz",
+        },
+        wtp-runtime-type: org.jboss.tools.openshift.crc.server.runtime.type.crc.100
    }   
