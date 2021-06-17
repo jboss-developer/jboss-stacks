@@ -3607,7 +3607,7 @@ availableRuntimes:
 
  - &jboss-as711runtime
    id: jboss-as711runtime
-   name: JBoss AS 7.1.1 (Brontes)
+   name: JBoss 7.1.1
    groupId: org.jboss.as
    artifactId: jboss-as-dist
    version: 7.1.1.Final
