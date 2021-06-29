@@ -6,7 +6,7 @@
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
-# http://www.apache.org/licenses/LICENSE-2.0
+# https://www.apache.org/licenses/LICENSE-2.0
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -15,9 +15,9 @@
 
 
 licenses:
- - &lgpl http://www.gnu.org/copyleft/lesser.txt
- - &lgpl21 http://www.gnu.org/licenses/lgpl-2.1.txt
- - &apache20 http://www.apache.org/licenses/LICENSE-2.0.txt
+ - &lgpl https://www.gnu.org/copyleft/lesser.txt
+ - &lgpl21 https://www.gnu.org/licenses/lgpl-2.1.txt
+ - &apache20 https://www.apache.org/licenses/LICENSE-2.0.txt
 #metadatas
 # - &lastJDGBomRelease 6.2.0-redhat-1
 # - &lastBRMSBomRelease 5.3.1-redhat-1
@@ -3323,7 +3323,7 @@ availableRuntimes:
    name: JBoss FSW 6.0.0
    version: 6.0.0
    license: *lgpl21
-   url: http://www.jboss.org/products
+   url: https://www.jboss.org/products
    downloadUrl: https://www.jboss.org/download-manager/jdf/file/jboss-fsw-6.0.0.GA.zip
    boms:
     - *jboss-javaee-6_0-eap61
@@ -3393,7 +3393,7 @@ availableRuntimes:
    name: JBoss Data Virtualization 6.1.0
    version: 6.1.0
    license: *lgpl21
-   url: http://www.jboss.org/products
+   url: https://www.jboss.org/products
    downloadUrl: https://www.jboss.org/download-manager/jdf/file/jboss-dv-installer-6.1.0.redhat-3.jar
    boms:
     - *jboss-javaee-6_0-eap61
@@ -3462,7 +3462,7 @@ availableRuntimes:
    name: JBoss Data Virtualization 6.2.0
    version: 6.2.0
    license: *lgpl21
-   url: http://www.jboss.org/products
+   url: https://www.jboss.org/products
    downloadUrl: https://www.jboss.org/download-manager/jdf/file/jboss-datavirt-6.2.0.GA-installer.jar
    boms:
      - *jboss-javaee-6_0-eap62
@@ -3536,7 +3536,7 @@ availableRuntimes:
    name: JBoss Data Virtualization 6.3.0
    version: 6.3.0
    license: *lgpl21
-   url: http://www.jboss.org/products
+   url: https://www.jboss.org/products
    downloadUrl: https://www.jboss.org/download-manager/jdf/content/origin/files/sha256/b4/b466affbcc1740bf2c7c73b60bb6ffa7e1ec844fc08447224ab15aa3bcee3949/jboss-dv-6.3.0-1-installer.jar
    labels: {
         requiresCredentials: true,
@@ -3555,7 +3555,7 @@ availableRuntimes:
    name: JBoss 7.0.1
    version: 7.0.1
    license: *lgpl21
-   url: http://www.jboss.org/jbossas/downloads
+   url: https://www.jboss.org/jbossas/downloads
    downloadUrl: https://download.jboss.org/jbossas/7.0/jboss-as-7.0.1.Final/jboss-as-7.0.1.Final.zip?use_mirror=autoselect
    labels: {
         runtime-category: SERVER,
@@ -3573,7 +3573,7 @@ availableRuntimes:
    name: JBoss 7.0.2
    version: 7.0.2
    license: *lgpl21
-   url: http://www.jboss.org/jbossas/downloads
+   url: https://www.jboss.org/jbossas/downloads
    downloadUrl: https://download.jboss.org/jbossas/7.0/jboss-as-7.0.2.Final/jboss-as-7.0.2.Final.zip?use_mirror=autoselect
    labels: {
         runtime-category: SERVER,
@@ -3591,7 +3591,7 @@ availableRuntimes:
    name: JBoss 7.1.0
    version: 7.1.0
    license: *lgpl21
-   url:  http://www.jboss.org/jbossas/downloads
+   url:  https://www.jboss.org/jbossas/downloads
    downloadUrl: https://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip?use_mirror=autoselect
    labels: {
         runtime-category: SERVER,
@@ -3612,7 +3612,7 @@ availableRuntimes:
    artifactId: jboss-as-dist
    version: 7.1.1.Final
    license: *lgpl
-   url: http://www.jboss.org/jbossas/downloads
+   url: https://www.jboss.org/jbossas/downloads
    downloadUrl: https://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip
    boms:
    defaultBom: 
@@ -3645,7 +3645,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 8.0.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/8.0.0.Final/wildfly-8.0.0.Final.zip
    boms:
    defaultBom:
@@ -3678,7 +3678,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 8.1.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/8.1.0.Final/wildfly-8.1.0.Final.zip
    boms:
    defaultBom:
@@ -3711,7 +3711,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 8.2.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/8.2.0.Final/wildfly-8.2.0.Final.zip
    boms:
    defaultBom:
@@ -3744,7 +3744,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 8.2.1.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/8.2.1.Final/wildfly-8.2.1.Final.zip
    boms:
    defaultBom:
@@ -3777,7 +3777,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 9.0.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/9.0.0.Final/wildfly-9.0.0.Final.zip
    boms:
    defaultBom:
@@ -3810,7 +3810,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 9.0.1.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/9.0.1.Final/wildfly-9.0.1.Final.zip
    boms:
    defaultBom:
@@ -3843,7 +3843,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 9.0.2.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/9.0.2.Final/wildfly-9.0.2.Final.zip
    boms:
    defaultBom:
@@ -3876,7 +3876,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 10.0.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/10.0.0.Final/wildfly-10.0.0.Final.zip
    boms:
    defaultBom:
@@ -3909,7 +3909,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 10.1.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/10.1.0.Final/wildfly-10.1.0.Final.zip
    boms:
    defaultBom:
@@ -3942,7 +3942,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 11.0.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/11.0.0.Final/wildfly-11.0.0.Final.zip
    boms:
    defaultBom:
@@ -3977,7 +3977,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 12.0.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/12.0.0.Final/wildfly-12.0.0.Final.zip
    boms:
    defaultBom:
@@ -4010,7 +4010,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 13.0.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/13.0.0.Final/wildfly-13.0.0.Final.zip
    boms:
    defaultBom:
@@ -4044,7 +4044,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 14.0.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/14.0.0.Final/wildfly-14.0.0.Final.zip
    boms:
    defaultBom:
@@ -4078,7 +4078,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 14.0.1.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/14.0.1.Final/wildfly-14.0.1.Final.zip
    boms:
    defaultBom:
@@ -4112,7 +4112,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 15.0.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/15.0.0.Final/wildfly-15.0.0.Final.zip
    boms:
    defaultBom:
@@ -4146,7 +4146,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 15.0.1.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/15.0.1.Final/wildfly-15.0.1.Final.zip
    boms:
    defaultBom:
@@ -4179,7 +4179,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 16.0.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/16.0.0.Final/wildfly-16.0.0.Final.zip
    boms:
    defaultBom:
@@ -4212,7 +4212,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 17.0.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/17.0.0.Final/wildfly-17.0.0.Final.zip
    boms:
    defaultBom:
@@ -4245,7 +4245,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 17.0.1.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/17.0.1.Final/wildfly-17.0.1.Final.zip
    boms:
    defaultBom:
@@ -4278,7 +4278,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 18.0.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/18.0.0.Final/wildfly-18.0.0.Final.zip
    boms:
    defaultBom:
@@ -4311,7 +4311,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 18.0.1.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/18.0.1.Final/wildfly-18.0.1.Final.zip
    boms:
    defaultBom:
@@ -4344,7 +4344,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 19.0.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/19.0.0.Final/wildfly-19.0.0.Final.zip
    boms:
    defaultBom:
@@ -4377,7 +4377,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 19.1.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/19.1.0.Final/wildfly-19.1.0.Final.zip
    boms:
    defaultBom:
@@ -4410,7 +4410,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 20.0.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/20.0.0.Final/wildfly-20.0.0.Final.zip
    boms:
    defaultBom:
@@ -4443,7 +4443,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 20.0.1.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/20.0.1.Final/wildfly-20.0.1.Final.zip
    boms:
    defaultBom:
@@ -4476,7 +4476,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 21.0.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/21.0.0.Final/wildfly-21.0.0.Final.zip
    boms:
    defaultBom:
@@ -4509,7 +4509,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 21.0.1.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/21.0.1.Final/wildfly-21.0.1.Final.zip
    boms:
    defaultBom:
@@ -4542,7 +4542,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 21.0.2.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/21.0.2.Final/wildfly-21.0.2.Final.zip
    boms:
    defaultBom:
@@ -4575,7 +4575,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 22.0.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/22.0.0.Final/wildfly-22.0.0.Final.zip
    boms:
    defaultBom:
@@ -4608,7 +4608,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 22.0.1.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/22.0.1.Final/wildfly-22.0.1.Final.zip
    boms:
    defaultBom:
@@ -4642,7 +4642,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 23.0.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/23.0.0.Final/wildfly-23.0.0.Final.zip
    boms:
    defaultBom:
@@ -4675,7 +4675,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 23.0.1.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/23.0.1.Final/wildfly-23.0.1.Final.zip
    boms:
    defaultBom:
@@ -4709,7 +4709,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 23.0.2.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/23.0.2.Final/wildfly-23.0.2.Final.zip
    boms:
    defaultBom:
@@ -4743,7 +4743,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 24.0.0.Final
    license: *lgpl
-   url: http://wildfly.org/downloads/
+   url: https://wildfly.org/downloads/
    downloadUrl: https://download.jboss.org/wildfly/24.0.0.Final/wildfly-24.0.0.Final.zip
    boms:
    defaultBom:
@@ -4798,7 +4798,7 @@ availableRuntimes:
    name: JBoss Portal Platform 6.0.0
    version: 6.0.0
    license: *lgpl
-   url: http://www.jboss.org/products
+   url: https://www.jboss.org/products
    boms:
     - *gatein-3_5-bom-jpp6
    defaultBom: *gatein-3_5-bom-jpp6
@@ -4820,7 +4820,7 @@ availableRuntimes:
    name: GateIn Portal 3.6.0
    version: 3.6.0.Final
    license: *lgpl
-   url: http://www.jboss.org/gatein/download
+   url: https://www.jboss.org/gatein/download
    downloadUrl: https://downloads.jboss.org/gatein/Releases/Portal/3.6.0.Final/GateIn-3.6.0.Final-jbossas7.zip
    boms:
     - *gatein-3_6-bom-101
