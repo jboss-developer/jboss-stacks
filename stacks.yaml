@@ -5852,7 +5852,7 @@ majorReleases:
 
  - name: JBoss EAP
    version: 7
-   recommendedRuntime: *jbosseap730runtime
+   recommendedRuntime: *jbosseap740runtime
    minorReleases:
     - *jbeap70
     - *jbeap71
