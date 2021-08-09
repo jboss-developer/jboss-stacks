@@ -3313,6 +3313,26 @@ availableRuntimes:
         runtime-md5: 3dba80cc1be17b00cb901441111886f3,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.73
    }
+   
+ - &jbosseap740runtime
+   id: jbosseap740runtime
+   name: Red Hat JBoss EAP 7.4.0
+   version: 7.4.0
+   license: *lgpl21
+   url: https://developers.redhat.com/products/eap
+   downloadUrl: https://www.jboss.org/download-manager/jdf/file/jboss-eap-7.4.0.zip
+   defaultBom:
+   boms:
+   defaultArchetype:
+   archetypes:
+   labels: {
+        requiresCredentials: true,
+        runtime-category: SERVER,
+        runtime-type: EAP,
+        runtime-size: 220377044,
+        runtime-md5: feddc39d58a29b1ed9791121a77e8b49,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.74
+   }
       
    #####################
    #   F S W 6.0       #
@@ -5252,6 +5272,11 @@ minorReleases:
    name: JBoss EAP
    version: 7.3
    recommendedRuntime: *jbosseap730runtime
+   
+ - &jbeap74
+   name: JBoss EAP
+   version: 7.4
+   recommendedRuntime: *jbosseap740runtime
 
    ###############
    #   A S 7.X   #
@@ -5865,12 +5890,13 @@ majorReleases:
 
  - name: JBoss EAP
    version: 7
-   recommendedRuntime: *jbosseap720runtime
+   recommendedRuntime: *jbosseap740runtime
    minorReleases:
     - *jbeap70
     - *jbeap71
     - *jbeap72
     - *jbeap73
+    - *jbeap74
 
    ##################
    #   J P P  6     #
