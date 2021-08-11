@@ -1024,6 +1024,29 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.tools.openshift.cdk.server.runtime.type.cdk.32
    }
 
+   ########################
+   #      CDK 3.16.0      #
+   ########################
+
+ - &cdk3160
+   id: cdk3160
+   name: Red Hat CDK v3.16.0
+   version: 3.16.0
+   license: *apache20
+   url: https://developers.redhat.com/products/cdk/download/
+   labels: {
+        requiresCredentials: true,
+        runtime-category: MINISHIFT,
+        runtime-type: CDK,
+        runtime-size: 509557824,
+        additionalDownloadURLs: {
+            "linux": "https://www.jboss.org/download-manager/jdf/file/cdk-3.16.0-1-minishift-linux-amd64",
+            "macosx": "https://www.jboss.org/download-manager/jdf/file/cdk-3.16.0-1-minishift-darwin-amd64",
+            "win32": "https://www.jboss.org/download-manager/jdf/file/cdk-3.16.0-1-minishift-windows-amd64.exe",
+        },
+        file-type: binary,
+        wtp-runtime-type: org.jboss.tools.openshift.cdk.server.runtime.type.cdk.32
+   }
 
    ########################
    #       CRC 1.0.0      #
@@ -1687,6 +1710,50 @@ availableRuntimes:
         additionalDownloadURLs: {
             "win32": "https://developers.redhat.com/content-gateway/file/pub/openshift-v4/clients/crc/1.28.0/crc-windows-amd64.zip",
             "linux": "https://developers.redhat.com/content-gateway/file/pub/openshift-v4/clients/crc/1.28.0/crc-linux-amd64.tar.xz",
+        },
+        wtp-runtime-type: org.jboss.tools.openshift.crc.server.runtime.type.crc.100
+   }   
+   
+   ########################
+   #       CRC 1.29.1     #
+   ########################
+
+ - &crc1291
+   id: crc1291
+   name: Red Hat CRC v1.29.1
+   version: 1.29.1
+   license: *apache20
+   url: https://github.com/code-ready/crc/releases
+   labels: {
+        requiresCredentials: false,
+        runtime-category: MINISHIFT,
+        runtime-type: CRC,
+        runtime-size: 2470133758,
+        additionalDownloadURLs: {
+            "win32": "https://developers.redhat.com/content-gateway/file/pub/openshift-v4/clients/crc/1.29.1/crc-windows-amd64.zip",
+            "linux": "https://developers.redhat.com/content-gateway/file/pub/openshift-v4/clients/crc/1.29.1/crc-linux-amd64.tar.xz",
+        },
+        wtp-runtime-type: org.jboss.tools.openshift.crc.server.runtime.type.crc.100
+   }   
+   
+   ########################
+   #       CRC 1.30.1     #
+   ########################
+
+ - &crc1301
+   id: crc1301
+   name: Red Hat CRC v1.30.1
+   version: 1.30.1
+   license: *apache20
+   url: https://github.com/code-ready/crc/releases
+   labels: {
+        requiresCredentials: false,
+        runtime-category: MINISHIFT,
+        runtime-type: CRC,
+        runtime-size: 3458059138,
+        additionalDownloadURLs: {
+            "win32": "https://developers.redhat.com/content-gateway/file/pub/openshift-v4/clients/crc/1.30.1/crc-windows-amd64.zip",
+            "linux": "https://developers.redhat.com/content-gateway/file/pub/openshift-v4/clients/crc/1.30.1/crc-linux-amd64.tar.xz",
         },
         wtp-runtime-type: org.jboss.tools.openshift.crc.server.runtime.type.crc.100
    }   
