@@ -1862,3 +1862,24 @@ availableRuntimes:
         },
         wtp-runtime-type: org.jboss.tools.openshift.crc.server.runtime.type.crc.100
    }   
+
+   ########################
+   #       CRC 1.36.0     #
+   ########################
+
+ - &crc1360
+   id: crc1360
+   name: Red Hat CRC v1.36.0
+   version: 1.36.0
+   license: *apache20
+   url: https://github.com/code-ready/crc/releases
+   labels: {
+        requiresCredentials: false,
+        runtime-category: MINISHIFT,
+        runtime-type: CRC,
+        runtime-size: 3121165168,
+        additionalDownloadURLs: {
+            "linux": "https://developers.redhat.com/content-gateway/file/pub/openshift-v4/clients/crc/1.36.0/crc-linux-amd64.tar.xz",
+        },
+        wtp-runtime-type: org.jboss.tools.openshift.crc.server.runtime.type.crc.100
+   }   
