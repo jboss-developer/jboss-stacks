@@ -4884,6 +4884,39 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.240
     }
 
+  #####################
+  #   WildFly  26.0.0 #
+  #####################
+
+ - &wildfly-2600finalruntime
+   id: wildfly-2600finalruntime
+   name: WildFly 26.0.0 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 26.0.0.Final
+   license: *lgpl
+   url: https://wildfly.org/downloads/
+   downloadUrl: https://github.com/wildfly/wildfly/releases/download/26.0.0.Final/wildfly-26.0.0.Final.zip
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/26.0.0.Final/pom.xml",
+        runtime-size: 218682376,
+        runtime-md5: 0a6783b5554e15836186cfcfe1321273,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.240
+    }
+
    #################
    #  J P P  6.1   #
    #################
@@ -5657,6 +5690,14 @@ minorReleases:
    version: 25.0.1.Final
    recommendedRuntime: *wildfly-2501finalruntime
 
+   ################
+   #   WildFly 26 #
+   ################
+ - &wildfly2600final
+   name: WildFly
+   version: 26.0.0.Final
+   recommendedRuntime: *wildfly-2600finalruntime
+
    ###############
    #   JPP 6.x   #
    ###############
@@ -6009,6 +6050,16 @@ majorReleases:
    minorReleases:
     - *wildfly2500final
     - *wildfly2501final
+
+   #################
+   #   WildFly 26  #
+   #################
+
+ - name: WildFly
+   version: 26
+   recommendedRuntime: *wildfly-2600finalruntime
+   minorReleases:
+    - *wildfly2600final
 
    ##################
    #   E A P  6     #
