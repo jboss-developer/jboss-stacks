@@ -34,8 +34,8 @@
                     </snapshots>
                 </repository>
                 <repository>
-                    <id>jboss-all</id>
-                    <url>https://maven.repository.redhat.com/techpreview/all</url>
+                    <id>redhat-ga</id>
+                    <url>https://maven.repository.redhat.com/ga/</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -56,8 +56,8 @@
             </repositories>
             <pluginRepositories>
                 <pluginRepository>
-                    <id>jboss-all-maven-plugin-repository</id>
-                    <url>https://maven.repository.redhat.com/techpreview/all</url>
+                    <id>redhat-ga-plugin-repository</id>
+                    <url>https://maven.repository.redhat.com/ga/</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
