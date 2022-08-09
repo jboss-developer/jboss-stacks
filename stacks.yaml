@@ -5020,14 +5020,14 @@ availableRuntimes:
   #   WildFly  27.0.0 #
   #####################
 
- - &wildfly-2700alpha3runtime
-   id: wildfly-2700alpha3runtime
-   name: WildFly 27.0.0 Alpha3
+ - &wildfly-2700alpha4runtime
+   id: wildfly-2700alpha4runtime
+   name: WildFly 27.0.0 Alpha4
    groupId: org.wildfly
    artifactId: wildfly-dist
    version: 26.1.1.Final
    license: *lgpl
-   downloadUrl: https://github.com/wildfly/wildfly/releases/download/27.0.0.Alpha3/wildfly-preview-27.0.0.Alpha3.zip
+   downloadUrl: https://github.com/wildfly/wildfly/releases/download/27.0.0.Alpha4/wildfly-preview-27.0.0.Alpha4.zip
    url: https://wildfly.org/downloads/
    boms:
    defaultBom:
@@ -5043,9 +5043,9 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/27.0.0.Alpha3/pom.xml",
-        runtime-size: 229988262,
-        runtime-md5: acef6f01dbc8750b66966b51b877ba81,
+        pom: "https://github.com/wildfly/wildfly/blob/27.0.0.Alpha4/pom.xml",
+        runtime-size: 230944566,
+        runtime-md5: 6d794c602e935255a6090176df4c3991,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.240
     }
 
@@ -5904,10 +5904,10 @@ minorReleases:
    ################
    #   WildFly 27 #
    ################
- - &wildfly2700alpha3
+ - &wildfly2700alpha4
    name: WildFly
-   version: 27.0.0.Alpha3
-   recommendedRuntime: *wildfly-2700alpha3runtime
+   version: 27.0.0.Alpha4
+   recommendedRuntime: *wildfly-2700alpha4runtime
 
    ###############
    #   JPP 6.x   #
@@ -6287,9 +6287,9 @@ majorReleases:
 
  - name: WildFly
    version: 27
-   recommendedRuntime: *wildfly-2700alpha3runtime
+   recommendedRuntime: *wildfly-2700alpha4runtime
    minorReleases:
-    - *wildfly2700alpha3
+    - *wildfly2700alpha4
 
    ##################
    #   E A P  6     #
