@@ -5017,6 +5017,39 @@ availableRuntimes:
     }
 
   #####################
+  #   WildFly  26.1.2 #
+  #####################
+
+ - &wildfly-2612finalruntime
+   id: wildfly-2612finalruntime
+   name: WildFly 26.1.2 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 26.1.2.Final
+   license: *lgpl
+   downloadUrl: https://github.com/wildfly/wildfly/releases/download/26.1.2.Final/wildfly-26.1.2.Final.zip
+   url: https://wildfly.org/downloads/
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/26.1.2.Final/pom.xml",
+        runtime-size: 217899691,
+        runtime-md5: edebc5a98ef3a6d72935ce25d8c442fd,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.240
+    }
+
+  #####################
   #   WildFly  27.0.0 #
   #####################
 
@@ -5901,6 +5934,11 @@ minorReleases:
    version: 26.1.1.Final
    recommendedRuntime: *wildfly-2611finalruntime
 
+ - &wildfly2612final
+   name: WildFly
+   version: 26.1.2.Final
+   recommendedRuntime: *wildfly-2612finalruntime
+
    ################
    #   WildFly 27 #
    ################
@@ -6280,6 +6318,7 @@ majorReleases:
     - *wildfly2601final
     - *wildfly2610final
     - *wildfly2611final
+    - *wildfly2612final
 
    #################
    #   WildFly 27  #
