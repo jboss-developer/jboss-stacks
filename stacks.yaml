@@ -3333,6 +3333,30 @@ availableRuntimes:
         runtime-md5: feddc39d58a29b1ed9791121a77e8b49,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.74
    }
+   
+   
+   ##########################
+   #   E A P 8.0            #
+   ##########################
+
+ - &jbosseap800runtime
+   id: jbosseap800runtime
+   name: Red Hat JBoss EAP 8.0.0 NOCRED
+   version: 8.0.0
+   license: *lgpl21
+   url: https://developers.redhat.com/products/eap
+   downloadUrl: http://download.hosts.prod.upshift.rdu2.redhat.com/devel/candidates/middleware/eap/JBEAP-8.0.0.Beta-CR1/jboss-eap-8.0.0.Beta-CR1.zip
+   defaultBom:
+   boms:
+   defaultArchetype:
+   archetypes:
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: EAP,
+        runtime-size: 224704270,
+        runtime-md5: 25c796ae8704762fca87fc26ce6fc91d,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.80
+   }
       
    #####################
    #   F S W 6.0       #
@@ -5638,6 +5662,16 @@ minorReleases:
    version: 7.4
    recommendedRuntime: *jbosseap740runtime
 
+
+   ##################
+   #   E A P  8.X   #
+   ##################
+
+ - &jbeap80
+   name: JBoss EAP
+   version: 8.0
+   recommendedRuntime: *jbosseap800runtime
+
    ###############
    #   A S 7.X   #
    ###############
@@ -6357,6 +6391,17 @@ majorReleases:
     - *jbeap72
     - *jbeap73
     - *jbeap74
+
+
+   ##################
+   #   E A P  8     #
+   ##################
+
+ - name: JBoss EAP
+   version: 8
+   recommendedRuntime: *jbosseap800runtime
+   minorReleases:
+    - *jbeap80
 
    ##################
    #   J P P  6     #
