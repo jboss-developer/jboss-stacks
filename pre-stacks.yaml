@@ -19,8 +19,8 @@
 # 02110-1301 USA, or see the FSF site: http://www.fsf.org.
 
 licenses:
- - &lgpl http://www.gnu.org/copyleft/lesser.txt
- - &lgpl21 http://www.gnu.org/licenses/lgpl-2.1.txt
+ - &lgpl https://www.gnu.org/copyleft/lesser.txt
+ - &lgpl21 https://www.gnu.org/licenses/lgpl-2.1.txt
 
    
 ##########################################################################
