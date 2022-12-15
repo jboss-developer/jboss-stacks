@@ -3353,8 +3353,8 @@ availableRuntimes:
    labels: {
         runtime-category: SERVER,
         runtime-type: EAP,
-        runtime-size: 224704270,
-        runtime-md5: 25c796ae8704762fca87fc26ce6fc91d,
+        runtime-size: 224679979,
+        runtime-md5: 445991cfd88b2f10d744aa8724d8b226,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.80
    }
       
