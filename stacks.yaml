@@ -3345,7 +3345,7 @@ availableRuntimes:
    version: 8.0.0
    license: *lgpl21
    url: https://developers.redhat.com/products/eap
-   downloadUrl: http://download.hosts.prod.upshift.rdu2.redhat.com/devel/candidates/middleware/eap/JBEAP-8.0.0.Beta-CR1/jboss-eap-8.0.0.Beta-CR1.zip
+   downloadUrl: http://download.hosts.prod.upshift.rdu2.redhat.com/devel/candidates/middleware/eap/JBEAP-8.0.0-Beta/jboss-eap-8.0.0.Beta.zip
    defaultBom:
    boms:
    defaultArchetype:
