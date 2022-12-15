@@ -5060,7 +5060,7 @@ availableRuntimes:
    artifactId: wildfly-dist
    version: 27.0.0.Final
    license: *lgpl
-   downloadUrl: https://github.com/wildfly/wildfly/releases/download/27.0.0.Final/wildfly-preview-27.0.0.Final.zip
+   downloadUrl: https://github.com/wildfly/wildfly/releases/download/27.0.0.Final/wildfly-27.0.0.Final.zip
    url: https://wildfly.org/downloads/
    boms:
    defaultBom:
@@ -5077,9 +5077,9 @@ availableRuntimes:
         runtime-type: AS,
         requiresLogModule: false,
         pom: "https://github.com/wildfly/wildfly/blob/27.0.0.Final/pom.xml",
-        runtime-size: 234182014,
-        runtime-md5: 12ee715b7a17c60fd7088a0a18a7f686,
-        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.240
+        runtime-size: 232588181,
+        runtime-md5: 56e2dd6f54e65603ada5659a06ad782b,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
     }
 
    #################
