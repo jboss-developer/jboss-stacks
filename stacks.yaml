@@ -3334,6 +3334,32 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.74
    }
       
+      
+
+   ##########################
+   #   E A P 8.0            #
+   ##########################
+
+ - &jbosseap800runtime
+   id: jbosseap800runtime
+   name: Red Hat JBoss EAP 8.0.0 Beta
+   version: 8.0.0
+   license: *lgpl21
+   url: https://developers.redhat.com/products/eap
+   downloadUrl: https://www.jboss.org/download-manager/jdf/file/eap/8.4_Beta/jboss-eap-8.0.0.Beta.zip
+   defaultBom: 
+   boms:
+   defaultArchetype: 
+   archetypes:
+   labels: {
+        requiresCredentials: true,
+        runtime-category: SERVER,
+        runtime-type: EAP,
+        runtime-size: 224679979,
+        runtime-md5: l445991cfd88b2f10d744aa8724d8b226,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.80
+   } 
+   
    #####################
    #   F S W 6.0       #
    #####################
@@ -5081,6 +5107,40 @@ availableRuntimes:
         runtime-md5: 56e2dd6f54e65603ada5659a06ad782b,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
     }
+    
+    
+  #####################
+  #   WildFly  27.0.1 #
+  #####################
+
+ - &wildfly-2701finalruntime
+   id: wildfly-2701finalruntime
+   name: WildFly 27.0.1 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 27.0.1.Final
+   license: *lgpl
+   downloadUrl: https://github.com/wildfly/wildfly/releases/download/27.0.1.Final/wildfly-27.0.1.Final.zip
+   url: https://wildfly.org/downloads/
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/27.0.1.Final/pom.xml",
+        runtime-size: 232750826,
+        runtime-md5: 55ad346ff2ab1f928f5f9abe05d432f4,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
+    }
 
    #################
    #  J P P  6.1   #
@@ -5638,6 +5698,17 @@ minorReleases:
    version: 7.4
    recommendedRuntime: *jbosseap740runtime
 
+
+
+   ##################
+   #   E A P  8.X   #
+   ##################
+
+ - &jbeap80
+   name: JBoss EAP
+   version: 8.0
+   recommendedRuntime: *jbosseap800runtime
+   
    ###############
    #   A S 7.X   #
    ###############
@@ -5946,6 +6017,11 @@ minorReleases:
    name: WildFly
    version: 27.0.0.Final
    recommendedRuntime: *wildfly-2700finalruntime
+
+ - &wildfly2701final
+   name: WildFly
+   version: 27.0.1.Final
+   recommendedRuntime: *wildfly-2701finalruntime
 
    ###############
    #   JPP 6.x   #
@@ -6312,7 +6388,7 @@ majorReleases:
 
  - name: WildFly
    version: 26
-   recommendedRuntime: *wildfly-2611finalruntime
+   recommendedRuntime: *wildfly-2612finalruntime
    minorReleases:
     - *wildfly2600final
     - *wildfly2601final
@@ -6326,9 +6402,10 @@ majorReleases:
 
  - name: WildFly
    version: 27
-   recommendedRuntime: *wildfly-2700finalruntime
+   recommendedRuntime: *wildfly-2701finalruntime
    minorReleases:
     - *wildfly2700final
+    - *wildfly2701final
 
    ##################
    #   E A P  6     #
@@ -6357,6 +6434,16 @@ majorReleases:
     - *jbeap72
     - *jbeap73
     - *jbeap74
+
+   ##################
+   #   E A P  8     #
+   ##################
+
+ - name: JBoss EAP
+   version: 8
+   recommendedRuntime: *jbosseap800runtime
+   minorReleases:
+    - *jbeap80
 
    ##################
    #   J P P  6     #
