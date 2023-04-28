@@ -5142,6 +5142,42 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
     }
 
+
+  #####################
+  #   WildFly  28.0.0 #
+  #####################
+
+ - &wildfly-2800finalruntime
+   id: wildfly-2800finalruntime
+   name: WildFly 28.0.0 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 28.0.0.Final
+   license: *lgpl
+   downloadUrl: https://github.com/wildfly/wildfly/releases/download/28.0.0.Final/wildfly-28.0.0.Final.zip
+   url: https://wildfly.org/downloads/
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/28.0.0.Final/pom.xml",
+        runtime-size: 234377863,
+        runtime-md5: 9d5a61f5f9ddd4f2f9071e768346e6d1,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
+    }
+    
+
+
    #################
    #  J P P  6.1   #
    #################
@@ -6046,6 +6082,16 @@ minorReleases:
    version: 27.0.1.Final
    recommendedRuntime: *wildfly-2701finalruntime
 
+
+   ################
+   #   WildFly 28 #
+   ################
+ - &wildfly2800final
+   name: WildFly
+   version: 28.0.0.Final
+   recommendedRuntime: *wildfly-2800finalruntime
+
+
    ###############
    #   JPP 6.x   #
    ###############
@@ -6429,6 +6475,16 @@ majorReleases:
    minorReleases:
     - *wildfly2700final
     - *wildfly2701final
+
+   #################
+   #   WildFly 28  #
+   #################
+
+ - name: WildFly
+   version: 28
+   recommendedRuntime: *wildfly-2800finalruntime
+   minorReleases:
+    - *wildfly2800final
 
    ##################
    #   E A P  6     #
