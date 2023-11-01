@@ -5176,7 +5176,142 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
     }
     
+    
+  #####################
+  #   WildFly  28.0.1 #
+  #####################
 
+ - &wildfly-2801finalruntime
+   id: wildfly-2801finalruntime
+   name: WildFly 28.0.1 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 28.0.1.Final
+   license: *lgpl
+   downloadUrl: https://github.com/wildfly/wildfly/releases/download/28.0.1.Final/wildfly-28.0.1.Final.zip
+   url: https://wildfly.org/downloads/
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/28.0.1.Final/pom.xml",
+        runtime-size: 234398826,
+        runtime-md5: 727d83115ba6d90198437f4e85da5d64,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
+    }
+    
+
+  #####################
+  #   WildFly  29.0.0 #
+  #####################
+
+ - &wildfly-2900finalruntime
+   id: wildfly-2900finalruntime
+   name: WildFly 29.0.0 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 29.0.0.Final
+   license: *lgpl
+   downloadUrl: https://github.com/wildfly/wildfly/releases/download/29.0.0.Final/wildfly-29.0.0.Final.zip
+   url: https://wildfly.org/downloads/
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/29.0.0.Final/pom.xml",
+        runtime-size: 237358641,
+        runtime-md5: b7028a723660352597ae22244722ae9d,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
+    }
+    
+    
+  #####################
+  #   WildFly  29.0.1 #
+  #####################
+
+ - &wildfly-2901finalruntime
+   id: wildfly-2901finalruntime
+   name: WildFly 29.0.1 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 29.0.1.Final
+   license: *lgpl
+   downloadUrl: https://github.com/wildfly/wildfly/releases/download/29.0.1.Final/wildfly-29.0.1.Final.zip
+   url: https://wildfly.org/downloads/
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/29.0.1.Final/pom.xml",
+        runtime-size: 237415658,
+        runtime-md5: 449455f4ac7d33773637aa2b848bf3f3,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
+    }
+    
+
+  #####################
+  #   WildFly  30.0.0 #
+  #####################
+
+ - &wildfly-3000finalruntime
+   id: wildfly-3000finalruntime
+   name: WildFly 30.0.0 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 30.0.0.Final
+   license: *lgpl
+   downloadUrl: https://github.com/wildfly/wildfly/releases/download/30.0.0.Final/wildfly-30.0.0.Final.zip
+   url: https://wildfly.org/downloads/
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://github.com/wildfly/wildfly/blob/30.0.0.Final/pom.xml",
+        runtime-size: 237393161,
+        runtime-md5: 49825309eadaa059d4081425742d7c95,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
+    }
+    
 
    #################
    #  J P P  6.1   #
@@ -6091,6 +6226,33 @@ minorReleases:
    version: 28.0.0.Final
    recommendedRuntime: *wildfly-2800finalruntime
 
+ - &wildfly2801final
+   name: WildFly
+   version: 28.0.1.Final
+   recommendedRuntime: *wildfly-2801finalruntime
+
+
+   ################
+   #   WildFly 29 #
+   ################
+ - &wildfly2900final
+   name: WildFly
+   version: 29.0.0.Final
+   recommendedRuntime: *wildfly-2900finalruntime
+
+ - &wildfly2901final
+   name: WildFly
+   version: 29.0.1.Final
+   recommendedRuntime: *wildfly-2901finalruntime
+
+
+   ################
+   #   WildFly 30 #
+   ################
+ - &wildfly3000final
+   name: WildFly
+   version: 30.0.0.Final
+   recommendedRuntime: *wildfly-3000finalruntime
 
    ###############
    #   JPP 6.x   #
@@ -6482,9 +6644,33 @@ majorReleases:
 
  - name: WildFly
    version: 28
-   recommendedRuntime: *wildfly-2800finalruntime
+   recommendedRuntime: *wildfly-2801finalruntime
    minorReleases:
     - *wildfly2800final
+    - *wildfly2801final
+
+
+   #################
+   #   WildFly 29  #
+   #################
+
+ - name: WildFly
+   version: 29
+   recommendedRuntime: *wildfly-2901finalruntime
+   minorReleases:
+    - *wildfly2900final
+    - *wildfly2901final
+
+
+   #################
+   #   WildFly 30  #
+   #################
+
+ - name: WildFly
+   version: 30
+   recommendedRuntime: *wildfly-3000finalruntime
+   minorReleases:
+    - *wildfly3000final
 
    ##################
    #   E A P  6     #
