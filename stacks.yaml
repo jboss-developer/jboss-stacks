@@ -3342,11 +3342,11 @@ availableRuntimes:
 
  - &jbosseap800runtime
    id: jbosseap800runtime
-   name: Red Hat JBoss EAP 8.0.0 Beta
+   name: Red Hat JBoss EAP 8.0.0
    version: 8.0.0
    license: *lgpl21
    url: https://developers.redhat.com/products/eap
-   downloadUrl: https://www.jboss.org/download-manager/jdf/file/eap/8.4_Beta/jboss-eap-8.0.0.Beta.zip
+   downloadUrl: https://www.jboss.org/download-manager/jdf/file/eap/8.0.0/jboss-eap-8.0.0.zip
    defaultBom: 
    boms:
    defaultArchetype: 
@@ -3355,8 +3355,8 @@ availableRuntimes:
         requiresCredentials: true,
         runtime-category: SERVER,
         runtime-type: EAP,
-        runtime-size: 224679979,
-        runtime-md5: l445991cfd88b2f10d744aa8724d8b226,
+        runtime-size: 242877767,
+        runtime-md5: 0879442344d35d95c92e51c3e59c1d56,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.eap.80
    } 
    
