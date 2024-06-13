@@ -3707,7 +3707,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/8.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/8.0.0.Final/pom.xml",
         runtime-size: 154598817,
         runtime-md5: 9df208525e7c8c03bd592a6a0f554bea,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.80
@@ -3740,7 +3740,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/8.1.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/8.1.0.Final/pom.xml",
         runtime-size: 129777493,
         runtime-md5: b7df11f92ee80155702a351aee4b003b,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.80
@@ -3773,7 +3773,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/8.2.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/8.2.0.Final/pom.xml",
         runtime-size: 132178731,
         runtime-md5: 86a51782581b90db44958a0ee7002c14,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.80
@@ -3806,7 +3806,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/8.2.1.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/8.2.1.Final/pom.xml",
         runtime-size: 132701605,
         runtime-md5: 071f6681512929e682d714155547d0a2,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.80
@@ -3839,7 +3839,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/9.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/9.0.0.Final/pom.xml",
         runtime-size: 133604638,
         runtime-md5: 5212c410bbc933edcf54efbeee429783,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.90
@@ -3872,7 +3872,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/9.0.1.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/9.0.1.Final/pom.xml",
         runtime-size: 133617224,
         runtime-md5: d8920358e99151915da08cd1cd576ab6,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.90
@@ -3905,7 +3905,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/9.0.2.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/9.0.2.Final/pom.xml",
         runtime-size: 133617224,
         runtime-md5: ca1233cca94a9a0d376fab1f1274ca1c,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.90
@@ -3938,7 +3938,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/10.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/10.0.0.Final/pom.xml",
         runtime-size: 138158431,
         runtime-md5: bbef420f1f3b3c463cf8c0b171d2a8c5,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.100
@@ -3971,7 +3971,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/10.1.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/10.1.0.Final/pom.xml",
         runtime-size: 140015717,
         runtime-md5: a7ff356fd3333529426e98937d8760cf,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.100
@@ -4004,7 +4004,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/11.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/11.0.0.Final/pom.xml",
         runtime-size: 159148919,
         runtime-md5: cabc51179090c24c2644c118df7422d9,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.110
@@ -4039,7 +4039,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/12.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/12.0.0.Final/pom.xml",
         runtime-size: 170092513,
         runtime-md5: 923a9e286098ce094d0216b2d4f175e3,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.120
@@ -4072,7 +4072,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/13.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/13.0.0.Final/pom.xml",
         runtime-size: 189007229,
         runtime-md5: 24cc6ee3148b809652a9ca20b99dadb2,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.130
@@ -4106,7 +4106,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/14.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/14.0.0.Final/pom.xml",
         runtime-size: 179331686,
         runtime-md5: c3b25e1dabdf64ebbf3c50c9470d92f9,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.140
@@ -4140,7 +4140,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/14.0.1.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/14.0.1.Final/pom.xml",
         runtime-size: 179320953,
         runtime-md5: 61a1279e0549089dc95519fced661999,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.140
@@ -4174,7 +4174,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/15.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/15.0.0.Final/pom.xml",
         runtime-size: 180814350,
         runtime-md5: 63b9575ac659e704c44992317a621b47,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.150
@@ -4208,7 +4208,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/15.0.1.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/15.0.1.Final/pom.xml",
         runtime-size: 180827189,
         runtime-md5: be42a899ba01a797ec5c097e3c5737c4,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.150
@@ -4241,7 +4241,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/16.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/16.0.0.Final/pom.xml",
         runtime-size: 181814060,
         runtime-md5: 6350533a4c7c21588aac8356cbd61095,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.160
@@ -4274,7 +4274,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/17.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/17.0.0.Final/pom.xml",
         runtime-size: 184615958,
         runtime-md5: 56d9dc8054d767845fefca7730c661da,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.170
@@ -4307,7 +4307,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/17.0.1.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/17.0.1.Final/pom.xml",
         runtime-size: 184617047,
         runtime-md5: 953ccd1eb2763c7946f0761c2245727c,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.170
@@ -4340,7 +4340,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/18.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/18.0.0.Final/pom.xml",
         runtime-size: 186228866,
         runtime-md5: 8e4d435bb5d6fe466b478dc49d34bf27,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.180
@@ -4373,7 +4373,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/18.0.1.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/18.0.1.Final/pom.xml",
         runtime-size: 186544268,
         runtime-md5: bb55109aeda5d091105f2a96255cda2c,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.180
@@ -4406,7 +4406,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/19.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/19.0.0.Final/pom.xml",
         runtime-size: 189896990,
         runtime-md5: bb55109aeda5d091105f2a96255cda2c,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.190
@@ -4439,7 +4439,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/19.1.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/19.1.0.Final/pom.xml",
         runtime-size: 190098634,
         runtime-md5: c3245d08cc31766a36980351cd50edf6,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.190
@@ -4472,7 +4472,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/20.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/20.0.0.Final/pom.xml",
         runtime-size: 192929195,
         runtime-md5: 3153f5089a740f29ff1f74c9ef101c3b,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.200
@@ -4505,7 +4505,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/20.0.1.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/20.0.1.Final/pom.xml",
         runtime-size: 192932490,
         runtime-md5: a44b89b7525597076fd72c8c38d1f78c,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.200
@@ -4538,7 +4538,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/21.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/21.0.0.Final/pom.xml",
         runtime-size: 200465618,
         runtime-md5: 51082259f8bffc141f4a2355cc80cb94,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.210
@@ -4571,7 +4571,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/21.0.1.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/21.0.1.Final/pom.xml",
         runtime-size: 200496443,
         runtime-md5: 0e681304b8a1466a4974d7125697a61b,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.210
@@ -4604,7 +4604,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/21.0.2.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/21.0.2.Final/pom.xml",
         runtime-size: 200493401,
         runtime-md5: cf8d1ee740d1b7e11ba4104d7e7923a0,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.210
@@ -4637,7 +4637,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/22.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/22.0.0.Final/pom.xml",
         runtime-size: 203150891,
         runtime-md5: 7e72dccb8f19996520869e204449960464e4a78b,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.220
@@ -4670,7 +4670,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/22.0.1.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/22.0.1.Final/pom.xml",
         runtime-size: 203202741,
         runtime-md5: 20c8bf4f47a0f0b8e1554bb69efc047e,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.220
@@ -4704,7 +4704,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/23.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/23.0.0.Final/pom.xml",
         runtime-size: 212083712,
         runtime-md5: 489f3c0a75dffe9ee89428741dfbc90f,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.230
@@ -4737,7 +4737,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/23.0.1.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/23.0.1.Final/pom.xml",
         runtime-size: 212266348,
         runtime-md5: 57bdb4b111772923da4e5edc65511efa,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.230
@@ -4771,7 +4771,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/23.0.2.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/23.0.2.Final/pom.xml",
         runtime-size: 212263918,
         runtime-md5: cd97de66ad95c9e8e870ad4f8f3a1da2,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.230
@@ -4805,7 +4805,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/24.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/24.0.0.Final/pom.xml",
         runtime-size: 211560567,
         runtime-md5: ffa28ed627340c231f33139182dd9c7d,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.240
@@ -4838,7 +4838,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/24.0.1.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/24.0.1.Final/pom.xml",
         runtime-size: 211800178,
         runtime-md5: a88ee4fccc25f8b775891ee1d1790546,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.240
@@ -4871,7 +4871,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/25.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/25.0.0.Final/pom.xml",
         runtime-size: 221156454,
         runtime-md5: 82c15ed601a28eff598a1cfbb052e191,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.240
@@ -4904,7 +4904,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/25.0.1.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/25.0.1.Final/pom.xml",
         runtime-size: 221236239,
         runtime-md5: b536ea156bd103fa8706d578a6f12f34,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.240
@@ -4937,7 +4937,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/26.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/26.0.0.Final/pom.xml",
         runtime-size: 218682376,
         runtime-md5: 0a6783b5554e15836186cfcfe1321273,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.240
@@ -4970,7 +4970,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/26.0.1.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/26.0.1.Final/pom.xml",
         runtime-size: 218681020,
         runtime-md5: e1a912939fe6a1ec22a41fd5afb07ac6,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.240
@@ -5003,7 +5003,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/26.1.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/26.1.0.Final/pom.xml",
         runtime-size: 213849069,
         runtime-md5: 3678285934d8a6ce704ada52720ae487,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.240
@@ -5036,7 +5036,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/26.1.1.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/26.1.1.Final/pom.xml",
         runtime-size: 214136499,
         runtime-md5: ac076c137813bc616367c13e8bd6b29c,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.240
@@ -5069,7 +5069,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/26.1.2.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/26.1.2.Final/pom.xml",
         runtime-size: 217899691,
         runtime-md5: edebc5a98ef3a6d72935ce25d8c442fd,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.240
@@ -5102,7 +5102,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/27.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/27.0.0.Final/pom.xml",
         runtime-size: 232588181,
         runtime-md5: 56e2dd6f54e65603ada5659a06ad782b,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
@@ -5136,7 +5136,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/27.0.1.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/27.0.1.Final/pom.xml",
         runtime-size: 232750826,
         runtime-md5: 55ad346ff2ab1f928f5f9abe05d432f4,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
@@ -5170,7 +5170,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/28.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/28.0.0.Final/pom.xml",
         runtime-size: 234377863,
         runtime-md5: 9d5a61f5f9ddd4f2f9071e768346e6d1,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
@@ -5204,7 +5204,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/28.0.1.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/28.0.1.Final/pom.xml",
         runtime-size: 234398826,
         runtime-md5: 727d83115ba6d90198437f4e85da5d64,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
@@ -5238,7 +5238,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/29.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/29.0.0.Final/pom.xml",
         runtime-size: 237358641,
         runtime-md5: b7028a723660352597ae22244722ae9d,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
@@ -5272,7 +5272,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/29.0.1.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/29.0.1.Final/pom.xml",
         runtime-size: 237415658,
         runtime-md5: 449455f4ac7d33773637aa2b848bf3f3,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
@@ -5306,7 +5306,7 @@ availableRuntimes:
         runtime-category: SERVER,
         runtime-type: AS,
         requiresLogModule: false,
-        pom: "https://github.com/wildfly/wildfly/blob/30.0.0.Final/pom.xml",
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/30.0.0.Final/pom.xml",
         runtime-size: 237393161,
         runtime-md5: 49825309eadaa059d4081425742d7c95,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
