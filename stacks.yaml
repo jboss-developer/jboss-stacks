@@ -5414,6 +5414,39 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
     }
     
+  #####################
+  #   WildFly  33.0.2 #
+  #####################
+
+ - &wildfly-3302finalruntime
+   id: wildfly-3302finalruntime
+   name: WildFly 33.0.2 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 33.0.2.Final
+   license: *lgpl
+   downloadUrl: https://github.com/wildfly/wildfly/releases/download/33.0.2.Final/wildfly-33.0.2.Final.zip
+   url: https://wildfly.org/downloads/
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/33.0.2.Final/pom.xml",
+        runtime-size: 248386941,
+        runtime-md5: 00b3cb771a5d87b6bb548c8b36bd2a87,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
+    }
+
 
    #################
    #  J P P  6.1   #
@@ -6378,6 +6411,14 @@ minorReleases:
    version: 32.0.1.Final
    recommendedRuntime: *wildfly-3201finalruntime
 
+   ################
+   #   WildFly 33 #
+   ################
+ - &wildfly3302final
+   name: WildFly
+   version: 33.0.2.Final
+   recommendedRuntime: *wildfly-3302finalruntime
+
    ###############
    #   JPP 6.x   #
    ###############
@@ -6818,6 +6859,17 @@ majorReleases:
    recommendedRuntime: *wildfly-3201finalruntime
    minorReleases:
     - *wildfly3201final
+
+
+   #################
+   #   WildFly 33  #
+   #################
+
+ - name: WildFly
+   version: 33
+   recommendedRuntime: *wildfly-3302finalruntime
+   minorReleases:
+    - *wildfly3302final
 
    ##################
    #   E A P  6     #
