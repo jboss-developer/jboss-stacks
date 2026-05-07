@@ -5447,6 +5447,192 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
     }
 
+  #####################
+  #   WildFly  34.0.1 #
+  #####################
+
+ - &wildfly-3401finalruntime
+   id: wildfly-3401finalruntime
+   name: WildFly 34.0.1 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 34.0.1.Final
+   license: *lgpl
+   downloadUrl: https://github.com/wildfly/wildfly/releases/download/34.0.1.Final/wildfly-34.0.1.Final.zip
+   url: https://wildfly.org/downloads/
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/34.0.1.Final/pom.xml",
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
+    }
+
+  #####################
+  #   WildFly  35.0.1 #
+  #####################
+
+ - &wildfly-3501finalruntime
+   id: wildfly-3501finalruntime
+   name: WildFly 35.0.1 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 35.0.1.Final
+   license: *lgpl
+   downloadUrl: https://github.com/wildfly/wildfly/releases/download/35.0.1.Final/wildfly-35.0.1.Final.zip
+   url: https://wildfly.org/downloads/
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/35.0.1.Final/pom.xml",
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
+    }
+
+  #####################
+  #   WildFly  36.0.1 #
+  #####################
+
+ - &wildfly-3601finalruntime
+   id: wildfly-3601finalruntime
+   name: WildFly 36.0.1 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 36.0.1.Final
+   license: *lgpl
+   downloadUrl: https://github.com/wildfly/wildfly/releases/download/36.0.1.Final/wildfly-36.0.1.Final.zip
+   url: https://wildfly.org/downloads/
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/36.0.1.Final/pom.xml",
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
+    }
+
+  #####################
+  #   WildFly  37.0.1 #
+  #####################
+
+ - &wildfly-3701finalruntime
+   id: wildfly-3701finalruntime
+   name: WildFly 37.0.1 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 37.0.1.Final
+   license: *lgpl
+   downloadUrl: https://github.com/wildfly/wildfly/releases/download/37.0.1.Final/wildfly-37.0.1.Final.zip
+   url: https://wildfly.org/downloads/
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/37.0.1.Final/pom.xml",
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
+    }
+
+  #####################
+  #   WildFly  38.0.1 #
+  #####################
+
+ - &wildfly-3801finalruntime
+   id: wildfly-3801finalruntime
+   name: WildFly 38.0.1 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 38.0.1.Final
+   license: *lgpl
+   downloadUrl: https://github.com/wildfly/wildfly/releases/download/38.0.1.Final/wildfly-38.0.1.Final.zip
+   url: https://wildfly.org/downloads/
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/38.0.1.Final/pom.xml",
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
+    }
+
+  #####################
+  #   WildFly  39.0.1 #
+  #####################
+
+ - &wildfly-3901finalruntime
+   id: wildfly-3901finalruntime
+   name: WildFly 39.0.1 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 39.0.1.Final
+   license: *lgpl
+   downloadUrl: https://github.com/wildfly/wildfly/releases/download/39.0.1.Final/wildfly-39.0.1.Final.zip
+   url: https://wildfly.org/downloads/
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/39.0.1.Final/pom.xml",
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
+    }
+
 
    #################
    #  J P P  6.1   #
@@ -6419,6 +6605,54 @@ minorReleases:
    version: 33.0.2.Final
    recommendedRuntime: *wildfly-3302finalruntime
 
+   ################
+   #   WildFly 34 #
+   ################
+ - &wildfly3401final
+   name: WildFly
+   version: 34.0.1.Final
+   recommendedRuntime: *wildfly-3401finalruntime
+
+   ################
+   #   WildFly 35 #
+   ################
+ - &wildfly3501final
+   name: WildFly
+   version: 35.0.1.Final
+   recommendedRuntime: *wildfly-3501finalruntime
+
+   ################
+   #   WildFly 36 #
+   ################
+ - &wildfly3601final
+   name: WildFly
+   version: 36.0.1.Final
+   recommendedRuntime: *wildfly-3601finalruntime
+
+   ################
+   #   WildFly 37 #
+   ################
+ - &wildfly3701final
+   name: WildFly
+   version: 37.0.1.Final
+   recommendedRuntime: *wildfly-3701finalruntime
+
+   ################
+   #   WildFly 38 #
+   ################
+ - &wildfly3801final
+   name: WildFly
+   version: 38.0.1.Final
+   recommendedRuntime: *wildfly-3801finalruntime
+
+   ################
+   #   WildFly 39 #
+   ################
+ - &wildfly3901final
+   name: WildFly
+   version: 39.0.1.Final
+   recommendedRuntime: *wildfly-3901finalruntime
+
    ###############
    #   JPP 6.x   #
    ###############
@@ -6870,6 +7104,66 @@ majorReleases:
    recommendedRuntime: *wildfly-3302finalruntime
    minorReleases:
     - *wildfly3302final
+
+   #################
+   #   WildFly 34  #
+   #################
+
+ - name: WildFly
+   version: 34
+   recommendedRuntime: *wildfly-3401finalruntime
+   minorReleases:
+    - *wildfly3401final
+
+   #################
+   #   WildFly 35  #
+   #################
+
+ - name: WildFly
+   version: 35
+   recommendedRuntime: *wildfly-3501finalruntime
+   minorReleases:
+    - *wildfly3501final
+
+   #################
+   #   WildFly 36  #
+   #################
+
+ - name: WildFly
+   version: 36
+   recommendedRuntime: *wildfly-3601finalruntime
+   minorReleases:
+    - *wildfly3601final
+
+   #################
+   #   WildFly 37  #
+   #################
+
+ - name: WildFly
+   version: 37
+   recommendedRuntime: *wildfly-3701finalruntime
+   minorReleases:
+    - *wildfly3701final
+
+   #################
+   #   WildFly 38  #
+   #################
+
+ - name: WildFly
+   version: 38
+   recommendedRuntime: *wildfly-3801finalruntime
+   minorReleases:
+    - *wildfly3801final
+
+   #################
+   #   WildFly 39  #
+   #################
+
+ - name: WildFly
+   version: 39
+   recommendedRuntime: *wildfly-3901finalruntime
+   minorReleases:
+    - *wildfly3901final
 
    ##################
    #   E A P  6     #
