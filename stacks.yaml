@@ -5475,6 +5475,8 @@ availableRuntimes:
         runtime-type: AS,
         requiresLogModule: false,
         pom: "https://raw.githubusercontent.com/wildfly/wildfly/34.0.1.Final/pom.xml",
+        runtime-size: 250408065,
+        runtime-md5: 94ff7542c7b2f250be23a02862e478cb,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
     }
 
@@ -5506,6 +5508,8 @@ availableRuntimes:
         runtime-type: AS,
         requiresLogModule: false,
         pom: "https://raw.githubusercontent.com/wildfly/wildfly/35.0.1.Final/pom.xml",
+        runtime-size: 259114369,
+        runtime-md5: 1886603cb0d02a7e663b88b03128cc0a,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
     }
 
@@ -5537,6 +5541,8 @@ availableRuntimes:
         runtime-type: AS,
         requiresLogModule: false,
         pom: "https://raw.githubusercontent.com/wildfly/wildfly/36.0.1.Final/pom.xml",
+        runtime-size: 267599602,
+        runtime-md5: 2afcd3957b92544fb0465205e85423e9,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
     }
 
@@ -5568,6 +5574,8 @@ availableRuntimes:
         runtime-type: AS,
         requiresLogModule: false,
         pom: "https://raw.githubusercontent.com/wildfly/wildfly/37.0.1.Final/pom.xml",
+        runtime-size: 259019041,
+        runtime-md5: d66ebed11751d48fac31b3b9b5013283,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
     }
 
@@ -5599,6 +5607,8 @@ availableRuntimes:
         runtime-type: AS,
         requiresLogModule: false,
         pom: "https://raw.githubusercontent.com/wildfly/wildfly/38.0.1.Final/pom.xml",
+        runtime-size: 259269385,
+        runtime-md5: a18d9ea6ab205bcb8dff47ee79b500f3,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
     }
 
@@ -5630,6 +5640,8 @@ availableRuntimes:
         runtime-type: AS,
         requiresLogModule: false,
         pom: "https://raw.githubusercontent.com/wildfly/wildfly/39.0.1.Final/pom.xml",
+        runtime-size: 261317791,
+        runtime-md5: 5841b9389309f76a948dd23b8577dedd,
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.270
     }
 
