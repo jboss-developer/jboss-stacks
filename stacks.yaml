@@ -5645,6 +5645,72 @@ availableRuntimes:
         wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.380
     }
 
+  #####################
+  #   WildFly  40.0.1 #
+  #####################
+
+ - &wildfly-4001finalruntime
+   id: wildfly-4001finalruntime
+   name: WildFly 40.0.1 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 40.0.1.Final
+   license: *lgpl
+   downloadUrl: https://github.com/wildfly/wildfly/releases/download/40.0.1.Final/wildfly-40.0.1.Final.zip
+   url: https://wildfly.org/downloads/
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/40.0.1.Final/pom.xml",
+        runtime-size: 264299602,
+        runtime-md5: 63f74ce54b2915b43da1b153c9e80a22,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.380
+    }
+
+  #####################
+  #   WildFly  41.0.0 #
+  #####################
+
+ - &wildfly-4100finalruntime
+   id: wildfly-4100finalruntime
+   name: WildFly 41.0.0 Final
+   groupId: org.wildfly
+   artifactId: wildfly-dist
+   version: 41.0.0.Final
+   license: *lgpl
+   downloadUrl: https://github.com/wildfly/wildfly/releases/download/41.0.0.Final/wildfly-41.0.0.Final.zip
+   url: https://wildfly.org/downloads/
+   boms:
+   defaultBom:
+   defaultArchetype: *wildfly-javaee7-webapp-archetype-latest
+   archetypes:
+    - *wildfly-javaee7-webapp-blank-archetype-latest
+    - *wildfly-javaee7-webapp-archetype-latest
+    - *wildfly-javaee7-webapp-ear-blank-archetype-latest
+    - *wildfly-javaee7-webapp-ear-archetype-latest
+    - *wildfly-html5-mobile-blank-archetype-latest
+    - *wildfly-html5-mobile-archetype-latest
+   labels: {
+        runtime-category: SERVER,
+        runtime-type: AS,
+        requiresLogModule: false,
+        pom: "https://raw.githubusercontent.com/wildfly/wildfly/41.0.0.Final/pom.xml",
+        runtime-size: 266348970,
+        runtime-md5: acd072be11524334b065485eae37d52d,
+        wtp-runtime-type: org.jboss.ide.eclipse.as.runtime.wildfly.380
+    }
+
 
    #################
    #  J P P  6.1   #
@@ -6665,6 +6731,22 @@ minorReleases:
    version: 39.0.1.Final
    recommendedRuntime: *wildfly-3901finalruntime
 
+   ################
+   #   WildFly 40 #
+   ################
+ - &wildfly4001final
+   name: WildFly
+   version: 40.0.1.Final
+   recommendedRuntime: *wildfly-4001finalruntime
+
+   ################
+   #   WildFly 41 #
+   ################
+ - &wildfly4100final
+   name: WildFly
+   version: 41.0.0.Final
+   recommendedRuntime: *wildfly-4100finalruntime
+
    ###############
    #   JPP 6.x   #
    ###############
@@ -7176,6 +7258,26 @@ majorReleases:
    recommendedRuntime: *wildfly-3901finalruntime
    minorReleases:
     - *wildfly3901final
+
+   #################
+   #   WildFly 40  #
+   #################
+
+ - name: WildFly
+   version: 40
+   recommendedRuntime: *wildfly-4001finalruntime
+   minorReleases:
+    - *wildfly4001final
+
+   #################
+   #   WildFly 41  #
+   #################
+
+ - name: WildFly
+   version: 41
+   recommendedRuntime: *wildfly-4100finalruntime
+   minorReleases:
+    - *wildfly4100final
 
    ##################
    #   E A P  6     #
